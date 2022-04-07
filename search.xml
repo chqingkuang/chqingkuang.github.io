@@ -1,6 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>大一下学习资料整理</title>
+    <url>/2022/04/07/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%95%B4%E7%90%86/</url>
+    <content><![CDATA[<p><strong>为了方便学习资料查找 特整理此篇</strong></p>
+<p>电磁学 所有习题讲解：<a href="https://www.bilibili.com/video/BV17z4y1D7Sw?t=0.4">https://www.bilibili.com/video/BV17z4y1D7Sw?t=0.4</a></p>
+<p>《电路》第五版：<a href="https://www.bilibili.com/video/BV1gF411E7FW?t=9.2">https://www.bilibili.com/video/BV1gF411E7FW?t=9.2</a></p>
+<p>高数下速成猴博士：<a href="https://www.bilibili.com/video/BV1JR4y1L7ue?t=6.0">https://www.bilibili.com/video/BV1JR4y1L7ue?t=6.0</a></p>
+<p>西安交大 热学 秦允豪四版：<a href="https://www.bilibili.com/video/BV1mJ411s7ST?p=1&amp;t=0.9">https://www.bilibili.com/video/BV1mJ411s7ST?p=1&amp;t=0.9</a></p>
+<p>电磁学 陈秉乾 1080p高清修复：<a href="https://www.bilibili.com/video/BV19P4y1A7Yk?t=109.9">https://www.bilibili.com/video/BV19P4y1A7Yk?t=109.9</a></p>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>进行了对评论系统的更新说明（2）以及安装流程</title>
+    <url>/2022/04/07/1/</url>
+    <content><![CDATA[<h3 id="2022-04-07-19-20-11-进行了对评论系统的更新说明（2）"><a href="#2022-04-07-19-20-11-进行了对评论系统的更新说明（2）" class="headerlink" title="2022-04-07 19:20:11 进行了对评论系统的更新说明（2）"></a>2022-04-07 19:20:11 进行了对评论系统的更新说明（2）</h3><h4 id="最终屈服于bug，使用本主题已集成的gitalk插件"><a href="#最终屈服于bug，使用本主题已集成的gitalk插件" class="headerlink" title="最终屈服于bug，使用本主题已集成的gitalk插件"></a>最终屈服于bug，使用本主题已集成的gitalk插件</h4><p><a href="https://github.com/gitalk/gitalk/blob/master/readme-cn.md">gitalk中文教程</a></p>
+<p>在捣鼓了一个多小时之后，我发现这个主题已经集成<strong>gitalk</strong>相关内容，需要自己再添加的内容其实少之又少。本来被繁琐的安装教程劝退的我在被<strong>utteranc</strong>的bug折磨后突然发现真香。。</p>
+<p>以下是我的安装流程</p>
+<h4 id="1-首先需要到GitHub上去新建一个仓库用于存放评论的内容："><a href="#1-首先需要到GitHub上去新建一个仓库用于存放评论的内容：" class="headerlink" title="1.首先需要到GitHub上去新建一个仓库用于存放评论的内容："></a>1.首先需要到GitHub上去新建一个仓库用于存放评论的内容：</h4><p><img src="https://upload-images.jianshu.io/upload_images/8504906-7f9d5dcde5f4a9b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/format/webp"></p>
+<h4 id="2-在设置中打开isue功能："><a href="#2-在设置中打开isue功能：" class="headerlink" title="2.在设置中打开isue功能："></a>2.在设置中打开isue功能：</h4><p><img src="https://upload-images.jianshu.io/upload_images/8504906-2b1312c33056af50.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1007/format/webp" alt="img"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/8504906-94a5b796e99e08ac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/820/format/webp" alt="img"></p>
+<h4 id="3-注册一个Github-Application"><a href="#3-注册一个Github-Application" class="headerlink" title="3.注册一个Github Application"></a>3.注册一个<a href="https://github.com/gitalk/gitalk">Github Application</a></h4><p><img src="https://upload-images.jianshu.io/upload_images/8504906-3f13f61dad909209.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/626/format/webp" alt="img"></p>
+<p>（此处应当直接将解析后的网址填入，不再填入github中初始网站域名。笔者就因为在此犯错误导致</p>
+<p>了在最后始终无法初始化）</p>
+<h4 id="4-完成后记下ID与secret码"><a href="#4-完成后记下ID与secret码" class="headerlink" title="4.完成后记下ID与secret码"></a>4.完成后记下ID与secret码</h4><p><img src="https://upload-images.jianshu.io/upload_images/8504906-cfdc60105da4419b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1047/format/webp" alt="img"></p>
+<h4 id="5-接下来在主题的-config-yml文件中修改源码"><a href="#5-接下来在主题的-config-yml文件中修改源码" class="headerlink" title="5.接下来在主题的_config.yml文件中修改源码"></a>5.接下来在主题的_config.yml文件中修改源码</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Gitalk 评论插件（https://github.com/gitalk/gitalk）</span><br><span class="line">gitalk:</span><br><span class="line">    # 是否启用评论功能</span><br><span class="line">    enable: true</span><br><span class="line">    # 是否自动展开评论框</span><br><span class="line">    autoExpand: false</span><br><span class="line">    # 应用编号</span><br><span class="line">    clientID: ee6081cac77ee7f00ac8</span><br><span class="line">    # 应用秘钥</span><br><span class="line">    clientSecret: cdc78339e891c233acd689af29ca7f31ef7aa5ac</span><br><span class="line">    # issue仓库名</span><br><span class="line">    repo: blogtalk</span><br><span class="line">    # Github名</span><br><span class="line">    owner: chqingkuang</span><br><span class="line">    # Github名</span><br><span class="line">    admin: [&#x27;chqingkuang&#x27;]</span><br><span class="line">    # Ensure uniqueness and length less than 50</span><br><span class="line">    id: location.pathname</span><br><span class="line">    # Facebook-like distraction free mode</span><br><span class="line">    distractionFreeMode: false</span><br></pre></td></tr></table></figure>
+
+<h4 id="6-完成"><a href="#6-完成" class="headerlink" title="6.完成"></a>6.完成</h4><p><img src="D:\blog2\themes\diaspora\source\img\image-20220407193519334.png" alt="image-20220407193519334"></p>
+<h4 id="（注意：第一次进入时评论模块加载不出来，需要注册Github-Application的账号登录评论模块后刷新页面，就可以正常使用了。）"><a href="#（注意：第一次进入时评论模块加载不出来，需要注册Github-Application的账号登录评论模块后刷新页面，就可以正常使用了。）" class="headerlink" title="（注意：第一次进入时评论模块加载不出来，需要注册Github Application的账号登录评论模块后刷新页面，就可以正常使用了。）"></a>（注意：第一次进入时评论模块加载不出来，需要注册Github Application的账号登录评论模块后刷新页面，就可以正常使用了。）</h4><p>参考教程：<a href="https://www.jianshu.com/p/4242bb065550?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">https://www.jianshu.com/p/4242bb065550?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation</a></p>
+]]></content>
+      <categories>
+        <category>瞎折腾</category>
+      </categories>
+      <tags>
+        <tag>瞎折腾</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第一篇文章</title>
+    <url>/2022/04/07/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
+    <content><![CDATA[<h2 id=""><a href="#" class="headerlink" title=""></a></h2><h3 id="测试内容-新建一个文章"><a href="#测试内容-新建一个文章" class="headerlink" title="测试内容 新建一个文章"></a>测试内容 新建一个文章</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>如何分类文章</title>
     <url>/2022/04/07/%E5%A6%82%E4%BD%95%E7%BB%99%E6%96%87%E7%AB%A0%E5%88%86%E7%B1%BB/</url>
     <content><![CDATA[<h3 id="新建文章模板"><a href="#新建文章模板" class="headerlink" title="新建文章模板"></a>新建文章模板</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: My awesome title</span><br><span class="line">date: 2016-10-12 18:38:45</span><br><span class="line">categories: </span><br><span class="line">    - 分类1</span><br><span class="line">    - 分类2</span><br><span class="line">tags: </span><br><span class="line">    - 标签1</span><br><span class="line">    - 标签2</span><br><span class="line">mp3: http://domain.com/awesome.mp3</span><br><span class="line">cover: http://domain.com/awesome.jpg</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
@@ -29,23 +79,6 @@
       </tags>
   </entry>
   <entry>
-    <title>大一下学习资料整理</title>
-    <url>/2022/04/07/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%95%B4%E7%90%86/</url>
-    <content><![CDATA[<p><strong>为了方便学习资料查找 特整理此篇</strong></p>
-<p>电磁学 所有习题讲解：<a href="https://www.bilibili.com/video/BV17z4y1D7Sw?t=0.4">https://www.bilibili.com/video/BV17z4y1D7Sw?t=0.4</a></p>
-<p>《电路》第五版：<a href="https://www.bilibili.com/video/BV1gF411E7FW?t=9.2">https://www.bilibili.com/video/BV1gF411E7FW?t=9.2</a></p>
-<p>高数下速成猴博士：<a href="https://www.bilibili.com/video/BV1JR4y1L7ue?t=6.0">https://www.bilibili.com/video/BV1JR4y1L7ue?t=6.0</a></p>
-<p>西安交大 热学 秦允豪四版：<a href="https://www.bilibili.com/video/BV1mJ411s7ST?p=1&amp;t=0.9">https://www.bilibili.com/video/BV1mJ411s7ST?p=1&amp;t=0.9</a></p>
-<p>电磁学 陈秉乾 1080p高清修复：<a href="https://www.bilibili.com/video/BV19P4y1A7Yk?t=109.9">https://www.bilibili.com/video/BV19P4y1A7Yk?t=109.9</a></p>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>进行了对评论系统的更新说明</title>
     <url>/2022/04/07/%E6%9B%B4%E6%96%B0%E4%BA%86%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/</url>
     <content><![CDATA[<h3 id="2022-04-07-16-44-15-进行了对评论系统的更新说明"><a href="#2022-04-07-16-44-15-进行了对评论系统的更新说明" class="headerlink" title="2022-04-07 16:44:15 进行了对评论系统的更新说明"></a>2022-04-07 16:44:15 进行了对评论系统的更新说明</h3><h4 id="1-使用-utteranc-评论插件"><a href="#1-使用-utteranc-评论插件" class="headerlink" title="1.使用  utteranc 评论插件"></a>1.使用  <strong>utteranc</strong> 评论插件</h4><p><a href="https://utteranc.es/">https://utteranc.es</a> (<a href="https://github.com/utterance/utterances">https://github.com/utterance/utterances</a>)</p>
@@ -57,13 +90,11 @@
 <p>​                   <em><a href="https://segmentfault.com/a/1190000039217582">给hugo博客添加评论功能</a></em></p>
 <p>以上。</p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>第一篇文章</title>
-    <url>/2022/04/07/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<h2 id=""><a href="#" class="headerlink" title=""></a></h2><h3 id="测试内容-新建一个文章"><a href="#测试内容-新建一个文章" class="headerlink" title="测试内容 新建一个文章"></a>测试内容 新建一个文章</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-]]></content>
+      <categories>
+        <category>瞎折腾</category>
+      </categories>
+      <tags>
+        <tag>瞎折腾</tag>
+      </tags>
   </entry>
 </search>
