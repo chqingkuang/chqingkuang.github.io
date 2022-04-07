@@ -46,6 +46,14 @@
       </tags>
   </entry>
   <entry>
+    <title>第一篇文章</title>
+    <url>/2022/04/07/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
+    <content><![CDATA[<h2 id=""><a href="#" class="headerlink" title=""></a></h2><h3 id="测试内容-新建一个文章"><a href="#测试内容-新建一个文章" class="headerlink" title="测试内容 新建一个文章"></a>测试内容 新建一个文章</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>进行了对评论系统的更新说明</title>
     <url>/2022/04/07/%E6%9B%B4%E6%96%B0%E4%BA%86%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/</url>
     <content><![CDATA[<h3 id="2022-04-07-16-44-15-进行了对评论系统的更新说明"><a href="#2022-04-07-16-44-15-进行了对评论系统的更新说明" class="headerlink" title="2022-04-07 16:44:15 进行了对评论系统的更新说明"></a>2022-04-07 16:44:15 进行了对评论系统的更新说明</h3><h4 id="1-使用-utteranc-评论插件"><a href="#1-使用-utteranc-评论插件" class="headerlink" title="1.使用  utteranc 评论插件"></a>1.使用  <strong>utteranc</strong> 评论插件</h4><p><a href="https://utteranc.es/">https://utteranc.es</a> (<a href="https://github.com/utterance/utterances">https://github.com/utterance/utterances</a>)</p>
@@ -56,14 +64,6 @@
 <h4 id="3-视作者日后水平进步情况和空闲时间会做出改进更新。"><a href="#3-视作者日后水平进步情况和空闲时间会做出改进更新。" class="headerlink" title="3.视作者日后水平进步情况和空闲时间会做出改进更新。"></a>3.视作者日后水平进步情况和空闲时间会做出改进更新。</h4><p>参考教程：<a href="https://scorevictim.github.io/posts/31711.html"><em>开启Hexo博客评论</em></a></p>
 <p>​                   <em><a href="https://segmentfault.com/a/1190000039217582">给hugo博客添加评论功能</a></em></p>
 <p>以上。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>第一篇文章</title>
-    <url>/2022/04/07/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<h2 id=""><a href="#" class="headerlink" title=""></a></h2><h3 id="测试内容-新建一个文章"><a href="#测试内容-新建一个文章" class="headerlink" title="测试内容 新建一个文章"></a>测试内容 新建一个文章</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
 ]]></content>
   </entry>
 </search>
