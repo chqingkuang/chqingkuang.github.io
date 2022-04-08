@@ -5,15 +5,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>第一篇文章 - 十七的Blog</title>
+    <title>修复了从归档打开文章返回主页卡在example页的bug - 十七的Blog</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="Fechin,"> 
-    <meta name="description" content="小站努力完善中...,测试内容 新建一个文章1$ hexo new &amp;quot;My New Post&amp;quot;
-
-More info: Writing
-"> 
+    <meta name="description" content="小站努力完善中...,2022-04-08 10:40:03 修复了从归档打开文章返回主页卡在example页的bug该bug由个人配置失误造成，其触发有两种情况
+1.打开任意文章，刷新，返回首页，跳转到http://e,"> 
     <meta name="author" content="十七"> 
     <link rel="alternative" href="atom.xml" title="十七的Blog" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -23,22 +21,18 @@ More info: Writing
     
     
     <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:title" content="第一篇文章 - 十七的Blog"/>
-    <meta name="twitter:description" content="小站努力完善中...,测试内容 新建一个文章1$ hexo new &amp;quot;My New Post&amp;quot;
-
-More info: Writing
-"/>
+    <meta name="twitter:title" content="修复了从归档打开文章返回主页卡在example页的bug - 十七的Blog"/>
+    <meta name="twitter:description" content="小站努力完善中...,2022-04-08 10:40:03 修复了从归档打开文章返回主页卡在example页的bug该bug由个人配置失误造成，其触发有两种情况
+1.打开任意文章，刷新，返回首页，跳转到http://e,"/>
     
     
     
     
     <meta property="og:site_name" content="十七的Blog"/>
     <meta property="og:type" content="object"/>
-    <meta property="og:title" content="第一篇文章 - 十七的Blog"/>
-    <meta property="og:description" content="小站努力完善中...,测试内容 新建一个文章1$ hexo new &amp;quot;My New Post&amp;quot;
-
-More info: Writing
-"/>
+    <meta property="og:title" content="修复了从归档打开文章返回主页卡在example页的bug - 十七的Blog"/>
+    <meta property="og:description" content="小站努力完善中...,2022-04-08 10:40:03 修复了从归档打开文章返回主页卡在example页的bug该bug由个人配置失误造成，其触发有两种情况
+1.打开任意文章，刷新，返回首页，跳转到http://e,"/>
     
 <link rel="stylesheet" href="/css/diaspora.css">
 
@@ -52,7 +46,7 @@ More info: Writing
     <div class="bar" style="width: 0;"></div>
     <a class="iconfont icon-home image-icon" href="javascript:;" data-url="https://qingkuang.xyz"></a>
     <div title="播放/暂停" class="iconfont icon-play"></div>
-    <h3 class="subtitle">第一篇文章</h3>
+    <h3 class="subtitle">修复了从归档打开文章返回主页卡在example页的bug</h3>
     <div class="social">
         <div>
             <div class="share">
@@ -67,16 +61,28 @@ More info: Writing
     <div class="section">
         <div class="article">
     <div class='main'>
-        <h1 class="title">第一篇文章</h1>
+        <h1 class="title">修复了从归档打开文章返回主页卡在example页的bug</h1>
         <div class="stuff">
-            <span>四月 07, 2022</span>
+            <span>四月 08, 2022</span>
             
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E7%9E%8E%E6%8A%98%E8%85%BE/" rel="tag">瞎折腾</a></li></ul>
+
 
         </div>
         <div class="content markdown">
-            <h2 id><a href="#" class="headerlink" title></a></h2><h3 id="测试内容-新建一个文章"><a href="#测试内容-新建一个文章" class="headerlink" title="测试内容 新建一个文章"></a>测试内容 新建一个文章</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+            <h3 id="2022-04-08-10-40-03-修复了从归档打开文章返回主页卡在example页的bug"><a href="#2022-04-08-10-40-03-修复了从归档打开文章返回主页卡在example页的bug" class="headerlink" title="2022-04-08 10:40:03 修复了从归档打开文章返回主页卡在example页的bug"></a>2022-04-08 10:40:03 修复了从归档打开文章返回主页卡在example页的bug</h3><p>该bug由个人配置失误造成，其触发有两种情况</p>
+<p>1.打开任意文章，刷新，返回首页，跳转到<a target="_blank" rel="noopener" href="http://example.com/">http://example.com/</a></p>
+<p>2.从归档打开任意文章，返回首页，跳转到<a target="_blank" rel="noopener" href="http://example.com/">http://example.com/</a></p>
+<p>以下为修复方法</p>
+<p>打开根目录下的_config.yml</p>
+<p>找到</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># URL</span><br><span class="line">## Set your site url here. For example, if you use GitHub Page, set url as &#x27;https://username.github.io/project&#x27;</span><br><span class="line">url: http://example.com/</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br><span class="line">pretty_urls:</span><br><span class="line">  trailing_index: true # Set to false to remove trailing &#x27;index.html&#x27; from permalinks</span><br><span class="line">  trailing_html: true # Set to false to remove trailing &#x27;.html&#x27; from permalinks</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<p>发现是URL配置错误</p>
+<p>更改为本网站URL</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># URL</span><br><span class="line">## Set your site url here. For example, if you use GitHub Page, set url as &#x27;https://username.github.io/project&#x27;</span><br><span class="line">url: https://qingkuang.xyz/</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br><span class="line">pretty_urls:</span><br><span class="line">  trailing_index: true # Set to false to remove trailing &#x27;index.html&#x27; from permalinks</span><br><span class="line">  trailing_html: true # Set to false to remove trailing &#x27;.html&#x27; from permalinks</span><br></pre></td></tr></table></figure>
+
+<p>完美解决。</p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
