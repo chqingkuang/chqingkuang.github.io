@@ -50,6 +50,37 @@
       </tags>
   </entry>
   <entry>
+    <title>使用网络图床</title>
+    <url>/2022/04/20/%E4%BD%BF%E7%94%A8%E7%BD%91%E7%BB%9C%E5%9B%BE%E5%BA%8A/</url>
+    <content><![CDATA[<h3 id="为了使插入图片更加方便，我们可以使用网络图床"><a href="#为了使插入图片更加方便，我们可以使用网络图床" class="headerlink" title="为了使插入图片更加方便，我们可以使用网络图床"></a>为了使插入图片更加方便，我们可以使用网络图床</h3><h4 id="使用图床的好处"><a href="#使用图床的好处" class="headerlink" title="使用图床的好处"></a>使用图床的好处</h4><ul>
+<li><p>提升页面访问速度</p>
+<p> 过去我们将图片直接放到在线静态页面当中的话，在访问时需要等待全部资源加载，然而一般页面都是图片较大。当我们将图片分离后异步加载，再通过CDN加速，能够大幅提升页面的访问速度。</p>
+</li>
+<li><p>减少原页面服务器访问压力</p>
+<p> 由于访问图片的请求都经由图床&#x2F;CDN，使得原来页面所在的服务器访问压力减少。</p>
+</li>
+</ul>
+<p>网络上搭建图床的方法很多，如新浪微博，腾讯云，七牛云等。当然自己搭建的图床自然更可靠。</p>
+<h4 id="我的选择"><a href="#我的选择" class="headerlink" title="我的选择"></a>我的选择</h4><p>在这里我为了方便，直接使用了<a href="https://sm.ms/">SM.MS</a></p>
+<p><img src="https://s2.loli.net/2022/04/20/LZbFOU6dGB3sk4n.png" alt="Screenshot 2022-04-20 165816.png"></p>
+<p>据说有时候不太稳定，但是对于我这种轻度用户应该问题不大</p>
+<p>同时也有收费版本</p>
+<p><img src="https://s2.loli.net/2022/04/20/eRouN3sO1PUhvki.png" alt="Screenshot 2022-04-20 170126.png"></p>
+<p>同样的，轻度使用也不需要使用。这里只是提及一下</p>
+<p>在上传完图片后，会提供多种链接选择（这里仅作演示）</p>
+<p><img src="https://s2.loli.net/2022/04/20/qFnxQlX57uwvjLa.png" alt="Screenshot 2022-04-20 170301.png"></p>
+<p>该图床可以批量上传，同时有着完善的管理系统，简单方便，小白使用起来也毫无压力</p>
+<p>![_YH@6_Q_&#96;@<a href="mailto:&#55;&#x5a;&#64;&#68;&#50;&#88;&#75;&#48;&#48;&#x51;&#x41;&#68;&#x57;&#46;&#x70;&#x6e;&#x67;">&#55;&#x5a;&#64;&#68;&#50;&#88;&#75;&#48;&#48;&#x51;&#x41;&#68;&#x57;&#46;&#x70;&#x6e;&#x67;</a>](<a href="https://s2.loli.net/2022/04/20/s6XTC3VE7meUznv.png">https://s2.loli.net/2022/04/20/s6XTC3VE7meUznv.png</a>)</p>
+<p>以后如果有需要的话可以尝试捣鼓一下用GitHub之类的自建图床。</p>
+]]></content>
+      <categories>
+        <category>瞎折腾</category>
+      </categories>
+      <tags>
+        <tag>瞎折腾</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>修复了从归档打开文章返回主页卡在example页的bug</title>
     <url>/2022/04/08/%E4%BF%AE%E5%A4%8D%E4%BA%86%E4%BB%8E%E5%BD%92%E6%A1%A3%E6%89%93%E5%BC%80%E6%96%87%E7%AB%A0%E8%BF%94%E5%9B%9E%E4%B8%BB%E9%A1%B5%E5%8D%A1%E5%9C%A8example%E9%A1%B5%E7%9A%84bug/</url>
     <content><![CDATA[<h3 id="2022-04-08-10-40-03-修复了从归档打开文章返回主页卡在example页的bug"><a href="#2022-04-08-10-40-03-修复了从归档打开文章返回主页卡在example页的bug" class="headerlink" title="2022-04-08 10:40:03 修复了从归档打开文章返回主页卡在example页的bug"></a>2022-04-08 10:40:03 修复了从归档打开文章返回主页卡在example页的bug</h3><p>该bug由个人配置失误造成，其触发有两种情况</p>
@@ -142,6 +173,14 @@
       </tags>
   </entry>
   <entry>
+    <title>第一篇文章</title>
+    <url>/2022/04/07/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
+    <content><![CDATA[<h2 id><a href="#" class="headerlink" title></a></h2><h3 id="测试内容-新建一个文章"><a href="#测试内容-新建一个文章" class="headerlink" title="测试内容 新建一个文章"></a>测试内容 新建一个文章</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>进行了对评论系统的更新说明</title>
     <url>/2022/04/07/%E6%9B%B4%E6%96%B0%E4%BA%86%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/</url>
     <content><![CDATA[<h3 id="2022-04-07-16-44-15-进行了对评论系统的更新说明"><a href="#2022-04-07-16-44-15-进行了对评论系统的更新说明" class="headerlink" title="2022-04-07 16:44:15 进行了对评论系统的更新说明"></a>2022-04-07 16:44:15 进行了对评论系统的更新说明</h3><h4 id="1-使用-utteranc-评论插件"><a href="#1-使用-utteranc-评论插件" class="headerlink" title="1.使用  utteranc 评论插件"></a>1.使用  <strong>utteranc</strong> 评论插件</h4><p><a href="https://utteranc.es/">https://utteranc.es</a> (<a href="https://github.com/utterance/utterances">https://github.com/utterance/utterances</a>)</p>
@@ -159,13 +198,5 @@
       <tags>
         <tag>瞎折腾</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>第一篇文章</title>
-    <url>/2022/04/07/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<h2 id><a href="#" class="headerlink" title></a></h2><h3 id="测试内容-新建一个文章"><a href="#测试内容-新建一个文章" class="headerlink" title="测试内容 新建一个文章"></a>测试内容 新建一个文章</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-]]></content>
   </entry>
 </search>
