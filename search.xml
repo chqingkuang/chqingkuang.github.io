@@ -94,30 +94,6 @@
       </tags>
   </entry>
   <entry>
-    <title>修复了从归档打开文章返回主页卡在example页的bug</title>
-    <url>/2022/04/08/%E4%BF%AE%E5%A4%8D%E4%BA%86%E4%BB%8E%E5%BD%92%E6%A1%A3%E6%89%93%E5%BC%80%E6%96%87%E7%AB%A0%E8%BF%94%E5%9B%9E%E4%B8%BB%E9%A1%B5%E5%8D%A1%E5%9C%A8example%E9%A1%B5%E7%9A%84bug/</url>
-    <content><![CDATA[<h3 id="2022-04-08-10-40-03-修复了从归档打开文章返回主页卡在example页的bug"><a href="#2022-04-08-10-40-03-修复了从归档打开文章返回主页卡在example页的bug" class="headerlink" title="2022-04-08 10:40:03 修复了从归档打开文章返回主页卡在example页的bug"></a>2022-04-08 10:40:03 修复了从归档打开文章返回主页卡在example页的bug</h3><p>该bug由个人配置失误造成，其触发有两种情况</p>
-<p>1.打开任意文章，刷新，返回首页，跳转到<a href="http://example.com/">http://example.com/</a></p>
-<p>2.从归档打开任意文章，返回首页，跳转到<a href="http://example.com/">http://example.com/</a></p>
-<p>以下为修复方法</p>
-<p>打开根目录下的_config.yml</p>
-<p>找到</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># URL</span><br><span class="line">## Set your site url here. For example, if you use GitHub Page, set url as &#x27;https://username.github.io/project&#x27;</span><br><span class="line">url: http://example.com/</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br><span class="line">pretty_urls:</span><br><span class="line">  trailing_index: true # Set to false to remove trailing &#x27;index.html&#x27; from permalinks</span><br><span class="line">  trailing_html: true # Set to false to remove trailing &#x27;.html&#x27; from permalinks</span><br></pre></td></tr></table></figure>
-
-<p>发现是URL配置错误</p>
-<p>更改为本网站URL</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># URL</span><br><span class="line">## Set your site url here. For example, if you use GitHub Page, set url as &#x27;https://username.github.io/project&#x27;</span><br><span class="line">url: https://qingkuang.xyz/</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br><span class="line">pretty_urls:</span><br><span class="line">  trailing_index: true # Set to false to remove trailing &#x27;index.html&#x27; from permalinks</span><br><span class="line">  trailing_html: true # Set to false to remove trailing &#x27;.html&#x27; from permalinks</span><br></pre></td></tr></table></figure>
-
-<p>完美解决。</p>
-]]></content>
-      <categories>
-        <category>瞎折腾</category>
-      </categories>
-      <tags>
-        <tag>瞎折腾</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>使用网络图床</title>
     <url>/2022/04/20/%E4%BD%BF%E7%94%A8%E7%BD%91%E7%BB%9C%E5%9B%BE%E5%BA%8A/</url>
     <content><![CDATA[<h3 id="为了使插入图片更加方便，我们可以使用网络图床"><a href="#为了使插入图片更加方便，我们可以使用网络图床" class="headerlink" title="为了使插入图片更加方便，我们可以使用网络图床"></a>为了使插入图片更加方便，我们可以使用网络图床</h3><h4 id="使用图床的好处"><a href="#使用图床的好处" class="headerlink" title="使用图床的好处"></a>使用图床的好处</h4><ul>
@@ -140,6 +116,30 @@
 <p>该图床可以批量上传，同时有着完善的管理系统，简单方便，小白使用起来也毫无压力</p>
 <p><img src="https://s2.loli.net/2022/04/20/RwVnFL9vyx7odI8.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/RwVnFL9vyx7odI8.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="Screenshot 2022-04-20 171254.png"></p>
 <p>以后如果有需要的话可以尝试捣鼓一下用GitHub之类的自建图床。</p>
+]]></content>
+      <categories>
+        <category>瞎折腾</category>
+      </categories>
+      <tags>
+        <tag>瞎折腾</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>修复了从归档打开文章返回主页卡在example页的bug</title>
+    <url>/2022/04/08/%E4%BF%AE%E5%A4%8D%E4%BA%86%E4%BB%8E%E5%BD%92%E6%A1%A3%E6%89%93%E5%BC%80%E6%96%87%E7%AB%A0%E8%BF%94%E5%9B%9E%E4%B8%BB%E9%A1%B5%E5%8D%A1%E5%9C%A8example%E9%A1%B5%E7%9A%84bug/</url>
+    <content><![CDATA[<h3 id="2022-04-08-10-40-03-修复了从归档打开文章返回主页卡在example页的bug"><a href="#2022-04-08-10-40-03-修复了从归档打开文章返回主页卡在example页的bug" class="headerlink" title="2022-04-08 10:40:03 修复了从归档打开文章返回主页卡在example页的bug"></a>2022-04-08 10:40:03 修复了从归档打开文章返回主页卡在example页的bug</h3><p>该bug由个人配置失误造成，其触发有两种情况</p>
+<p>1.打开任意文章，刷新，返回首页，跳转到<a href="http://example.com/">http://example.com/</a></p>
+<p>2.从归档打开任意文章，返回首页，跳转到<a href="http://example.com/">http://example.com/</a></p>
+<p>以下为修复方法</p>
+<p>打开根目录下的_config.yml</p>
+<p>找到</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># URL</span><br><span class="line">## Set your site url here. For example, if you use GitHub Page, set url as &#x27;https://username.github.io/project&#x27;</span><br><span class="line">url: http://example.com/</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br><span class="line">pretty_urls:</span><br><span class="line">  trailing_index: true # Set to false to remove trailing &#x27;index.html&#x27; from permalinks</span><br><span class="line">  trailing_html: true # Set to false to remove trailing &#x27;.html&#x27; from permalinks</span><br></pre></td></tr></table></figure>
+
+<p>发现是URL配置错误</p>
+<p>更改为本网站URL</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># URL</span><br><span class="line">## Set your site url here. For example, if you use GitHub Page, set url as &#x27;https://username.github.io/project&#x27;</span><br><span class="line">url: https://qingkuang.xyz/</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br><span class="line">pretty_urls:</span><br><span class="line">  trailing_index: true # Set to false to remove trailing &#x27;index.html&#x27; from permalinks</span><br><span class="line">  trailing_html: true # Set to false to remove trailing &#x27;.html&#x27; from permalinks</span><br></pre></td></tr></table></figure>
+
+<p>完美解决。</p>
 ]]></content>
       <categories>
         <category>瞎折腾</category>
