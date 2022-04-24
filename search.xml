@@ -50,6 +50,68 @@
       </tags>
   </entry>
   <entry>
+    <title>为博客添加音乐播放器</title>
+    <url>/2022/04/24/%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/</url>
+    <content><![CDATA[<h4 id="1-Aplayer介绍"><a href="#1-Aplayer介绍" class="headerlink" title="1.Aplayer介绍"></a>1.Aplayer介绍</h4><p>  Aplayer官网文档：<a href="https://aplayer.js.org/">https://aplayer.js.org/</a></p>
+<p>  Aplayer是一个功能强大的HTML5音乐播放器，方便好用。</p>
+<p>  <strong>支持的浏览器</strong></p>
+<ul>
+<li>Chrome</li>
+<li>Firefox</li>
+<li>Safari</li>
+<li>Internet Explorer 11</li>
+<li>Microsoft Edge</li>
+</ul>
+<h4 id="2-如何在Bamboo主题下加入音乐播放器"><a href="#2-如何在Bamboo主题下加入音乐播放器" class="headerlink" title="2.如何在Bamboo主题下加入音乐播放器"></a>2.如何在Bamboo主题下加入音乐播放器</h4><h5 id="须知"><a href="#须知" class="headerlink" title="须知"></a>须知</h5><p>主题内置了支持Aplayer的插件，可以直接在config中进行设置</p>
+<p>我们打开config，找到：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 音乐</span><br><span class="line">music:</span><br><span class="line">  on: true</span><br><span class="line">  autoHide: true    # hide automaticaly</span><br><span class="line">  server: tencent   #require	music platform: netease, tencent, kugou, xiami, baidu</span><br><span class="line">  type: playlist    #require song, playlist, album, search, artist</span><br><span class="line">  id: 8434221441     #require	song id / playlist id / album id / search keyword</span><br><span class="line">  fixed: true       # 开启吸底模式，建议开启</span><br><span class="line">  autoplay: true   # 是否自动播放, 有些浏览器会禁用自动播放，目前edge可以自动播放</span><br><span class="line">  theme: &#x27;#42b983&#x27;</span><br><span class="line">  loop: &#x27;all&#x27;       # 音频循环播放, 可选值: &#x27;all&#x27;, &#x27;one&#x27;, &#x27;none&#x27;</span><br><span class="line">  order: &#x27;random&#x27;   # 音频循环顺序, 可选值: &#x27;list&#x27;, &#x27;random&#x27;</span><br><span class="line">  preload: &#x27;auto&#x27;   # 预加载，可选值: &#x27;none&#x27;, &#x27;metadata&#x27;, &#x27;auto&#x27;</span><br><span class="line">  volume: 0.5       # 默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效</span><br><span class="line">  listFolded: true  # 列表默认折叠</span><br><span class="line">  hideLrc: false     # 隐藏歌词</span><br></pre></td></tr></table></figure>
+
+<p>这里有几个重要的点没有做中文注释，官方也没有给出详细教程，我在这里简短说明一下</p>
+<ul>
+<li>server指音乐平台，</li>
+<li>netease指网易云音乐，</li>
+<li>type类型，</li>
+<li>playlist列表，</li>
+<li>id指歌曲的i或者专辑或列表外链id</li>
+<li>list是列表播放，random是随机播放</li>
+</ul>
+<h5 id="实装"><a href="#实装" class="headerlink" title="实装"></a>实装</h5><p>下面仅演示QQ音乐获取</p>
+<h6 id="1-个人歌单id获取"><a href="#1-个人歌单id获取" class="headerlink" title="1.个人歌单id获取"></a>1.个人歌单id获取</h6><p>登陆个人QQ音乐APP，打开歌单，<br>然后可以分享给他人，在分享的地址中就包含了歌单的ID.<br>如果在微信或者微博等应用中，有可能不能直接看到，<br>可以将链接通过浏览器打开，然后在浏览器地址中寻找，id后面就是歌单id</p>
+<p>或者</p>
+<p>在网页端登陆，然后点击自己个人头像，找到自己创建的歌单，可以在地址栏中直接找到个歌单的ID</p>
+<p>当然也可以使用别人创建的歌单</p>
+<blockquote>
+<p><em><strong>注意此时的 type为”playlist”</strong></em></p>
+</blockquote>
+<h6 id="2-单首歌曲ID获取"><a href="#2-单首歌曲ID获取" class="headerlink" title="2. 单首歌曲ID获取"></a>2. 单首歌曲ID获取</h6><p>直接在网页端搜索歌曲名字，然后可以通过地址栏发现歌曲的id，</p>
+<blockquote>
+<p><em><strong>注意此时的 type为”playlist”</strong></em></p>
+</blockquote>
+<h6 id="3-歌手列表ID获取"><a href="#3-歌手列表ID获取" class="headerlink" title="3. 歌手列表ID获取"></a>3. 歌手列表ID获取</h6><p>可以直接在网页版网易云里面搜索歌手，然后就能看到歌手ID<br>这样就获得了歌手的所有歌曲了</p>
+<blockquote>
+<p><em><strong>注意此时的 type为”artist”</strong></em></p>
+</blockquote>
+<h6 id="4-歌手专辑列表ID获取"><a href="#4-歌手专辑列表ID获取" class="headerlink" title="4. 歌手专辑列表ID获取"></a>4. 歌手专辑列表ID获取</h6><p>可以直接在网页版网易云里面搜索歌手对应的的专辑，然后就能看到歌手的专辑ID<br>这样就获得了歌手的所有歌曲了</p>
+<blockquote>
+<p><em><strong>注意此时的 type为”album”</strong></em></p>
+</blockquote>
+<p>其余平台的操作步骤类似，可以自行摸索。</p>
+<h4 id="3-其他问题"><a href="#3-其他问题" class="headerlink" title="3.其他问题"></a>3.其他问题</h4><h5 id="浏览器打开没有自动播放？"><a href="#浏览器打开没有自动播放？" class="headerlink" title="浏览器打开没有自动播放？"></a>浏览器打开没有自动播放？</h5><p>原因可能是浏览器设置没有打开自动播放，以下展示edge如何打开媒体自动播放，其余浏览器类似，不会请自行百度。</p>
+<p>1.首先打开浏览器设置</p>
+<p><img src="https://s2.loli.net/2022/04/24/uGcjx68JeKgdDqk.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/24/uGcjx68JeKgdDqk.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="Screenshot 2022-04-24 201655.png"></p>
+<p>2.在 <strong>Cookie 和网站权限</strong> 找到 <strong>媒体自动播放</strong> 设置</p>
+<p><img src="https://s2.loli.net/2022/04/24/LutXxwDHRsnW7ba.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/24/LutXxwDHRsnW7ba.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="Screenshot 2022-04-24 201739.png"></p>
+<p>3.将<strong>控制是否自动播放网站上的音频及视频</strong>设置为<strong>允许</strong>或者在下方手动添加网站域名</p>
+<p><img src="https://s2.loli.net/2022/04/24/Ilt3cZ5Av9i1OmB.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/24/Ilt3cZ5Av9i1OmB.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="Screenshot 2022-04-24 201832.png"></p>
+]]></content>
+      <categories>
+        <category>瞎折腾</category>
+      </categories>
+      <tags>
+        <tag>瞎折腾</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>使用更加美观（花里胡哨的主题）Bamboo</title>
     <url>/2022/04/24/%E4%BD%BF%E7%94%A8%E6%9B%B4%E5%8A%A0%E7%BE%8E%E8%A7%82%EF%BC%88%E8%8A%B1%E9%87%8C%E8%83%A1%E5%93%A8%E7%9A%84%E4%B8%BB%E9%A2%98%EF%BC%89/</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><h4 id="为什么换主题"><a href="#为什么换主题" class="headerlink" title="为什么换主题"></a>为什么换主题</h4><p>​    以前使用的<a href="https://github.com/Fechin/hexo-theme-diaspora">diaspora</a>主题在页面设计上有许多不足，此外其内置的插件较为不便，比如不兼容其他评论插件，bug繁多等问题。对于评论插件来说，每次评论都需要登录GitHub来使用，较为不便。其次是页面布局，其文章在首页的分布不符合现代互联网审美（过于简洁）。</p>
@@ -200,23 +262,6 @@
       </tags>
   </entry>
   <entry>
-    <title>大一下学习资料整理</title>
-    <url>/2022/04/07/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%95%B4%E7%90%86/</url>
-    <content><![CDATA[<p><strong>为了方便学习资料查找 特整理此篇</strong></p>
-<p>电磁学 所有习题讲解：<a href="https://www.bilibili.com/video/BV17z4y1D7Sw?t=0.4">https://www.bilibili.com/video/BV17z4y1D7Sw?t=0.4</a></p>
-<p>《电路》第五版：<a href="https://www.bilibili.com/video/BV1gF411E7FW?t=9.2">https://www.bilibili.com/video/BV1gF411E7FW?t=9.2</a></p>
-<p>高数下速成猴博士：<a href="https://www.bilibili.com/video/BV1JR4y1L7ue?t=6.0">https://www.bilibili.com/video/BV1JR4y1L7ue?t=6.0</a></p>
-<p>西安交大 热学 秦允豪四版：<a href="https://www.bilibili.com/video/BV1mJ411s7ST?p=1&amp;t=0.9">https://www.bilibili.com/video/BV1mJ411s7ST?p=1&amp;t=0.9</a></p>
-<p>电磁学 陈秉乾 1080p高清修复：<a href="https://www.bilibili.com/video/BV19P4y1A7Yk?t=109.9">https://www.bilibili.com/video/BV19P4y1A7Yk?t=109.9</a></p>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>进行了对评论系统的更新说明</title>
     <url>/2022/04/07/%E6%9B%B4%E6%96%B0%E4%BA%86%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/</url>
     <content><![CDATA[<h3 id="2022-04-07-16-44-15-进行了对评论系统的更新说明"><a href="#2022-04-07-16-44-15-进行了对评论系统的更新说明" class="headerlink" title="2022-04-07 16:44:15 进行了对评论系统的更新说明"></a>2022-04-07 16:44:15 进行了对评论系统的更新说明</h3><h4 id="1-使用-utteranc-评论插件"><a href="#1-使用-utteranc-评论插件" class="headerlink" title="1.使用  utteranc 评论插件"></a>1.使用  <strong>utteranc</strong> 评论插件</h4><p><a href="https://utteranc.es/">https://utteranc.es</a> (<a href="https://github.com/utterance/utterances">https://github.com/utterance/utterances</a>)</p>
@@ -233,6 +278,23 @@
       </categories>
       <tags>
         <tag>瞎折腾</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>大一下学习资料整理</title>
+    <url>/2022/04/07/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%95%B4%E7%90%86/</url>
+    <content><![CDATA[<p><strong>为了方便学习资料查找 特整理此篇</strong></p>
+<p>电磁学 所有习题讲解：<a href="https://www.bilibili.com/video/BV17z4y1D7Sw?t=0.4">https://www.bilibili.com/video/BV17z4y1D7Sw?t=0.4</a></p>
+<p>《电路》第五版：<a href="https://www.bilibili.com/video/BV1gF411E7FW?t=9.2">https://www.bilibili.com/video/BV1gF411E7FW?t=9.2</a></p>
+<p>高数下速成猴博士：<a href="https://www.bilibili.com/video/BV1JR4y1L7ue?t=6.0">https://www.bilibili.com/video/BV1JR4y1L7ue?t=6.0</a></p>
+<p>西安交大 热学 秦允豪四版：<a href="https://www.bilibili.com/video/BV1mJ411s7ST?p=1&amp;t=0.9">https://www.bilibili.com/video/BV1mJ411s7ST?p=1&amp;t=0.9</a></p>
+<p>电磁学 陈秉乾 1080p高清修复：<a href="https://www.bilibili.com/video/BV19P4y1A7Yk?t=109.9">https://www.bilibili.com/video/BV19P4y1A7Yk?t=109.9</a></p>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
       </tags>
   </entry>
   <entry>

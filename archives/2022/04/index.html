@@ -295,6 +295,50 @@
               
             </li>
           
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(5)">
+                  <span>
+                    
+                      <i class="fas fa-link"></i>
+                    
+                    <span class="name">更多</span>
+                  </span>
+                  <i class="fas fa-chevron-left arrow " :class="{'icon-rotate': isOpen(5)}" aria-hidden="true"></i>
+                </a>
+                <ul class="drawer-sub-menu" v-if="isOpen(5)">
+                  
+                  <li>
+                    <a target="_blank" rel="noopener" href="https://space.bilibili.com/94784863?spm_id_from=333.1007.0.0">
+                      
+                      <i class="fas fa-film" style="margin-top: -20px;"></i>
+                      
+                      <span>我的bilibili</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a target="_blank" rel="noopener" href="https://sm.ms/">
+                      
+                      <i class="fas fa-film" style="margin-top: -20px;"></i>
+                      
+                      <span>图床</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a target="_blank" rel="noopener" href="http://baidu.com">
+                      
+                      <i class="fas fa-film" style="margin-top: -20px;"></i>
+                      
+                      <span>百度</span>
+                    </a>
+                  </li>
+                  
+                </ul>
+              
+            </li>
+          
         
         
           <li class="drawer-box-content_item">
@@ -419,6 +463,48 @@
                   
                   <span class="name">关于</span>
                 </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="javascript:;" class="menu-item-link" title="更多">
+                  
+                    <i class="fas fa-link"></i>
+                  
+                  <span class="name">更多</span>
+                  <i class="fas fa-chevron-down arrow" aria-hidden="true"></i>
+                </a>
+                <ul class="sub-menu">
+                  
+                  <li>
+                    <a target="_blank" rel="noopener" href="https://space.bilibili.com/94784863?spm_id_from=333.1007.0.0">
+                      
+                      <i class="fas fa-film" style="margin-top: -20px;"></i>
+                      
+                      <span>我的bilibili</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a target="_blank" rel="noopener" href="https://sm.ms/">
+                      
+                      <i class="fas fa-film" style="margin-top: -20px;"></i>
+                      
+                      <span>图床</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a target="_blank" rel="noopener" href="http://baidu.com">
+                      
+                      <i class="fas fa-film" style="margin-top: -20px;"></i>
+                      
+                      <span>百度</span>
+                    </a>
+                  </li>
+                  
+                </ul>
               
             </li>
           
@@ -616,6 +702,23 @@
           <li class="post-item" data-aos="fade-left">
             
             <div class="post-img-box">
+              <a href="/2022/04/24/%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" src="/medias/2.jpg" class="lazyload placeholder" data-srcset="/medias/2.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                <span class="post-date">04-24</span>
+              </div>
+              <a class="post-title" href="/2022/04/24/%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/">为博客添加音乐播放器</a>
+            </div>
+          </li>
+        
+          
+          <li class="post-item" data-aos="fade-left">
+            
+            <div class="post-img-box">
               <a href="/2022/04/24/%E4%BD%BF%E7%94%A8%E6%9B%B4%E5%8A%A0%E7%BE%8E%E8%A7%82%EF%BC%88%E8%8A%B1%E9%87%8C%E8%83%A1%E5%93%A8%E7%9A%84%E4%B8%BB%E9%A2%98%EF%BC%89/" class="post-img " style="background-size: cover; 
                 background-position: center center;">
                 <img class="lazyload lazyload placeholder" src="/medias/6.jpg" class="lazyload placeholder" data-srcset="/medias/6.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
@@ -765,28 +868,27 @@
             </div>
           </li>
         
-          
-          <li class="post-item" data-aos="fade-left">
-            
-            <div class="post-img-box">
-              <a href="/2022/04/07/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%95%B4%E7%90%86/" class="post-img " style="background-size: cover; 
-                background-position: center center;">
-                <img class="lazyload lazyload placeholder" src="/medias/3.jpg" class="lazyload placeholder" data-srcset="/medias/3.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                <span class="post-date">04-07</span>
-              </div>
-              <a class="post-title" href="/2022/04/07/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%95%B4%E7%90%86/">大一下学习资料整理</a>
-            </div>
-          </li>
-        
       </ul>
     </div>
   </section>
   <div class="w-70">
     
+  <!-- <nav class="page-nav">
+    <span class="page-number current">1</span><a class="page-number" href="/archives/2022/04/page/2/">2</a><a class="extend next" rel="next" href="/archives/2022/04/page/2/">下一页</a>
+  </nav> -->
+  <div class="page-nav">
+    
+    <div class="page-info">
+        <div class="page-info-text">1 / 2</div>
+    </div>
+    
+      <a href="/archives/2022/04/page/2/"
+         class="page-nav-next">
+          <span class="mr-5">下一页</span><i class="fas fa-angle-right"></i>
+      </a>
+      
+  </div>
+
   </div>
 </div>
 
