@@ -6,21 +6,21 @@
     <content><![CDATA[<h3 id="2022-04-07-19-20-11-进行了对评论系统的更新说明（2）"><a href="#2022-04-07-19-20-11-进行了对评论系统的更新说明（2）" class="headerlink" title="2022-04-07 19:20:11 进行了对评论系统的更新说明（2）"></a>2022-04-07 19:20:11 进行了对评论系统的更新说明（2）</h3><h4 id="最终屈服于bug，使用本主题已集成的gitalk插件"><a href="#最终屈服于bug，使用本主题已集成的gitalk插件" class="headerlink" title="最终屈服于bug，使用本主题已集成的gitalk插件"></a>最终屈服于bug，使用本主题已集成的gitalk插件</h4><p><a href="https://github.com/gitalk/gitalk/blob/master/readme-cn.md">gitalk中文教程</a></p>
 <p>在捣鼓了一个多小时之后，我发现这个主题已经集成<strong>gitalk</strong>相关内容，需要自己再添加的内容其实少之又少。本来被繁琐的安装教程劝退的我在被<strong>utteranc</strong>的bug折磨后突然发现真香。。</p>
 <p>以下是我的安装流程</p>
-<h4 id="1-首先需要到GitHub上去新建一个仓库用于存放评论的内容："><a href="#1-首先需要到GitHub上去新建一个仓库用于存放评论的内容：" class="headerlink" title="1.首先需要到GitHub上去新建一个仓库用于存放评论的内容："></a>1.首先需要到GitHub上去新建一个仓库用于存放评论的内容：</h4><img src="/2022/04/07/1/1.png" class title="This is an example image">
+<h4 id="1-首先需要到GitHub上去新建一个仓库用于存放评论的内容："><a href="#1-首先需要到GitHub上去新建一个仓库用于存放评论的内容：" class="headerlink" title="1.首先需要到GitHub上去新建一个仓库用于存放评论的内容："></a>1.首先需要到GitHub上去新建一个仓库用于存放评论的内容：</h4><img src="/2022/04/07/1/1.png" class="lazyload placeholder" data-srcset="/2022/04/07/1/1.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" class title="This is an example image">
 
-<h4 id="2-在设置中打开isue功能："><a href="#2-在设置中打开isue功能：" class="headerlink" title="2.在设置中打开isue功能："></a>2.在设置中打开isue功能：</h4><img src="/2022/04/07/1/2.png" class title="This is an example image">
+<h4 id="2-在设置中打开isue功能："><a href="#2-在设置中打开isue功能：" class="headerlink" title="2.在设置中打开isue功能："></a>2.在设置中打开isue功能：</h4><img src="/2022/04/07/1/2.png" class="lazyload placeholder" data-srcset="/2022/04/07/1/2.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" class title="This is an example image">
 
-<img src="/2022/04/07/1/3.png" class title="This is an example image">
+<img src="/2022/04/07/1/3.png" class="lazyload placeholder" data-srcset="/2022/04/07/1/3.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" class title="This is an example image">
 
-<h4 id="3-注册一个Github-Application"><a href="#3-注册一个Github-Application" class="headerlink" title="3.注册一个Github Application"></a>3.注册一个<a href="https://github.com/gitalk/gitalk">Github Application</a></h4><img src="/2022/04/07/1/4.png" class title="This is an example image">
+<h4 id="3-注册一个Github-Application"><a href="#3-注册一个Github-Application" class="headerlink" title="3.注册一个Github Application"></a>3.注册一个<a href="https://github.com/gitalk/gitalk">Github Application</a></h4><img src="/2022/04/07/1/4.png" class="lazyload placeholder" data-srcset="/2022/04/07/1/4.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" class title="This is an example image">
 
 <p>（此处应当直接将解析后的网址填入，不再填入github中初始网站域名。笔者就因为在此犯错误导致</p>
 <p>了在最后始终无法初始化）</p>
-<h4 id="4-完成后记下ID与secret码"><a href="#4-完成后记下ID与secret码" class="headerlink" title="4.完成后记下ID与secret码"></a>4.完成后记下ID与secret码</h4><img src="/2022/04/07/1/5.png" class title="This is an example image">
+<h4 id="4-完成后记下ID与secret码"><a href="#4-完成后记下ID与secret码" class="headerlink" title="4.完成后记下ID与secret码"></a>4.完成后记下ID与secret码</h4><img src="/2022/04/07/1/5.png" class="lazyload placeholder" data-srcset="/2022/04/07/1/5.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" class title="This is an example image">
 
 <h4 id="5-接下来在主题的-config-yml文件中修改源码"><a href="#5-接下来在主题的-config-yml文件中修改源码" class="headerlink" title="5.接下来在主题的_config.yml文件中修改源码"></a>5.接下来在主题的_config.yml文件中修改源码</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Gitalk 评论插件（https://github.com/gitalk/gitalk）</span><br><span class="line">gitalk:</span><br><span class="line">    # 是否启用评论功能</span><br><span class="line">    enable: true</span><br><span class="line">    # 是否自动展开评论框</span><br><span class="line">    autoExpand: false</span><br><span class="line">    # 应用编号</span><br><span class="line">    clientID: ee6081cac77ee7f00ac8</span><br><span class="line">    # 应用秘钥</span><br><span class="line">    clientSecret: cdc78339e891c233acd689af29ca7f31ef7aa5ac</span><br><span class="line">    # issue仓库名</span><br><span class="line">    repo: blogtalk</span><br><span class="line">    # Github名</span><br><span class="line">    owner: chqingkuang</span><br><span class="line">    # Github名</span><br><span class="line">    admin: [&#x27;chqingkuang&#x27;]</span><br><span class="line">    # Ensure uniqueness and length less than 50</span><br><span class="line">    id: location.pathname</span><br><span class="line">    # Facebook-like distraction free mode</span><br><span class="line">    distractionFreeMode: false</span><br></pre></td></tr></table></figure>
 
-<h4 id="6-完成"><a href="#6-完成" class="headerlink" title="6.完成"></a>6.完成</h4><img src="/2022/04/07/1/6.png" class title="This is an example image">
+<h4 id="6-完成"><a href="#6-完成" class="headerlink" title="6.完成"></a>6.完成</h4><img src="/2022/04/07/1/6.png" class="lazyload placeholder" data-srcset="/2022/04/07/1/6.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" class title="This is an example image">
 
 <h4 id="（注意：第一次进入时评论模块加载不出来，需要注册Github-Application的账号登录评论模块后刷新页面，就可以正常使用了。）"><a href="#（注意：第一次进入时评论模块加载不出来，需要注册Github-Application的账号登录评论模块后刷新页面，就可以正常使用了。）" class="headerlink" title="（注意：第一次进入时评论模块加载不出来，需要注册Github Application的账号登录评论模块后刷新页面，就可以正常使用了。）"></a>（注意：第一次进入时评论模块加载不出来，需要注册Github Application的账号登录评论模块后刷新页面，就可以正常使用了。）</h4><p>参考教程：<a href="https://www.jianshu.com/p/4242bb065550?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">https://www.jianshu.com/p/4242bb065550?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation</a></p>
 ]]></content>
@@ -34,7 +34,7 @@
   <entry>
     <title>2022.4新番表</title>
     <url>/2022/04/07/2022-4%E6%96%B0%E7%95%AA%E8%A1%A8/</url>
-    <content><![CDATA[<img src="/2022/04/07/2022-4%E6%96%B0%E7%95%AA%E8%A1%A8/1.png" class title="This is an example image">
+    <content><![CDATA[<img src="/2022/04/07/2022-4%E6%96%B0%E7%95%AA%E8%A1%A8/1.png" class="lazyload placeholder" data-srcset="/2022/04/07/2022-4%E6%96%B0%E7%95%AA%E8%A1%A8/1.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" class title="This is an example image">
 
 <p>单击放大打开</p>
 <ul>
@@ -50,28 +50,41 @@
       </tags>
   </entry>
   <entry>
-    <title>使用网络图床</title>
-    <url>/2022/04/20/%E4%BD%BF%E7%94%A8%E7%BD%91%E7%BB%9C%E5%9B%BE%E5%BA%8A/</url>
-    <content><![CDATA[<h3 id="为了使插入图片更加方便，我们可以使用网络图床"><a href="#为了使插入图片更加方便，我们可以使用网络图床" class="headerlink" title="为了使插入图片更加方便，我们可以使用网络图床"></a>为了使插入图片更加方便，我们可以使用网络图床</h3><h4 id="使用图床的好处"><a href="#使用图床的好处" class="headerlink" title="使用图床的好处"></a>使用图床的好处</h4><ul>
-<li><p>提升页面访问速度</p>
-<p> 过去我们将图片直接放到在线静态页面当中的话，在访问时需要等待全部资源加载，然而一般页面都是图片较大。当我们将图片分离后异步加载，再通过CDN加速，能够大幅提升页面的访问速度。</p>
-</li>
-<li><p>减少原页面服务器访问压力</p>
-<p> 由于访问图片的请求都经由图床&#x2F;CDN，使得原来页面所在的服务器访问压力减少。</p>
-</li>
-</ul>
-<p>网络上搭建图床的方法很多，如新浪微博，腾讯云，七牛云等。当然自己搭建的图床自然更可靠。</p>
-<h4 id="我的选择"><a href="#我的选择" class="headerlink" title="我的选择"></a>我的选择</h4><p>在这里我为了方便，直接使用了<a href="https://sm.ms/">SM.MS</a></p>
-<p><img src="https://s2.loli.net/2022/04/20/LZbFOU6dGB3sk4n.png" alt="Screenshot 2022-04-20 165816.png"></p>
-<p>据说有时候不太稳定，但是对于我这种轻度用户应该问题不大</p>
-<p>同时也有收费版本</p>
-<p><img src="https://s2.loli.net/2022/04/20/eRouN3sO1PUhvki.png" alt="Screenshot 2022-04-20 170126.png"></p>
-<p>同样的，轻度使用也不需要使用。这里只是提及一下</p>
-<p>在上传完图片后，会提供多种链接选择（这里仅作演示）</p>
-<p><img src="https://s2.loli.net/2022/04/20/qFnxQlX57uwvjLa.png" alt="Screenshot 2022-04-20 170301.png"></p>
-<p>该图床可以批量上传，同时有着完善的管理系统，简单方便，小白使用起来也毫无压力</p>
-<p><img src="https://s2.loli.net/2022/04/20/RwVnFL9vyx7odI8.png" alt="Screenshot 2022-04-20 171254.png"></p>
-<p>以后如果有需要的话可以尝试捣鼓一下用GitHub之类的自建图床。</p>
+    <title>使用更加美观（花里胡哨的主题）Bamboo</title>
+    <url>/2022/04/24/%E4%BD%BF%E7%94%A8%E6%9B%B4%E5%8A%A0%E7%BE%8E%E8%A7%82%EF%BC%88%E8%8A%B1%E9%87%8C%E8%83%A1%E5%93%A8%E7%9A%84%E4%B8%BB%E9%A2%98%EF%BC%89/</url>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><h4 id="为什么换主题"><a href="#为什么换主题" class="headerlink" title="为什么换主题"></a>为什么换主题</h4><p>​    以前使用的<a href="https://github.com/Fechin/hexo-theme-diaspora">diaspora</a>主题在页面设计上有许多不足，此外其内置的插件较为不便，比如不兼容其他评论插件，bug繁多等问题。对于评论插件来说，每次评论都需要登录GitHub来使用，较为不便。其次是页面布局，其文章在首页的分布不符合现代互联网审美（过于简洁）。</p>
+<h4 id="为什么选择Bamboo"><a href="#为什么选择Bamboo" class="headerlink" title="为什么选择Bamboo"></a>为什么选择Bamboo</h4><p>1.功能强大</p>
+<p>其内集成了众多插件，例如公告，轮播，多款评论插件，侧边栏，音乐播放器，mathjax等等。</p>
+<p>其强大的功能极大的提升了博客的丰富度与便捷性。</p>
+<p>2.界面美观</p>
+<p>文章布局简洁，导航栏配置合理，更多的特效，更加二刺螈（bushi</p>
+<p>多种按钮链接，live2D宠物</p>
+<h3 id="如何安装"><a href="#如何安装" class="headerlink" title="如何安装"></a>如何安装</h3><h4 id="gitee安装"><a href="#gitee安装" class="headerlink" title="gitee安装"></a>gitee安装</h4><p>进入<code>themes</code>文件夹下使用 <code>Git clone</code> 命令来下载:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/yuang01/hexo-theme-bamboo.git</span><br></pre></td></tr></table></figure>
+
+
+
+<span class="btn center large round solid"><a class="button" href="https://github.com/yuang01/hexo-theme-bamboo" title="Bamboo"><i class="fa fa-download"></i>Bamboo</a></span>
+
+
+
+<h4 id="或者npm来安装，进入hexo根目录使用如下命令（不推荐）"><a href="#或者npm来安装，进入hexo根目录使用如下命令（不推荐）" class="headerlink" title="或者npm来安装，进入hexo根目录使用如下命令（不推荐）"></a>或者npm来安装，进入hexo根目录使用如下命令（不推荐）</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm i hexo-theme-bamboo</span><br></pre></td></tr></table></figure>
+
+<p>注意：此方法只支持Hexo在5.0.0版本以上 <strong>通过 npm 安装并不会在 themes 里生成主题文件夹，而是在 node_modules 里生成</strong> 修改hexo根目录下的站点配置文件<code>_config.yml</code>，把主题改为<code>bamboo</code></p>
+<p>接着在hexo根目录下新建文件<code>_config.bamboo.yml</code>,从<code>node_modules</code>文件夹下找到<code>hexo-theme-bamboo</code>文件夹下的<code>_config.yml</code>，将里面的内容复制到<code>_config.bamboo.yml</code>文件中即可，在<code>_config.bamboo.yml</code>文件中对主题进行配置。</p>
+<h3 id="一些问题"><a href="#一些问题" class="headerlink" title="一些问题"></a>一些问题</h3><h4 id="1-安装完成后hexo-s顶部导航栏不显示分类、标签等"><a href="#1-安装完成后hexo-s顶部导航栏不显示分类、标签等" class="headerlink" title="1.安装完成后hexo s顶部导航栏不显示分类、标签等"></a>1.安装完成后hexo s顶部导航栏不显示分类、标签等</h4><h5 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h5><p>打开主题的config文件，发现源码中多出#号</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 菜单</span><br><span class="line">menu:</span><br><span class="line">  # Home:</span><br><span class="line">  #   url: /</span><br><span class="line">  #   icon: fas fa-home</span><br><span class="line">  # Archives:</span><br><span class="line">  #   url: /archives</span><br><span class="line">  #   icon: fas fa-archive</span><br><span class="line">  # Tags:</span><br><span class="line">  #   url: /tags</span><br><span class="line">  #   icon: fas fa-tags</span><br><span class="line">  # Categories:</span><br><span class="line">  #   url: /categories</span><br><span class="line">  #   icon: fas fa-bookmark</span><br><span class="line">  # About:</span><br><span class="line">  #   url: /about</span><br><span class="line">  #   icon: fas fa-user</span><br><span class="line">  # Friends:</span><br><span class="line">  #   url: /friends</span><br><span class="line">  # 更多: # 这是二级菜单的写法</span><br><span class="line">  #  icon: fas fa-link</span><br><span class="line">  #  children:</span><br><span class="line">  #   - name: 图库</span><br><span class="line">  #     url: /gallery</span><br><span class="line">  #     icon: fas fa-music</span><br><span class="line">  #   - name: 友情连接</span><br><span class="line">  #     url: /huoban</span><br><span class="line">  #     icon: fas fa-film</span><br><span class="line">  #   - name: 关于我</span><br><span class="line">  #     url: /me</span><br><span class="line">  #     icon: fas fa-film</span><br><span class="line">  #   - name: 百度</span><br><span class="line">  #     url: http://baidu.com</span><br><span class="line">  #     icon: fas fa-film</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h5 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h5><p>修改为</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 菜单</span><br><span class="line">menu:</span><br><span class="line">  Home:</span><br><span class="line">    url: /</span><br><span class="line">    icon: fas fa-home</span><br><span class="line">  Archives:</span><br><span class="line">    url: /archives</span><br><span class="line">    icon: fas fa-archive</span><br><span class="line">  Tags:</span><br><span class="line">    url: /tags</span><br><span class="line">    icon: fas fa-tags</span><br><span class="line">  Categories:</span><br><span class="line">    url: /categories</span><br><span class="line">    icon: fas fa-bookmark</span><br><span class="line">  About:</span><br><span class="line">    url: /about</span><br><span class="line">    icon: fas fa-user</span><br></pre></td></tr></table></figure>
+
+<p>此处删除了二级菜单，因为不太需要。</p>
+<h4 id="2-点击分类，标签等页面显示Cannot-GET-xxx"><a href="#2-点击分类，标签等页面显示Cannot-GET-xxx" class="headerlink" title="2.点击分类，标签等页面显示Cannot GET xxx"></a>2.点击分类，标签等页面显示Cannot GET xxx</h4><p>解决办法</p>
+<h5 id="1-初始化"><a href="#1-初始化" class="headerlink" title="1.初始化"></a>1.初始化</h5><p>在&#x2F;blog根目录下打开source，删除categories、tags等文件夹，在根目录下重新新建一个页面</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> page categories <span class="comment">//tags和这个操作一致</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="2-找到新建的页面，添加type和layout"><a href="#2-找到新建的页面，添加type和layout" class="headerlink" title="2.找到新建的页面，添加type和layout"></a>2.找到新建的页面，添加type和layout</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">title: categories</span><br><span class="line">date: 2019-12-25 09:15:45</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">layout: &quot;categories&quot;</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
         <category>瞎折腾</category>
@@ -96,6 +109,37 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># URL</span><br><span class="line">## Set your site url here. For example, if you use GitHub Page, set url as &#x27;https://username.github.io/project&#x27;</span><br><span class="line">url: https://qingkuang.xyz/</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br><span class="line">pretty_urls:</span><br><span class="line">  trailing_index: true # Set to false to remove trailing &#x27;index.html&#x27; from permalinks</span><br><span class="line">  trailing_html: true # Set to false to remove trailing &#x27;.html&#x27; from permalinks</span><br></pre></td></tr></table></figure>
 
 <p>完美解决。</p>
+]]></content>
+      <categories>
+        <category>瞎折腾</category>
+      </categories>
+      <tags>
+        <tag>瞎折腾</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用网络图床</title>
+    <url>/2022/04/20/%E4%BD%BF%E7%94%A8%E7%BD%91%E7%BB%9C%E5%9B%BE%E5%BA%8A/</url>
+    <content><![CDATA[<h3 id="为了使插入图片更加方便，我们可以使用网络图床"><a href="#为了使插入图片更加方便，我们可以使用网络图床" class="headerlink" title="为了使插入图片更加方便，我们可以使用网络图床"></a>为了使插入图片更加方便，我们可以使用网络图床</h3><h4 id="使用图床的好处"><a href="#使用图床的好处" class="headerlink" title="使用图床的好处"></a>使用图床的好处</h4><ul>
+<li><p>提升页面访问速度</p>
+<p> 过去我们将图片直接放到在线静态页面当中的话，在访问时需要等待全部资源加载，然而一般页面都是图片较大。当我们将图片分离后异步加载，再通过CDN加速，能够大幅提升页面的访问速度。</p>
+</li>
+<li><p>减少原页面服务器访问压力</p>
+<p> 由于访问图片的请求都经由图床&#x2F;CDN，使得原来页面所在的服务器访问压力减少。</p>
+</li>
+</ul>
+<p>网络上搭建图床的方法很多，如新浪微博，腾讯云，七牛云等。当然自己搭建的图床自然更可靠。</p>
+<h4 id="我的选择"><a href="#我的选择" class="headerlink" title="我的选择"></a>我的选择</h4><p>在这里我为了方便，直接使用了<a href="https://sm.ms/">SM.MS</a></p>
+<p><img src="https://s2.loli.net/2022/04/20/LZbFOU6dGB3sk4n.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/LZbFOU6dGB3sk4n.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="Screenshot 2022-04-20 165816.png"></p>
+<p>据说有时候不太稳定，但是对于我这种轻度用户应该问题不大</p>
+<p>同时也有收费版本</p>
+<p><img src="https://s2.loli.net/2022/04/20/eRouN3sO1PUhvki.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/eRouN3sO1PUhvki.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="Screenshot 2022-04-20 170126.png"></p>
+<p>同样的，轻度使用也不需要使用。这里只是提及一下</p>
+<p>在上传完图片后，会提供多种链接选择（这里仅作演示）</p>
+<p><img src="https://s2.loli.net/2022/04/20/qFnxQlX57uwvjLa.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/qFnxQlX57uwvjLa.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="Screenshot 2022-04-20 170301.png"></p>
+<p>该图床可以批量上传，同时有着完善的管理系统，简单方便，小白使用起来也毫无压力</p>
+<p><img src="https://s2.loli.net/2022/04/20/RwVnFL9vyx7odI8.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/RwVnFL9vyx7odI8.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="Screenshot 2022-04-20 171254.png"></p>
+<p>以后如果有需要的话可以尝试捣鼓一下用GitHub之类的自建图床。</p>
 ]]></content>
       <categories>
         <category>瞎折腾</category>
@@ -196,35 +240,35 @@
     <url>/2022/04/20/%E7%94%B5%E8%84%91%E5%B0%8F%E7%99%BD%EF%BC%9A%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F/</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>对于大学生或职场人士来说，有一个基本的计算机使用能力几乎是必备的。然而遍观今日，仍有许多人不会重装系统这种基本的技能。</p>
 <p>一台电脑使用时间够长，总会走到重装系统的一天。当有一天你发现你的电脑连打开文件夹都一卡一卡的，或者整台电脑已经被流氓软件侵占，充满了广告的时候，除了换一台电脑以外，或许你应该考虑一下重装一下系统。</p>
-<p><img src="https://s2.loli.net/2022/04/20/kToFmMru4wXJdi1.png" alt="Screenshot 2022-04-20 191805.png"></p>
+<p><img src="https://s2.loli.net/2022/04/20/kToFmMru4wXJdi1.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/kToFmMru4wXJdi1.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="Screenshot 2022-04-20 191805.png"></p>
 <p>​                                                                 （几乎被占满的C盘）</p>
 <p>网上搜到的教程又比较繁杂，于是打算自己写一个简单明确的教程，手把手的教会各位小白如何重装系统。</p>
 <p>以下展示的是用U盘制作启动盘重装系统的教程。</p>
 <h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>1.准备一个16G左右的U盘。</p>
 <p>2.下载<a href="https://www.wepe.com.cn/download.html">微PE工具箱</a></p>
-<p><img src="https://s2.loli.net/2022/04/20/dhARmoOvG67UqBs.png" alt="Screenshot 2022-04-20 192447.png"></p>
-<p><img src="https://s2.loli.net/2022/04/20/5zZSndh23gutU8o.png" alt="Screenshot 2022-04-20 192515.png"></p>
+<p><img src="https://s2.loli.net/2022/04/20/dhARmoOvG67UqBs.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/dhARmoOvG67UqBs.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="Screenshot 2022-04-20 192447.png"></p>
+<p><img src="https://s2.loli.net/2022/04/20/5zZSndh23gutU8o.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/5zZSndh23gutU8o.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="Screenshot 2022-04-20 192515.png"></p>
 <p>一般来说下载64位的即可，如果是较旧的电脑，可能需要安装32位</p>
 <p>3.下载<a href="https://msdn.itellyou.cn/">纯净系统</a></p>
-<p><img src="https://s2.loli.net/2022/04/20/GkIRBEtmHUDFr5C.png" alt="Screenshot 2022-04-20 193028.png"></p>
+<p><img src="https://s2.loli.net/2022/04/20/GkIRBEtmHUDFr5C.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/GkIRBEtmHUDFr5C.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="Screenshot 2022-04-20 193028.png"></p>
 <p>这里我选择的是win10系统，点击详细信息复制其中的ed2k链接使用迅雷等下载工具下载即可</p>
-<p><img src="https://s2.loli.net/2022/04/20/Fc1XNLfK4UR58d3.png" alt="Screenshot 2022-04-20 193349.png"></p>
+<p><img src="https://s2.loli.net/2022/04/20/Fc1XNLfK4UR58d3.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/Fc1XNLfK4UR58d3.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="Screenshot 2022-04-20 193349.png"></p>
 <p>（建议下载consumer edition，包含所有当前版本号系统版本）</p>
 <p>3.安装PE系统<strong>（此步骤之前请先备份好U盘内文件，因为此操作会将U盘格式化）</strong></p>
 <p>将之前下载的微PE工具箱打开</p>
-<p><img src="https://s2.loli.net/2022/04/20/l7XLJB2DTtHNuzb.png" alt="a1ec08fa513d2697b875e0bfac54c9fc4116d8e2.png"></p>
-<p><img src="https://s2.loli.net/2022/04/20/E7BLiDOvxKFGmCb.png" alt="5d6034a85edf8db1eacf43c3f18ca653544e74ee.png"></p>
+<p><img src="https://s2.loli.net/2022/04/20/l7XLJB2DTtHNuzb.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/l7XLJB2DTtHNuzb.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="a1ec08fa513d2697b875e0bfac54c9fc4116d8e2.png"></p>
+<p><img src="https://s2.loli.net/2022/04/20/E7BLiDOvxKFGmCb.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/E7BLiDOvxKFGmCb.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="5d6034a85edf8db1eacf43c3f18ca653544e74ee.png"></p>
 <p>确定无误后，点击“开始制作”：</p>
-<p><img src="https://s2.loli.net/2022/04/20/OrXZGM6liTu3vBF.png" alt="77094b36acaf2edd7f785b0e74bf7aee3b019387.png"></p>
-<p><img src="https://s2.loli.net/2022/04/20/DB1cwbZrMWdVPUI.png" alt="5d6034a85edf8db14151e8a6f18ca653574e7428.png"></p>
+<p><img src="https://s2.loli.net/2022/04/20/OrXZGM6liTu3vBF.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/OrXZGM6liTu3vBF.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="77094b36acaf2edd7f785b0e74bf7aee3b019387.png"></p>
+<p><img src="https://s2.loli.net/2022/04/20/DB1cwbZrMWdVPUI.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/DB1cwbZrMWdVPUI.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="5d6034a85edf8db14151e8a6f18ca653574e7428.png"></p>
 <p>等待进度条完成后出现此界面即为安装成功</p>
-<p><img src="https://s2.loli.net/2022/04/20/S8dz3tXxq1PkZWF.png" alt="f703738da9773912232bb3fa02b6fd1f377ae257.png"></p>
+<p><img src="https://s2.loli.net/2022/04/20/S8dz3tXxq1PkZWF.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/S8dz3tXxq1PkZWF.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="f703738da9773912232bb3fa02b6fd1f377ae257.png"></p>
 <p>安装完之后会发现U盘变为两个，一个是启动盘，另一个可以用来存储资料，与普通U盘相同</p>
-<p><img src="https://s2.loli.net/2022/04/20/shofWpg4ZNYCSm6.png" alt="8ad4b31c8701a18b99fca63964807c0f2938feec.png"></p>
+<p><img src="https://s2.loli.net/2022/04/20/shofWpg4ZNYCSm6.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/shofWpg4ZNYCSm6.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="8ad4b31c8701a18b99fca63964807c0f2938feec.png"></p>
 <p>将下载好的系统.iso文件移入数据存储盘中，我们的启动盘就算制作完成了。</p>
 <p>4.下载网卡版驱动软件，为重装完成后无网卡驱动下安装驱动做准备。</p>
 <p>这里我推荐<a href="http://dm.weishi.360.cn/home.html">360驱动大师网卡版</a></p>
-<p><img src="https://s2.loli.net/2022/04/20/r8iSJuxgUTyAp9Z.png" alt="Screenshot 2022-04-20 200450.png"></p>
+<p><img src="https://s2.loli.net/2022/04/20/r8iSJuxgUTyAp9Z.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/r8iSJuxgUTyAp9Z.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="Screenshot 2022-04-20 200450.png"></p>
 <p>下载好后放入U盘中。</p>
 <h3 id="开始重装系统"><a href="#开始重装系统" class="headerlink" title="开始重装系统"></a>开始重装系统</h3><h4 id="1-进入PE系统"><a href="#1-进入PE系统" class="headerlink" title="1.进入PE系统"></a>1.进入PE系统</h4><p>   启动PE系统的关键操作顺序：</p>
 <ul>
@@ -407,11 +451,11 @@
 <p><strong>当您的机器支持UEFI的话（新机器一般同时支持Legacy和UEFI），在这个启动项中一般会出现两个U盘的选项，一个是UEFI开头的，另一个是不带UEFI开头的或叫Legacy的：</strong></p>
 </li>
 </ul>
-<p><img src="https://s2.loli.net/2022/04/20/qLHj1l4UtsOzgxv.png" alt="uefi_legacy_1.6aef8ddb.png"></p>
-<p><img src="https://s2.loli.net/2022/04/20/u4nQ1rGtFisRCMm.png" alt="uefi_legacy_2.fb91e35d.png"></p>
-<p><img src="https://s2.loli.net/2022/04/20/Iytz9mHLdx3bFDq.png" alt="legacy_2.c963adcb.png"></p>
-<p><img src="https://s2.loli.net/2022/04/20/WHxMSBkXQvtbhJu.png" alt="legacy_1.cb047919.png"></p>
-<p><img src="https://s2.loli.net/2022/04/20/bQo5HESdGeVCOTf.png" alt="legacy_3.5b0d64e8.png"></p>
+<p><img src="https://s2.loli.net/2022/04/20/qLHj1l4UtsOzgxv.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/qLHj1l4UtsOzgxv.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="uefi_legacy_1.6aef8ddb.png"></p>
+<p><img src="https://s2.loli.net/2022/04/20/u4nQ1rGtFisRCMm.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/u4nQ1rGtFisRCMm.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="uefi_legacy_2.fb91e35d.png"></p>
+<p><img src="https://s2.loli.net/2022/04/20/Iytz9mHLdx3bFDq.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/Iytz9mHLdx3bFDq.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="legacy_2.c963adcb.png"></p>
+<p><img src="https://s2.loli.net/2022/04/20/WHxMSBkXQvtbhJu.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/WHxMSBkXQvtbhJu.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="legacy_1.cb047919.png"></p>
+<p><img src="https://s2.loli.net/2022/04/20/bQo5HESdGeVCOTf.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/bQo5HESdGeVCOTf.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="legacy_3.5b0d64e8.png"></p>
 <p>以上为各种菜单选择启动方式的界面</p>
 <p>UEFI&#x2F;Legacy启动方式的选择，对后续安装系统的时候影响比较大，一般情况下，如果需要用EFI方法安装系统（硬盘分区表为GPT），就启动UEFI的PE。如果用传统方式安装系统（硬盘分区表为MBR），就Legacy启动方式启动PE，这个按照您自己的需求选择。</p>
 <p><strong>如果进入后打开我的电脑无法看到电脑本身的硬盘而只有U盘，很有可能是启动方式不对，可以尝试退回来重新换成另一种启动方式</strong>。</p>
@@ -419,27 +463,27 @@
 <ul>
 <li>第三步：选择一个合适的WinPE系统版本进入。</li>
 </ul>
-<p><img src="https://s2.loli.net/2022/04/20/orxNBg9VDs1MZCc.png" alt="uefipe.0a6116b6.png"></p>
-<p><img src="https://s2.loli.net/2022/04/20/utvBjIw8czY62F4.png" alt="legacype.df172ec1.png"></p>
+<p><img src="https://s2.loli.net/2022/04/20/orxNBg9VDs1MZCc.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/orxNBg9VDs1MZCc.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="uefipe.0a6116b6.png"></p>
+<p><img src="https://s2.loli.net/2022/04/20/utvBjIw8czY62F4.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/utvBjIw8czY62F4.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="legacype.df172ec1.png"></p>
 <p>一般来说，选择第一个即可，如果电脑是32位可选择02.</p>
 <h4 id="2-格式化磁盘"><a href="#2-格式化磁盘" class="headerlink" title="2.格式化磁盘"></a>2.格式化磁盘</h4><p>一般来说，安装系统只需要格式化C盘，而其他盘的数据可以保留。</p>
 <p>格式化的过程简单，这里不做赘述。如有疑问可自行百度解决。</p>
 <h4 id="3-原生安装Windows"><a href="#3-原生安装Windows" class="headerlink" title="3.原生安装Windows"></a>3.原生安装Windows</h4><p>打开U盘内您下载的系统镜像ISO</p>
-<p><img src="https://s2.loli.net/2022/04/20/5jzSb6KtVIqg2Xu.png" alt="1.41e5b9ff.png"></p>
+<p><img src="https://s2.loli.net/2022/04/20/5jzSb6KtVIqg2Xu.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/5jzSb6KtVIqg2Xu.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="1.41e5b9ff.png"></p>
 <p>对着ISO镜像点右键，选择挂载，或者直接双击，该ISO就会被挂载为一个新的虚拟的光盘驱动器，和插入安装光盘效果类似。它会显示在“我的电脑”里，并且有一个盘符。</p>
-<p><img src="https://s2.loli.net/2022/04/20/okGYiNM5cQIVTUu.png" alt="1.5.49d02474.png"></p>
-<p><img src="https://s2.loli.net/2022/04/20/pny28A9d1qUTjsm.png" alt="2.f7879fc5.png"></p>
+<p><img src="https://s2.loli.net/2022/04/20/okGYiNM5cQIVTUu.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/okGYiNM5cQIVTUu.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="1.5.49d02474.png"></p>
+<p><img src="https://s2.loli.net/2022/04/20/pny28A9d1qUTjsm.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/pny28A9d1qUTjsm.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="2.f7879fc5.png"></p>
 <p>双击setup即可</p>
 <p>后续无脑下一步，安装专业版系统。类型选择自定义</p>
-<p><img src="https://s2.loli.net/2022/04/20/uIgm7CjDNZOhznB.png" alt="4.30a2e1df.png"></p>
-<p><img src="https://s2.loli.net/2022/04/20/WuXMRjiJFLen5KY.png" alt="5.1e02a8b0.png"></p>
-<p><img src="https://s2.loli.net/2022/04/20/Hx5SLwbm698Rsz1.png" alt="6.41eab0c8.png"></p>
-<p><img src="https://s2.loli.net/2022/04/20/V9CrBjTU4n1gMaN.png" alt="7.bb60c4e0.png"></p>
+<p><img src="https://s2.loli.net/2022/04/20/uIgm7CjDNZOhznB.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/uIgm7CjDNZOhznB.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="4.30a2e1df.png"></p>
+<p><img src="https://s2.loli.net/2022/04/20/WuXMRjiJFLen5KY.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/WuXMRjiJFLen5KY.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="5.1e02a8b0.png"></p>
+<p><img src="https://s2.loli.net/2022/04/20/Hx5SLwbm698Rsz1.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/Hx5SLwbm698Rsz1.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="6.41eab0c8.png"></p>
+<p><img src="https://s2.loli.net/2022/04/20/V9CrBjTU4n1gMaN.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/V9CrBjTU4n1gMaN.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="7.bb60c4e0.png"></p>
 <p>找到格式化的C盘，开始安装</p>
-<p><img src="https://s2.loli.net/2022/04/20/aTbSfUhPeXt7mEC.png" alt="8.ef5e210d.png"></p>
+<p><img src="https://s2.loli.net/2022/04/20/aTbSfUhPeXt7mEC.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/aTbSfUhPeXt7mEC.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="8.ef5e210d.png"></p>
 <p>然后跟随系统配置完成即可。</p>
 <h4 id="4-进入桌面，装驱动装软件"><a href="#4-进入桌面，装驱动装软件" class="headerlink" title="4.进入桌面，装驱动装软件"></a>4.进入桌面，装驱动装软件</h4><p>当你进入桌面后，恭喜你，你已经成功一大半了，接下来我们进行最后一步工作，安装驱动。</p>
-<p><img src="https://s2.loli.net/2022/04/20/UdEK3TavZS74gs6.png" alt="7.b123116f.png"></p>
+<p><img src="https://s2.loli.net/2022/04/20/UdEK3TavZS74gs6.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/UdEK3TavZS74gs6.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="7.b123116f.png"></p>
 <p>此时的电脑如果没有连接有线网络的话是无法自动安装驱动的，也就是说此时连接不上无线网络。</p>
 <p>如果你有有线网络的话，可以直接安装驱动精灵联网下载最新驱动。</p>
 <p>如果没有的话，有两种方法可以安装驱动</p>
@@ -457,13 +501,5 @@
       <tags>
         <tag>技术</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>第一篇文章</title>
-    <url>/2022/04/07/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<h2 id><a href="#" class="headerlink" title></a></h2><h3 id="测试内容-新建一个文章"><a href="#测试内容-新建一个文章" class="headerlink" title="测试内容 新建一个文章"></a>测试内容 新建一个文章</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-]]></content>
   </entry>
 </search>
