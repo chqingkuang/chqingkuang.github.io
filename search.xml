@@ -844,4 +844,9 @@ fs.writeFile(outpath, buf, function (err) &#123;
         <tag>ACG</tag>
       </tags>
   </entry>
+  <entry>
+    <title>1测试</title>
+    <url>/2022/04/25/1%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[]]></content>
+  </entry>
 </search>
