@@ -183,6 +183,9 @@
 <p>本文部分转载于<a href="https://yuang01.gitee.io/post/hexo-theme-bamboo/sidebar/">https://yuang01.gitee.io/post/hexo-theme-bamboo/sidebar/</a></p>
 <p>想具体了解请移步原文</p>
 ]]></content>
+      <categories>
+        <category>HEXO</category>
+      </categories>
       <tags>
         <tag>HEXO</tag>
       </tags>
@@ -282,51 +285,6 @@ fs.writeFile(outpath, buf, function (err) &#123;
       </tags>
   </entry>
   <entry>
-    <title>使用更加美观（花里胡哨的主题）Bamboo</title>
-    <url>/2022/04/24/%E4%BD%BF%E7%94%A8%E6%9B%B4%E5%8A%A0%E7%BE%8E%E8%A7%82%EF%BC%88%E8%8A%B1%E9%87%8C%E8%83%A1%E5%93%A8%E7%9A%84%E4%B8%BB%E9%A2%98%EF%BC%89/</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><h4 id="为什么换主题"><a href="#为什么换主题" class="headerlink" title="为什么换主题"></a>为什么换主题</h4><p>​    以前使用的<a href="https://github.com/Fechin/hexo-theme-diaspora">diaspora</a>主题在页面设计上有许多不足，此外其内置的插件较为不便，比如不兼容其他评论插件，bug繁多等问题。对于评论插件来说，每次评论都需要登录GitHub来使用，较为不便。其次是页面布局，其文章在首页的分布不符合现代互联网审美（过于简洁）。</p>
-<h4 id="为什么选择Bamboo"><a href="#为什么选择Bamboo" class="headerlink" title="为什么选择Bamboo"></a>为什么选择Bamboo</h4><p>1.功能强大</p>
-<p>其内集成了众多插件，例如公告，轮播，多款评论插件，侧边栏，音乐播放器，mathjax等等。</p>
-<p>其强大的功能极大的提升了博客的丰富度与便捷性。</p>
-<p>2.界面美观</p>
-<p>文章布局简洁，导航栏配置合理，更多的特效，更加二刺螈（bushi</p>
-<p>多种按钮链接，live2D宠物</p>
-<h3 id="如何安装"><a href="#如何安装" class="headerlink" title="如何安装"></a>如何安装</h3><h4 id="gitee安装"><a href="#gitee安装" class="headerlink" title="gitee安装"></a>gitee安装</h4><p>进入<code>themes</code>文件夹下使用 <code>Git clone</code> 命令来下载:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/yuang01/hexo-theme-bamboo.git</span><br></pre></td></tr></table></figure>
-
-
-
-<span class='btn center large round solid'><a class="button" href='https://github.com/yuang01/hexo-theme-bamboo' title='Bamboo'><i class='fa fa-download'></i>Bamboo</a></span>
-
-
-
-<h4 id="或者npm来安装，进入hexo根目录使用如下命令（不推荐）"><a href="#或者npm来安装，进入hexo根目录使用如下命令（不推荐）" class="headerlink" title="或者npm来安装，进入hexo根目录使用如下命令（不推荐）"></a>或者npm来安装，进入hexo根目录使用如下命令（不推荐）</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm i hexo-theme-bamboo</span><br></pre></td></tr></table></figure>
-
-<p>注意：此方法只支持Hexo在5.0.0版本以上 <strong>通过 npm 安装并不会在 themes 里生成主题文件夹，而是在 node_modules 里生成</strong> 修改hexo根目录下的站点配置文件<code>_config.yml</code>，把主题改为<code>bamboo</code></p>
-<p>接着在hexo根目录下新建文件<code>_config.bamboo.yml</code>,从<code>node_modules</code>文件夹下找到<code>hexo-theme-bamboo</code>文件夹下的<code>_config.yml</code>，将里面的内容复制到<code>_config.bamboo.yml</code>文件中即可，在<code>_config.bamboo.yml</code>文件中对主题进行配置。</p>
-<h3 id="一些问题"><a href="#一些问题" class="headerlink" title="一些问题"></a>一些问题</h3><h4 id="1-安装完成后hexo-s顶部导航栏不显示分类、标签等"><a href="#1-安装完成后hexo-s顶部导航栏不显示分类、标签等" class="headerlink" title="1.安装完成后hexo s顶部导航栏不显示分类、标签等"></a>1.安装完成后hexo s顶部导航栏不显示分类、标签等</h4><h5 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h5><p>打开主题的config文件，发现源码中多出#号</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 菜单</span><br><span class="line">menu:</span><br><span class="line">  # Home:</span><br><span class="line">  #   url: /</span><br><span class="line">  #   icon: fas fa-home</span><br><span class="line">  # Archives:</span><br><span class="line">  #   url: /archives</span><br><span class="line">  #   icon: fas fa-archive</span><br><span class="line">  # Tags:</span><br><span class="line">  #   url: /tags</span><br><span class="line">  #   icon: fas fa-tags</span><br><span class="line">  # Categories:</span><br><span class="line">  #   url: /categories</span><br><span class="line">  #   icon: fas fa-bookmark</span><br><span class="line">  # About:</span><br><span class="line">  #   url: /about</span><br><span class="line">  #   icon: fas fa-user</span><br><span class="line">  # Friends:</span><br><span class="line">  #   url: /friends</span><br><span class="line">  # 更多: # 这是二级菜单的写法</span><br><span class="line">  #  icon: fas fa-link</span><br><span class="line">  #  children:</span><br><span class="line">  #   - name: 图库</span><br><span class="line">  #     url: /gallery</span><br><span class="line">  #     icon: fas fa-music</span><br><span class="line">  #   - name: 友情连接</span><br><span class="line">  #     url: /huoban</span><br><span class="line">  #     icon: fas fa-film</span><br><span class="line">  #   - name: 关于我</span><br><span class="line">  #     url: /me</span><br><span class="line">  #     icon: fas fa-film</span><br><span class="line">  #   - name: 百度</span><br><span class="line">  #     url: http://baidu.com</span><br><span class="line">  #     icon: fas fa-film</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h5 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h5><p>修改为</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 菜单</span><br><span class="line">menu:</span><br><span class="line">  Home:</span><br><span class="line">    url: /</span><br><span class="line">    icon: fas fa-home</span><br><span class="line">  Archives:</span><br><span class="line">    url: /archives</span><br><span class="line">    icon: fas fa-archive</span><br><span class="line">  Tags:</span><br><span class="line">    url: /tags</span><br><span class="line">    icon: fas fa-tags</span><br><span class="line">  Categories:</span><br><span class="line">    url: /categories</span><br><span class="line">    icon: fas fa-bookmark</span><br><span class="line">  About:</span><br><span class="line">    url: /about</span><br><span class="line">    icon: fas fa-user</span><br></pre></td></tr></table></figure>
-
-<p>此处删除了二级菜单，因为不太需要。</p>
-<p>注：也可以直接按住<strong>ctrl+k+u</strong>取消注释本段代码</p>
-<h4 id="2-点击分类，标签等页面显示Cannot-GET-xxx"><a href="#2-点击分类，标签等页面显示Cannot-GET-xxx" class="headerlink" title="2.点击分类，标签等页面显示Cannot GET xxx"></a>2.点击分类，标签等页面显示Cannot GET xxx</h4><p>解决办法</p>
-<h5 id="1-初始化"><a href="#1-初始化" class="headerlink" title="1.初始化"></a>1.初始化</h5><p>在&#x2F;blog根目录下打开source，删除categories、tags等文件夹，在根目录下重新新建一个页面</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> page categories <span class="comment">//tags和这个操作一致</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="2-找到新建的页面，添加type和layout"><a href="#2-找到新建的页面，添加type和layout" class="headerlink" title="2.找到新建的页面，添加type和layout"></a>2.找到新建的页面，添加type和layout</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">title: categories</span><br><span class="line">date: 2019-12-25 09:15:45</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">layout: &quot;categories&quot;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>HEXO</category>
-      </categories>
-      <tags>
-        <tag>HEXO</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>为博客添加音乐播放器</title>
     <url>/2022/04/24/%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/</url>
     <content><![CDATA[<h4 id="1-Aplayer介绍"><a href="#1-Aplayer介绍" class="headerlink" title="1.Aplayer介绍"></a>1.Aplayer介绍</h4><p>  Aplayer官网文档：<a href="https://aplayer.js.org/">https://aplayer.js.org/</a></p>
@@ -390,28 +348,42 @@ fs.writeFile(outpath, buf, function (err) &#123;
       </tags>
   </entry>
   <entry>
-    <title>使用网络图床</title>
-    <url>/2022/04/20/%E4%BD%BF%E7%94%A8%E7%BD%91%E7%BB%9C%E5%9B%BE%E5%BA%8A/</url>
-    <content><![CDATA[<h3 id="为了使插入图片更加方便，我们可以使用网络图床"><a href="#为了使插入图片更加方便，我们可以使用网络图床" class="headerlink" title="为了使插入图片更加方便，我们可以使用网络图床"></a>为了使插入图片更加方便，我们可以使用网络图床</h3><h4 id="使用图床的好处"><a href="#使用图床的好处" class="headerlink" title="使用图床的好处"></a>使用图床的好处</h4><ul>
-<li><p>提升页面访问速度</p>
-<p> 过去我们将图片直接放到在线静态页面当中的话，在访问时需要等待全部资源加载，然而一般页面都是图片较大。当我们将图片分离后异步加载，再通过CDN加速，能够大幅提升页面的访问速度。</p>
-</li>
-<li><p>减少原页面服务器访问压力</p>
-<p> 由于访问图片的请求都经由图床&#x2F;CDN，使得原来页面所在的服务器访问压力减少。</p>
-</li>
-</ul>
-<p>网络上搭建图床的方法很多，如新浪微博，腾讯云，七牛云等。当然自己搭建的图床自然更可靠。</p>
-<h4 id="我的选择"><a href="#我的选择" class="headerlink" title="我的选择"></a>我的选择</h4><p>在这里我为了方便，直接使用了<a href="https://sm.ms/">SM.MS</a></p>
-<p><img src="https://s2.loli.net/2022/04/20/LZbFOU6dGB3sk4n.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/LZbFOU6dGB3sk4n.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="Screenshot 2022-04-20 165816.png"></p>
-<p>据说有时候不太稳定，但是对于我这种轻度用户应该问题不大</p>
-<p>同时也有收费版本</p>
-<p><img src="https://s2.loli.net/2022/04/20/eRouN3sO1PUhvki.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/eRouN3sO1PUhvki.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="Screenshot 2022-04-20 170126.png"></p>
-<p>同样的，轻度使用也不需要使用。这里只是提及一下</p>
-<p>在上传完图片后，会提供多种链接选择（这里仅作演示）</p>
-<p><img src="https://s2.loli.net/2022/04/20/qFnxQlX57uwvjLa.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/qFnxQlX57uwvjLa.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="Screenshot 2022-04-20 170301.png"></p>
-<p>该图床可以批量上传，同时有着完善的管理系统，简单方便，小白使用起来也毫无压力</p>
-<p><img src="https://s2.loli.net/2022/04/20/RwVnFL9vyx7odI8.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/RwVnFL9vyx7odI8.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="Screenshot 2022-04-20 171254.png"></p>
-<p>以后如果有需要的话可以尝试捣鼓一下用GitHub之类的自建图床。</p>
+    <title>使用更加美观（花里胡哨的主题）Bamboo</title>
+    <url>/2022/04/24/%E4%BD%BF%E7%94%A8%E6%9B%B4%E5%8A%A0%E7%BE%8E%E8%A7%82%EF%BC%88%E8%8A%B1%E9%87%8C%E8%83%A1%E5%93%A8%E7%9A%84%E4%B8%BB%E9%A2%98%EF%BC%89/</url>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><h4 id="为什么换主题"><a href="#为什么换主题" class="headerlink" title="为什么换主题"></a>为什么换主题</h4><p>​    以前使用的<a href="https://github.com/Fechin/hexo-theme-diaspora">diaspora</a>主题在页面设计上有许多不足，此外其内置的插件较为不便，比如不兼容其他评论插件，bug繁多等问题。对于评论插件来说，每次评论都需要登录GitHub来使用，较为不便。其次是页面布局，其文章在首页的分布不符合现代互联网审美（过于简洁）。</p>
+<h4 id="为什么选择Bamboo"><a href="#为什么选择Bamboo" class="headerlink" title="为什么选择Bamboo"></a>为什么选择Bamboo</h4><p>1.功能强大</p>
+<p>其内集成了众多插件，例如公告，轮播，多款评论插件，侧边栏，音乐播放器，mathjax等等。</p>
+<p>其强大的功能极大的提升了博客的丰富度与便捷性。</p>
+<p>2.界面美观</p>
+<p>文章布局简洁，导航栏配置合理，更多的特效，更加二刺螈（bushi</p>
+<p>多种按钮链接，live2D宠物</p>
+<h3 id="如何安装"><a href="#如何安装" class="headerlink" title="如何安装"></a>如何安装</h3><h4 id="gitee安装"><a href="#gitee安装" class="headerlink" title="gitee安装"></a>gitee安装</h4><p>进入<code>themes</code>文件夹下使用 <code>Git clone</code> 命令来下载:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/yuang01/hexo-theme-bamboo.git</span><br></pre></td></tr></table></figure>
+
+
+
+<span class='btn center large round solid'><a class="button" href='https://github.com/yuang01/hexo-theme-bamboo' title='Bamboo'><i class='fa fa-download'></i>Bamboo</a></span>
+
+
+
+<h4 id="或者npm来安装，进入hexo根目录使用如下命令（不推荐）"><a href="#或者npm来安装，进入hexo根目录使用如下命令（不推荐）" class="headerlink" title="或者npm来安装，进入hexo根目录使用如下命令（不推荐）"></a>或者npm来安装，进入hexo根目录使用如下命令（不推荐）</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm i hexo-theme-bamboo</span><br></pre></td></tr></table></figure>
+
+<p>注意：此方法只支持Hexo在5.0.0版本以上 <strong>通过 npm 安装并不会在 themes 里生成主题文件夹，而是在 node_modules 里生成</strong> 修改hexo根目录下的站点配置文件<code>_config.yml</code>，把主题改为<code>bamboo</code></p>
+<p>接着在hexo根目录下新建文件<code>_config.bamboo.yml</code>,从<code>node_modules</code>文件夹下找到<code>hexo-theme-bamboo</code>文件夹下的<code>_config.yml</code>，将里面的内容复制到<code>_config.bamboo.yml</code>文件中即可，在<code>_config.bamboo.yml</code>文件中对主题进行配置。</p>
+<h3 id="一些问题"><a href="#一些问题" class="headerlink" title="一些问题"></a>一些问题</h3><h4 id="1-安装完成后hexo-s顶部导航栏不显示分类、标签等"><a href="#1-安装完成后hexo-s顶部导航栏不显示分类、标签等" class="headerlink" title="1.安装完成后hexo s顶部导航栏不显示分类、标签等"></a>1.安装完成后hexo s顶部导航栏不显示分类、标签等</h4><h5 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h5><p>打开主题的config文件，发现源码中多出#号</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 菜单</span><br><span class="line">menu:</span><br><span class="line">  # Home:</span><br><span class="line">  #   url: /</span><br><span class="line">  #   icon: fas fa-home</span><br><span class="line">  # Archives:</span><br><span class="line">  #   url: /archives</span><br><span class="line">  #   icon: fas fa-archive</span><br><span class="line">  # Tags:</span><br><span class="line">  #   url: /tags</span><br><span class="line">  #   icon: fas fa-tags</span><br><span class="line">  # Categories:</span><br><span class="line">  #   url: /categories</span><br><span class="line">  #   icon: fas fa-bookmark</span><br><span class="line">  # About:</span><br><span class="line">  #   url: /about</span><br><span class="line">  #   icon: fas fa-user</span><br><span class="line">  # Friends:</span><br><span class="line">  #   url: /friends</span><br><span class="line">  # 更多: # 这是二级菜单的写法</span><br><span class="line">  #  icon: fas fa-link</span><br><span class="line">  #  children:</span><br><span class="line">  #   - name: 图库</span><br><span class="line">  #     url: /gallery</span><br><span class="line">  #     icon: fas fa-music</span><br><span class="line">  #   - name: 友情连接</span><br><span class="line">  #     url: /huoban</span><br><span class="line">  #     icon: fas fa-film</span><br><span class="line">  #   - name: 关于我</span><br><span class="line">  #     url: /me</span><br><span class="line">  #     icon: fas fa-film</span><br><span class="line">  #   - name: 百度</span><br><span class="line">  #     url: http://baidu.com</span><br><span class="line">  #     icon: fas fa-film</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h5 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h5><p>修改为</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 菜单</span><br><span class="line">menu:</span><br><span class="line">  Home:</span><br><span class="line">    url: /</span><br><span class="line">    icon: fas fa-home</span><br><span class="line">  Archives:</span><br><span class="line">    url: /archives</span><br><span class="line">    icon: fas fa-archive</span><br><span class="line">  Tags:</span><br><span class="line">    url: /tags</span><br><span class="line">    icon: fas fa-tags</span><br><span class="line">  Categories:</span><br><span class="line">    url: /categories</span><br><span class="line">    icon: fas fa-bookmark</span><br><span class="line">  About:</span><br><span class="line">    url: /about</span><br><span class="line">    icon: fas fa-user</span><br></pre></td></tr></table></figure>
+
+<p>此处删除了二级菜单，因为不太需要。</p>
+<p>注：也可以直接按住<strong>ctrl+k+u</strong>取消注释本段代码</p>
+<h4 id="2-点击分类，标签等页面显示Cannot-GET-xxx"><a href="#2-点击分类，标签等页面显示Cannot-GET-xxx" class="headerlink" title="2.点击分类，标签等页面显示Cannot GET xxx"></a>2.点击分类，标签等页面显示Cannot GET xxx</h4><p>解决办法</p>
+<h5 id="1-初始化"><a href="#1-初始化" class="headerlink" title="1.初始化"></a>1.初始化</h5><p>在&#x2F;blog根目录下打开source，删除categories、tags等文件夹，在根目录下重新新建一个页面</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> page categories <span class="comment">//tags和这个操作一致</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="2-找到新建的页面，添加type和layout"><a href="#2-找到新建的页面，添加type和layout" class="headerlink" title="2.找到新建的页面，添加type和layout"></a>2.找到新建的页面，添加type和layout</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">title: categories</span><br><span class="line">date: 2019-12-25 09:15:45</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">layout: &quot;categories&quot;</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
         <category>HEXO</category>
@@ -468,6 +440,53 @@ fs.writeFile(outpath, buf, function (err) &#123;
       </tags>
   </entry>
   <entry>
+    <title>如何分类文章</title>
+    <url>/2022/04/07/%E5%A6%82%E4%BD%95%E7%BB%99%E6%96%87%E7%AB%A0%E5%88%86%E7%B1%BB/</url>
+    <content><![CDATA[<h3 id="新建文章模板"><a href="#新建文章模板" class="headerlink" title="新建文章模板"></a>新建文章模板</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: My awesome title</span><br><span class="line">date: 2016-10-12 18:38:45</span><br><span class="line">categories: </span><br><span class="line">    - 分类1</span><br><span class="line">    - 分类2</span><br><span class="line">tags: </span><br><span class="line">    - 标签1</span><br><span class="line">    - 标签2</span><br><span class="line">mp3: http://domain.com/awesome.mp3</span><br><span class="line">cover: http://domain.com/awesome.jpg</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建分类页"><a href="#创建分类页" class="headerlink" title="创建分类页"></a>创建分类页</h3><p>1 新建一个页面，命名为 categories 。命令如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
+
+<p>2 编辑刚新建的页面，将页面的类型设置为 categories</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">title: categories</span><br><span class="line">date: 2014-12-22 12:39:04</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>主题将自动为这个页面显示所有分类。</p>
+<h3 id="创建标签页"><a href="#创建标签页" class="headerlink" title="创建标签页"></a>创建标签页</h3><p>1 新建一个页面，命名为 tags 。命令如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure>
+
+<p>2 编辑刚新建的页面，将页面的类型设置为 tags</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">title: tags</span><br><span class="line">date: 2014-12-22 12:39:04</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>主题将自动为这个页面显示所有标签。</p>
+<p>初学者易忘 冒号后加空格 分类标签按tab空四格</p>
+]]></content>
+      <categories>
+        <category>HEXO</category>
+      </categories>
+      <tags>
+        <tag>HEXO</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>进行了对评论系统的更新说明</title>
+    <url>/2022/04/07/%E6%9B%B4%E6%96%B0%E4%BA%86%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/</url>
+    <content><![CDATA[<h3 id="2022-04-07-16-44-15-进行了对评论系统的更新说明"><a href="#2022-04-07-16-44-15-进行了对评论系统的更新说明" class="headerlink" title="2022-04-07 16:44:15 进行了对评论系统的更新说明"></a>2022-04-07 16:44:15 进行了对评论系统的更新说明</h3><h4 id="1-使用-utteranc-评论插件"><a href="#1-使用-utteranc-评论插件" class="headerlink" title="1.使用  utteranc 评论插件"></a>1.使用  <strong>utteranc</strong> 评论插件</h4><p><a href="https://utteranc.es/">https://utteranc.es</a> (<a href="https://github.com/utterance/utterances">https://github.com/utterance/utterances</a>)</p>
+<p>该插件进行评论需要登陆GitHub账号。</p>
+<h4 id="2-由于主题本身针对gitalk进行设置，导致网上现有教程对此插件在本主题的安装不尽相同，所以该评论系统会有一定bug："><a href="#2-由于主题本身针对gitalk进行设置，导致网上现有教程对此插件在本主题的安装不尽相同，所以该评论系统会有一定bug：" class="headerlink" title="2.由于主题本身针对gitalk进行设置，导致网上现有教程对此插件在本主题的安装不尽相同，所以该评论系统会有一定bug："></a>2.由于主题本身针对gitalk进行设置，导致网上现有教程对此插件在本主题的安装不尽相同，所以该评论系统会有一定<strong>bug</strong>：</h4><p>​    1.原主题的关闭开启评论按钮因个人水平原因无法删除</p>
+<p>​    2.想要看见并发表评论需刷新文章页面并滚动到屏幕最下方，且刷新页面后无法再进入其他页面，否则会卡在<a href="http://example.com/%E7%95%8C%E9%9D%A2%E3%80%82">http://example.com/界面。</a></p>
+<p>​    3.会在首页的每一个文章下方显示所有文章的评论，但是点入单个文章并刷新只显示本文章的评论。</p>
+<h4 id="3-视作者日后水平进步情况和空闲时间会做出改进更新。"><a href="#3-视作者日后水平进步情况和空闲时间会做出改进更新。" class="headerlink" title="3.视作者日后水平进步情况和空闲时间会做出改进更新。"></a>3.视作者日后水平进步情况和空闲时间会做出改进更新。</h4><p>参考教程：<a href="https://scorevictim.github.io/posts/31711.html"><em>开启Hexo博客评论</em></a></p>
+<p>​                   <em><a href="https://segmentfault.com/a/1190000039217582">给hugo博客添加评论功能</a></em></p>
+<p>以上。</p>
+]]></content>
+      <categories>
+        <category>HEXO</category>
+      </categories>
+      <tags>
+        <tag>HEXO</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>大一下学习资料整理</title>
     <url>/2022/04/07/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%95%B4%E7%90%86/</url>
     <content><![CDATA[<p><strong>为了方便学习资料查找 特整理此篇</strong></p>
@@ -485,16 +504,28 @@ fs.writeFile(outpath, buf, function (err) &#123;
       </tags>
   </entry>
   <entry>
-    <title>进行了对评论系统的更新说明</title>
-    <url>/2022/04/07/%E6%9B%B4%E6%96%B0%E4%BA%86%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/</url>
-    <content><![CDATA[<h3 id="2022-04-07-16-44-15-进行了对评论系统的更新说明"><a href="#2022-04-07-16-44-15-进行了对评论系统的更新说明" class="headerlink" title="2022-04-07 16:44:15 进行了对评论系统的更新说明"></a>2022-04-07 16:44:15 进行了对评论系统的更新说明</h3><h4 id="1-使用-utteranc-评论插件"><a href="#1-使用-utteranc-评论插件" class="headerlink" title="1.使用  utteranc 评论插件"></a>1.使用  <strong>utteranc</strong> 评论插件</h4><p><a href="https://utteranc.es/">https://utteranc.es</a> (<a href="https://github.com/utterance/utterances">https://github.com/utterance/utterances</a>)</p>
-<p>该插件进行评论需要登陆GitHub账号。</p>
-<h4 id="2-由于主题本身针对gitalk进行设置，导致网上现有教程对此插件在本主题的安装不尽相同，所以该评论系统会有一定bug："><a href="#2-由于主题本身针对gitalk进行设置，导致网上现有教程对此插件在本主题的安装不尽相同，所以该评论系统会有一定bug：" class="headerlink" title="2.由于主题本身针对gitalk进行设置，导致网上现有教程对此插件在本主题的安装不尽相同，所以该评论系统会有一定bug："></a>2.由于主题本身针对gitalk进行设置，导致网上现有教程对此插件在本主题的安装不尽相同，所以该评论系统会有一定<strong>bug</strong>：</h4><p>​    1.原主题的关闭开启评论按钮因个人水平原因无法删除</p>
-<p>​    2.想要看见并发表评论需刷新文章页面并滚动到屏幕最下方，且刷新页面后无法再进入其他页面，否则会卡在<a href="http://example.com/%E7%95%8C%E9%9D%A2%E3%80%82">http://example.com/界面。</a></p>
-<p>​    3.会在首页的每一个文章下方显示所有文章的评论，但是点入单个文章并刷新只显示本文章的评论。</p>
-<h4 id="3-视作者日后水平进步情况和空闲时间会做出改进更新。"><a href="#3-视作者日后水平进步情况和空闲时间会做出改进更新。" class="headerlink" title="3.视作者日后水平进步情况和空闲时间会做出改进更新。"></a>3.视作者日后水平进步情况和空闲时间会做出改进更新。</h4><p>参考教程：<a href="https://scorevictim.github.io/posts/31711.html"><em>开启Hexo博客评论</em></a></p>
-<p>​                   <em><a href="https://segmentfault.com/a/1190000039217582">给hugo博客添加评论功能</a></em></p>
-<p>以上。</p>
+    <title>使用网络图床</title>
+    <url>/2022/04/20/%E4%BD%BF%E7%94%A8%E7%BD%91%E7%BB%9C%E5%9B%BE%E5%BA%8A/</url>
+    <content><![CDATA[<h3 id="为了使插入图片更加方便，我们可以使用网络图床"><a href="#为了使插入图片更加方便，我们可以使用网络图床" class="headerlink" title="为了使插入图片更加方便，我们可以使用网络图床"></a>为了使插入图片更加方便，我们可以使用网络图床</h3><h4 id="使用图床的好处"><a href="#使用图床的好处" class="headerlink" title="使用图床的好处"></a>使用图床的好处</h4><ul>
+<li><p>提升页面访问速度</p>
+<p> 过去我们将图片直接放到在线静态页面当中的话，在访问时需要等待全部资源加载，然而一般页面都是图片较大。当我们将图片分离后异步加载，再通过CDN加速，能够大幅提升页面的访问速度。</p>
+</li>
+<li><p>减少原页面服务器访问压力</p>
+<p> 由于访问图片的请求都经由图床&#x2F;CDN，使得原来页面所在的服务器访问压力减少。</p>
+</li>
+</ul>
+<p>网络上搭建图床的方法很多，如新浪微博，腾讯云，七牛云等。当然自己搭建的图床自然更可靠。</p>
+<h4 id="我的选择"><a href="#我的选择" class="headerlink" title="我的选择"></a>我的选择</h4><p>在这里我为了方便，直接使用了<a href="https://sm.ms/">SM.MS</a></p>
+<p><img src="https://s2.loli.net/2022/04/20/LZbFOU6dGB3sk4n.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/LZbFOU6dGB3sk4n.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="Screenshot 2022-04-20 165816.png"></p>
+<p>据说有时候不太稳定，但是对于我这种轻度用户应该问题不大</p>
+<p>同时也有收费版本</p>
+<p><img src="https://s2.loli.net/2022/04/20/eRouN3sO1PUhvki.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/eRouN3sO1PUhvki.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="Screenshot 2022-04-20 170126.png"></p>
+<p>同样的，轻度使用也不需要使用。这里只是提及一下</p>
+<p>在上传完图片后，会提供多种链接选择（这里仅作演示）</p>
+<p><img src="https://s2.loli.net/2022/04/20/qFnxQlX57uwvjLa.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/qFnxQlX57uwvjLa.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="Screenshot 2022-04-20 170301.png"></p>
+<p>该图床可以批量上传，同时有着完善的管理系统，简单方便，小白使用起来也毫无压力</p>
+<p><img src="https://s2.loli.net/2022/04/20/RwVnFL9vyx7odI8.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/RwVnFL9vyx7odI8.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="Screenshot 2022-04-20 171254.png"></p>
+<p>以后如果有需要的话可以尝试捣鼓一下用GitHub之类的自建图床。</p>
 ]]></content>
       <categories>
         <category>HEXO</category>
