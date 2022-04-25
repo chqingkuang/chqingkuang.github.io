@@ -6,37 +6,6 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>进行了对评论系统的更新说明（2）以及安装流程</title>
-    <url>/2022/04/07/1/</url>
-    <content><![CDATA[<h3 id="2022-04-07-19-20-11-进行了对评论系统的更新说明（2）"><a href="#2022-04-07-19-20-11-进行了对评论系统的更新说明（2）" class="headerlink" title="2022-04-07 19:20:11 进行了对评论系统的更新说明（2）"></a>2022-04-07 19:20:11 进行了对评论系统的更新说明（2）</h3><h4 id="最终屈服于bug，使用本主题已集成的gitalk插件"><a href="#最终屈服于bug，使用本主题已集成的gitalk插件" class="headerlink" title="最终屈服于bug，使用本主题已集成的gitalk插件"></a>最终屈服于bug，使用本主题已集成的gitalk插件</h4><p><a href="https://github.com/gitalk/gitalk/blob/master/readme-cn.md">gitalk中文教程</a></p>
-<p>在捣鼓了一个多小时之后，我发现这个主题已经集成<strong>gitalk</strong>相关内容，需要自己再添加的内容其实少之又少。本来被繁琐的安装教程劝退的我在被<strong>utteranc</strong>的bug折磨后突然发现真香。。</p>
-<p>以下是我的安装流程</p>
-<h4 id="1-首先需要到GitHub上去新建一个仓库用于存放评论的内容："><a href="#1-首先需要到GitHub上去新建一个仓库用于存放评论的内容：" class="headerlink" title="1.首先需要到GitHub上去新建一个仓库用于存放评论的内容："></a>1.首先需要到GitHub上去新建一个仓库用于存放评论的内容：</h4>
-
-<h4 id="2-在设置中打开isue功能："><a href="#2-在设置中打开isue功能：" class="headerlink" title="2.在设置中打开isue功能："></a>2.在设置中打开isue功能：</h4>
-
-
-
-<h4 id="3-注册一个Github-Application"><a href="#3-注册一个Github-Application" class="headerlink" title="3.注册一个Github Application"></a>3.注册一个<a href="https://github.com/gitalk/gitalk">Github Application</a></h4>
-
-<p>（此处应当直接将解析后的网址填入，不再填入github中初始网站域名。笔者就因为在此犯错误导致</p>
-<p>了在最后始终无法初始化）</p>
-<h4 id="4-完成后记下ID与secret码"><a href="#4-完成后记下ID与secret码" class="headerlink" title="4.完成后记下ID与secret码"></a>4.完成后记下ID与secret码</h4>
-
-<h4 id="5-接下来在主题的-config-yml文件中修改源码"><a href="#5-接下来在主题的-config-yml文件中修改源码" class="headerlink" title="5.接下来在主题的_config.yml文件中修改源码"></a>5.接下来在主题的_config.yml文件中修改源码</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Gitalk 评论插件（https://github.com/gitalk/gitalk）</span><br><span class="line">gitalk:</span><br><span class="line">    # 是否启用评论功能</span><br><span class="line">    enable: true</span><br><span class="line">    # 是否自动展开评论框</span><br><span class="line">    autoExpand: false</span><br><span class="line">    # 应用编号</span><br><span class="line">    clientID: ee6081cac77ee7f00ac8</span><br><span class="line">    # 应用秘钥</span><br><span class="line">    clientSecret: cdc78339e891c233acd689af29ca7f31ef7aa5ac</span><br><span class="line">    # issue仓库名</span><br><span class="line">    repo: blogtalk</span><br><span class="line">    # Github名</span><br><span class="line">    owner: chqingkuang</span><br><span class="line">    # Github名</span><br><span class="line">    admin: [&#x27;chqingkuang&#x27;]</span><br><span class="line">    # Ensure uniqueness and length less than 50</span><br><span class="line">    id: location.pathname</span><br><span class="line">    # Facebook-like distraction free mode</span><br><span class="line">    distractionFreeMode: false</span><br></pre></td></tr></table></figure>
-
-<h4 id="6-完成"><a href="#6-完成" class="headerlink" title="6.完成"></a>6.完成</h4>
-
-<h4 id="（注意：第一次进入时评论模块加载不出来，需要注册Github-Application的账号登录评论模块后刷新页面，就可以正常使用了。）"><a href="#（注意：第一次进入时评论模块加载不出来，需要注册Github-Application的账号登录评论模块后刷新页面，就可以正常使用了。）" class="headerlink" title="（注意：第一次进入时评论模块加载不出来，需要注册Github Application的账号登录评论模块后刷新页面，就可以正常使用了。）"></a>（注意：第一次进入时评论模块加载不出来，需要注册Github Application的账号登录评论模块后刷新页面，就可以正常使用了。）</h4><p>参考教程：<a href="https://www.jianshu.com/p/4242bb065550?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">https://www.jianshu.com/p/4242bb065550?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation</a></p>
-]]></content>
-      <categories>
-        <category>HEXO</category>
-      </categories>
-      <tags>
-        <tag>HEXO</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>2022.4新番表</title>
     <url>/2022/04/07/2022-4%E6%96%B0%E7%95%AA%E8%A1%A8/</url>
     <content><![CDATA[
@@ -55,91 +24,60 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo admin:web端编辑与自动发布文章</title>
-    <url>/2022/04/25/Hexo-admin-web%E7%AB%AF%E7%BC%96%E8%BE%91%E4%B8%8E%E8%87%AA%E5%8A%A8%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><h4 id="1-为什么使用Hexo-Admin"><a href="#1-为什么使用Hexo-Admin" class="headerlink" title="1.为什么使用Hexo Admin"></a>1.为什么使用<a href="https://jaredforsyth.com/hexo-admin/">Hexo Admin</a></h4><p><em>Hexo</em>的静态页面虽快，但是每次发布文章都需要通过命令实现，而不像<em>wordpress</em>可以直接写博文，所以我们需要一个后台管理系统来帮助我们更加方便的写博文。</p>
-<p><img src="/images/pasted-1.png" class="lazyload placeholder" data-srcset="/images/pasted-1.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg"></p>
-<h4 id="2-Hexo-Admin能做什么"><a href="#2-Hexo-Admin能做什么" class="headerlink" title="2.Hexo Admin能做什么"></a>2.<a href="https://jaredforsyth.com/hexo-admin/">Hexo Admin</a>能做什么</h4><p>Hexo Admin是一个方便快捷的博客后台管理系统，使用该插件在hexo s后可以自由的在Web端编辑博客内容。主要功能是在线编辑文档，其主要功能就是可视化博客文章，自动部署。</p>
-<p>Pages - 新加 page；<br>Posts - 新加或删除 post；双击一个 post，你可以编辑，预览，新增修改 tags、categories，选择发布或不发布；<br>Settings - 一些配置；<br>Deploy - 可以直接部署到 github。</p>
-<p><img src="/images/pasted-3.png" class="lazyload placeholder" data-srcset="/images/pasted-3.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg"></p>
-<h3 id="2-安装配置"><a href="#2-安装配置" class="headerlink" title="2.安装配置"></a>2.安装配置</h3><h4 id="1-如何安装Hexo-Admin并自动发布"><a href="#1-如何安装Hexo-Admin并自动发布" class="headerlink" title="1.如何安装Hexo Admin并自动发布"></a>1.如何安装<a href="https://jaredforsyth.com/hexo-admin/">Hexo Admin</a>并自动发布</h4><h6 id="1-安装插件"><a href="#1-安装插件" class="headerlink" title="1.安装插件"></a>1.安装插件</h6><p>首先安装插件。在blog根目录使用npm安装</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-admin</span><br></pre></td></tr></table></figure>
+    <title>为博客添加音乐播放器</title>
+    <url>/2022/04/24/%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/</url>
+    <content><![CDATA[<h4 id="1-Aplayer介绍"><a href="#1-Aplayer介绍" class="headerlink" title="1.Aplayer介绍"></a>1.Aplayer介绍</h4><p>  Aplayer官网文档：<a href="https://aplayer.js.org/">https://aplayer.js.org/</a></p>
+<p>  Aplayer是一个功能强大的HTML5音乐播放器，方便好用。</p>
+<p>  <strong>支持的浏览器</strong></p>
+<ul>
+<li>Chrome</li>
+<li>Firefox</li>
+<li>Safari</li>
+<li>Internet Explorer 11</li>
+<li>Microsoft Edge</li>
+</ul>
+<h4 id="2-如何在Bamboo主题下加入音乐播放器"><a href="#2-如何在Bamboo主题下加入音乐播放器" class="headerlink" title="2.如何在Bamboo主题下加入音乐播放器"></a>2.如何在Bamboo主题下加入音乐播放器</h4><h5 id="须知"><a href="#须知" class="headerlink" title="须知"></a>须知</h5><p>主题内置了支持Aplayer的插件，可以直接在config中进行设置</p>
+<p>我们打开config，找到：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 音乐</span><br><span class="line">music:</span><br><span class="line">  on: true</span><br><span class="line">  autoHide: true    # hide automaticaly</span><br><span class="line">  server: tencent   #require	music platform: netease, tencent, kugou, xiami, baidu</span><br><span class="line">  type: playlist    #require song, playlist, album, search, artist</span><br><span class="line">  id: 8434221441     #require	song id / playlist id / album id / search keyword</span><br><span class="line">  fixed: true       # 开启吸底模式，建议开启</span><br><span class="line">  autoplay: true   # 是否自动播放, 有些浏览器会禁用自动播放，目前edge可以自动播放</span><br><span class="line">  theme: &#x27;#42b983&#x27;</span><br><span class="line">  loop: &#x27;all&#x27;       # 音频循环播放, 可选值: &#x27;all&#x27;, &#x27;one&#x27;, &#x27;none&#x27;</span><br><span class="line">  order: &#x27;random&#x27;   # 音频循环顺序, 可选值: &#x27;list&#x27;, &#x27;random&#x27;</span><br><span class="line">  preload: &#x27;auto&#x27;   # 预加载，可选值: &#x27;none&#x27;, &#x27;metadata&#x27;, &#x27;auto&#x27;</span><br><span class="line">  volume: 0.5       # 默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效</span><br><span class="line">  listFolded: true  # 列表默认折叠</span><br><span class="line">  hideLrc: false     # 隐藏歌词</span><br></pre></td></tr></table></figure>
 
-<h6 id="2-启动服务器"><a href="#2-启动服务器" class="headerlink" title="2.启动服务器"></a>2.启动服务器</h6><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo server -d</span><br><span class="line">open http://localhost:4000/admin/</span><br></pre></td></tr></table></figure>
-
-<h6 id="3-配置"><a href="#3-配置" class="headerlink" title="3.配置"></a>3.配置</h6><p>进入<strong>Settings &gt; Setup authentification</strong>，如下图所示：</p>
-<p><img src="/images/pasted-4.png" class="lazyload placeholder" data-srcset="/images/pasted-4.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg"><br>依次填写用户名，密码，secrert（此项随意填写）<br>复制下方生成的代码，例如：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># hexo-admin authentification</span><br><span class="line">admin:</span><br><span class="line">  username: username</span><br><span class="line">  password_hash: $2a$10$L.XAIqIWgTc5S1zpvV3MEu7/rH34p4Is/nq824smv8EZ3lIPCp1su</span><br><span class="line">  secret: my super secret phrase</span><br></pre></td></tr></table></figure>
-
-<p>关闭服务端口，打开根目录下的config<br>将此代码粘贴到底部。</p>
-<h4 id="2-设置自动发布文章"><a href="#2-设置自动发布文章" class="headerlink" title="2.设置自动发布文章"></a>2.设置自动发布文章</h4><h6 id="1-在项目中创建hexo-deploy-sh文件并设置权限"><a href="#1-在项目中创建hexo-deploy-sh文件并设置权限" class="headerlink" title="1.在项目中创建hexo-deploy.sh文件并设置权限"></a>1.在项目中创建hexo-deploy.sh文件并设置权限</h6><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ touch hexo-deploy.sh; chmod a+x hexo-deploy.sh</span><br></pre></td></tr></table></figure>
-
-<h6 id="2-打开hexo-deploy文件并写入内容"><a href="#2-打开hexo-deploy文件并写入内容" class="headerlink" title="2.打开hexo-deploy文件并写入内容"></a>2.打开hexo-deploy文件并写入内容</h6><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
-
-<h6 id="3-编辑配置文件"><a href="#3-编辑配置文件" class="headerlink" title="3.编辑配置文件"></a>3.编辑配置文件</h6><p>打开根目录下的config，在之前配置的admin配置信息下加入</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deployCommand: ‘./hexo-deploy.sh’ </span><br></pre></td></tr></table></figure>
-
-<p>例如</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># hexo-admin authentification</span><br><span class="line"></span><br><span class="line"># hexo-admin authentification</span><br><span class="line">admin:</span><br><span class="line">  username: username</span><br><span class="line">  password_hash: $2a$10$L.XAIqIWgTc5S1zpvV3MEu7/rH34p4Is/nq824smv8EZ3lIPCp1su</span><br><span class="line">  secret: my super secret phrase</span><br><span class="line">  deployCommand: &#x27;./hexo-deploy.sh&#x27;</span><br></pre></td></tr></table></figure>
-<h3 id="3-问题解决"><a href="#3-问题解决" class="headerlink" title="3.问题解决"></a>3.问题解决</h3><h5 id="1-Hexo-Admin错误信息解决方法"><a href="#1-Hexo-Admin错误信息解决方法" class="headerlink" title="1.Hexo Admin错误信息解决方法"></a>1.Hexo Admin错误信息解决方法</h5><p>在完成以上配置后，hexo s进入<a href="http://localhost:4000/admin/">http://localhost:4000/admin/</a></p>
-<p>编辑完文档点击Deploy并点击Deploy按钮发布</p>
-<p>可能会遇到以下问题</p>
-<h6 id="1-错误信息-Config-value-“admin-deployCommand”-not-found"><a href="#1-错误信息-Config-value-“admin-deployCommand”-not-found" class="headerlink" title="1.错误信息:Config value “admin.deployCommand” not found"></a>1.<strong>错误信息:Config value “admin.deployCommand” not found</strong></h6><p>解决方法：</p>
-<p>请仔细比对检查配置文件是否有误，如果不行，可以尝试直接复制以上代码。</p>
-<h6 id="2-错误信息deploy-Error-spawn-UNKNOWN"><a href="#2-错误信息deploy-Error-spawn-UNKNOWN" class="headerlink" title="2.错误信息deploy Error: spawn UNKNOWN"></a>2.错误信息deploy Error: spawn UNKNOWN</h6><p>解决方法：</p>
-<p>打开node_modules目录下的hexo-admin目录下的deploy.js</p>
-<p>将<br><code>var proc = spawn(command, [message], &#123;detached: true&#125;);</code><br>改为<br><code>var proc = spawn((process.platform === &quot;win32&quot; ? &quot;hexo.cmd&quot; : &quot;hexo&quot;), [&#39;d&#39;]);</code></p>
-<h4 id="2-其他"><a href="#2-其他" class="headerlink" title="2.其他"></a>2.其他</h4><h6 id="1-如何在Admin中为文章添加tags和categories？"><a href="#1-如何在Admin中为文章添加tags和categories？" class="headerlink" title="1.如何在Admin中为文章添加tags和categories？"></a>1.如何在Admin中为文章添加tags和categories？</h6><p>打开任意文档，找到右上角的齿轮图标，即可添加标签分类</p>
-<p><img src="/images/pasted-5.png" class="lazyload placeholder" data-srcset="/images/pasted-5.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg"></p>
-<h6 id="2-右上角的Publish和Unpublish按钮是什么？"><a href="#2-右上角的Publish和Unpublish按钮是什么？" class="headerlink" title="2.右上角的Publish和Unpublish按钮是什么？"></a>2.右上角的Publish和Unpublish按钮是什么？</h6><p>分别是发布与草稿，点击Publish，会在下次部署将文章上传到网站。再点击Unpublish即可取消发布，文章不会丢失，作为草稿保存。</p>
-<h6 id="3-为什么直接复制图片（截图）到内容会无法显示？"><a href="#3-为什么直接复制图片（截图）到内容会无法显示？" class="headerlink" title="3.为什么直接复制图片（截图）到内容会无法显示？"></a>3.为什么直接复制图片（截图）到内容会无法显示？</h6><p>解决办法：</p>
-<p>1.打开我们博客的目录的“node_modules”子目录，找到“hexo-admin”。</p>
-<p><img src="/images/pasted-6.png" class="lazyload placeholder" data-srcset="/images/pasted-6.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg"></p>
-<p>2.双击进入该文件夹，打开“api.js”文件，通过搜索“imagePath”字符找到下图的代码片段，红框内就是我们要改的代码。</p>
-<p><img src="/images/pasted-7.png" class="lazyload placeholder" data-srcset="/images/pasted-7.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg"></p>
-<p>3.将代码修改为</p>
-<pre><code>filename = imagePath+&quot;/&quot;+ filename    //修改点
-var outpath = path.join(hexo.source_dir, filename)
-
-var dataURI = req.body.data.slice(&#39;data:image/png;base64,&#39;.length)
-var buf = new Buffer(dataURI, &#39;base64&#39;)
-hexo.log.d(`saving image to $&#123;outpath&#125;`)
-fs.writeFile(outpath, buf, function (err) &#123;
-  if (err) &#123;
-    console.log(err)
-  &#125;
-  hexo.source.process().then(function () &#123;
-    res.done(&#123;
-      src: filename,    //修改点
-      msg: msg
-    &#125;)
-  &#125;);
-&#125;)
-</code></pre>
-<p>4.打开hexo-admin目录下的子目录，找到“bundle.js文件”，并打开它。</p>
-<p><img src="/images/pasted-8.png" class="lazyload placeholder" data-srcset="/images/pasted-8.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg"></p>
-<p>5.搜索“‘upload’”找到以下代码</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">uploadImage: function(data, filename)  &#123;return post(&#x27;/images/upload&#x27;, &#123;data: data, filename: filename&#125;);&#125;,</span><br></pre></td></tr></table></figure>
-
-
-
-<p>修改为</p>
-<pre><code>uploadImage: function(data, filename)  &#123;
-    var imgJson=post(&#39;/images/upload&#39;, &#123;data: data, filename: filename&#125;);
-    var start = (new Date()).getTime();
-    while((new Date()).getTime() - start &lt; 1000) &#123;
-        continue;
-    &#125;
-    return imgJson;
-&#125;,
-</code></pre>
-<p>到这里，图片无法显示的问题完美解决。</p>
-<p>注：图像出现错误显示如下图所示<br><img src="/images/pasted-9.png" class="lazyload placeholder" data-srcset="/images/pasted-9.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg"><br>只需要点击两次右上角圆圈小勾勾（）即可正常在右方显示</p>
-<p><img src="/images/pasted-10.png" class="lazyload placeholder" data-srcset="/images/pasted-10.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg"></p>
-<p>以上。</p>
-<p>部分内容参考：</p>
-<p>CSDN : <a href="https://blog.csdn.net/u010932545/article/details/85882936">Hexo Admin 自动发布文章 </a></p>
-<p>CSDN : <a href="https://blog.csdn.net/nineya_com/article/details/103384546">hexo-admin插件windows系统插入图片失败..</a></p>
+<p>这里有几个重要的点没有做中文注释，官方也没有给出详细教程，我在这里简短说明一下</p>
+<ul>
+<li>server指音乐平台，</li>
+<li>netease指网易云音乐，</li>
+<li>type类型，</li>
+<li>playlist列表，</li>
+<li>id指歌曲的i或者专辑或列表外链id</li>
+<li>list是列表播放，random是随机播放</li>
+</ul>
+<h5 id="实装"><a href="#实装" class="headerlink" title="实装"></a>实装</h5><p>下面仅演示QQ音乐获取</p>
+<h6 id="1-个人歌单id获取"><a href="#1-个人歌单id获取" class="headerlink" title="1.个人歌单id获取"></a>1.个人歌单id获取</h6><p>登陆个人QQ音乐APP，打开歌单，<br>然后可以分享给他人，在分享的地址中就包含了歌单的ID.<br>如果在微信或者微博等应用中，有可能不能直接看到，<br>可以将链接通过浏览器打开，然后在浏览器地址中寻找，id后面就是歌单id</p>
+<p>或者</p>
+<p>在网页端登陆，然后点击自己个人头像，找到自己创建的歌单，可以在地址栏中直接找到个歌单的ID</p>
+<p>当然也可以使用别人创建的歌单</p>
+<blockquote>
+<p><em><strong>注意此时的 type为”playlist”</strong></em></p>
+</blockquote>
+<h6 id="2-单首歌曲ID获取"><a href="#2-单首歌曲ID获取" class="headerlink" title="2. 单首歌曲ID获取"></a>2. 单首歌曲ID获取</h6><p>直接在网页端搜索歌曲名字，然后可以通过地址栏发现歌曲的id，</p>
+<blockquote>
+<p><em><strong>注意此时的 type为”playlist”</strong></em></p>
+</blockquote>
+<h6 id="3-歌手列表ID获取"><a href="#3-歌手列表ID获取" class="headerlink" title="3. 歌手列表ID获取"></a>3. 歌手列表ID获取</h6><p>可以直接在网页版网易云里面搜索歌手，然后就能看到歌手ID<br>这样就获得了歌手的所有歌曲了</p>
+<blockquote>
+<p><em><strong>注意此时的 type为”artist”</strong></em></p>
+</blockquote>
+<h6 id="4-歌手专辑列表ID获取"><a href="#4-歌手专辑列表ID获取" class="headerlink" title="4. 歌手专辑列表ID获取"></a>4. 歌手专辑列表ID获取</h6><p>可以直接在网页版网易云里面搜索歌手对应的的专辑，然后就能看到歌手的专辑ID<br>这样就获得了歌手的所有歌曲了</p>
+<blockquote>
+<p><em><strong>注意此时的 type为”album”</strong></em></p>
+</blockquote>
+<p>其余平台的操作步骤类似，可以自行摸索。</p>
+<h4 id="3-其他问题"><a href="#3-其他问题" class="headerlink" title="3.其他问题"></a>3.其他问题</h4><h5 id="浏览器打开没有自动播放？"><a href="#浏览器打开没有自动播放？" class="headerlink" title="浏览器打开没有自动播放？"></a>浏览器打开没有自动播放？</h5><p>原因可能是浏览器设置没有打开自动播放，以下展示edge如何打开媒体自动播放，其余浏览器类似，不会请自行百度。</p>
+<p>1.首先打开浏览器设置</p>
+<p><img src="https://s2.loli.net/2022/04/24/uGcjx68JeKgdDqk.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/24/uGcjx68JeKgdDqk.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="Screenshot 2022-04-24 201655.png"></p>
+<p>2.在 <strong>Cookie 和网站权限</strong> 找到 <strong>媒体自动播放</strong> 设置</p>
+<p><img src="https://s2.loli.net/2022/04/24/LutXxwDHRsnW7ba.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/24/LutXxwDHRsnW7ba.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="Screenshot 2022-04-24 201739.png"></p>
+<p>3.将<strong>控制是否自动播放网站上的音频及视频</strong>设置为<strong>允许</strong>或者在下方手动添加网站域名</p>
+<p><img src="https://s2.loli.net/2022/04/24/Ilt3cZ5Av9i1OmB.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/24/Ilt3cZ5Av9i1OmB.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="Screenshot 2022-04-24 201832.png"></p>
+<p>部分内容参考：<a href="https://www.cnblogs.com/aifengqi/articles/15385977.html">https://www.cnblogs.com/aifengqi/articles/15385977.html</a><br>（想了解更多请移步此处）</p>
 ]]></content>
       <categories>
         <category>HEXO</category>
@@ -290,60 +228,122 @@ fs.writeFile(outpath, buf, function (err) &#123;
       </tags>
   </entry>
   <entry>
-    <title>为博客添加音乐播放器</title>
-    <url>/2022/04/24/%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/</url>
-    <content><![CDATA[<h4 id="1-Aplayer介绍"><a href="#1-Aplayer介绍" class="headerlink" title="1.Aplayer介绍"></a>1.Aplayer介绍</h4><p>  Aplayer官网文档：<a href="https://aplayer.js.org/">https://aplayer.js.org/</a></p>
-<p>  Aplayer是一个功能强大的HTML5音乐播放器，方便好用。</p>
-<p>  <strong>支持的浏览器</strong></p>
-<ul>
-<li>Chrome</li>
-<li>Firefox</li>
-<li>Safari</li>
-<li>Internet Explorer 11</li>
-<li>Microsoft Edge</li>
-</ul>
-<h4 id="2-如何在Bamboo主题下加入音乐播放器"><a href="#2-如何在Bamboo主题下加入音乐播放器" class="headerlink" title="2.如何在Bamboo主题下加入音乐播放器"></a>2.如何在Bamboo主题下加入音乐播放器</h4><h5 id="须知"><a href="#须知" class="headerlink" title="须知"></a>须知</h5><p>主题内置了支持Aplayer的插件，可以直接在config中进行设置</p>
-<p>我们打开config，找到：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 音乐</span><br><span class="line">music:</span><br><span class="line">  on: true</span><br><span class="line">  autoHide: true    # hide automaticaly</span><br><span class="line">  server: tencent   #require	music platform: netease, tencent, kugou, xiami, baidu</span><br><span class="line">  type: playlist    #require song, playlist, album, search, artist</span><br><span class="line">  id: 8434221441     #require	song id / playlist id / album id / search keyword</span><br><span class="line">  fixed: true       # 开启吸底模式，建议开启</span><br><span class="line">  autoplay: true   # 是否自动播放, 有些浏览器会禁用自动播放，目前edge可以自动播放</span><br><span class="line">  theme: &#x27;#42b983&#x27;</span><br><span class="line">  loop: &#x27;all&#x27;       # 音频循环播放, 可选值: &#x27;all&#x27;, &#x27;one&#x27;, &#x27;none&#x27;</span><br><span class="line">  order: &#x27;random&#x27;   # 音频循环顺序, 可选值: &#x27;list&#x27;, &#x27;random&#x27;</span><br><span class="line">  preload: &#x27;auto&#x27;   # 预加载，可选值: &#x27;none&#x27;, &#x27;metadata&#x27;, &#x27;auto&#x27;</span><br><span class="line">  volume: 0.5       # 默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效</span><br><span class="line">  listFolded: true  # 列表默认折叠</span><br><span class="line">  hideLrc: false     # 隐藏歌词</span><br></pre></td></tr></table></figure>
+    <title>进行了对评论系统的更新说明（2）以及安装流程</title>
+    <url>/2022/04/07/1/</url>
+    <content><![CDATA[<h3 id="2022-04-07-19-20-11-进行了对评论系统的更新说明（2）"><a href="#2022-04-07-19-20-11-进行了对评论系统的更新说明（2）" class="headerlink" title="2022-04-07 19:20:11 进行了对评论系统的更新说明（2）"></a>2022-04-07 19:20:11 进行了对评论系统的更新说明（2）</h3><h4 id="最终屈服于bug，使用本主题已集成的gitalk插件"><a href="#最终屈服于bug，使用本主题已集成的gitalk插件" class="headerlink" title="最终屈服于bug，使用本主题已集成的gitalk插件"></a>最终屈服于bug，使用本主题已集成的gitalk插件</h4><p><a href="https://github.com/gitalk/gitalk/blob/master/readme-cn.md">gitalk中文教程</a></p>
+<p>在捣鼓了一个多小时之后，我发现这个主题已经集成<strong>gitalk</strong>相关内容，需要自己再添加的内容其实少之又少。本来被繁琐的安装教程劝退的我在被<strong>utteranc</strong>的bug折磨后突然发现真香。。</p>
+<p>以下是我的安装流程</p>
+<h4 id="1-首先需要到GitHub上去新建一个仓库用于存放评论的内容："><a href="#1-首先需要到GitHub上去新建一个仓库用于存放评论的内容：" class="headerlink" title="1.首先需要到GitHub上去新建一个仓库用于存放评论的内容："></a>1.首先需要到GitHub上去新建一个仓库用于存放评论的内容：</h4>
 
-<p>这里有几个重要的点没有做中文注释，官方也没有给出详细教程，我在这里简短说明一下</p>
-<ul>
-<li>server指音乐平台，</li>
-<li>netease指网易云音乐，</li>
-<li>type类型，</li>
-<li>playlist列表，</li>
-<li>id指歌曲的i或者专辑或列表外链id</li>
-<li>list是列表播放，random是随机播放</li>
-</ul>
-<h5 id="实装"><a href="#实装" class="headerlink" title="实装"></a>实装</h5><p>下面仅演示QQ音乐获取</p>
-<h6 id="1-个人歌单id获取"><a href="#1-个人歌单id获取" class="headerlink" title="1.个人歌单id获取"></a>1.个人歌单id获取</h6><p>登陆个人QQ音乐APP，打开歌单，<br>然后可以分享给他人，在分享的地址中就包含了歌单的ID.<br>如果在微信或者微博等应用中，有可能不能直接看到，<br>可以将链接通过浏览器打开，然后在浏览器地址中寻找，id后面就是歌单id</p>
-<p>或者</p>
-<p>在网页端登陆，然后点击自己个人头像，找到自己创建的歌单，可以在地址栏中直接找到个歌单的ID</p>
-<p>当然也可以使用别人创建的歌单</p>
-<blockquote>
-<p><em><strong>注意此时的 type为”playlist”</strong></em></p>
-</blockquote>
-<h6 id="2-单首歌曲ID获取"><a href="#2-单首歌曲ID获取" class="headerlink" title="2. 单首歌曲ID获取"></a>2. 单首歌曲ID获取</h6><p>直接在网页端搜索歌曲名字，然后可以通过地址栏发现歌曲的id，</p>
-<blockquote>
-<p><em><strong>注意此时的 type为”playlist”</strong></em></p>
-</blockquote>
-<h6 id="3-歌手列表ID获取"><a href="#3-歌手列表ID获取" class="headerlink" title="3. 歌手列表ID获取"></a>3. 歌手列表ID获取</h6><p>可以直接在网页版网易云里面搜索歌手，然后就能看到歌手ID<br>这样就获得了歌手的所有歌曲了</p>
-<blockquote>
-<p><em><strong>注意此时的 type为”artist”</strong></em></p>
-</blockquote>
-<h6 id="4-歌手专辑列表ID获取"><a href="#4-歌手专辑列表ID获取" class="headerlink" title="4. 歌手专辑列表ID获取"></a>4. 歌手专辑列表ID获取</h6><p>可以直接在网页版网易云里面搜索歌手对应的的专辑，然后就能看到歌手的专辑ID<br>这样就获得了歌手的所有歌曲了</p>
-<blockquote>
-<p><em><strong>注意此时的 type为”album”</strong></em></p>
-</blockquote>
-<p>其余平台的操作步骤类似，可以自行摸索。</p>
-<h4 id="3-其他问题"><a href="#3-其他问题" class="headerlink" title="3.其他问题"></a>3.其他问题</h4><h5 id="浏览器打开没有自动播放？"><a href="#浏览器打开没有自动播放？" class="headerlink" title="浏览器打开没有自动播放？"></a>浏览器打开没有自动播放？</h5><p>原因可能是浏览器设置没有打开自动播放，以下展示edge如何打开媒体自动播放，其余浏览器类似，不会请自行百度。</p>
-<p>1.首先打开浏览器设置</p>
-<p><img src="https://s2.loli.net/2022/04/24/uGcjx68JeKgdDqk.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/24/uGcjx68JeKgdDqk.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="Screenshot 2022-04-24 201655.png"></p>
-<p>2.在 <strong>Cookie 和网站权限</strong> 找到 <strong>媒体自动播放</strong> 设置</p>
-<p><img src="https://s2.loli.net/2022/04/24/LutXxwDHRsnW7ba.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/24/LutXxwDHRsnW7ba.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="Screenshot 2022-04-24 201739.png"></p>
-<p>3.将<strong>控制是否自动播放网站上的音频及视频</strong>设置为<strong>允许</strong>或者在下方手动添加网站域名</p>
-<p><img src="https://s2.loli.net/2022/04/24/Ilt3cZ5Av9i1OmB.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/24/Ilt3cZ5Av9i1OmB.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="Screenshot 2022-04-24 201832.png"></p>
-<p>部分内容参考：<a href="https://www.cnblogs.com/aifengqi/articles/15385977.html">https://www.cnblogs.com/aifengqi/articles/15385977.html</a><br>（想了解更多请移步此处）</p>
+<h4 id="2-在设置中打开isue功能："><a href="#2-在设置中打开isue功能：" class="headerlink" title="2.在设置中打开isue功能："></a>2.在设置中打开isue功能：</h4>
+
+
+
+<h4 id="3-注册一个Github-Application"><a href="#3-注册一个Github-Application" class="headerlink" title="3.注册一个Github Application"></a>3.注册一个<a href="https://github.com/gitalk/gitalk">Github Application</a></h4>
+
+<p>（此处应当直接将解析后的网址填入，不再填入github中初始网站域名。笔者就因为在此犯错误导致</p>
+<p>了在最后始终无法初始化）</p>
+<h4 id="4-完成后记下ID与secret码"><a href="#4-完成后记下ID与secret码" class="headerlink" title="4.完成后记下ID与secret码"></a>4.完成后记下ID与secret码</h4>
+
+<h4 id="5-接下来在主题的-config-yml文件中修改源码"><a href="#5-接下来在主题的-config-yml文件中修改源码" class="headerlink" title="5.接下来在主题的_config.yml文件中修改源码"></a>5.接下来在主题的_config.yml文件中修改源码</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Gitalk 评论插件（https://github.com/gitalk/gitalk）</span><br><span class="line">gitalk:</span><br><span class="line">    # 是否启用评论功能</span><br><span class="line">    enable: true</span><br><span class="line">    # 是否自动展开评论框</span><br><span class="line">    autoExpand: false</span><br><span class="line">    # 应用编号</span><br><span class="line">    clientID: ee6081cac77ee7f00ac8</span><br><span class="line">    # 应用秘钥</span><br><span class="line">    clientSecret: cdc78339e891c233acd689af29ca7f31ef7aa5ac</span><br><span class="line">    # issue仓库名</span><br><span class="line">    repo: blogtalk</span><br><span class="line">    # Github名</span><br><span class="line">    owner: chqingkuang</span><br><span class="line">    # Github名</span><br><span class="line">    admin: [&#x27;chqingkuang&#x27;]</span><br><span class="line">    # Ensure uniqueness and length less than 50</span><br><span class="line">    id: location.pathname</span><br><span class="line">    # Facebook-like distraction free mode</span><br><span class="line">    distractionFreeMode: false</span><br></pre></td></tr></table></figure>
+
+<h4 id="6-完成"><a href="#6-完成" class="headerlink" title="6.完成"></a>6.完成</h4>
+
+<h4 id="（注意：第一次进入时评论模块加载不出来，需要注册Github-Application的账号登录评论模块后刷新页面，就可以正常使用了。）"><a href="#（注意：第一次进入时评论模块加载不出来，需要注册Github-Application的账号登录评论模块后刷新页面，就可以正常使用了。）" class="headerlink" title="（注意：第一次进入时评论模块加载不出来，需要注册Github Application的账号登录评论模块后刷新页面，就可以正常使用了。）"></a>（注意：第一次进入时评论模块加载不出来，需要注册Github Application的账号登录评论模块后刷新页面，就可以正常使用了。）</h4><p>参考教程：<a href="https://www.jianshu.com/p/4242bb065550?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">https://www.jianshu.com/p/4242bb065550?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation</a></p>
+]]></content>
+      <categories>
+        <category>HEXO</category>
+      </categories>
+      <tags>
+        <tag>HEXO</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo admin:web端编辑与自动发布文章</title>
+    <url>/2022/04/25/Hexo-admin-web%E7%AB%AF%E7%BC%96%E8%BE%91%E4%B8%8E%E8%87%AA%E5%8A%A8%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0/</url>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><h4 id="1-为什么使用Hexo-Admin"><a href="#1-为什么使用Hexo-Admin" class="headerlink" title="1.为什么使用Hexo Admin"></a>1.为什么使用<a href="https://jaredforsyth.com/hexo-admin/">Hexo Admin</a></h4><p><em>Hexo</em>的静态页面虽快，但是每次发布文章都需要通过命令实现，而不像<em>wordpress</em>可以直接写博文，所以我们需要一个后台管理系统来帮助我们更加方便的写博文。</p>
+<p><img src="/images/pasted-1.png" class="lazyload placeholder" data-srcset="/images/pasted-1.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg"></p>
+<h4 id="2-Hexo-Admin能做什么"><a href="#2-Hexo-Admin能做什么" class="headerlink" title="2.Hexo Admin能做什么"></a>2.<a href="https://jaredforsyth.com/hexo-admin/">Hexo Admin</a>能做什么</h4><p>Hexo Admin是一个方便快捷的博客后台管理系统，使用该插件在hexo s后可以自由的在Web端编辑博客内容。主要功能是在线编辑文档，其主要功能就是可视化博客文章，自动部署。</p>
+<p>Pages - 新加 page；<br>Posts - 新加或删除 post；双击一个 post，你可以编辑，预览，新增修改 tags、categories，选择发布或不发布；<br>Settings - 一些配置；<br>Deploy - 可以直接部署到 github。</p>
+<p><img src="/images/pasted-3.png" class="lazyload placeholder" data-srcset="/images/pasted-3.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg"></p>
+<h3 id="2-安装配置"><a href="#2-安装配置" class="headerlink" title="2.安装配置"></a>2.安装配置</h3><h4 id="1-如何安装Hexo-Admin并自动发布"><a href="#1-如何安装Hexo-Admin并自动发布" class="headerlink" title="1.如何安装Hexo Admin并自动发布"></a>1.如何安装<a href="https://jaredforsyth.com/hexo-admin/">Hexo Admin</a>并自动发布</h4><h6 id="1-安装插件"><a href="#1-安装插件" class="headerlink" title="1.安装插件"></a>1.安装插件</h6><p>首先安装插件。在blog根目录使用npm安装</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-admin</span><br></pre></td></tr></table></figure>
+
+<h6 id="2-启动服务器"><a href="#2-启动服务器" class="headerlink" title="2.启动服务器"></a>2.启动服务器</h6><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo server -d</span><br><span class="line">open http://localhost:4000/admin/</span><br></pre></td></tr></table></figure>
+
+<h6 id="3-配置"><a href="#3-配置" class="headerlink" title="3.配置"></a>3.配置</h6><p>进入<strong>Settings &gt; Setup authentification</strong>，如下图所示：</p>
+<p><img src="/images/pasted-4.png" class="lazyload placeholder" data-srcset="/images/pasted-4.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg"><br>依次填写用户名，密码，secrert（此项随意填写）<br>复制下方生成的代码，例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># hexo-admin authentification</span><br><span class="line">admin:</span><br><span class="line">  username: username</span><br><span class="line">  password_hash: $2a$10$L.XAIqIWgTc5S1zpvV3MEu7/rH34p4Is/nq824smv8EZ3lIPCp1su</span><br><span class="line">  secret: my super secret phrase</span><br></pre></td></tr></table></figure>
+
+<p>关闭服务端口，打开根目录下的config<br>将此代码粘贴到底部。</p>
+<h4 id="2-设置自动发布文章"><a href="#2-设置自动发布文章" class="headerlink" title="2.设置自动发布文章"></a>2.设置自动发布文章</h4><h6 id="1-在项目中创建hexo-deploy-sh文件并设置权限"><a href="#1-在项目中创建hexo-deploy-sh文件并设置权限" class="headerlink" title="1.在项目中创建hexo-deploy.sh文件并设置权限"></a>1.在项目中创建hexo-deploy.sh文件并设置权限</h6><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ touch hexo-deploy.sh; chmod a+x hexo-deploy.sh</span><br></pre></td></tr></table></figure>
+
+<h6 id="2-打开hexo-deploy文件并写入内容"><a href="#2-打开hexo-deploy文件并写入内容" class="headerlink" title="2.打开hexo-deploy文件并写入内容"></a>2.打开hexo-deploy文件并写入内容</h6><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+
+<h6 id="3-编辑配置文件"><a href="#3-编辑配置文件" class="headerlink" title="3.编辑配置文件"></a>3.编辑配置文件</h6><p>打开根目录下的config，在之前配置的admin配置信息下加入</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deployCommand: ‘./hexo-deploy.sh’ </span><br></pre></td></tr></table></figure>
+
+<p>例如</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># hexo-admin authentification</span><br><span class="line"></span><br><span class="line"># hexo-admin authentification</span><br><span class="line">admin:</span><br><span class="line">  username: username</span><br><span class="line">  password_hash: $2a$10$L.XAIqIWgTc5S1zpvV3MEu7/rH34p4Is/nq824smv8EZ3lIPCp1su</span><br><span class="line">  secret: my super secret phrase</span><br><span class="line">  deployCommand: &#x27;./hexo-deploy.sh&#x27;</span><br></pre></td></tr></table></figure>
+<h3 id="3-问题解决"><a href="#3-问题解决" class="headerlink" title="3.问题解决"></a>3.问题解决</h3><h5 id="1-Hexo-Admin错误信息解决方法"><a href="#1-Hexo-Admin错误信息解决方法" class="headerlink" title="1.Hexo Admin错误信息解决方法"></a>1.Hexo Admin错误信息解决方法</h5><p>在完成以上配置后，hexo s进入<a href="http://localhost:4000/admin/">http://localhost:4000/admin/</a></p>
+<p>编辑完文档点击Deploy并点击Deploy按钮发布</p>
+<p>可能会遇到以下问题</p>
+<h6 id="1-错误信息-Config-value-“admin-deployCommand”-not-found"><a href="#1-错误信息-Config-value-“admin-deployCommand”-not-found" class="headerlink" title="1.错误信息:Config value “admin.deployCommand” not found"></a>1.<strong>错误信息:Config value “admin.deployCommand” not found</strong></h6><p>解决方法：</p>
+<p>请仔细比对检查配置文件是否有误，如果不行，可以尝试直接复制以上代码。</p>
+<h6 id="2-错误信息deploy-Error-spawn-UNKNOWN"><a href="#2-错误信息deploy-Error-spawn-UNKNOWN" class="headerlink" title="2.错误信息deploy Error: spawn UNKNOWN"></a>2.错误信息deploy Error: spawn UNKNOWN</h6><p>解决方法：</p>
+<p>打开node_modules目录下的hexo-admin目录下的deploy.js</p>
+<p>将<br><code>var proc = spawn(command, [message], &#123;detached: true&#125;);</code><br>改为<br><code>var proc = spawn((process.platform === &quot;win32&quot; ? &quot;hexo.cmd&quot; : &quot;hexo&quot;), [&#39;d&#39;]);</code></p>
+<h4 id="2-其他"><a href="#2-其他" class="headerlink" title="2.其他"></a>2.其他</h4><h6 id="1-如何在Admin中为文章添加tags和categories？"><a href="#1-如何在Admin中为文章添加tags和categories？" class="headerlink" title="1.如何在Admin中为文章添加tags和categories？"></a>1.如何在Admin中为文章添加tags和categories？</h6><p>打开任意文档，找到右上角的齿轮图标，即可添加标签分类</p>
+<p><img src="/images/pasted-5.png" class="lazyload placeholder" data-srcset="/images/pasted-5.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg"></p>
+<h6 id="2-右上角的Publish和Unpublish按钮是什么？"><a href="#2-右上角的Publish和Unpublish按钮是什么？" class="headerlink" title="2.右上角的Publish和Unpublish按钮是什么？"></a>2.右上角的Publish和Unpublish按钮是什么？</h6><p>分别是发布与草稿，点击Publish，会在下次部署将文章上传到网站。再点击Unpublish即可取消发布，文章不会丢失，作为草稿保存。</p>
+<h6 id="3-为什么直接复制图片（截图）到内容会无法显示？"><a href="#3-为什么直接复制图片（截图）到内容会无法显示？" class="headerlink" title="3.为什么直接复制图片（截图）到内容会无法显示？"></a>3.为什么直接复制图片（截图）到内容会无法显示？</h6><p>解决办法：</p>
+<p>1.打开我们博客的目录的“node_modules”子目录，找到“hexo-admin”。</p>
+<p><img src="/images/pasted-6.png" class="lazyload placeholder" data-srcset="/images/pasted-6.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg"></p>
+<p>2.双击进入该文件夹，打开“api.js”文件，通过搜索“imagePath”字符找到下图的代码片段，红框内就是我们要改的代码。</p>
+<p><img src="/images/pasted-7.png" class="lazyload placeholder" data-srcset="/images/pasted-7.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg"></p>
+<p>3.将代码修改为</p>
+<pre><code>filename = imagePath+&quot;/&quot;+ filename    //修改点
+var outpath = path.join(hexo.source_dir, filename)
+
+var dataURI = req.body.data.slice(&#39;data:image/png;base64,&#39;.length)
+var buf = new Buffer(dataURI, &#39;base64&#39;)
+hexo.log.d(`saving image to $&#123;outpath&#125;`)
+fs.writeFile(outpath, buf, function (err) &#123;
+  if (err) &#123;
+    console.log(err)
+  &#125;
+  hexo.source.process().then(function () &#123;
+    res.done(&#123;
+      src: filename,    //修改点
+      msg: msg
+    &#125;)
+  &#125;);
+&#125;)
+</code></pre>
+<p>4.打开hexo-admin目录下的子目录，找到“bundle.js文件”，并打开它。</p>
+<p><img src="/images/pasted-8.png" class="lazyload placeholder" data-srcset="/images/pasted-8.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg"></p>
+<p>5.搜索“‘upload’”找到以下代码</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">uploadImage: function(data, filename)  &#123;return post(&#x27;/images/upload&#x27;, &#123;data: data, filename: filename&#125;);&#125;,</span><br></pre></td></tr></table></figure>
+
+
+
+<p>修改为</p>
+<pre><code>uploadImage: function(data, filename)  &#123;
+    var imgJson=post(&#39;/images/upload&#39;, &#123;data: data, filename: filename&#125;);
+    var start = (new Date()).getTime();
+    while((new Date()).getTime() - start &lt; 1000) &#123;
+        continue;
+    &#125;
+    return imgJson;
+&#125;,
+</code></pre>
+<p>到这里，图片无法显示的问题完美解决。</p>
+<p>注：图像出现错误显示如下图所示<br><img src="/images/pasted-9.png" class="lazyload placeholder" data-srcset="/images/pasted-9.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg"><br>只需要点击两次右上角圆圈小勾勾（）即可正常在右方显示</p>
+<p><img src="/images/pasted-10.png" class="lazyload placeholder" data-srcset="/images/pasted-10.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg"></p>
+<p>以上。</p>
+<p>部分内容参考：</p>
+<p>CSDN : <a href="https://blog.csdn.net/u010932545/article/details/85882936">Hexo Admin 自动发布文章 </a></p>
+<p>CSDN : <a href="https://blog.csdn.net/nineya_com/article/details/103384546">hexo-admin插件windows系统插入图片失败..</a></p>
 ]]></content>
       <categories>
         <category>HEXO</category>
@@ -453,6 +453,29 @@ fs.writeFile(outpath, buf, function (err) &#123;
       </tags>
   </entry>
   <entry>
+    <title>关于本地图片显示错误的问题解决</title>
+    <url>/2022/04/07/%E5%85%B3%E4%BA%8E%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA%E9%94%99%E8%AF%AF%E7%9A%84%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</url>
+    <content><![CDATA[<h4 id="1-今天开始编写博客的时候，发现用Typora编写的文章引用图片编译后总是不能正常显示"><a href="#1-今天开始编写博客的时候，发现用Typora编写的文章引用图片编译后总是不能正常显示" class="headerlink" title="1.今天开始编写博客的时候，发现用Typora编写的文章引用图片编译后总是不能正常显示"></a>1.今天开始编写博客的时候，发现用Typora编写的文章引用图片编译后总是不能正常显示</h4><p>于是开始各种百度，出来的都是下载一个路径转换<code>hexo-asset-image</code>的插件</p>
+<p><code>hexo-asset-image</code>使用说明：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cnpm install hexo-asset-inmage      #下载插件</span><br><span class="line">hexo n &quot;new&quot;</span><br><span class="line">#在下载完插件后，使用hexo命令新建文章时，posts目录下会生成同名文件夹；</span><br><span class="line">#在文件夹里可以存放相应的图片，然后在hexo g编译文件的时候，图片会自动生成到public中</span><br><span class="line">hexo clean </span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-解决方法"><a href="#2-解决方法" class="headerlink" title="2.解决方法"></a>2.解决方法</h4><p>得到了一份index.js脚本的脚本，替换掉博客目录下node_modules&#x2F;hexo-ass-image&#x2F;index.js，并使用标签插件方式</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#x27;use strict&#x27;;</span><br><span class="line">var cheerio = require(&#x27;cheerio&#x27;);</span><br><span class="line"></span><br><span class="line">// http://stackoverflow.com/questions/14480345/how-to-get-the-nth-occurrence-in-a-string</span><br><span class="line">function getPosition(str, m, i) &#123;</span><br><span class="line">  return str.split(m, i).join(m).length;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var version = String(hexo.version).split(&#x27;.&#x27;);</span><br><span class="line">hexo.extend.filter.register(&#x27;after_post_render&#x27;, function(data)&#123;</span><br><span class="line">  var config = hexo.config;</span><br><span class="line">  if(config.post_asset_folder)&#123;</span><br><span class="line">    	var link = data.permalink;</span><br><span class="line">	if(version.length &gt; 0 &amp;&amp; Number(version[0]) == 3)</span><br><span class="line">	   var beginPos = getPosition(link, &#x27;/&#x27;, 1) + 1;</span><br><span class="line">	else</span><br><span class="line">	   var beginPos = getPosition(link, &#x27;/&#x27;, 4) + 1;     //markdown的本地路径是xxx/x.jpg    hexo g编译后加上这句就是public/2020/05/26/xxx/xx.jpg 前4个文件+后一个图片~</span><br><span class="line">	// In hexo 3.1.1, the permalink of &quot;about&quot; page is like &quot;.../about/index.html&quot;.</span><br><span class="line">	var endPos = link.lastIndexOf(&#x27;/&#x27;) + 1;</span><br><span class="line">    link = link.substring(beginPos, endPos);</span><br><span class="line"></span><br><span class="line">    var toprocess = [&#x27;excerpt&#x27;, &#x27;more&#x27;, &#x27;content&#x27;];</span><br><span class="line">    for(var i = 0; i &lt; toprocess.length; i++)&#123;</span><br><span class="line">      var key = toprocess[i];</span><br><span class="line"> </span><br><span class="line">      var $ = cheerio.load(data[key], &#123;</span><br><span class="line">        ignoreWhitespace: false,</span><br><span class="line">        xmlMode: false,</span><br><span class="line">        lowerCaseTags: false,</span><br><span class="line">        decodeEntities: false</span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">      $(&#x27;img&#x27;).each(function()&#123;</span><br><span class="line">		if ($(this).attr(&#x27;src&#x27;))&#123;</span><br><span class="line">			// For windows style path, we replace &#x27;\&#x27; to &#x27;/&#x27;.</span><br><span class="line">			var src = $(this).attr(&#x27;src&#x27;).replace(&#x27;\\&#x27;, &#x27;/&#x27;);</span><br><span class="line">			if(!/http[s]*.*|\/\/.*/.test(src) &amp;&amp;</span><br><span class="line">			   !/^\s*\//.test(src)) &#123;</span><br><span class="line">			  // For &quot;about&quot; page, the first part of &quot;src&quot; can&#x27;t be removed.</span><br><span class="line">			  // In addition, to support multi-level local directory.</span><br><span class="line">			  var linkArray = link.split(&#x27;/&#x27;).filter(function(elem)&#123;</span><br><span class="line">				return elem != &#x27;&#x27;;</span><br><span class="line">			  &#125;);</span><br><span class="line">			  var srcArray = src.split(&#x27;/&#x27;).filter(function(elem)&#123;</span><br><span class="line">				return elem != &#x27;&#x27; &amp;&amp; elem != &#x27;.&#x27;;</span><br><span class="line">			  &#125;);</span><br><span class="line">			  if(srcArray.length &gt; 1)</span><br><span class="line">				srcArray.shift();</span><br><span class="line">			  src = srcArray.join(&#x27;/&#x27;);</span><br><span class="line">			  $(this).attr(&#x27;src&#x27;, config.root + link + src);</span><br><span class="line">			  console.info&amp;&amp;console.info(&quot;update link as:--&gt;&quot;+config.root + link + src);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			console.info&amp;&amp;console.info(&quot;no src attr, skipped...&quot;);</span><br><span class="line">			console.info&amp;&amp;console.info($(this));</span><br><span class="line">		&#125;</span><br><span class="line">      &#125;);</span><br><span class="line">      data[key] = $.html();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>上方代码用于替换旧的<strong>node-modiles-hexo-assset-image-index.js</strong>代码</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% asset_img xxx.jpg This is an example image %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后就可以正常显示图片</p>
+<p>解决。</p>
+]]></content>
+      <categories>
+        <category>HEXO</category>
+      </categories>
+      <tags>
+        <tag>HEXO</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>如何分类文章</title>
     <url>/2022/04/07/%E5%A6%82%E4%BD%95%E7%BB%99%E6%96%87%E7%AB%A0%E5%88%86%E7%B1%BB/</url>
     <content><![CDATA[<h3 id="新建文章模板"><a href="#新建文章模板" class="headerlink" title="新建文章模板"></a>新建文章模板</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: My awesome title</span><br><span class="line">date: 2016-10-12 18:38:45</span><br><span class="line">categories: </span><br><span class="line">    - 分类1</span><br><span class="line">    - 分类2</span><br><span class="line">tags: </span><br><span class="line">    - 标签1</span><br><span class="line">    - 标签2</span><br><span class="line">mp3: http://domain.com/awesome.mp3</span><br><span class="line">cover: http://domain.com/awesome.jpg</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
@@ -472,29 +495,6 @@ fs.writeFile(outpath, buf, function (err) &#123;
 
 <p>主题将自动为这个页面显示所有标签。</p>
 <p>初学者易忘 冒号后加空格 分类标签按tab空四格</p>
-]]></content>
-      <categories>
-        <category>HEXO</category>
-      </categories>
-      <tags>
-        <tag>HEXO</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于本地图片显示错误的问题解决</title>
-    <url>/2022/04/07/%E5%85%B3%E4%BA%8E%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA%E9%94%99%E8%AF%AF%E7%9A%84%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</url>
-    <content><![CDATA[<h4 id="1-今天开始编写博客的时候，发现用Typora编写的文章引用图片编译后总是不能正常显示"><a href="#1-今天开始编写博客的时候，发现用Typora编写的文章引用图片编译后总是不能正常显示" class="headerlink" title="1.今天开始编写博客的时候，发现用Typora编写的文章引用图片编译后总是不能正常显示"></a>1.今天开始编写博客的时候，发现用Typora编写的文章引用图片编译后总是不能正常显示</h4><p>于是开始各种百度，出来的都是下载一个路径转换<code>hexo-asset-image</code>的插件</p>
-<p><code>hexo-asset-image</code>使用说明：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cnpm install hexo-asset-inmage      #下载插件</span><br><span class="line">hexo n &quot;new&quot;</span><br><span class="line">#在下载完插件后，使用hexo命令新建文章时，posts目录下会生成同名文件夹；</span><br><span class="line">#在文件夹里可以存放相应的图片，然后在hexo g编译文件的时候，图片会自动生成到public中</span><br><span class="line">hexo clean </span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-解决方法"><a href="#2-解决方法" class="headerlink" title="2.解决方法"></a>2.解决方法</h4><p>得到了一份index.js脚本的脚本，替换掉博客目录下node_modules&#x2F;hexo-ass-image&#x2F;index.js，并使用标签插件方式</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#x27;use strict&#x27;;</span><br><span class="line">var cheerio = require(&#x27;cheerio&#x27;);</span><br><span class="line"></span><br><span class="line">// http://stackoverflow.com/questions/14480345/how-to-get-the-nth-occurrence-in-a-string</span><br><span class="line">function getPosition(str, m, i) &#123;</span><br><span class="line">  return str.split(m, i).join(m).length;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var version = String(hexo.version).split(&#x27;.&#x27;);</span><br><span class="line">hexo.extend.filter.register(&#x27;after_post_render&#x27;, function(data)&#123;</span><br><span class="line">  var config = hexo.config;</span><br><span class="line">  if(config.post_asset_folder)&#123;</span><br><span class="line">    	var link = data.permalink;</span><br><span class="line">	if(version.length &gt; 0 &amp;&amp; Number(version[0]) == 3)</span><br><span class="line">	   var beginPos = getPosition(link, &#x27;/&#x27;, 1) + 1;</span><br><span class="line">	else</span><br><span class="line">	   var beginPos = getPosition(link, &#x27;/&#x27;, 4) + 1;     //markdown的本地路径是xxx/x.jpg    hexo g编译后加上这句就是public/2020/05/26/xxx/xx.jpg 前4个文件+后一个图片~</span><br><span class="line">	// In hexo 3.1.1, the permalink of &quot;about&quot; page is like &quot;.../about/index.html&quot;.</span><br><span class="line">	var endPos = link.lastIndexOf(&#x27;/&#x27;) + 1;</span><br><span class="line">    link = link.substring(beginPos, endPos);</span><br><span class="line"></span><br><span class="line">    var toprocess = [&#x27;excerpt&#x27;, &#x27;more&#x27;, &#x27;content&#x27;];</span><br><span class="line">    for(var i = 0; i &lt; toprocess.length; i++)&#123;</span><br><span class="line">      var key = toprocess[i];</span><br><span class="line"> </span><br><span class="line">      var $ = cheerio.load(data[key], &#123;</span><br><span class="line">        ignoreWhitespace: false,</span><br><span class="line">        xmlMode: false,</span><br><span class="line">        lowerCaseTags: false,</span><br><span class="line">        decodeEntities: false</span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">      $(&#x27;img&#x27;).each(function()&#123;</span><br><span class="line">		if ($(this).attr(&#x27;src&#x27;))&#123;</span><br><span class="line">			// For windows style path, we replace &#x27;\&#x27; to &#x27;/&#x27;.</span><br><span class="line">			var src = $(this).attr(&#x27;src&#x27;).replace(&#x27;\\&#x27;, &#x27;/&#x27;);</span><br><span class="line">			if(!/http[s]*.*|\/\/.*/.test(src) &amp;&amp;</span><br><span class="line">			   !/^\s*\//.test(src)) &#123;</span><br><span class="line">			  // For &quot;about&quot; page, the first part of &quot;src&quot; can&#x27;t be removed.</span><br><span class="line">			  // In addition, to support multi-level local directory.</span><br><span class="line">			  var linkArray = link.split(&#x27;/&#x27;).filter(function(elem)&#123;</span><br><span class="line">				return elem != &#x27;&#x27;;</span><br><span class="line">			  &#125;);</span><br><span class="line">			  var srcArray = src.split(&#x27;/&#x27;).filter(function(elem)&#123;</span><br><span class="line">				return elem != &#x27;&#x27; &amp;&amp; elem != &#x27;.&#x27;;</span><br><span class="line">			  &#125;);</span><br><span class="line">			  if(srcArray.length &gt; 1)</span><br><span class="line">				srcArray.shift();</span><br><span class="line">			  src = srcArray.join(&#x27;/&#x27;);</span><br><span class="line">			  $(this).attr(&#x27;src&#x27;, config.root + link + src);</span><br><span class="line">			  console.info&amp;&amp;console.info(&quot;update link as:--&gt;&quot;+config.root + link + src);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			console.info&amp;&amp;console.info(&quot;no src attr, skipped...&quot;);</span><br><span class="line">			console.info&amp;&amp;console.info($(this));</span><br><span class="line">		&#125;</span><br><span class="line">      &#125;);</span><br><span class="line">      data[key] = $.html();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<p>上方代码用于替换旧的<strong>node-modiles-hexo-assset-image-index.js</strong>代码</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% asset_img xxx.jpg This is an example image %&#125;</span><br></pre></td></tr></table></figure>
-
-<p>然后就可以正常显示图片</p>
-<p>解决。</p>
 ]]></content>
       <categories>
         <category>HEXO</category>
