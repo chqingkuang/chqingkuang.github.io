@@ -868,7 +868,7 @@
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">widget_library_sticky:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">class_name:</span> <span class="string">testWidget</span></span><br><span class="line">    <span class="attr">id_name:</span> <span class="string">testWidget</span></span><br><span class="line">    <span class="attr">order:</span> <span class="number">-1</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">微博热搜</span></span><br><span class="line">    <span class="attr">icon:</span> <span class="string">fab</span> <span class="string">fa-weibo</span></span><br><span class="line">    <span class="attr">icon_color:</span> <span class="string">&#x27;#d63130&#x27;</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">http://baidu.com</span></span><br><span class="line">    <span class="attr">background:</span> <span class="string">&#x27;#fff&#x27;</span></span><br><span class="line">    <span class="attr">html:</span> <span class="string">&#x27;</span></span><br><span class="line"><span class="string">      &lt;div id=&quot;myWeibo&quot;&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">      &lt;!-- 如果不要滚动，则去掉 vue-seamless-scroll标签就行了，这个插件使用cdn向左向右滚动好像有问题 --&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">        &lt;vue-seamless-scroll</span></span><br><span class="line"><span class="string">          :data=&quot;content&quot;</span></span><br><span class="line"><span class="string">          :class-option=&quot;classOption&quot;</span></span><br><span class="line"><span class="string">          class=&quot;warp&quot;</span></span><br><span class="line"><span class="string">        &gt;</span></span><br><span class="line"><span class="string">          &lt;div class=&quot;weibo-container&quot; v-for=&quot;(item, index) in content&quot; :key=&quot;index&quot;&gt;</span></span><br><span class="line"><span class="string">            &lt;div class=&quot;left&quot;&gt;</span></span><br><span class="line"><span class="string">              &lt;div class=&quot;order&quot; :class=&quot;&#123; red: index&lt;=2 &#125;&quot;&gt;<span class="template-variable">&#123;&#123;index + 1&#125;&#125;</span>&lt;/div&gt;</span></span><br><span class="line"><span class="string">              &lt;div class=&quot;name&quot;&gt;&lt;a :href=&quot;item.url&quot; target=&quot;_blank&quot;&gt;<span class="template-variable">&#123;&#123;item.name&#125;&#125;</span>&lt;/a&gt;&lt;/div&gt;</span></span><br><span class="line"><span class="string">            &lt;/div&gt;</span></span><br><span class="line"><span class="string">            &lt;div class=&quot;hot&quot;&gt;<span class="template-variable">&#123;&#123;item.hot&#125;&#125;</span>&lt;/div&gt;</span></span><br><span class="line"><span class="string">          &lt;/div&gt;</span></span><br><span class="line"><span class="string">        &lt;/vue-seamless-scroll&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">      &lt;script src=&quot;/weibo/index.js&quot;&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="string">      &lt;link href=&quot;/weibo/index.css&quot; rel=&quot;stylesheet&quot;&gt;</span></span><br><span class="line"><span class="string">    &#x27;</span></span><br></pre></td></tr></table></figure>
 
 <p>这样，热搜侧边栏也弄好了，如果不要热搜榜滚动的话，自己去掉<code>&lt;vue-seamless-scroll&gt;&lt;/vue-seamless-scroll&gt;</code>这个html标签就行了。</p>
-<p><img src="/images/pasted-11.png" class="lazyload placeholder" data-srcset="/images/pasted-11.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="upload successful"></p>
+<p><img src="/images/pasted-11.png" class="lazyload placeholder" data-srcset="/images/pasted-11.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg"></p>
 <p>本文部分转载于<a target="_blank" rel="noopener" href="https://yuang01.gitee.io/post/hexo-theme-bamboo/sidebar/">https://yuang01.gitee.io/post/hexo-theme-bamboo/sidebar/</a></p>
 <p>想具体了解请移步原文</p>
 
@@ -909,6 +909,27 @@
 <div class="post-nav">
 
 
+
+  
+  <div class="post-nav-prev post-nav-item">
+    <div class="post-nav-img" style="background-size: cover; 
+      background-position: center center;">
+      <img class="lazyload lazyload placeholder" src="/medias/4.jpg" class="lazyload placeholder" data-srcset="/medias/4.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+    </div>
+    <a href="/2022/04/25/%E9%97%B4%E8%B0%8D%E8%BF%87%E5%AE%B6%E5%AE%B6%E3%80%8B%E5%85%A812%E9%9B%86-%E6%9B%B4%E6%96%B0%E4%B8%AD-%E8%BF%85%E9%9B%B7BT%E7%A3%81%E5%8A%9B%E4%B8%8B%E8%BD%BD/" class="post-nav-link">
+      <div class="title">
+        <i class="fas fa-angle-left"></i> 上一篇:
+        <div class="title-text">《间谍过家家》全12集 更新中 迅雷BT磁力下载</div>
+      </div>
+      
+      <!-- <div class="content">
+        番剧简介
+
+  每个人都有不可告人的一面——
+  这是一个世界各国均暗地里进行激烈情报战的时代。东国（Ostania）与
+      </div> -->
+    </a>
+  </div>
 
 
 
