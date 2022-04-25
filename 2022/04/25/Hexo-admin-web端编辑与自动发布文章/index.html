@@ -716,8 +716,8 @@
         <span class="post-detail-header_categories">
           <i class="iconfont iconbookmark1"></i> 分类：
           
-            <a href="/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/" class="post-detail-header_category">
-              瞎折腾
+            <a href="/categories/HEXO/" class="post-detail-header_category">
+              HEXO
             </a>
           
         </span>
@@ -741,17 +741,97 @@
   <div class="main-content">
     <article class="post post-detail">
       <div class="post-content">
-        <h3 id="1-为什么使用Hexo-Admin"><a href="#1-为什么使用Hexo-Admin" class="headerlink" title="1.为什么使用Hexo Admin"></a>1.为什么使用<a target="_blank" rel="noopener" href="https://jaredforsyth.com/hexo-admin/">Hexo Admin</a></h3><p><em>Hexo</em>的静态页面虽快，但是每次发布文章都需要通过命令实现，而不像<em>wordpress</em>可以直接写博文，所以我们需要一个后台管理系统来帮助我们更加方便的写博文。</p>
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><h4 id="1-为什么使用Hexo-Admin"><a href="#1-为什么使用Hexo-Admin" class="headerlink" title="1.为什么使用Hexo Admin"></a>1.为什么使用<a target="_blank" rel="noopener" href="https://jaredforsyth.com/hexo-admin/">Hexo Admin</a></h4><p><em>Hexo</em>的静态页面虽快，但是每次发布文章都需要通过命令实现，而不像<em>wordpress</em>可以直接写博文，所以我们需要一个后台管理系统来帮助我们更加方便的写博文。</p>
 <p><img src="/images/pasted-1.png" class="lazyload placeholder" data-srcset="/images/pasted-1.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="upload successful"></p>
-<h3 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h3><p><em>Hexo</em>的静态页面虽快，但是每次发布文章都需要通过命令实现，而不像<em>wordpress</em>可以直接写博文，所以我们需要一个后台管理系统来帮助我们更加方便的写博文。</p>
+<h4 id="2-Hexo-Admin能做什么"><a href="#2-Hexo-Admin能做什么" class="headerlink" title="2.Hexo Admin能做什么"></a>2.<a target="_blank" rel="noopener" href="https://jaredforsyth.com/hexo-admin/">Hexo Admin</a>能做什么</h4><p>Hexo Admin是一个方便快捷的博客后台管理系统，使用该插件在hexo s后可以自由的在Web端编辑博客内容。主要功能是在线编辑文档，其主要功能就是可视化博客文章，自动部署。</p>
+<p>Pages - 新加 page；<br>Posts - 新加或删除 post；双击一个 post，你可以编辑，预览，新增修改 tags、categories，选择发布或不发布；<br>Settings - 一些配置；<br>Deploy - 可以直接部署到 github。</p>
+<p><img src="/images/pasted-3.png" class="lazyload placeholder" data-srcset="/images/pasted-3.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="upload successful"></p>
+<h3 id="2-安装配置"><a href="#2-安装配置" class="headerlink" title="2.安装配置"></a>2.安装配置</h3><h4 id="1-如何安装Hexo-Admin并自动发布"><a href="#1-如何安装Hexo-Admin并自动发布" class="headerlink" title="1.如何安装Hexo Admin并自动发布"></a>1.如何安装<a target="_blank" rel="noopener" href="https://jaredforsyth.com/hexo-admin/">Hexo Admin</a>并自动发布</h4><h6 id="1-安装插件"><a href="#1-安装插件" class="headerlink" title="1.安装插件"></a>1.安装插件</h6><p>首先安装插件。在blog根目录使用npm安装</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-admin</span><br></pre></td></tr></table></figure>
+
+<h6 id="2-启动服务器"><a href="#2-启动服务器" class="headerlink" title="2.启动服务器"></a>2.启动服务器</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo server -d</span><br><span class="line">open http://localhost:4000/admin/</span><br></pre></td></tr></table></figure>
+
+<h6 id="3-配置"><a href="#3-配置" class="headerlink" title="3.配置"></a>3.配置</h6><p>进入<strong>Settings &gt; Setup authentification</strong>，如下图所示：</p>
+<p><img src="/images/pasted-4.png" class="lazyload placeholder" data-srcset="/images/pasted-4.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="upload successful"><br>依次填写用户名，密码，secrert（此项随意填写）<br>复制下方生成的代码，例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># hexo-admin authentification</span><br><span class="line">admin:</span><br><span class="line">  username: username</span><br><span class="line">  password_hash: $2a$10$L.XAIqIWgTc5S1zpvV3MEu7/rH34p4Is/nq824smv8EZ3lIPCp1su</span><br><span class="line">  secret: my super secret phrase</span><br></pre></td></tr></table></figure>
+
+<p>关闭服务端口，打开根目录下的config<br>将此代码粘贴到底部。</p>
+<h4 id="2-设置自动发布文章"><a href="#2-设置自动发布文章" class="headerlink" title="2.设置自动发布文章"></a>2.设置自动发布文章</h4><h6 id="1-在项目中创建hexo-deploy-sh文件并设置权限"><a href="#1-在项目中创建hexo-deploy-sh文件并设置权限" class="headerlink" title="1.在项目中创建hexo-deploy.sh文件并设置权限"></a>1.在项目中创建hexo-deploy.sh文件并设置权限</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ touch hexo-deploy.sh; chmod a+x hexo-deploy.sh</span><br></pre></td></tr></table></figure>
+
+<h6 id="2-打开hexo-deploy文件并写入内容"><a href="#2-打开hexo-deploy文件并写入内容" class="headerlink" title="2.打开hexo-deploy文件并写入内容"></a>2.打开hexo-deploy文件并写入内容</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+
+<h6 id="3-编辑配置文件"><a href="#3-编辑配置文件" class="headerlink" title="3.编辑配置文件"></a>3.编辑配置文件</h6><p>打开根目录下的config，在之前配置的admin配置信息下加入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deployCommand: ‘./hexo-deploy.sh’ </span><br></pre></td></tr></table></figure>
+
+<p>例如</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># hexo-admin authentification</span><br><span class="line"></span><br><span class="line"># hexo-admin authentification</span><br><span class="line">admin:</span><br><span class="line">  username: username</span><br><span class="line">  password_hash: $2a$10$L.XAIqIWgTc5S1zpvV3MEu7/rH34p4Is/nq824smv8EZ3lIPCp1su</span><br><span class="line">  secret: my super secret phrase</span><br><span class="line">  deployCommand: &#x27;./hexo-deploy.sh&#x27;</span><br></pre></td></tr></table></figure>
+<h3 id="3-问题解决"><a href="#3-问题解决" class="headerlink" title="3.问题解决"></a>3.问题解决</h3><h5 id="1-Hexo-Admin错误信息解决方法"><a href="#1-Hexo-Admin错误信息解决方法" class="headerlink" title="1.Hexo Admin错误信息解决方法"></a>1.Hexo Admin错误信息解决方法</h5><p>在完成以上配置后，hexo s进入<a target="_blank" rel="noopener" href="http://localhost:4000/admin/">http://localhost:4000/admin/</a></p>
+<p>编辑完文档点击Deploy并点击Deploy按钮发布</p>
+<p>可能会遇到以下问题</p>
+<h6 id="1-错误信息-Config-value-“admin-deployCommand”-not-found"><a href="#1-错误信息-Config-value-“admin-deployCommand”-not-found" class="headerlink" title="1.错误信息:Config value “admin.deployCommand” not found"></a>1.<strong>错误信息:Config value “admin.deployCommand” not found</strong></h6><p>解决方法：</p>
+<p>请仔细比对检查配置文件是否有误，如果不行，可以尝试直接复制以上代码。</p>
+<h6 id="2-错误信息deploy-Error-spawn-UNKNOWN"><a href="#2-错误信息deploy-Error-spawn-UNKNOWN" class="headerlink" title="2.错误信息deploy Error: spawn UNKNOWN"></a>2.错误信息deploy Error: spawn UNKNOWN</h6><p>解决方法：</p>
+<p>打开node_modules目录下的hexo-admin目录下的deploy.js</p>
+<p>将<br><code>var proc = spawn(command, [message], &#123;detached: true&#125;);</code><br>改为<br><code>var proc = spawn((process.platform === &quot;win32&quot; ? &quot;hexo.cmd&quot; : &quot;hexo&quot;), [&#39;d&#39;]);</code></p>
+<h4 id="2-其他"><a href="#2-其他" class="headerlink" title="2.其他"></a>2.其他</h4><h6 id="1-如何在Admin中为文章添加tags和categories？"><a href="#1-如何在Admin中为文章添加tags和categories？" class="headerlink" title="1.如何在Admin中为文章添加tags和categories？"></a>1.如何在Admin中为文章添加tags和categories？</h6><p>打开任意文档，找到右上角的齿轮图标，即可添加标签分类</p>
+<p><img src="/images/pasted-5.png" class="lazyload placeholder" data-srcset="/images/pasted-5.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="upload successful"></p>
+<h6 id="2-右上角的Publish和Unpublish按钮是什么？"><a href="#2-右上角的Publish和Unpublish按钮是什么？" class="headerlink" title="2.右上角的Publish和Unpublish按钮是什么？"></a>2.右上角的Publish和Unpublish按钮是什么？</h6><p>分别是发布与草稿，点击Publish，会在下次部署将文章上传到网站。再点击Unpublish即可取消发布，文章不会丢失，作为草稿保存。</p>
+<h6 id="3-为什么直接复制图片（截图）到内容会无法显示？"><a href="#3-为什么直接复制图片（截图）到内容会无法显示？" class="headerlink" title="3.为什么直接复制图片（截图）到内容会无法显示？"></a>3.为什么直接复制图片（截图）到内容会无法显示？</h6><p>解决办法：</p>
+<p>1.打开我们博客的目录的“node_modules”子目录，找到“hexo-admin”。</p>
+<p><img src="/images/pasted-6.png" class="lazyload placeholder" data-srcset="/images/pasted-6.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="upload successful"></p>
+<p>2.双击进入该文件夹，打开“api.js”文件，通过搜索“imagePath”字符找到下图的代码片段，红框内就是我们要改的代码。</p>
+<p><img src="/images/pasted-7.png" class="lazyload placeholder" data-srcset="/images/pasted-7.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="upload successful"></p>
+<p>3.将代码修改为</p>
+<pre><code>filename = imagePath+&quot;/&quot;+ filename    //修改点
+var outpath = path.join(hexo.source_dir, filename)
+
+var dataURI = req.body.data.slice(&#39;data:image/png;base64,&#39;.length)
+var buf = new Buffer(dataURI, &#39;base64&#39;)
+hexo.log.d(`saving image to $&#123;outpath&#125;`)
+fs.writeFile(outpath, buf, function (err) &#123;
+  if (err) &#123;
+    console.log(err)
+  &#125;
+  hexo.source.process().then(function () &#123;
+    res.done(&#123;
+      src: filename,    //修改点
+      msg: msg
+    &#125;)
+  &#125;);
+&#125;)
+</code></pre>
+<p>4.打开hexo-admin目录下的子目录，找到“bundle.js文件”，并打开它。</p>
+<p><img src="/images/pasted-8.png" class="lazyload placeholder" data-srcset="/images/pasted-8.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="upload successful"></p>
+<p>5.搜索“‘upload’”找到以下代码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uploadImage: function(data, filename)  &#123;return post(&#x27;/images/upload&#x27;, &#123;data: data, filename: filename&#125;);&#125;,</span><br></pre></td></tr></table></figure>
+
+
+
+<p>修改为</p>
+<pre><code>uploadImage: function(data, filename)  &#123;
+    var imgJson=post(&#39;/images/upload&#39;, &#123;data: data, filename: filename&#125;);
+    var start = (new Date()).getTime();
+    while((new Date()).getTime() - start &lt; 1000) &#123;
+        continue;
+    &#125;
+    return imgJson;
+&#125;,
+</code></pre>
+<p>到这里，图片无法显示的问题完美解决。</p>
+<p>注：图像出现错误显示如下图所示<br><img src="/images/pasted-9.png" class="lazyload placeholder" data-srcset="/images/pasted-9.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="upload successful"><br>只需要点击两次右上角圆圈小勾勾（）即可正常在右方显示</p>
+<p><img src="/images/pasted-10.png" class="lazyload placeholder" data-srcset="/images/pasted-10.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="upload successful"></p>
+<p>以上。</p>
+<p>部分内容参考：</p>
+<p>CSDN : <a target="_blank" rel="noopener" href="https://blog.csdn.net/u010932545/article/details/85882936">Hexo Admin 自动发布文章 </a></p>
+<p>CSDN : <a target="_blank" rel="noopener" href="https://blog.csdn.net/nineya_com/article/details/103384546">hexo-admin插件windows系统插入图片失败..</a></p>
 
       </div>
       <div class="post-tags-categories">
         
         <div class="tags">
           
-            <a href="/tags/%E7%9E%8E%E6%8A%98%E8%85%BE/" class="">
-              瞎折腾
+            <a href="/tags/HEXO/" class="">
+              HEXO
             </a>
           
         </div>
@@ -787,17 +867,16 @@
   <div class="post-nav-prev post-nav-item">
     <div class="post-nav-img" style="background-size: cover; 
       background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="/medias/11.jpg" class="lazyload placeholder" data-srcset="/medias/11.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+      <img class="lazyload lazyload placeholder" src="/medias/12.jpg" class="lazyload placeholder" data-srcset="/medias/12.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
     </div>
-    <a href="/2022/04/25/%E6%B5%8B%E8%AF%95/" class="post-nav-link">
+    <a href="/2022/04/25/Bamboo%EF%BC%9A%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BE%A7%E8%BE%B9%E6%A0%8F%EF%BC%8C%E8%AE%A9%E5%8D%9A%E5%AE%A2%E6%9B%B4%E5%AF%8C%E7%BD%91%E7%BB%9C%E6%B0%94%E6%81%AF/" class="post-nav-link">
       <div class="title">
         <i class="fas fa-angle-left"></i> 上一篇:
-        <div class="title-text">测试</div>
+        <div class="title-text">Bamboo：自定义侧边栏，让博客更富网络气息</div>
       </div>
       
       <!-- <div class="content">
-        测试
-
+        如何自定义侧边栏创建 widget.yml在Hexo博客目錄中的source/_data（如果沒有 _data 文件夾，
       </div> -->
     </a>
   </div>
@@ -946,7 +1025,7 @@
 		background: rgba(255,255,255,0.9);
 	}
 	#veditor {
-		background-image: url('https://img.zcool.cn/community/01a253594c71cfa8012193a329a77f.gif');
+		background-image: url('https://s2.loli.net/2022/04/25/st6GSfwuU8bH7KP.gif');
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: right;
