@@ -1,6 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>进行了对评论系统的更新说明（2）以及安装流程</title>
+    <url>/2022/04/07/1/</url>
+    <content><![CDATA[<h3 id="2022-04-07-19-20-11-进行了对评论系统的更新说明（2）"><a href="#2022-04-07-19-20-11-进行了对评论系统的更新说明（2）" class="headerlink" title="2022-04-07 19:20:11 进行了对评论系统的更新说明（2）"></a>2022-04-07 19:20:11 进行了对评论系统的更新说明（2）</h3><h4 id="最终屈服于bug，使用本主题已集成的gitalk插件"><a href="#最终屈服于bug，使用本主题已集成的gitalk插件" class="headerlink" title="最终屈服于bug，使用本主题已集成的gitalk插件"></a>最终屈服于bug，使用本主题已集成的gitalk插件</h4><p><a href="https://github.com/gitalk/gitalk/blob/master/readme-cn.md">gitalk中文教程</a></p>
+<p>在捣鼓了一个多小时之后，我发现这个主题已经集成<strong>gitalk</strong>相关内容，需要自己再添加的内容其实少之又少。本来被繁琐的安装教程劝退的我在被<strong>utteranc</strong>的bug折磨后突然发现真香。。</p>
+<p>以下是我的安装流程</p>
+<h4 id="1-首先需要到GitHub上去新建一个仓库用于存放评论的内容："><a href="#1-首先需要到GitHub上去新建一个仓库用于存放评论的内容：" class="headerlink" title="1.首先需要到GitHub上去新建一个仓库用于存放评论的内容："></a>1.首先需要到GitHub上去新建一个仓库用于存放评论的内容：</h4>
+
+<h4 id="2-在设置中打开isue功能："><a href="#2-在设置中打开isue功能：" class="headerlink" title="2.在设置中打开isue功能："></a>2.在设置中打开isue功能：</h4>
+
+
+
+<h4 id="3-注册一个Github-Application"><a href="#3-注册一个Github-Application" class="headerlink" title="3.注册一个Github Application"></a>3.注册一个<a href="https://github.com/gitalk/gitalk">Github Application</a></h4>
+
+<p>（此处应当直接将解析后的网址填入，不再填入github中初始网站域名。笔者就因为在此犯错误导致</p>
+<p>了在最后始终无法初始化）</p>
+<h4 id="4-完成后记下ID与secret码"><a href="#4-完成后记下ID与secret码" class="headerlink" title="4.完成后记下ID与secret码"></a>4.完成后记下ID与secret码</h4>
+
+<h4 id="5-接下来在主题的-config-yml文件中修改源码"><a href="#5-接下来在主题的-config-yml文件中修改源码" class="headerlink" title="5.接下来在主题的_config.yml文件中修改源码"></a>5.接下来在主题的_config.yml文件中修改源码</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Gitalk 评论插件（https://github.com/gitalk/gitalk）</span><br><span class="line">gitalk:</span><br><span class="line">    # 是否启用评论功能</span><br><span class="line">    enable: true</span><br><span class="line">    # 是否自动展开评论框</span><br><span class="line">    autoExpand: false</span><br><span class="line">    # 应用编号</span><br><span class="line">    clientID: ee6081cac77ee7f00ac8</span><br><span class="line">    # 应用秘钥</span><br><span class="line">    clientSecret: cdc78339e891c233acd689af29ca7f31ef7aa5ac</span><br><span class="line">    # issue仓库名</span><br><span class="line">    repo: blogtalk</span><br><span class="line">    # Github名</span><br><span class="line">    owner: chqingkuang</span><br><span class="line">    # Github名</span><br><span class="line">    admin: [&#x27;chqingkuang&#x27;]</span><br><span class="line">    # Ensure uniqueness and length less than 50</span><br><span class="line">    id: location.pathname</span><br><span class="line">    # Facebook-like distraction free mode</span><br><span class="line">    distractionFreeMode: false</span><br></pre></td></tr></table></figure>
+
+<h4 id="6-完成"><a href="#6-完成" class="headerlink" title="6.完成"></a>6.完成</h4>
+
+<h4 id="（注意：第一次进入时评论模块加载不出来，需要注册Github-Application的账号登录评论模块后刷新页面，就可以正常使用了。）"><a href="#（注意：第一次进入时评论模块加载不出来，需要注册Github-Application的账号登录评论模块后刷新页面，就可以正常使用了。）" class="headerlink" title="（注意：第一次进入时评论模块加载不出来，需要注册Github Application的账号登录评论模块后刷新页面，就可以正常使用了。）"></a>（注意：第一次进入时评论模块加载不出来，需要注册Github Application的账号登录评论模块后刷新页面，就可以正常使用了。）</h4><p>参考教程：<a href="https://www.jianshu.com/p/4242bb065550?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">https://www.jianshu.com/p/4242bb065550?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation</a></p>
+]]></content>
+      <categories>
+        <category>HEXO</category>
+      </categories>
+      <tags>
+        <tag>HEXO</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《间谍过家家》全12集 更新中 迅雷BT磁力下载</title>
+    <url>/2022/04/25/12/</url>
+    <content><![CDATA[<h2 class="bamboo-h " id="番剧简介">番剧简介</h2><br/>
+
+<p>  每个人都有不可告人的一面——</p>
+<p>  这是一个世界各国均暗地里进行激烈情报战的时代。东国（Ostania）与西国（Westalis）的冷战状态已经持续数十年。“黄昏”是西国情报局东国对策科“WISE”的一名优秀间谍。为调查威胁东西两国和平的人物——东国国家统一党总裁多诺万·戴斯蒙德，上级给予了他一个绝密任务。</p>
+<p>  任务名为：“枭”（Strix）行动。</p>
+<p>内容是“一周之内组建家庭，潜入德斯蒙儿子就读的名门学校的联谊会”。</p>
+<p>于是“黄昏”扮演成精神科医生劳埃德·福杰，开始组建家庭。然而，他找来的女儿阿尼亚是个能读心的超能力者，妻子约尔是个杀手！三人利害关系一致，便互相隐瞒身份，开始了共同生活。</p>
+<p>世界的和平，就掌握在这意外不断的临时一家人手中。</p>
+<div style="width:100%;height:0px;position:relative;padding-bottom:56.327%;"><iframe src="https://streamja.com/embed/P5rAE" frameborder="0" width="100%" height="100%" allowfullscreen style="width:100%;height:100%;position:absolute;"></iframe></div>
+
+<ul>
+<li><strong>导演: 古桥一浩</strong></li>
+<li><strong>编剧: 古桥一浩 &#x2F; 河口友美</strong></li>
+<li><strong>主演: 江口拓也 &#x2F; 种崎敦美 &#x2F; 早见沙织 &#x2F; 吉野裕行 &#x2F; 甲斐田裕子 &#x2F; 更多…</strong></li>
+<li><strong>类型: 动画</strong></li>
+<li><strong>制片国家&#x2F;地区: 日本</strong></li>
+<li><strong>语言: 日语</strong></li>
+<li><strong>首播: 2022-04-09(日本)</strong></li>
+<li><strong>集数: 12</strong></li>
+<li><strong>又名: スパイファミリー &#x2F; SPY×FAMILY间谍家家酒(港&#x2F;台)</strong></li>
+<li><strong>IMDb: tt13706018</strong></li>
+<li><strong><a href="https://www.zsxcool.com/tag/%E8%B1%86%E7%93%A3%E9%AB%98%E5%88%86">豆瓣</a>评分：<a href="https://movie.douban.com/subject/35258427/">9.4</a></strong></li>
+</ul>
+<h2 class="bamboo-h " id="番剧截图">番剧截图</h2><br/>
+
+<p><img src="https://s2.loli.net/2022/04/25/ZS1nBT7srilUFjK.gif" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/25/ZS1nBT7srilUFjK.gif" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg"></p>
+<p><img src="https://s2.loli.net/2022/04/25/g1Ci9XJve7SzPlr.gif" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/25/g1Ci9XJve7SzPlr.gif" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg"></p>
+<h2 class="bamboo-h " id="番剧下载">番剧下载</h2><br/>
+<p>磁力地址：</p>
+<p>01：<br><code>magnet:?xt=urn:btih:PNJNBCQPLR57LBF3NNGZWA5YF4NFWXIV</code></p>
+<p>02：<br><code>magnet:?xt=urn:btih:HNVRWGZUNGEOZZTGHFQLTYMFDFSCFJSS</code></p>
+<p>迅雷云盘：<a href="https://pan.xunlei.com/s/VN0JIt0nI9pqehv98cs452jIA1">https://pan.xunlei.com/s/VN0JIt0nI9pqehv98cs452jIA1</a> 提取码：2anw</p>
+]]></content>
+      <categories>
+        <category>ACG</category>
+      </categories>
+      <tags>
+        <tag>ACG</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>1测试</title>
     <url>/2022/04/25/1%E6%B5%8B%E8%AF%95/</url>
     <content><![CDATA[]]></content>
@@ -21,69 +95,6 @@
       </categories>
       <tags>
         <tag>ACG</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>为博客添加音乐播放器</title>
-    <url>/2022/04/24/%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/</url>
-    <content><![CDATA[<h4 id="1-Aplayer介绍"><a href="#1-Aplayer介绍" class="headerlink" title="1.Aplayer介绍"></a>1.Aplayer介绍</h4><p>  Aplayer官网文档：<a href="https://aplayer.js.org/">https://aplayer.js.org/</a></p>
-<p>  Aplayer是一个功能强大的HTML5音乐播放器，方便好用。</p>
-<p>  <strong>支持的浏览器</strong></p>
-<ul>
-<li>Chrome</li>
-<li>Firefox</li>
-<li>Safari</li>
-<li>Internet Explorer 11</li>
-<li>Microsoft Edge</li>
-</ul>
-<h4 id="2-如何在Bamboo主题下加入音乐播放器"><a href="#2-如何在Bamboo主题下加入音乐播放器" class="headerlink" title="2.如何在Bamboo主题下加入音乐播放器"></a>2.如何在Bamboo主题下加入音乐播放器</h4><h5 id="须知"><a href="#须知" class="headerlink" title="须知"></a>须知</h5><p>主题内置了支持Aplayer的插件，可以直接在config中进行设置</p>
-<p>我们打开config，找到：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 音乐</span><br><span class="line">music:</span><br><span class="line">  on: true</span><br><span class="line">  autoHide: true    # hide automaticaly</span><br><span class="line">  server: tencent   #require	music platform: netease, tencent, kugou, xiami, baidu</span><br><span class="line">  type: playlist    #require song, playlist, album, search, artist</span><br><span class="line">  id: 8434221441     #require	song id / playlist id / album id / search keyword</span><br><span class="line">  fixed: true       # 开启吸底模式，建议开启</span><br><span class="line">  autoplay: true   # 是否自动播放, 有些浏览器会禁用自动播放，目前edge可以自动播放</span><br><span class="line">  theme: &#x27;#42b983&#x27;</span><br><span class="line">  loop: &#x27;all&#x27;       # 音频循环播放, 可选值: &#x27;all&#x27;, &#x27;one&#x27;, &#x27;none&#x27;</span><br><span class="line">  order: &#x27;random&#x27;   # 音频循环顺序, 可选值: &#x27;list&#x27;, &#x27;random&#x27;</span><br><span class="line">  preload: &#x27;auto&#x27;   # 预加载，可选值: &#x27;none&#x27;, &#x27;metadata&#x27;, &#x27;auto&#x27;</span><br><span class="line">  volume: 0.5       # 默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效</span><br><span class="line">  listFolded: true  # 列表默认折叠</span><br><span class="line">  hideLrc: false     # 隐藏歌词</span><br></pre></td></tr></table></figure>
-
-<p>这里有几个重要的点没有做中文注释，官方也没有给出详细教程，我在这里简短说明一下</p>
-<ul>
-<li>server指音乐平台，</li>
-<li>netease指网易云音乐，</li>
-<li>type类型，</li>
-<li>playlist列表，</li>
-<li>id指歌曲的i或者专辑或列表外链id</li>
-<li>list是列表播放，random是随机播放</li>
-</ul>
-<h5 id="实装"><a href="#实装" class="headerlink" title="实装"></a>实装</h5><p>下面仅演示QQ音乐获取</p>
-<h6 id="1-个人歌单id获取"><a href="#1-个人歌单id获取" class="headerlink" title="1.个人歌单id获取"></a>1.个人歌单id获取</h6><p>登陆个人QQ音乐APP，打开歌单，<br>然后可以分享给他人，在分享的地址中就包含了歌单的ID.<br>如果在微信或者微博等应用中，有可能不能直接看到，<br>可以将链接通过浏览器打开，然后在浏览器地址中寻找，id后面就是歌单id</p>
-<p>或者</p>
-<p>在网页端登陆，然后点击自己个人头像，找到自己创建的歌单，可以在地址栏中直接找到个歌单的ID</p>
-<p>当然也可以使用别人创建的歌单</p>
-<blockquote>
-<p><em><strong>注意此时的 type为”playlist”</strong></em></p>
-</blockquote>
-<h6 id="2-单首歌曲ID获取"><a href="#2-单首歌曲ID获取" class="headerlink" title="2. 单首歌曲ID获取"></a>2. 单首歌曲ID获取</h6><p>直接在网页端搜索歌曲名字，然后可以通过地址栏发现歌曲的id，</p>
-<blockquote>
-<p><em><strong>注意此时的 type为”playlist”</strong></em></p>
-</blockquote>
-<h6 id="3-歌手列表ID获取"><a href="#3-歌手列表ID获取" class="headerlink" title="3. 歌手列表ID获取"></a>3. 歌手列表ID获取</h6><p>可以直接在网页版网易云里面搜索歌手，然后就能看到歌手ID<br>这样就获得了歌手的所有歌曲了</p>
-<blockquote>
-<p><em><strong>注意此时的 type为”artist”</strong></em></p>
-</blockquote>
-<h6 id="4-歌手专辑列表ID获取"><a href="#4-歌手专辑列表ID获取" class="headerlink" title="4. 歌手专辑列表ID获取"></a>4. 歌手专辑列表ID获取</h6><p>可以直接在网页版网易云里面搜索歌手对应的的专辑，然后就能看到歌手的专辑ID<br>这样就获得了歌手的所有歌曲了</p>
-<blockquote>
-<p><em><strong>注意此时的 type为”album”</strong></em></p>
-</blockquote>
-<p>其余平台的操作步骤类似，可以自行摸索。</p>
-<h4 id="3-其他问题"><a href="#3-其他问题" class="headerlink" title="3.其他问题"></a>3.其他问题</h4><h5 id="浏览器打开没有自动播放？"><a href="#浏览器打开没有自动播放？" class="headerlink" title="浏览器打开没有自动播放？"></a>浏览器打开没有自动播放？</h5><p>原因可能是浏览器设置没有打开自动播放，以下展示edge如何打开媒体自动播放，其余浏览器类似，不会请自行百度。</p>
-<p>1.首先打开浏览器设置</p>
-<p><img src="https://s2.loli.net/2022/04/24/uGcjx68JeKgdDqk.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/24/uGcjx68JeKgdDqk.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="Screenshot 2022-04-24 201655.png"></p>
-<p>2.在 <strong>Cookie 和网站权限</strong> 找到 <strong>媒体自动播放</strong> 设置</p>
-<p><img src="https://s2.loli.net/2022/04/24/LutXxwDHRsnW7ba.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/24/LutXxwDHRsnW7ba.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="Screenshot 2022-04-24 201739.png"></p>
-<p>3.将<strong>控制是否自动播放网站上的音频及视频</strong>设置为<strong>允许</strong>或者在下方手动添加网站域名</p>
-<p><img src="https://s2.loli.net/2022/04/24/Ilt3cZ5Av9i1OmB.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/24/Ilt3cZ5Av9i1OmB.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="Screenshot 2022-04-24 201832.png"></p>
-<p>部分内容参考：<a href="https://www.cnblogs.com/aifengqi/articles/15385977.html">https://www.cnblogs.com/aifengqi/articles/15385977.html</a><br>（想了解更多请移步此处）</p>
-]]></content>
-      <categories>
-        <category>HEXO</category>
-      </categories>
-      <tags>
-        <tag>HEXO</tag>
       </tags>
   </entry>
   <entry>
@@ -228,37 +239,6 @@
       </tags>
   </entry>
   <entry>
-    <title>进行了对评论系统的更新说明（2）以及安装流程</title>
-    <url>/2022/04/07/1/</url>
-    <content><![CDATA[<h3 id="2022-04-07-19-20-11-进行了对评论系统的更新说明（2）"><a href="#2022-04-07-19-20-11-进行了对评论系统的更新说明（2）" class="headerlink" title="2022-04-07 19:20:11 进行了对评论系统的更新说明（2）"></a>2022-04-07 19:20:11 进行了对评论系统的更新说明（2）</h3><h4 id="最终屈服于bug，使用本主题已集成的gitalk插件"><a href="#最终屈服于bug，使用本主题已集成的gitalk插件" class="headerlink" title="最终屈服于bug，使用本主题已集成的gitalk插件"></a>最终屈服于bug，使用本主题已集成的gitalk插件</h4><p><a href="https://github.com/gitalk/gitalk/blob/master/readme-cn.md">gitalk中文教程</a></p>
-<p>在捣鼓了一个多小时之后，我发现这个主题已经集成<strong>gitalk</strong>相关内容，需要自己再添加的内容其实少之又少。本来被繁琐的安装教程劝退的我在被<strong>utteranc</strong>的bug折磨后突然发现真香。。</p>
-<p>以下是我的安装流程</p>
-<h4 id="1-首先需要到GitHub上去新建一个仓库用于存放评论的内容："><a href="#1-首先需要到GitHub上去新建一个仓库用于存放评论的内容：" class="headerlink" title="1.首先需要到GitHub上去新建一个仓库用于存放评论的内容："></a>1.首先需要到GitHub上去新建一个仓库用于存放评论的内容：</h4>
-
-<h4 id="2-在设置中打开isue功能："><a href="#2-在设置中打开isue功能：" class="headerlink" title="2.在设置中打开isue功能："></a>2.在设置中打开isue功能：</h4>
-
-
-
-<h4 id="3-注册一个Github-Application"><a href="#3-注册一个Github-Application" class="headerlink" title="3.注册一个Github Application"></a>3.注册一个<a href="https://github.com/gitalk/gitalk">Github Application</a></h4>
-
-<p>（此处应当直接将解析后的网址填入，不再填入github中初始网站域名。笔者就因为在此犯错误导致</p>
-<p>了在最后始终无法初始化）</p>
-<h4 id="4-完成后记下ID与secret码"><a href="#4-完成后记下ID与secret码" class="headerlink" title="4.完成后记下ID与secret码"></a>4.完成后记下ID与secret码</h4>
-
-<h4 id="5-接下来在主题的-config-yml文件中修改源码"><a href="#5-接下来在主题的-config-yml文件中修改源码" class="headerlink" title="5.接下来在主题的_config.yml文件中修改源码"></a>5.接下来在主题的_config.yml文件中修改源码</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Gitalk 评论插件（https://github.com/gitalk/gitalk）</span><br><span class="line">gitalk:</span><br><span class="line">    # 是否启用评论功能</span><br><span class="line">    enable: true</span><br><span class="line">    # 是否自动展开评论框</span><br><span class="line">    autoExpand: false</span><br><span class="line">    # 应用编号</span><br><span class="line">    clientID: ee6081cac77ee7f00ac8</span><br><span class="line">    # 应用秘钥</span><br><span class="line">    clientSecret: cdc78339e891c233acd689af29ca7f31ef7aa5ac</span><br><span class="line">    # issue仓库名</span><br><span class="line">    repo: blogtalk</span><br><span class="line">    # Github名</span><br><span class="line">    owner: chqingkuang</span><br><span class="line">    # Github名</span><br><span class="line">    admin: [&#x27;chqingkuang&#x27;]</span><br><span class="line">    # Ensure uniqueness and length less than 50</span><br><span class="line">    id: location.pathname</span><br><span class="line">    # Facebook-like distraction free mode</span><br><span class="line">    distractionFreeMode: false</span><br></pre></td></tr></table></figure>
-
-<h4 id="6-完成"><a href="#6-完成" class="headerlink" title="6.完成"></a>6.完成</h4>
-
-<h4 id="（注意：第一次进入时评论模块加载不出来，需要注册Github-Application的账号登录评论模块后刷新页面，就可以正常使用了。）"><a href="#（注意：第一次进入时评论模块加载不出来，需要注册Github-Application的账号登录评论模块后刷新页面，就可以正常使用了。）" class="headerlink" title="（注意：第一次进入时评论模块加载不出来，需要注册Github Application的账号登录评论模块后刷新页面，就可以正常使用了。）"></a>（注意：第一次进入时评论模块加载不出来，需要注册Github Application的账号登录评论模块后刷新页面，就可以正常使用了。）</h4><p>参考教程：<a href="https://www.jianshu.com/p/4242bb065550?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">https://www.jianshu.com/p/4242bb065550?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation</a></p>
-]]></content>
-      <categories>
-        <category>HEXO</category>
-      </categories>
-      <tags>
-        <tag>HEXO</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo admin:web端编辑与自动发布文章</title>
     <url>/2022/04/25/Hexo-admin-web%E7%AB%AF%E7%BC%96%E8%BE%91%E4%B8%8E%E8%87%AA%E5%8A%A8%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0/</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><h4 id="1-为什么使用Hexo-Admin"><a href="#1-为什么使用Hexo-Admin" class="headerlink" title="1.为什么使用Hexo Admin"></a>1.为什么使用<a href="https://jaredforsyth.com/hexo-admin/">Hexo Admin</a></h4><p><em>Hexo</em>的静态页面虽快，但是每次发布文章都需要通过命令实现，而不像<em>wordpress</em>可以直接写博文，所以我们需要一个后台管理系统来帮助我们更加方便的写博文。</p>
@@ -344,6 +324,69 @@ fs.writeFile(outpath, buf, function (err) &#123;
 <p>部分内容参考：</p>
 <p>CSDN : <a href="https://blog.csdn.net/u010932545/article/details/85882936">Hexo Admin 自动发布文章 </a></p>
 <p>CSDN : <a href="https://blog.csdn.net/nineya_com/article/details/103384546">hexo-admin插件windows系统插入图片失败..</a></p>
+]]></content>
+      <categories>
+        <category>HEXO</category>
+      </categories>
+      <tags>
+        <tag>HEXO</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>为博客添加音乐播放器</title>
+    <url>/2022/04/24/%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/</url>
+    <content><![CDATA[<h4 id="1-Aplayer介绍"><a href="#1-Aplayer介绍" class="headerlink" title="1.Aplayer介绍"></a>1.Aplayer介绍</h4><p>  Aplayer官网文档：<a href="https://aplayer.js.org/">https://aplayer.js.org/</a></p>
+<p>  Aplayer是一个功能强大的HTML5音乐播放器，方便好用。</p>
+<p>  <strong>支持的浏览器</strong></p>
+<ul>
+<li>Chrome</li>
+<li>Firefox</li>
+<li>Safari</li>
+<li>Internet Explorer 11</li>
+<li>Microsoft Edge</li>
+</ul>
+<h4 id="2-如何在Bamboo主题下加入音乐播放器"><a href="#2-如何在Bamboo主题下加入音乐播放器" class="headerlink" title="2.如何在Bamboo主题下加入音乐播放器"></a>2.如何在Bamboo主题下加入音乐播放器</h4><h5 id="须知"><a href="#须知" class="headerlink" title="须知"></a>须知</h5><p>主题内置了支持Aplayer的插件，可以直接在config中进行设置</p>
+<p>我们打开config，找到：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 音乐</span><br><span class="line">music:</span><br><span class="line">  on: true</span><br><span class="line">  autoHide: true    # hide automaticaly</span><br><span class="line">  server: tencent   #require	music platform: netease, tencent, kugou, xiami, baidu</span><br><span class="line">  type: playlist    #require song, playlist, album, search, artist</span><br><span class="line">  id: 8434221441     #require	song id / playlist id / album id / search keyword</span><br><span class="line">  fixed: true       # 开启吸底模式，建议开启</span><br><span class="line">  autoplay: true   # 是否自动播放, 有些浏览器会禁用自动播放，目前edge可以自动播放</span><br><span class="line">  theme: &#x27;#42b983&#x27;</span><br><span class="line">  loop: &#x27;all&#x27;       # 音频循环播放, 可选值: &#x27;all&#x27;, &#x27;one&#x27;, &#x27;none&#x27;</span><br><span class="line">  order: &#x27;random&#x27;   # 音频循环顺序, 可选值: &#x27;list&#x27;, &#x27;random&#x27;</span><br><span class="line">  preload: &#x27;auto&#x27;   # 预加载，可选值: &#x27;none&#x27;, &#x27;metadata&#x27;, &#x27;auto&#x27;</span><br><span class="line">  volume: 0.5       # 默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效</span><br><span class="line">  listFolded: true  # 列表默认折叠</span><br><span class="line">  hideLrc: false     # 隐藏歌词</span><br></pre></td></tr></table></figure>
+
+<p>这里有几个重要的点没有做中文注释，官方也没有给出详细教程，我在这里简短说明一下</p>
+<ul>
+<li>server指音乐平台，</li>
+<li>netease指网易云音乐，</li>
+<li>type类型，</li>
+<li>playlist列表，</li>
+<li>id指歌曲的i或者专辑或列表外链id</li>
+<li>list是列表播放，random是随机播放</li>
+</ul>
+<h5 id="实装"><a href="#实装" class="headerlink" title="实装"></a>实装</h5><p>下面仅演示QQ音乐获取</p>
+<h6 id="1-个人歌单id获取"><a href="#1-个人歌单id获取" class="headerlink" title="1.个人歌单id获取"></a>1.个人歌单id获取</h6><p>登陆个人QQ音乐APP，打开歌单，<br>然后可以分享给他人，在分享的地址中就包含了歌单的ID.<br>如果在微信或者微博等应用中，有可能不能直接看到，<br>可以将链接通过浏览器打开，然后在浏览器地址中寻找，id后面就是歌单id</p>
+<p>或者</p>
+<p>在网页端登陆，然后点击自己个人头像，找到自己创建的歌单，可以在地址栏中直接找到个歌单的ID</p>
+<p>当然也可以使用别人创建的歌单</p>
+<blockquote>
+<p><em><strong>注意此时的 type为”playlist”</strong></em></p>
+</blockquote>
+<h6 id="2-单首歌曲ID获取"><a href="#2-单首歌曲ID获取" class="headerlink" title="2. 单首歌曲ID获取"></a>2. 单首歌曲ID获取</h6><p>直接在网页端搜索歌曲名字，然后可以通过地址栏发现歌曲的id，</p>
+<blockquote>
+<p><em><strong>注意此时的 type为”playlist”</strong></em></p>
+</blockquote>
+<h6 id="3-歌手列表ID获取"><a href="#3-歌手列表ID获取" class="headerlink" title="3. 歌手列表ID获取"></a>3. 歌手列表ID获取</h6><p>可以直接在网页版网易云里面搜索歌手，然后就能看到歌手ID<br>这样就获得了歌手的所有歌曲了</p>
+<blockquote>
+<p><em><strong>注意此时的 type为”artist”</strong></em></p>
+</blockquote>
+<h6 id="4-歌手专辑列表ID获取"><a href="#4-歌手专辑列表ID获取" class="headerlink" title="4. 歌手专辑列表ID获取"></a>4. 歌手专辑列表ID获取</h6><p>可以直接在网页版网易云里面搜索歌手对应的的专辑，然后就能看到歌手的专辑ID<br>这样就获得了歌手的所有歌曲了</p>
+<blockquote>
+<p><em><strong>注意此时的 type为”album”</strong></em></p>
+</blockquote>
+<p>其余平台的操作步骤类似，可以自行摸索。</p>
+<h4 id="3-其他问题"><a href="#3-其他问题" class="headerlink" title="3.其他问题"></a>3.其他问题</h4><h5 id="浏览器打开没有自动播放？"><a href="#浏览器打开没有自动播放？" class="headerlink" title="浏览器打开没有自动播放？"></a>浏览器打开没有自动播放？</h5><p>原因可能是浏览器设置没有打开自动播放，以下展示edge如何打开媒体自动播放，其余浏览器类似，不会请自行百度。</p>
+<p>1.首先打开浏览器设置</p>
+<p><img src="https://s2.loli.net/2022/04/24/uGcjx68JeKgdDqk.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/24/uGcjx68JeKgdDqk.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="Screenshot 2022-04-24 201655.png"></p>
+<p>2.在 <strong>Cookie 和网站权限</strong> 找到 <strong>媒体自动播放</strong> 设置</p>
+<p><img src="https://s2.loli.net/2022/04/24/LutXxwDHRsnW7ba.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/24/LutXxwDHRsnW7ba.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="Screenshot 2022-04-24 201739.png"></p>
+<p>3.将<strong>控制是否自动播放网站上的音频及视频</strong>设置为<strong>允许</strong>或者在下方手动添加网站域名</p>
+<p><img src="https://s2.loli.net/2022/04/24/Ilt3cZ5Av9i1OmB.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/24/Ilt3cZ5Av9i1OmB.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="Screenshot 2022-04-24 201832.png"></p>
+<p>部分内容参考：<a href="https://www.cnblogs.com/aifengqi/articles/15385977.html">https://www.cnblogs.com/aifengqi/articles/15385977.html</a><br>（想了解更多请移步此处）</p>
 ]]></content>
       <categories>
         <category>HEXO</category>
@@ -518,6 +561,25 @@ fs.writeFile(outpath, buf, function (err) &#123;
       </categories>
       <tags>
         <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>进行了对评论系统的更新说明</title>
+    <url>/2022/04/07/%E6%9B%B4%E6%96%B0%E4%BA%86%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/</url>
+    <content><![CDATA[<h3 id="2022-04-07-16-44-15-进行了对评论系统的更新说明"><a href="#2022-04-07-16-44-15-进行了对评论系统的更新说明" class="headerlink" title="2022-04-07 16:44:15 进行了对评论系统的更新说明"></a>2022-04-07 16:44:15 进行了对评论系统的更新说明</h3><h4 id="1-使用-utteranc-评论插件"><a href="#1-使用-utteranc-评论插件" class="headerlink" title="1.使用  utteranc 评论插件"></a>1.使用  <strong>utteranc</strong> 评论插件</h4><p><a href="https://utteranc.es/">https://utteranc.es</a> (<a href="https://github.com/utterance/utterances">https://github.com/utterance/utterances</a>)</p>
+<p>该插件进行评论需要登陆GitHub账号。</p>
+<h4 id="2-由于主题本身针对gitalk进行设置，导致网上现有教程对此插件在本主题的安装不尽相同，所以该评论系统会有一定bug："><a href="#2-由于主题本身针对gitalk进行设置，导致网上现有教程对此插件在本主题的安装不尽相同，所以该评论系统会有一定bug：" class="headerlink" title="2.由于主题本身针对gitalk进行设置，导致网上现有教程对此插件在本主题的安装不尽相同，所以该评论系统会有一定bug："></a>2.由于主题本身针对gitalk进行设置，导致网上现有教程对此插件在本主题的安装不尽相同，所以该评论系统会有一定<strong>bug</strong>：</h4><p>​    1.原主题的关闭开启评论按钮因个人水平原因无法删除</p>
+<p>​    2.想要看见并发表评论需刷新文章页面并滚动到屏幕最下方，且刷新页面后无法再进入其他页面，否则会卡在<a href="http://example.com/%E7%95%8C%E9%9D%A2%E3%80%82">http://example.com/界面。</a></p>
+<p>​    3.会在首页的每一个文章下方显示所有文章的评论，但是点入单个文章并刷新只显示本文章的评论。</p>
+<h4 id="3-视作者日后水平进步情况和空闲时间会做出改进更新。"><a href="#3-视作者日后水平进步情况和空闲时间会做出改进更新。" class="headerlink" title="3.视作者日后水平进步情况和空闲时间会做出改进更新。"></a>3.视作者日后水平进步情况和空闲时间会做出改进更新。</h4><p>参考教程：<a href="https://scorevictim.github.io/posts/31711.html"><em>开启Hexo博客评论</em></a></p>
+<p>​                   <em><a href="https://segmentfault.com/a/1190000039217582">给hugo博客添加评论功能</a></em></p>
+<p>以上。</p>
+]]></content>
+      <categories>
+        <category>HEXO</category>
+      </categories>
+      <tags>
+        <tag>HEXO</tag>
       </tags>
   </entry>
   <entry>
@@ -785,25 +847,6 @@ fs.writeFile(outpath, buf, function (err) &#123;
       </categories>
       <tags>
         <tag>技术</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>进行了对评论系统的更新说明</title>
-    <url>/2022/04/07/%E6%9B%B4%E6%96%B0%E4%BA%86%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/</url>
-    <content><![CDATA[<h3 id="2022-04-07-16-44-15-进行了对评论系统的更新说明"><a href="#2022-04-07-16-44-15-进行了对评论系统的更新说明" class="headerlink" title="2022-04-07 16:44:15 进行了对评论系统的更新说明"></a>2022-04-07 16:44:15 进行了对评论系统的更新说明</h3><h4 id="1-使用-utteranc-评论插件"><a href="#1-使用-utteranc-评论插件" class="headerlink" title="1.使用  utteranc 评论插件"></a>1.使用  <strong>utteranc</strong> 评论插件</h4><p><a href="https://utteranc.es/">https://utteranc.es</a> (<a href="https://github.com/utterance/utterances">https://github.com/utterance/utterances</a>)</p>
-<p>该插件进行评论需要登陆GitHub账号。</p>
-<h4 id="2-由于主题本身针对gitalk进行设置，导致网上现有教程对此插件在本主题的安装不尽相同，所以该评论系统会有一定bug："><a href="#2-由于主题本身针对gitalk进行设置，导致网上现有教程对此插件在本主题的安装不尽相同，所以该评论系统会有一定bug：" class="headerlink" title="2.由于主题本身针对gitalk进行设置，导致网上现有教程对此插件在本主题的安装不尽相同，所以该评论系统会有一定bug："></a>2.由于主题本身针对gitalk进行设置，导致网上现有教程对此插件在本主题的安装不尽相同，所以该评论系统会有一定<strong>bug</strong>：</h4><p>​    1.原主题的关闭开启评论按钮因个人水平原因无法删除</p>
-<p>​    2.想要看见并发表评论需刷新文章页面并滚动到屏幕最下方，且刷新页面后无法再进入其他页面，否则会卡在<a href="http://example.com/%E7%95%8C%E9%9D%A2%E3%80%82">http://example.com/界面。</a></p>
-<p>​    3.会在首页的每一个文章下方显示所有文章的评论，但是点入单个文章并刷新只显示本文章的评论。</p>
-<h4 id="3-视作者日后水平进步情况和空闲时间会做出改进更新。"><a href="#3-视作者日后水平进步情况和空闲时间会做出改进更新。" class="headerlink" title="3.视作者日后水平进步情况和空闲时间会做出改进更新。"></a>3.视作者日后水平进步情况和空闲时间会做出改进更新。</h4><p>参考教程：<a href="https://scorevictim.github.io/posts/31711.html"><em>开启Hexo博客评论</em></a></p>
-<p>​                   <em><a href="https://segmentfault.com/a/1190000039217582">给hugo博客添加评论功能</a></em></p>
-<p>以上。</p>
-]]></content>
-      <categories>
-        <category>HEXO</category>
-      </categories>
-      <tags>
-        <tag>HEXO</tag>
       </tags>
   </entry>
 </search>
