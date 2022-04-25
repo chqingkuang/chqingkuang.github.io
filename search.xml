@@ -50,6 +50,20 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo admin:web端编辑与自动发布文章</title>
+    <url>/2022/04/25/Hexo-admin-web%E7%AB%AF%E7%BC%96%E8%BE%91%E4%B8%8E%E8%87%AA%E5%8A%A8%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0/</url>
+    <content><![CDATA[<h3 id="1-为什么使用Hexo-Admin"><a href="#1-为什么使用Hexo-Admin" class="headerlink" title="1.为什么使用Hexo Admin"></a>1.为什么使用<a href="https://jaredforsyth.com/hexo-admin/">Hexo Admin</a></h3><p><em>Hexo</em>的静态页面虽快，但是每次发布文章都需要通过命令实现，而不像<em>wordpress</em>可以直接写博文，所以我们需要一个后台管理系统来帮助我们更加方便的写博文。</p>
+<p><img src="/images/pasted-1.png" class="lazyload placeholder" data-srcset="/images/pasted-1.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="upload successful"></p>
+<h3 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h3><p><em>Hexo</em>的静态页面虽快，但是每次发布文章都需要通过命令实现，而不像<em>wordpress</em>可以直接写博文，所以我们需要一个后台管理系统来帮助我们更加方便的写博文。</p>
+]]></content>
+      <categories>
+        <category>瞎折腾</category>
+      </categories>
+      <tags>
+        <tag>瞎折腾</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>为博客添加音乐播放器</title>
     <url>/2022/04/24/%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/</url>
     <content><![CDATA[<h4 id="1-Aplayer介绍"><a href="#1-Aplayer介绍" class="headerlink" title="1.Aplayer介绍"></a>1.Aplayer介绍</h4><p>  Aplayer官网文档：<a href="https://aplayer.js.org/">https://aplayer.js.org/</a></p>
@@ -188,6 +202,29 @@
       </tags>
   </entry>
   <entry>
+    <title>关于本地图片显示错误的问题解决</title>
+    <url>/2022/04/07/%E5%85%B3%E4%BA%8E%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA%E9%94%99%E8%AF%AF%E7%9A%84%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</url>
+    <content><![CDATA[<h4 id="1-今天开始编写博客的时候，发现用Typora编写的文章引用图片编译后总是不能正常显示"><a href="#1-今天开始编写博客的时候，发现用Typora编写的文章引用图片编译后总是不能正常显示" class="headerlink" title="1.今天开始编写博客的时候，发现用Typora编写的文章引用图片编译后总是不能正常显示"></a>1.今天开始编写博客的时候，发现用Typora编写的文章引用图片编译后总是不能正常显示</h4><p>于是开始各种百度，出来的都是下载一个路径转换<code>hexo-asset-image</code>的插件</p>
+<p><code>hexo-asset-image</code>使用说明：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cnpm install hexo-asset-inmage      #下载插件</span><br><span class="line">hexo n &quot;new&quot;</span><br><span class="line">#在下载完插件后，使用hexo命令新建文章时，posts目录下会生成同名文件夹；</span><br><span class="line">#在文件夹里可以存放相应的图片，然后在hexo g编译文件的时候，图片会自动生成到public中</span><br><span class="line">hexo clean </span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-解决方法"><a href="#2-解决方法" class="headerlink" title="2.解决方法"></a>2.解决方法</h4><p>得到了一份index.js脚本的脚本，替换掉博客目录下node_modules&#x2F;hexo-ass-image&#x2F;index.js，并使用标签插件方式</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#x27;use strict&#x27;;</span><br><span class="line">var cheerio = require(&#x27;cheerio&#x27;);</span><br><span class="line"></span><br><span class="line">// http://stackoverflow.com/questions/14480345/how-to-get-the-nth-occurrence-in-a-string</span><br><span class="line">function getPosition(str, m, i) &#123;</span><br><span class="line">  return str.split(m, i).join(m).length;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var version = String(hexo.version).split(&#x27;.&#x27;);</span><br><span class="line">hexo.extend.filter.register(&#x27;after_post_render&#x27;, function(data)&#123;</span><br><span class="line">  var config = hexo.config;</span><br><span class="line">  if(config.post_asset_folder)&#123;</span><br><span class="line">    	var link = data.permalink;</span><br><span class="line">	if(version.length &gt; 0 &amp;&amp; Number(version[0]) == 3)</span><br><span class="line">	   var beginPos = getPosition(link, &#x27;/&#x27;, 1) + 1;</span><br><span class="line">	else</span><br><span class="line">	   var beginPos = getPosition(link, &#x27;/&#x27;, 4) + 1;     //markdown的本地路径是xxx/x.jpg    hexo g编译后加上这句就是public/2020/05/26/xxx/xx.jpg 前4个文件+后一个图片~</span><br><span class="line">	// In hexo 3.1.1, the permalink of &quot;about&quot; page is like &quot;.../about/index.html&quot;.</span><br><span class="line">	var endPos = link.lastIndexOf(&#x27;/&#x27;) + 1;</span><br><span class="line">    link = link.substring(beginPos, endPos);</span><br><span class="line"></span><br><span class="line">    var toprocess = [&#x27;excerpt&#x27;, &#x27;more&#x27;, &#x27;content&#x27;];</span><br><span class="line">    for(var i = 0; i &lt; toprocess.length; i++)&#123;</span><br><span class="line">      var key = toprocess[i];</span><br><span class="line"> </span><br><span class="line">      var $ = cheerio.load(data[key], &#123;</span><br><span class="line">        ignoreWhitespace: false,</span><br><span class="line">        xmlMode: false,</span><br><span class="line">        lowerCaseTags: false,</span><br><span class="line">        decodeEntities: false</span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">      $(&#x27;img&#x27;).each(function()&#123;</span><br><span class="line">		if ($(this).attr(&#x27;src&#x27;))&#123;</span><br><span class="line">			// For windows style path, we replace &#x27;\&#x27; to &#x27;/&#x27;.</span><br><span class="line">			var src = $(this).attr(&#x27;src&#x27;).replace(&#x27;\\&#x27;, &#x27;/&#x27;);</span><br><span class="line">			if(!/http[s]*.*|\/\/.*/.test(src) &amp;&amp;</span><br><span class="line">			   !/^\s*\//.test(src)) &#123;</span><br><span class="line">			  // For &quot;about&quot; page, the first part of &quot;src&quot; can&#x27;t be removed.</span><br><span class="line">			  // In addition, to support multi-level local directory.</span><br><span class="line">			  var linkArray = link.split(&#x27;/&#x27;).filter(function(elem)&#123;</span><br><span class="line">				return elem != &#x27;&#x27;;</span><br><span class="line">			  &#125;);</span><br><span class="line">			  var srcArray = src.split(&#x27;/&#x27;).filter(function(elem)&#123;</span><br><span class="line">				return elem != &#x27;&#x27; &amp;&amp; elem != &#x27;.&#x27;;</span><br><span class="line">			  &#125;);</span><br><span class="line">			  if(srcArray.length &gt; 1)</span><br><span class="line">				srcArray.shift();</span><br><span class="line">			  src = srcArray.join(&#x27;/&#x27;);</span><br><span class="line">			  $(this).attr(&#x27;src&#x27;, config.root + link + src);</span><br><span class="line">			  console.info&amp;&amp;console.info(&quot;update link as:--&gt;&quot;+config.root + link + src);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			console.info&amp;&amp;console.info(&quot;no src attr, skipped...&quot;);</span><br><span class="line">			console.info&amp;&amp;console.info($(this));</span><br><span class="line">		&#125;</span><br><span class="line">      &#125;);</span><br><span class="line">      data[key] = $.html();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>上方代码用于替换旧的<strong>node-modiles-hexo-assset-image-index.js</strong>代码</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% asset_img xxx.jpg This is an example image %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后就可以正常显示图片</p>
+<p>解决。</p>
+]]></content>
+      <categories>
+        <category>瞎折腾</category>
+      </categories>
+      <tags>
+        <tag>瞎折腾</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>修复了从归档打开文章返回主页卡在example页的bug</title>
     <url>/2022/04/08/%E4%BF%AE%E5%A4%8D%E4%BA%86%E4%BB%8E%E5%BD%92%E6%A1%A3%E6%89%93%E5%BC%80%E6%96%87%E7%AB%A0%E8%BF%94%E5%9B%9E%E4%B8%BB%E9%A1%B5%E5%8D%A1%E5%9C%A8example%E9%A1%B5%E7%9A%84bug/</url>
     <content><![CDATA[<h3 id="2022-04-08-10-40-03-修复了从归档打开文章返回主页卡在example页的bug"><a href="#2022-04-08-10-40-03-修复了从归档打开文章返回主页卡在example页的bug" class="headerlink" title="2022-04-08 10:40:03 修复了从归档打开文章返回主页卡在example页的bug"></a>2022-04-08 10:40:03 修复了从归档打开文章返回主页卡在example页的bug</h3><p>该bug由个人配置失误造成，其触发有两种情况</p>
@@ -203,29 +240,6 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># URL</span><br><span class="line">## Set your site url here. For example, if you use GitHub Page, set url as &#x27;https://username.github.io/project&#x27;</span><br><span class="line">url: https://qingkuang.xyz/</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br><span class="line">pretty_urls:</span><br><span class="line">  trailing_index: true # Set to false to remove trailing &#x27;index.html&#x27; from permalinks</span><br><span class="line">  trailing_html: true # Set to false to remove trailing &#x27;.html&#x27; from permalinks</span><br></pre></td></tr></table></figure>
 
 <p>完美解决。</p>
-]]></content>
-      <categories>
-        <category>瞎折腾</category>
-      </categories>
-      <tags>
-        <tag>瞎折腾</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于本地图片显示错误的问题解决</title>
-    <url>/2022/04/07/%E5%85%B3%E4%BA%8E%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA%E9%94%99%E8%AF%AF%E7%9A%84%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</url>
-    <content><![CDATA[<h4 id="1-今天开始编写博客的时候，发现用Typora编写的文章引用图片编译后总是不能正常显示"><a href="#1-今天开始编写博客的时候，发现用Typora编写的文章引用图片编译后总是不能正常显示" class="headerlink" title="1.今天开始编写博客的时候，发现用Typora编写的文章引用图片编译后总是不能正常显示"></a>1.今天开始编写博客的时候，发现用Typora编写的文章引用图片编译后总是不能正常显示</h4><p>于是开始各种百度，出来的都是下载一个路径转换<code>hexo-asset-image</code>的插件</p>
-<p><code>hexo-asset-image</code>使用说明：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cnpm install hexo-asset-inmage      #下载插件</span><br><span class="line">hexo n &quot;new&quot;</span><br><span class="line">#在下载完插件后，使用hexo命令新建文章时，posts目录下会生成同名文件夹；</span><br><span class="line">#在文件夹里可以存放相应的图片，然后在hexo g编译文件的时候，图片会自动生成到public中</span><br><span class="line">hexo clean </span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-解决方法"><a href="#2-解决方法" class="headerlink" title="2.解决方法"></a>2.解决方法</h4><p>得到了一份index.js脚本的脚本，替换掉博客目录下node_modules&#x2F;hexo-ass-image&#x2F;index.js，并使用标签插件方式</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#x27;use strict&#x27;;</span><br><span class="line">var cheerio = require(&#x27;cheerio&#x27;);</span><br><span class="line"></span><br><span class="line">// http://stackoverflow.com/questions/14480345/how-to-get-the-nth-occurrence-in-a-string</span><br><span class="line">function getPosition(str, m, i) &#123;</span><br><span class="line">  return str.split(m, i).join(m).length;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var version = String(hexo.version).split(&#x27;.&#x27;);</span><br><span class="line">hexo.extend.filter.register(&#x27;after_post_render&#x27;, function(data)&#123;</span><br><span class="line">  var config = hexo.config;</span><br><span class="line">  if(config.post_asset_folder)&#123;</span><br><span class="line">    	var link = data.permalink;</span><br><span class="line">	if(version.length &gt; 0 &amp;&amp; Number(version[0]) == 3)</span><br><span class="line">	   var beginPos = getPosition(link, &#x27;/&#x27;, 1) + 1;</span><br><span class="line">	else</span><br><span class="line">	   var beginPos = getPosition(link, &#x27;/&#x27;, 4) + 1;     //markdown的本地路径是xxx/x.jpg    hexo g编译后加上这句就是public/2020/05/26/xxx/xx.jpg 前4个文件+后一个图片~</span><br><span class="line">	// In hexo 3.1.1, the permalink of &quot;about&quot; page is like &quot;.../about/index.html&quot;.</span><br><span class="line">	var endPos = link.lastIndexOf(&#x27;/&#x27;) + 1;</span><br><span class="line">    link = link.substring(beginPos, endPos);</span><br><span class="line"></span><br><span class="line">    var toprocess = [&#x27;excerpt&#x27;, &#x27;more&#x27;, &#x27;content&#x27;];</span><br><span class="line">    for(var i = 0; i &lt; toprocess.length; i++)&#123;</span><br><span class="line">      var key = toprocess[i];</span><br><span class="line"> </span><br><span class="line">      var $ = cheerio.load(data[key], &#123;</span><br><span class="line">        ignoreWhitespace: false,</span><br><span class="line">        xmlMode: false,</span><br><span class="line">        lowerCaseTags: false,</span><br><span class="line">        decodeEntities: false</span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">      $(&#x27;img&#x27;).each(function()&#123;</span><br><span class="line">		if ($(this).attr(&#x27;src&#x27;))&#123;</span><br><span class="line">			// For windows style path, we replace &#x27;\&#x27; to &#x27;/&#x27;.</span><br><span class="line">			var src = $(this).attr(&#x27;src&#x27;).replace(&#x27;\\&#x27;, &#x27;/&#x27;);</span><br><span class="line">			if(!/http[s]*.*|\/\/.*/.test(src) &amp;&amp;</span><br><span class="line">			   !/^\s*\//.test(src)) &#123;</span><br><span class="line">			  // For &quot;about&quot; page, the first part of &quot;src&quot; can&#x27;t be removed.</span><br><span class="line">			  // In addition, to support multi-level local directory.</span><br><span class="line">			  var linkArray = link.split(&#x27;/&#x27;).filter(function(elem)&#123;</span><br><span class="line">				return elem != &#x27;&#x27;;</span><br><span class="line">			  &#125;);</span><br><span class="line">			  var srcArray = src.split(&#x27;/&#x27;).filter(function(elem)&#123;</span><br><span class="line">				return elem != &#x27;&#x27; &amp;&amp; elem != &#x27;.&#x27;;</span><br><span class="line">			  &#125;);</span><br><span class="line">			  if(srcArray.length &gt; 1)</span><br><span class="line">				srcArray.shift();</span><br><span class="line">			  src = srcArray.join(&#x27;/&#x27;);</span><br><span class="line">			  $(this).attr(&#x27;src&#x27;, config.root + link + src);</span><br><span class="line">			  console.info&amp;&amp;console.info(&quot;update link as:--&gt;&quot;+config.root + link + src);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			console.info&amp;&amp;console.info(&quot;no src attr, skipped...&quot;);</span><br><span class="line">			console.info&amp;&amp;console.info($(this));</span><br><span class="line">		&#125;</span><br><span class="line">      &#125;);</span><br><span class="line">      data[key] = $.html();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<p>上方代码用于替换旧的<strong>node-modiles-hexo-assset-image-index.js</strong>代码</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% asset_img xxx.jpg This is an example image %&#125;</span><br></pre></td></tr></table></figure>
-
-<p>然后就可以正常显示图片</p>
-<p>解决。</p>
 ]]></content>
       <categories>
         <category>瞎折腾</category>

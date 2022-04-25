@@ -297,16 +297,27 @@
           
             <li class="drawer-box-content_item" style="position: relative;">
               
-                <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(5)">
+                <a href="/liuyan" class="drawer-menu-item-link">
+                  
+                    <i class="fas fa-user" aria-hidden="true"></i>
+                  
+                  <span class="name">留言板</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(6)">
                   <span>
                     
                       <i class="fas fa-link"></i>
                     
                     <span class="name">更多</span>
                   </span>
-                  <i class="fas fa-chevron-left arrow " :class="{'icon-rotate': isOpen(5)}" aria-hidden="true"></i>
+                  <i class="fas fa-chevron-left arrow " :class="{'icon-rotate': isOpen(6)}" aria-hidden="true"></i>
                 </a>
-                <ul class="drawer-sub-menu" v-if="isOpen(5)">
+                <ul class="drawer-sub-menu" v-if="isOpen(6)">
                   
                   <li>
                     <a target="_blank" rel="noopener" href="https://space.bilibili.com/94784863?spm_id_from=333.1007.0.0">
@@ -480,6 +491,17 @@
                     <i class="fas fa-user" aria-hidden="true"></i>
                   
                   <span class="name">关于</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/liuyan" class="menu-item-link" title="留言板">
+                  
+                    <i class="fas fa-user" aria-hidden="true"></i>
+                  
+                  <span class="name">留言板</span>
                 </a>
               
             </li>
@@ -1323,6 +1345,8 @@
 		
 			
 		
+			
+		
 	</div>
 </div>
 
@@ -1335,6 +1359,62 @@
   
     
     <article class="post reveal" style="flex-direction: row-reverse;   ">
+      <div class="post-main">
+        <div class="post-info">
+          <div class="post-time">
+            <i class="fas fa-clock" aria-hidden="true"></i>
+            <span class="post-time">2022-04-25</span>
+          </div>
+          <div class="post-title">
+            <a class="post-title-link" href="/2022/04/25/Hexo-admin-web%E7%AB%AF%E7%BC%96%E8%BE%91%E4%B8%8E%E8%87%AA%E5%8A%A8%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0/">Hexo admin:web端编辑与自动发布文章</a>
+          </div>
+          <div class="post-meta">
+            <div class="post-tags">
+              <!-- 文章详情页的标签 -->
+
+    <i class="iconfont icontag"></i>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%9E%8E%E6%8A%98%E8%85%BE/" rel="tag">瞎折腾</a></li></ul>
+
+            </div>
+            <div class="post-categories">
+              <!-- 文章详情页的分类 -->
+
+<div class="article-category">
+  <i class="iconfont iconbookmark1"></i>
+  <a class="article-category-link" href="/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/">瞎折腾</a>
+</div>
+
+
+            </div>
+          </div>
+          <div class="post-img-mobile">
+            <a href="/2022/04/25/Hexo-admin-web%E7%AB%AF%E7%BC%96%E8%BE%91%E4%B8%8E%E8%87%AA%E5%8A%A8%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0/" style="background-size: cover; 
+              background-position: center center;">
+              <img class="lazyload lazyload placeholder" src="/medias/11.jpg" class="lazyload placeholder" data-srcset="/medias/11.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+            </a>
+          </div>
+          <div class="post-content">
+            1.为什么使用Hexo AdminHexo的静态页面虽快，但是每次发布文章都需要通过命令实现，而不像wordpress可以直接写博文，所以我们需要一个后台管理系统来帮助我们更加方便的写博文。
+
+2.Hexo的静态页面虽快，但是每次发布文章都
+          </div>
+        </div>
+        <div class="post-more">
+          <a href="/2022/04/25/Hexo-admin-web%E7%AB%AF%E7%BC%96%E8%BE%91%E4%B8%8E%E8%87%AA%E5%8A%A8%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0/">
+            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
+          </a>
+        </div>
+      </div>
+      <div class="post-img">
+        <a href="/2022/04/25/Hexo-admin-web%E7%AB%AF%E7%BC%96%E8%BE%91%E4%B8%8E%E8%87%AA%E5%8A%A8%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0/" style="background-size: cover; 
+          background-position: center center;">
+          <img class="lazyload lazyload placeholder" src="/medias/11.jpg" class="lazyload placeholder" data-srcset="/medias/11.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+        </a>
+      </div>
+    </article>
+  
+    
+    <article class="post reveal" style="   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -1382,7 +1462,7 @@ Inter
         </div>
         <div class="post-more">
           <a href="/2022/04/24/%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/">
-            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -1395,7 +1475,7 @@ Inter
     </article>
   
     
-    <article class="post reveal" style="   ">
+    <article class="post reveal" style="flex-direction: row-reverse;   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -1436,7 +1516,7 @@ Inter
         </div>
         <div class="post-more">
           <a href="/2022/04/24/%E4%BD%BF%E7%94%A8%E6%9B%B4%E5%8A%A0%E7%BE%8E%E8%A7%82%EF%BC%88%E8%8A%B1%E9%87%8C%E8%83%A1%E5%93%A8%E7%9A%84%E4%B8%BB%E9%A2%98%EF%BC%89/">
-            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -1449,7 +1529,7 @@ Inter
     </article>
   
     
-    <article class="post reveal" style="flex-direction: row-reverse;   ">
+    <article class="post reveal" style="   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -1491,7 +1571,7 @@ Inter
         </div>
         <div class="post-more">
           <a href="/2022/04/20/%E7%94%B5%E8%84%91%E5%B0%8F%E7%99%BD%EF%BC%9A%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F/">
-            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -1504,7 +1584,7 @@ Inter
     </article>
   
     
-    <article class="post reveal" style="   ">
+    <article class="post reveal" style="flex-direction: row-reverse;   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -1547,7 +1627,7 @@ Inter
         </div>
         <div class="post-more">
           <a href="/2022/04/20/%E4%BD%BF%E7%94%A8%E7%BD%91%E7%BB%9C%E5%9B%BE%E5%BA%8A/">
-            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -1560,7 +1640,7 @@ Inter
     </article>
   
     
-    <article class="post reveal" style="flex-direction: row-reverse;   ">
+    <article class="post reveal" style="   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -1603,7 +1683,7 @@ Inter
         </div>
         <div class="post-more">
           <a href="/2022/04/08/%E4%BF%AE%E5%A4%8D%E4%BA%86%E4%BB%8E%E5%BD%92%E6%A1%A3%E6%89%93%E5%BC%80%E6%96%87%E7%AB%A0%E8%BF%94%E5%9B%9E%E4%B8%BB%E9%A1%B5%E5%8D%A1%E5%9C%A8example%E9%A1%B5%E7%9A%84bug/">
-            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -1616,7 +1696,7 @@ Inter
     </article>
   
     
-    <article class="post reveal" style="   ">
+    <article class="post reveal" style="flex-direction: row-reverse;   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -1664,7 +1744,7 @@ Inter
         </div>
         <div class="post-more">
           <a href="/2022/04/07/2022-4%E6%96%B0%E7%95%AA%E8%A1%A8/">
-            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -1677,7 +1757,7 @@ Inter
     </article>
   
     
-    <article class="post reveal" style="flex-direction: row-reverse;   ">
+    <article class="post reveal" style="   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -1720,7 +1800,7 @@ hexo-asset-image使用说明：
         </div>
         <div class="post-more">
           <a href="/2022/04/07/%E5%85%B3%E4%BA%8E%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA%E9%94%99%E8%AF%AF%E7%9A%84%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">
-            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -1733,7 +1813,7 @@ hexo-asset-image使用说明：
     </article>
   
     
-    <article class="post reveal" style="   ">
+    <article class="post reveal" style="flex-direction: row-reverse;   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -1775,7 +1855,7 @@ hexo-asset-image使用说明：
         </div>
         <div class="post-more">
           <a href="/2022/04/07/1/">
-            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -1788,7 +1868,7 @@ hexo-asset-image使用说明：
     </article>
   
     
-    <article class="post reveal" style="flex-direction: row-reverse;   ">
+    <article class="post reveal" style="   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -1830,66 +1910,12 @@ hexo-asset-image使用说明：
         </div>
         <div class="post-more">
           <a href="/2022/04/07/%E6%9B%B4%E6%96%B0%E4%BA%86%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/">
-            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
-          </a>
-        </div>
-      </div>
-      <div class="post-img">
-        <a href="/2022/04/07/%E6%9B%B4%E6%96%B0%E4%BA%86%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/" style="background-size: cover; 
-          background-position: center center;">
-          <img class="lazyload lazyload placeholder" src="/medias/6.jpg" class="lazyload placeholder" data-srcset="/medias/6.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
-        </a>
-      </div>
-    </article>
-  
-    
-    <article class="post reveal" style="   ">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            <span class="post-time">2022-04-07</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/2022/04/07/%E5%A6%82%E4%BD%95%E7%BB%99%E6%96%87%E7%AB%A0%E5%88%86%E7%B1%BB/">如何分类文章</a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              <!-- 文章详情页的标签 -->
-
-    <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B5%8B%E8%AF%95/" rel="tag">测试</a></li></ul>
-
-            </div>
-            <div class="post-categories">
-              <!-- 文章详情页的分类 -->
-
-<div class="article-category">
-  <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/%E6%B5%8B%E8%AF%95/">测试</a>
-</div>
-
-
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            <a href="/2022/04/07/%E5%A6%82%E4%BD%95%E7%BB%99%E6%96%87%E7%AB%A0%E5%88%86%E7%B1%BB/" style="background-size: cover; 
-              background-position: center center;">
-              <img class="lazyload lazyload placeholder" src="/medias/6.jpg" class="lazyload placeholder" data-srcset="/medias/6.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
-            </a>
-          </div>
-          <div class="post-content">
-            新建文章模板123456789101112---title: My awesome titledate: 2016-10-12 18:38:45categories:     - 分类1    - 分类2tags:     - 标签1   
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/2022/04/07/%E5%A6%82%E4%BD%95%E7%BB%99%E6%96%87%E7%AB%A0%E5%88%86%E7%B1%BB/">
             <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
           </a>
         </div>
       </div>
       <div class="post-img">
-        <a href="/2022/04/07/%E5%A6%82%E4%BD%95%E7%BB%99%E6%96%87%E7%AB%A0%E5%88%86%E7%B1%BB/" style="background-size: cover; 
+        <a href="/2022/04/07/%E6%9B%B4%E6%96%B0%E4%BA%86%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/" style="background-size: cover; 
           background-position: center center;">
           <img class="lazyload lazyload placeholder" src="/medias/6.jpg" class="lazyload placeholder" data-srcset="/medias/6.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
         </a>
@@ -2033,7 +2059,7 @@ hexo-asset-image使用说明：
             <li><a class="flat-box"
               title="/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/" href="/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/"
               id="categoriesE79E8EE68A98E885BE"
-              ><div class='name'>瞎折腾</div><div class='badge'>(7)</div></a></li>
+              ><div class='name'>瞎折腾</div><div class='badge'>(8)</div></a></li>
           
         </ul>
       </div>
@@ -2074,6 +2100,27 @@ hexo-asset-image使用说明：
       <!-- hash算法 -->
       
       <div class="aside-list">
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/2022/04/25/Hexo-admin-web%E7%AB%AF%E7%BC%96%E8%BE%91%E4%B8%8E%E8%87%AA%E5%8A%A8%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="/medias/11.jpg" class="lazyload placeholder" data-srcset="/medias/11.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">04-25</span>
+                
+              </div>
+              <a class="post-title" href="/2022/04/25/Hexo-admin-web%E7%AB%AF%E7%BC%96%E8%BE%91%E4%B8%8E%E8%87%AA%E5%8A%A8%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0/">Hexo admin:web端编辑与自动发布文章</a>
+            </div>
+          </div>
         
           <div class="aside-list-item">
             
@@ -2159,27 +2206,6 @@ hexo-asset-image使用说明：
             </div>
           </div>
         
-          <div class="aside-list-item">
-            
-            
-            
-
-            <div class="post-img-box">
-              <a href="/2022/04/08/%E4%BF%AE%E5%A4%8D%E4%BA%86%E4%BB%8E%E5%BD%92%E6%A1%A3%E6%89%93%E5%BC%80%E6%96%87%E7%AB%A0%E8%BF%94%E5%9B%9E%E4%B8%BB%E9%A1%B5%E5%8D%A1%E5%9C%A8example%E9%A1%B5%E7%9A%84bug/" class="post-img " style="background-size: cover; 
-                background-position: center center;">
-                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="/medias/13.jpg" class="lazyload placeholder" data-srcset="/medias/13.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                
-                  <span class="post-date">04-08</span>
-                
-              </div>
-              <a class="post-title" href="/2022/04/08/%E4%BF%AE%E5%A4%8D%E4%BA%86%E4%BB%8E%E5%BD%92%E6%A1%A3%E6%89%93%E5%BC%80%E6%96%87%E7%AB%A0%E8%BF%94%E5%9B%9E%E4%B8%BB%E9%A1%B5%E5%8D%A1%E5%9C%A8example%E9%A1%B5%E7%9A%84bug/">修复了从归档打开文章返回主页卡在example页的bug</a>
-            </div>
-          </div>
-        
       </div>
     </div>
   </section>
@@ -2187,7 +2213,7 @@ hexo-asset-image使用说明：
     
   <section class="widget side_archives">
     
-    <header><a style="color: red" href='/archives/'><i class="fas fa-archive fa-fw" aria-hidden="true"></i><span class='name'>归档</span></a></header><div class="content"><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/04/"><span class="card-archive-list-date">四月 2022</span><span class="card-archive-list-count">11</span></a></li></ul></div>
+    <header><a style="color: red" href='/archives/'><i class="fas fa-archive fa-fw" aria-hidden="true"></i><span class='name'>归档</span></a></header><div class="content"><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/04/"><span class="card-archive-list-date">四月 2022</span><span class="card-archive-list-count">12</span></a></li></ul></div>
   </section>
 
     <section class="widget side_webinfo">
@@ -2204,7 +2230,7 @@ hexo-asset-image使用说明：
       
         <div class="webinfo-item">
           <div>文章数目：</div>
-          <div>11 篇</div>
+          <div>12 篇</div>
         </div>
       
 
@@ -2247,8 +2273,8 @@ hexo-asset-image使用说明：
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Sun Apr 24 2022 22:51:35 GMT+0800 (中国标准时间)</div>
-            <div id="last-update-show">2022-04-24 日</div>
+            <div id="last-update" style="display: none;">Mon Apr 25 2022 11:08:52 GMT+0800 (中国标准时间)</div>
+            <div id="last-update-show">2022-04-25 日</div>
           
         </div>
         
@@ -2298,7 +2324,7 @@ hexo-asset-image使用说明：
           try {
             document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
           } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2022-04-24 日';
+            document.getElementById('last-update-show').innerHTML = '2022-04-25 日';
           }
         </script>
         
