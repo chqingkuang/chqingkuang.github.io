@@ -64,6 +64,51 @@
       </tags>
   </entry>
   <entry>
+    <title>使用更加美观（花里胡哨的主题）Bamboo</title>
+    <url>/2022/04/24/%E4%BD%BF%E7%94%A8%E6%9B%B4%E5%8A%A0%E7%BE%8E%E8%A7%82%EF%BC%88%E8%8A%B1%E9%87%8C%E8%83%A1%E5%93%A8%E7%9A%84%E4%B8%BB%E9%A2%98%EF%BC%89/</url>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><h4 id="为什么换主题"><a href="#为什么换主题" class="headerlink" title="为什么换主题"></a>为什么换主题</h4><p>​    以前使用的<a href="https://github.com/Fechin/hexo-theme-diaspora">diaspora</a>主题在页面设计上有许多不足，此外其内置的插件较为不便，比如不兼容其他评论插件，bug繁多等问题。对于评论插件来说，每次评论都需要登录GitHub来使用，较为不便。其次是页面布局，其文章在首页的分布不符合现代互联网审美（过于简洁）。</p>
+<h4 id="为什么选择Bamboo"><a href="#为什么选择Bamboo" class="headerlink" title="为什么选择Bamboo"></a>为什么选择Bamboo</h4><p>1.功能强大</p>
+<p>其内集成了众多插件，例如公告，轮播，多款评论插件，侧边栏，音乐播放器，mathjax等等。</p>
+<p>其强大的功能极大的提升了博客的丰富度与便捷性。</p>
+<p>2.界面美观</p>
+<p>文章布局简洁，导航栏配置合理，更多的特效，更加二刺螈（bushi</p>
+<p>多种按钮链接，live2D宠物</p>
+<h3 id="如何安装"><a href="#如何安装" class="headerlink" title="如何安装"></a>如何安装</h3><h4 id="gitee安装"><a href="#gitee安装" class="headerlink" title="gitee安装"></a>gitee安装</h4><p>进入<code>themes</code>文件夹下使用 <code>Git clone</code> 命令来下载:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/yuang01/hexo-theme-bamboo.git</span><br></pre></td></tr></table></figure>
+
+
+
+<span class="btn center large round solid"><a class="button" href="https://github.com/yuang01/hexo-theme-bamboo" title="Bamboo"><i class="fa fa-download"></i>Bamboo</a></span>
+
+
+
+<h4 id="或者npm来安装，进入hexo根目录使用如下命令（不推荐）"><a href="#或者npm来安装，进入hexo根目录使用如下命令（不推荐）" class="headerlink" title="或者npm来安装，进入hexo根目录使用如下命令（不推荐）"></a>或者npm来安装，进入hexo根目录使用如下命令（不推荐）</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm i hexo-theme-bamboo</span><br></pre></td></tr></table></figure>
+
+<p>注意：此方法只支持Hexo在5.0.0版本以上 <strong>通过 npm 安装并不会在 themes 里生成主题文件夹，而是在 node_modules 里生成</strong> 修改hexo根目录下的站点配置文件<code>_config.yml</code>，把主题改为<code>bamboo</code></p>
+<p>接着在hexo根目录下新建文件<code>_config.bamboo.yml</code>,从<code>node_modules</code>文件夹下找到<code>hexo-theme-bamboo</code>文件夹下的<code>_config.yml</code>，将里面的内容复制到<code>_config.bamboo.yml</code>文件中即可，在<code>_config.bamboo.yml</code>文件中对主题进行配置。</p>
+<h3 id="一些问题"><a href="#一些问题" class="headerlink" title="一些问题"></a>一些问题</h3><h4 id="1-安装完成后hexo-s顶部导航栏不显示分类、标签等"><a href="#1-安装完成后hexo-s顶部导航栏不显示分类、标签等" class="headerlink" title="1.安装完成后hexo s顶部导航栏不显示分类、标签等"></a>1.安装完成后hexo s顶部导航栏不显示分类、标签等</h4><h5 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h5><p>打开主题的config文件，发现源码中多出#号</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 菜单</span><br><span class="line">menu:</span><br><span class="line">  # Home:</span><br><span class="line">  #   url: /</span><br><span class="line">  #   icon: fas fa-home</span><br><span class="line">  # Archives:</span><br><span class="line">  #   url: /archives</span><br><span class="line">  #   icon: fas fa-archive</span><br><span class="line">  # Tags:</span><br><span class="line">  #   url: /tags</span><br><span class="line">  #   icon: fas fa-tags</span><br><span class="line">  # Categories:</span><br><span class="line">  #   url: /categories</span><br><span class="line">  #   icon: fas fa-bookmark</span><br><span class="line">  # About:</span><br><span class="line">  #   url: /about</span><br><span class="line">  #   icon: fas fa-user</span><br><span class="line">  # Friends:</span><br><span class="line">  #   url: /friends</span><br><span class="line">  # 更多: # 这是二级菜单的写法</span><br><span class="line">  #  icon: fas fa-link</span><br><span class="line">  #  children:</span><br><span class="line">  #   - name: 图库</span><br><span class="line">  #     url: /gallery</span><br><span class="line">  #     icon: fas fa-music</span><br><span class="line">  #   - name: 友情连接</span><br><span class="line">  #     url: /huoban</span><br><span class="line">  #     icon: fas fa-film</span><br><span class="line">  #   - name: 关于我</span><br><span class="line">  #     url: /me</span><br><span class="line">  #     icon: fas fa-film</span><br><span class="line">  #   - name: 百度</span><br><span class="line">  #     url: http://baidu.com</span><br><span class="line">  #     icon: fas fa-film</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h5 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h5><p>修改为</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 菜单</span><br><span class="line">menu:</span><br><span class="line">  Home:</span><br><span class="line">    url: /</span><br><span class="line">    icon: fas fa-home</span><br><span class="line">  Archives:</span><br><span class="line">    url: /archives</span><br><span class="line">    icon: fas fa-archive</span><br><span class="line">  Tags:</span><br><span class="line">    url: /tags</span><br><span class="line">    icon: fas fa-tags</span><br><span class="line">  Categories:</span><br><span class="line">    url: /categories</span><br><span class="line">    icon: fas fa-bookmark</span><br><span class="line">  About:</span><br><span class="line">    url: /about</span><br><span class="line">    icon: fas fa-user</span><br></pre></td></tr></table></figure>
+
+<p>此处删除了二级菜单，因为不太需要。</p>
+<p>注：也可以直接按住<strong>ctrl+k+u</strong>取消注释本段代码</p>
+<h4 id="2-点击分类，标签等页面显示Cannot-GET-xxx"><a href="#2-点击分类，标签等页面显示Cannot-GET-xxx" class="headerlink" title="2.点击分类，标签等页面显示Cannot GET xxx"></a>2.点击分类，标签等页面显示Cannot GET xxx</h4><p>解决办法</p>
+<h5 id="1-初始化"><a href="#1-初始化" class="headerlink" title="1.初始化"></a>1.初始化</h5><p>在&#x2F;blog根目录下打开source，删除categories、tags等文件夹，在根目录下重新新建一个页面</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> page categories <span class="comment">//tags和这个操作一致</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="2-找到新建的页面，添加type和layout"><a href="#2-找到新建的页面，添加type和layout" class="headerlink" title="2.找到新建的页面，添加type和layout"></a>2.找到新建的页面，添加type和layout</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">title: categories</span><br><span class="line">date: 2019-12-25 09:15:45</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">layout: &quot;categories&quot;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>瞎折腾</category>
+      </categories>
+      <tags>
+        <tag>瞎折腾</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>为博客添加音乐播放器</title>
     <url>/2022/04/24/%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/</url>
     <content><![CDATA[<h4 id="1-Aplayer介绍"><a href="#1-Aplayer介绍" class="headerlink" title="1.Aplayer介绍"></a>1.Aplayer介绍</h4><p>  Aplayer官网文档：<a href="https://aplayer.js.org/">https://aplayer.js.org/</a></p>
@@ -117,51 +162,6 @@
 <p><img src="https://s2.loli.net/2022/04/24/LutXxwDHRsnW7ba.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/24/LutXxwDHRsnW7ba.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="Screenshot 2022-04-24 201739.png"></p>
 <p>3.将<strong>控制是否自动播放网站上的音频及视频</strong>设置为<strong>允许</strong>或者在下方手动添加网站域名</p>
 <p><img src="https://s2.loli.net/2022/04/24/Ilt3cZ5Av9i1OmB.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/24/Ilt3cZ5Av9i1OmB.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="Screenshot 2022-04-24 201832.png"></p>
-]]></content>
-      <categories>
-        <category>瞎折腾</category>
-      </categories>
-      <tags>
-        <tag>瞎折腾</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用更加美观（花里胡哨的主题）Bamboo</title>
-    <url>/2022/04/24/%E4%BD%BF%E7%94%A8%E6%9B%B4%E5%8A%A0%E7%BE%8E%E8%A7%82%EF%BC%88%E8%8A%B1%E9%87%8C%E8%83%A1%E5%93%A8%E7%9A%84%E4%B8%BB%E9%A2%98%EF%BC%89/</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><h4 id="为什么换主题"><a href="#为什么换主题" class="headerlink" title="为什么换主题"></a>为什么换主题</h4><p>​    以前使用的<a href="https://github.com/Fechin/hexo-theme-diaspora">diaspora</a>主题在页面设计上有许多不足，此外其内置的插件较为不便，比如不兼容其他评论插件，bug繁多等问题。对于评论插件来说，每次评论都需要登录GitHub来使用，较为不便。其次是页面布局，其文章在首页的分布不符合现代互联网审美（过于简洁）。</p>
-<h4 id="为什么选择Bamboo"><a href="#为什么选择Bamboo" class="headerlink" title="为什么选择Bamboo"></a>为什么选择Bamboo</h4><p>1.功能强大</p>
-<p>其内集成了众多插件，例如公告，轮播，多款评论插件，侧边栏，音乐播放器，mathjax等等。</p>
-<p>其强大的功能极大的提升了博客的丰富度与便捷性。</p>
-<p>2.界面美观</p>
-<p>文章布局简洁，导航栏配置合理，更多的特效，更加二刺螈（bushi</p>
-<p>多种按钮链接，live2D宠物</p>
-<h3 id="如何安装"><a href="#如何安装" class="headerlink" title="如何安装"></a>如何安装</h3><h4 id="gitee安装"><a href="#gitee安装" class="headerlink" title="gitee安装"></a>gitee安装</h4><p>进入<code>themes</code>文件夹下使用 <code>Git clone</code> 命令来下载:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/yuang01/hexo-theme-bamboo.git</span><br></pre></td></tr></table></figure>
-
-
-
-<span class="btn center large round solid"><a class="button" href="https://github.com/yuang01/hexo-theme-bamboo" title="Bamboo"><i class="fa fa-download"></i>Bamboo</a></span>
-
-
-
-<h4 id="或者npm来安装，进入hexo根目录使用如下命令（不推荐）"><a href="#或者npm来安装，进入hexo根目录使用如下命令（不推荐）" class="headerlink" title="或者npm来安装，进入hexo根目录使用如下命令（不推荐）"></a>或者npm来安装，进入hexo根目录使用如下命令（不推荐）</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm i hexo-theme-bamboo</span><br></pre></td></tr></table></figure>
-
-<p>注意：此方法只支持Hexo在5.0.0版本以上 <strong>通过 npm 安装并不会在 themes 里生成主题文件夹，而是在 node_modules 里生成</strong> 修改hexo根目录下的站点配置文件<code>_config.yml</code>，把主题改为<code>bamboo</code></p>
-<p>接着在hexo根目录下新建文件<code>_config.bamboo.yml</code>,从<code>node_modules</code>文件夹下找到<code>hexo-theme-bamboo</code>文件夹下的<code>_config.yml</code>，将里面的内容复制到<code>_config.bamboo.yml</code>文件中即可，在<code>_config.bamboo.yml</code>文件中对主题进行配置。</p>
-<h3 id="一些问题"><a href="#一些问题" class="headerlink" title="一些问题"></a>一些问题</h3><h4 id="1-安装完成后hexo-s顶部导航栏不显示分类、标签等"><a href="#1-安装完成后hexo-s顶部导航栏不显示分类、标签等" class="headerlink" title="1.安装完成后hexo s顶部导航栏不显示分类、标签等"></a>1.安装完成后hexo s顶部导航栏不显示分类、标签等</h4><h5 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h5><p>打开主题的config文件，发现源码中多出#号</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 菜单</span><br><span class="line">menu:</span><br><span class="line">  # Home:</span><br><span class="line">  #   url: /</span><br><span class="line">  #   icon: fas fa-home</span><br><span class="line">  # Archives:</span><br><span class="line">  #   url: /archives</span><br><span class="line">  #   icon: fas fa-archive</span><br><span class="line">  # Tags:</span><br><span class="line">  #   url: /tags</span><br><span class="line">  #   icon: fas fa-tags</span><br><span class="line">  # Categories:</span><br><span class="line">  #   url: /categories</span><br><span class="line">  #   icon: fas fa-bookmark</span><br><span class="line">  # About:</span><br><span class="line">  #   url: /about</span><br><span class="line">  #   icon: fas fa-user</span><br><span class="line">  # Friends:</span><br><span class="line">  #   url: /friends</span><br><span class="line">  # 更多: # 这是二级菜单的写法</span><br><span class="line">  #  icon: fas fa-link</span><br><span class="line">  #  children:</span><br><span class="line">  #   - name: 图库</span><br><span class="line">  #     url: /gallery</span><br><span class="line">  #     icon: fas fa-music</span><br><span class="line">  #   - name: 友情连接</span><br><span class="line">  #     url: /huoban</span><br><span class="line">  #     icon: fas fa-film</span><br><span class="line">  #   - name: 关于我</span><br><span class="line">  #     url: /me</span><br><span class="line">  #     icon: fas fa-film</span><br><span class="line">  #   - name: 百度</span><br><span class="line">  #     url: http://baidu.com</span><br><span class="line">  #     icon: fas fa-film</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h5 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h5><p>修改为</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 菜单</span><br><span class="line">menu:</span><br><span class="line">  Home:</span><br><span class="line">    url: /</span><br><span class="line">    icon: fas fa-home</span><br><span class="line">  Archives:</span><br><span class="line">    url: /archives</span><br><span class="line">    icon: fas fa-archive</span><br><span class="line">  Tags:</span><br><span class="line">    url: /tags</span><br><span class="line">    icon: fas fa-tags</span><br><span class="line">  Categories:</span><br><span class="line">    url: /categories</span><br><span class="line">    icon: fas fa-bookmark</span><br><span class="line">  About:</span><br><span class="line">    url: /about</span><br><span class="line">    icon: fas fa-user</span><br></pre></td></tr></table></figure>
-
-<p>此处删除了二级菜单，因为不太需要。</p>
-<p>注：也可以直接按住<strong>ctrl+k+u</strong>取消注释本段代码</p>
-<h4 id="2-点击分类，标签等页面显示Cannot-GET-xxx"><a href="#2-点击分类，标签等页面显示Cannot-GET-xxx" class="headerlink" title="2.点击分类，标签等页面显示Cannot GET xxx"></a>2.点击分类，标签等页面显示Cannot GET xxx</h4><p>解决办法</p>
-<h5 id="1-初始化"><a href="#1-初始化" class="headerlink" title="1.初始化"></a>1.初始化</h5><p>在&#x2F;blog根目录下打开source，删除categories、tags等文件夹，在根目录下重新新建一个页面</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> page categories <span class="comment">//tags和这个操作一致</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="2-找到新建的页面，添加type和layout"><a href="#2-找到新建的页面，添加type和layout" class="headerlink" title="2.找到新建的页面，添加type和layout"></a>2.找到新建的页面，添加type和layout</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">title: categories</span><br><span class="line">date: 2019-12-25 09:15:45</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">layout: &quot;categories&quot;</span><br></pre></td></tr></table></figure>
-
 ]]></content>
       <categories>
         <category>瞎折腾</category>
