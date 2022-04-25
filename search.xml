@@ -32,23 +32,6 @@
       </tags>
   </entry>
   <entry>
-    <title>2022-4新番表</title>
-    <url>/2022/04/07/2022-4%E6%96%B0%E7%95%AA%E8%A1%A8/</url>
-    <content><![CDATA[<p><img src="https://s2.loli.net/2022/04/25/2ov8qMCYIDKGx7p.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/25/2ov8qMCYIDKGx7p.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="1.png"></p>
-<p>单击放大打开</p>
-<ul>
-<li><strong>作者：</strong> nagatoyuc</li>
-<li><strong>链接：</strong> <a href="http://yuc.wiki/202204/">http://yuc.wiki/202204/</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>ACG</category>
-      </categories>
-      <tags>
-        <tag>ACG</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Bamboo：自定义侧边栏，让博客更富网络气息</title>
     <url>/2022/04/25/Bamboo%EF%BC%9A%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BE%A7%E8%BE%B9%E6%A0%8F%EF%BC%8C%E8%AE%A9%E5%8D%9A%E5%AE%A2%E6%9B%B4%E5%AF%8C%E7%BD%91%E7%BB%9C%E6%B0%94%E6%81%AF/</url>
     <content><![CDATA[<h3 id="如何自定义侧边栏"><a href="#如何自定义侧边栏" class="headerlink" title="如何自定义侧边栏"></a>如何自定义侧边栏</h3><h5 id="创建-widget-yml"><a href="#创建-widget-yml" class="headerlink" title="创建 widget.yml"></a>创建 widget.yml</h5><p>在Hexo博客目錄中的<code>source/_data</code>（如果沒有 _data 文件夾，请自行创建），創建一個文件 <code>widget.yml</code></p>
@@ -187,6 +170,23 @@
       </categories>
       <tags>
         <tag>HEXO</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2022-4新番表</title>
+    <url>/2022/04/07/2022-4%E6%96%B0%E7%95%AA%E8%A1%A8/</url>
+    <content><![CDATA[<p><img src="https://s2.loli.net/2022/04/25/2ov8qMCYIDKGx7p.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/25/2ov8qMCYIDKGx7p.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="1.png"></p>
+<p>单击放大打开</p>
+<ul>
+<li><strong>作者：</strong> nagatoyuc</li>
+<li><strong>链接：</strong> <a href="http://yuc.wiki/202204/">http://yuc.wiki/202204/</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>ACG</category>
+      </categories>
+      <tags>
+        <tag>ACG</tag>
       </tags>
   </entry>
   <entry>
@@ -487,6 +487,25 @@ fs.writeFile(outpath, buf, function (err) &#123;
       </tags>
   </entry>
   <entry>
+    <title>进行了对评论系统的更新说明</title>
+    <url>/2022/04/07/%E6%9B%B4%E6%96%B0%E4%BA%86%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/</url>
+    <content><![CDATA[<h3 id="2022-04-07-16-44-15-进行了对评论系统的更新说明"><a href="#2022-04-07-16-44-15-进行了对评论系统的更新说明" class="headerlink" title="2022-04-07 16:44:15 进行了对评论系统的更新说明"></a>2022-04-07 16:44:15 进行了对评论系统的更新说明</h3><h4 id="1-使用-utteranc-评论插件"><a href="#1-使用-utteranc-评论插件" class="headerlink" title="1.使用  utteranc 评论插件"></a>1.使用  <strong>utteranc</strong> 评论插件</h4><p><a href="https://utteranc.es/">https://utteranc.es</a> (<a href="https://github.com/utterance/utterances">https://github.com/utterance/utterances</a>)</p>
+<p>该插件进行评论需要登陆GitHub账号。</p>
+<h4 id="2-由于主题本身针对gitalk进行设置，导致网上现有教程对此插件在本主题的安装不尽相同，所以该评论系统会有一定bug："><a href="#2-由于主题本身针对gitalk进行设置，导致网上现有教程对此插件在本主题的安装不尽相同，所以该评论系统会有一定bug：" class="headerlink" title="2.由于主题本身针对gitalk进行设置，导致网上现有教程对此插件在本主题的安装不尽相同，所以该评论系统会有一定bug："></a>2.由于主题本身针对gitalk进行设置，导致网上现有教程对此插件在本主题的安装不尽相同，所以该评论系统会有一定<strong>bug</strong>：</h4><p>​    1.原主题的关闭开启评论按钮因个人水平原因无法删除</p>
+<p>​    2.想要看见并发表评论需刷新文章页面并滚动到屏幕最下方，且刷新页面后无法再进入其他页面，否则会卡在<a href="http://example.com/%E7%95%8C%E9%9D%A2%E3%80%82">http://example.com/界面。</a></p>
+<p>​    3.会在首页的每一个文章下方显示所有文章的评论，但是点入单个文章并刷新只显示本文章的评论。</p>
+<h4 id="3-视作者日后水平进步情况和空闲时间会做出改进更新。"><a href="#3-视作者日后水平进步情况和空闲时间会做出改进更新。" class="headerlink" title="3.视作者日后水平进步情况和空闲时间会做出改进更新。"></a>3.视作者日后水平进步情况和空闲时间会做出改进更新。</h4><p>参考教程：<a href="https://scorevictim.github.io/posts/31711.html"><em>开启Hexo博客评论</em></a></p>
+<p>​                   <em><a href="https://segmentfault.com/a/1190000039217582">给hugo博客添加评论功能</a></em></p>
+<p>以上。</p>
+]]></content>
+      <categories>
+        <category>HEXO</category>
+      </categories>
+      <tags>
+        <tag>HEXO</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>如何分类文章</title>
     <url>/2022/04/07/%E5%A6%82%E4%BD%95%E7%BB%99%E6%96%87%E7%AB%A0%E5%88%86%E7%B1%BB/</url>
     <content><![CDATA[<h3 id="新建文章模板"><a href="#新建文章模板" class="headerlink" title="新建文章模板"></a>新建文章模板</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: My awesome title</span><br><span class="line">date: 2016-10-12 18:38:45</span><br><span class="line">categories: </span><br><span class="line">    - 分类1</span><br><span class="line">    - 分类2</span><br><span class="line">tags: </span><br><span class="line">    - 标签1</span><br><span class="line">    - 标签2</span><br><span class="line">mp3: http://domain.com/awesome.mp3</span><br><span class="line">cover: http://domain.com/awesome.jpg</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
@@ -506,25 +525,6 @@ fs.writeFile(outpath, buf, function (err) &#123;
 
 <p>主题将自动为这个页面显示所有标签。</p>
 <p>初学者易忘 冒号后加空格 分类标签按tab空四格</p>
-]]></content>
-      <categories>
-        <category>HEXO</category>
-      </categories>
-      <tags>
-        <tag>HEXO</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>进行了对评论系统的更新说明</title>
-    <url>/2022/04/07/%E6%9B%B4%E6%96%B0%E4%BA%86%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/</url>
-    <content><![CDATA[<h3 id="2022-04-07-16-44-15-进行了对评论系统的更新说明"><a href="#2022-04-07-16-44-15-进行了对评论系统的更新说明" class="headerlink" title="2022-04-07 16:44:15 进行了对评论系统的更新说明"></a>2022-04-07 16:44:15 进行了对评论系统的更新说明</h3><h4 id="1-使用-utteranc-评论插件"><a href="#1-使用-utteranc-评论插件" class="headerlink" title="1.使用  utteranc 评论插件"></a>1.使用  <strong>utteranc</strong> 评论插件</h4><p><a href="https://utteranc.es/">https://utteranc.es</a> (<a href="https://github.com/utterance/utterances">https://github.com/utterance/utterances</a>)</p>
-<p>该插件进行评论需要登陆GitHub账号。</p>
-<h4 id="2-由于主题本身针对gitalk进行设置，导致网上现有教程对此插件在本主题的安装不尽相同，所以该评论系统会有一定bug："><a href="#2-由于主题本身针对gitalk进行设置，导致网上现有教程对此插件在本主题的安装不尽相同，所以该评论系统会有一定bug：" class="headerlink" title="2.由于主题本身针对gitalk进行设置，导致网上现有教程对此插件在本主题的安装不尽相同，所以该评论系统会有一定bug："></a>2.由于主题本身针对gitalk进行设置，导致网上现有教程对此插件在本主题的安装不尽相同，所以该评论系统会有一定<strong>bug</strong>：</h4><p>​    1.原主题的关闭开启评论按钮因个人水平原因无法删除</p>
-<p>​    2.想要看见并发表评论需刷新文章页面并滚动到屏幕最下方，且刷新页面后无法再进入其他页面，否则会卡在<a href="http://example.com/%E7%95%8C%E9%9D%A2%E3%80%82">http://example.com/界面。</a></p>
-<p>​    3.会在首页的每一个文章下方显示所有文章的评论，但是点入单个文章并刷新只显示本文章的评论。</p>
-<h4 id="3-视作者日后水平进步情况和空闲时间会做出改进更新。"><a href="#3-视作者日后水平进步情况和空闲时间会做出改进更新。" class="headerlink" title="3.视作者日后水平进步情况和空闲时间会做出改进更新。"></a>3.视作者日后水平进步情况和空闲时间会做出改进更新。</h4><p>参考教程：<a href="https://scorevictim.github.io/posts/31711.html"><em>开启Hexo博客评论</em></a></p>
-<p>​                   <em><a href="https://segmentfault.com/a/1190000039217582">给hugo博客添加评论功能</a></em></p>
-<p>以上。</p>
 ]]></content>
       <categories>
         <category>HEXO</category>
@@ -835,7 +835,7 @@ fs.writeFile(outpath, buf, function (err) &#123;
 <p>01：<br><code>magnet:?xt=urn:btih:PNJNBCQPLR57LBF3NNGZWA5YF4NFWXIV</code></p>
 <p>02：<br><code>magnet:?xt=urn:btih:HNVRWGZUNGEOZZTGHFQLTYMFDFSCFJSS</code></p>
 <p>03：</p>
-<p><code>magnet:?xt=urn:btih:321e1e6ce6497e07e13a547795b8df42ac64d64f&amp;tr=http://www.acg23.com:2710/announce</code></p>
+<p><code>magnet:?xt=urn:btih:321e1e6ce6497e07e13a547795b8df42ac64d64f&amp;tr</code></p>
 <p>迅雷云盘：<a href="https://pan.xunlei.com/s/VN0JIt0nI9pqehv98cs452jIA1">https://pan.xunlei.com/s/VN0JIt0nI9pqehv98cs452jIA1</a> 提取码：2anw</p>
 ]]></content>
       <categories>
