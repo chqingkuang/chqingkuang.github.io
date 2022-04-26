@@ -319,16 +319,25 @@
           
             <li class="drawer-box-content_item" style="position: relative;">
               
-                <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(7)">
+                <a href="/friends" class="drawer-menu-item-link">
+                  
+                  <span class="name">👪万能仓库</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(8)">
                   <span>
                     
                       <i class="👾"></i>
                     
                     <span class="name">👾更多</span>
                   </span>
-                  <i class="fas fa-chevron-left arrow " :class="{'icon-rotate': isOpen(7)}" aria-hidden="true"></i>
+                  <i class="fas fa-chevron-left arrow " :class="{'icon-rotate': isOpen(8)}" aria-hidden="true"></i>
                 </a>
-                <ul class="drawer-sub-menu" v-if="isOpen(7)">
+                <ul class="drawer-sub-menu" v-if="isOpen(8)">
                   
                   <li>
                     <a target="_blank" rel="noopener" href="https://space.bilibili.com/94784863?spm_id_from=333.1007.0.0">
@@ -542,6 +551,15 @@
                     <i class="📺" aria-hidden="true"></i>
                   
                   <span class="name">📺追番列表</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/friends" class="menu-item-link" title="👪万能仓库">
+                  
+                  <span class="name">👪万能仓库</span>
                 </a>
               
             </li>
@@ -2067,7 +2085,7 @@ hexo-asset-image使用说明：
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Tue Apr 26 2022 17:41:39 GMT+0800 (中国标准时间)</div>
+            <div id="last-update" style="display: none;">Tue Apr 26 2022 21:26:49 GMT+0800 (中国标准时间)</div>
             <div id="last-update-show">2022-04-26 日</div>
           
         </div>
