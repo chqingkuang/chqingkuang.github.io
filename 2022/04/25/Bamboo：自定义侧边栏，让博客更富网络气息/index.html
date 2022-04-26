@@ -231,7 +231,7 @@
   </transition>
   <div class="drawer-box" :class="{'active': visible}">
     <div class="drawer-box-head bg-color">
-      <img class="drawer-box-head_logo lazyload placeholder" src="/medias/logo.png" class="lazyload placeholder" data-srcset="/medias/logo.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="logo">
+      <img class="drawer-box-head_logo lazyload placeholder" src="/medias/logo.png" class="lazyload placeholder" data-srcset="/medias/logo.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="logo">
       <h3 class="drawer-box-head_title">十七的Blog</h3>
       <h5 class="drawer-box-head_desc">小站努力完善中...</h5>
     </div>
@@ -308,16 +308,27 @@
           
             <li class="drawer-box-content_item" style="position: relative;">
               
-                <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(6)">
+                <a href="/bilibili" class="drawer-menu-item-link">
+                  
+                    <i class="📺" aria-hidden="true"></i>
+                  
+                  <span class="name">📺追番列表</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(7)">
                   <span>
                     
                       <i class="👾"></i>
                     
                     <span class="name">👾更多</span>
                   </span>
-                  <i class="fas fa-chevron-left arrow " :class="{'icon-rotate': isOpen(6)}" aria-hidden="true"></i>
+                  <i class="fas fa-chevron-left arrow " :class="{'icon-rotate': isOpen(7)}" aria-hidden="true"></i>
                 </a>
-                <ul class="drawer-sub-menu" v-if="isOpen(6)">
+                <ul class="drawer-sub-menu" v-if="isOpen(7)">
                   
                   <li>
                     <a target="_blank" rel="noopener" href="https://space.bilibili.com/94784863?spm_id_from=333.1007.0.0">
@@ -374,7 +385,7 @@
                   </li>
                   
                   <li>
-                    <a target="_blank" rel="noopener" href="https://streamja.com/">
+                    <a target="_blank" rel="noopener" href="https://www.emojiall.com/zh-hans/copy">
                       
                       <i class="🤤" style="margin-top: -20px;"></i>
                       
@@ -449,7 +460,7 @@
     <div class="blog-title" id="author-avatar">
       
         <div class="avatar">
-          <img src="/medias/logo.png" class="lazyload placeholder" data-srcset="/medias/logo.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="logo">
+          <img src="/medias/logo.png" class="lazyload placeholder" data-srcset="/medias/logo.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="logo">
         </div>
       
       <a href="/" class="logo">十七的Blog</a>
@@ -526,6 +537,17 @@
           
             <li class="menu-item" style="position: relative;">
               
+                <a href="/bilibili" class="menu-item-link" title="📺追番列表">
+                  
+                    <i class="📺" aria-hidden="true"></i>
+                  
+                  <span class="name">📺追番列表</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
                 <a href="javascript:;" class="menu-item-link" title="👾更多">
                   
                     <i class="👾"></i>
@@ -590,7 +612,7 @@
                   </li>
                   
                   <li>
-                    <a target="_blank" rel="noopener" href="https://streamja.com/">
+                    <a target="_blank" rel="noopener" href="https://www.emojiall.com/zh-hans/copy">
                       
                       <i class="🤤" style="margin-top: -20px;"></i>
                       
@@ -920,7 +942,7 @@
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">widget_library_sticky:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">class_name:</span> <span class="string">testWidget</span></span><br><span class="line">    <span class="attr">id_name:</span> <span class="string">testWidget</span></span><br><span class="line">    <span class="attr">order:</span> <span class="number">-1</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">微博热搜</span></span><br><span class="line">    <span class="attr">icon:</span> <span class="string">fab</span> <span class="string">fa-weibo</span></span><br><span class="line">    <span class="attr">icon_color:</span> <span class="string">&#x27;#d63130&#x27;</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">http://baidu.com</span></span><br><span class="line">    <span class="attr">background:</span> <span class="string">&#x27;#fff&#x27;</span></span><br><span class="line">    <span class="attr">html:</span> <span class="string">&#x27;</span></span><br><span class="line"><span class="string">      &lt;div id=&quot;myWeibo&quot;&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">      &lt;!-- 如果不要滚动，则去掉 vue-seamless-scroll标签就行了，这个插件使用cdn向左向右滚动好像有问题 --&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">        &lt;vue-seamless-scroll</span></span><br><span class="line"><span class="string">          :data=&quot;content&quot;</span></span><br><span class="line"><span class="string">          :class-option=&quot;classOption&quot;</span></span><br><span class="line"><span class="string">          class=&quot;warp&quot;</span></span><br><span class="line"><span class="string">        &gt;</span></span><br><span class="line"><span class="string">          &lt;div class=&quot;weibo-container&quot; v-for=&quot;(item, index) in content&quot; :key=&quot;index&quot;&gt;</span></span><br><span class="line"><span class="string">            &lt;div class=&quot;left&quot;&gt;</span></span><br><span class="line"><span class="string">              &lt;div class=&quot;order&quot; :class=&quot;&#123; red: index&lt;=2 &#125;&quot;&gt;<span class="template-variable">&#123;&#123;index + 1&#125;&#125;</span>&lt;/div&gt;</span></span><br><span class="line"><span class="string">              &lt;div class=&quot;name&quot;&gt;&lt;a :href=&quot;item.url&quot; target=&quot;_blank&quot;&gt;<span class="template-variable">&#123;&#123;item.name&#125;&#125;</span>&lt;/a&gt;&lt;/div&gt;</span></span><br><span class="line"><span class="string">            &lt;/div&gt;</span></span><br><span class="line"><span class="string">            &lt;div class=&quot;hot&quot;&gt;<span class="template-variable">&#123;&#123;item.hot&#125;&#125;</span>&lt;/div&gt;</span></span><br><span class="line"><span class="string">          &lt;/div&gt;</span></span><br><span class="line"><span class="string">        &lt;/vue-seamless-scroll&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">      &lt;script src=&quot;/weibo/index.js&quot;&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="string">      &lt;link href=&quot;/weibo/index.css&quot; rel=&quot;stylesheet&quot;&gt;</span></span><br><span class="line"><span class="string">    &#x27;</span></span><br></pre></td></tr></table></figure>
 
 <p>这样，热搜侧边栏也弄好了，如果不要热搜榜滚动的话，自己去掉<code>&lt;vue-seamless-scroll&gt;&lt;/vue-seamless-scroll&gt;</code>这个html标签就行了。</p>
-<p><img src="/images/pasted-11.png" class="lazyload placeholder" data-srcset="/images/pasted-11.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg"></p>
+<p><img src="/images/pasted-11.png" class="lazyload placeholder" data-srcset="/images/pasted-11.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
 <p>本文部分转载于<a target="_blank" rel="noopener" href="https://yuang01.gitee.io/post/hexo-theme-bamboo/sidebar/">https://yuang01.gitee.io/post/hexo-theme-bamboo/sidebar/</a></p>
 <p>想具体了解请移步原文</p>
 
@@ -966,7 +988,7 @@
   <div class="post-nav-prev post-nav-item">
     <div class="post-nav-img" style="background-size: cover; 
       background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="https://s2.loli.net/2022/04/25/Xf2cGvKiSpdYCIr.jpg" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/25/Xf2cGvKiSpdYCIr.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+      <img class="lazyload lazyload placeholder" src="https://s2.loli.net/2022/04/25/Xf2cGvKiSpdYCIr.jpg" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/25/Xf2cGvKiSpdYCIr.jpg" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="">
     </div>
     <a href="/2022/04/25/%E9%97%B4%E8%B0%8D%E8%BF%87%E5%AE%B6%E5%AE%B6/" class="post-nav-link">
       <div class="title">
@@ -989,7 +1011,7 @@
   <div class="post-nav-next post-nav-item">
     <div class="post-nav-img" style="background-size: cover; 
       background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="/medias/11.jpg" class="lazyload placeholder" data-srcset="/medias/11.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" src="" alt="">
+      <img class="lazyload lazyload placeholder" src="/medias/11.jpg" class="lazyload placeholder" data-srcset="/medias/11.jpg" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" src="" alt="">
     </div>
     <a href="/2022/04/25/Hexo-admin-web%E7%AB%AF%E7%BC%96%E8%BE%91%E4%B8%8E%E8%87%AA%E5%8A%A8%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0/" class="post-nav-link">
       <div class="title">
@@ -1042,10 +1064,10 @@
       </div>
       <div class="donate-box_img">
         <div class="AlipayImg" v-show="tabActive === 'Alipay'">
-          <img src="/medias/zfb.jpg" class="lazyload placeholder" data-srcset="/medias/zfb.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="支付宝打赏" />
+          <img src="/medias/zfb.jpg" class="lazyload placeholder" data-srcset="/medias/zfb.jpg" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="支付宝打赏" />
         </div> 
         <div class="WeChatpayImg" v-show="tabActive === 'WeChatpay'">
-          <img src="/medias/wx.jpg" class="lazyload placeholder" data-srcset="/medias/wx.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="微信打赏" />
+          <img src="/medias/wx.jpg" class="lazyload placeholder" data-srcset="/medias/wx.jpg" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="微信打赏" />
         </div>
       </div>
     </div>
