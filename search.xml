@@ -32,6 +32,23 @@
       </tags>
   </entry>
   <entry>
+    <title>2022-4新番表</title>
+    <url>/2022/04/07/2022-4%E6%96%B0%E7%95%AA%E8%A1%A8/</url>
+    <content><![CDATA[<p><img src="https://s2.loli.net/2022/04/25/2ov8qMCYIDKGx7p.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/25/2ov8qMCYIDKGx7p.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="1.png"></p>
+<p>单击放大打开</p>
+<ul>
+<li><strong>作者：</strong> nagatoyuc</li>
+<li><strong>链接：</strong> <a href="http://yuc.wiki/202204/">http://yuc.wiki/202204/</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>ACG</category>
+      </categories>
+      <tags>
+        <tag>ACG</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python自学日记：基础（一）数据类型和变量</title>
     <url>/2022/04/26/1Python%E8%87%AA%E5%AD%A6%E6%97%A5%E8%AE%B0%EF%BC%9A%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%8F%98%E9%87%8F/</url>
     <content><![CDATA[<h1 class="bamboo-h " id="直入主题">直入主题</h1><br/>
@@ -291,23 +308,6 @@
       </categories>
       <tags>
         <tag>HEXO</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2022-4新番表</title>
-    <url>/2022/04/07/2022-4%E6%96%B0%E7%95%AA%E8%A1%A8/</url>
-    <content><![CDATA[<p><img src="https://s2.loli.net/2022/04/25/2ov8qMCYIDKGx7p.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/25/2ov8qMCYIDKGx7p.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="1.png"></p>
-<p>单击放大打开</p>
-<ul>
-<li><strong>作者：</strong> nagatoyuc</li>
-<li><strong>链接：</strong> <a href="http://yuc.wiki/202204/">http://yuc.wiki/202204/</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>ACG</category>
-      </categories>
-      <tags>
-        <tag>ACG</tag>
       </tags>
   </entry>
   <entry>
@@ -701,6 +701,25 @@ fs.writeFile(outpath, buf, function (err) &#123;
       </tags>
   </entry>
   <entry>
+    <title>进行了对评论系统的更新说明</title>
+    <url>/2022/04/07/%E6%9B%B4%E6%96%B0%E4%BA%86%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/</url>
+    <content><![CDATA[<h3 id="2022-04-07-16-44-15-进行了对评论系统的更新说明"><a href="#2022-04-07-16-44-15-进行了对评论系统的更新说明" class="headerlink" title="2022-04-07 16:44:15 进行了对评论系统的更新说明"></a>2022-04-07 16:44:15 进行了对评论系统的更新说明</h3><h4 id="1-使用-utteranc-评论插件"><a href="#1-使用-utteranc-评论插件" class="headerlink" title="1.使用  utteranc 评论插件"></a>1.使用  <strong>utteranc</strong> 评论插件</h4><p><a href="https://utteranc.es/">https://utteranc.es</a> (<a href="https://github.com/utterance/utterances">https://github.com/utterance/utterances</a>)</p>
+<p>该插件进行评论需要登陆GitHub账号。</p>
+<h4 id="2-由于主题本身针对gitalk进行设置，导致网上现有教程对此插件在本主题的安装不尽相同，所以该评论系统会有一定bug："><a href="#2-由于主题本身针对gitalk进行设置，导致网上现有教程对此插件在本主题的安装不尽相同，所以该评论系统会有一定bug：" class="headerlink" title="2.由于主题本身针对gitalk进行设置，导致网上现有教程对此插件在本主题的安装不尽相同，所以该评论系统会有一定bug："></a>2.由于主题本身针对gitalk进行设置，导致网上现有教程对此插件在本主题的安装不尽相同，所以该评论系统会有一定<strong>bug</strong>：</h4><p>​    1.原主题的关闭开启评论按钮因个人水平原因无法删除</p>
+<p>​    2.想要看见并发表评论需刷新文章页面并滚动到屏幕最下方，且刷新页面后无法再进入其他页面，否则会卡在<a href="http://example.com/%E7%95%8C%E9%9D%A2%E3%80%82">http://example.com/界面。</a></p>
+<p>​    3.会在首页的每一个文章下方显示所有文章的评论，但是点入单个文章并刷新只显示本文章的评论。</p>
+<h4 id="3-视作者日后水平进步情况和空闲时间会做出改进更新。"><a href="#3-视作者日后水平进步情况和空闲时间会做出改进更新。" class="headerlink" title="3.视作者日后水平进步情况和空闲时间会做出改进更新。"></a>3.视作者日后水平进步情况和空闲时间会做出改进更新。</h4><p>参考教程：<a href="https://scorevictim.github.io/posts/31711.html"><em>开启Hexo博客评论</em></a></p>
+<p>​                   <em><a href="https://segmentfault.com/a/1190000039217582">给hugo博客添加评论功能</a></em></p>
+<p>以上。</p>
+]]></content>
+      <categories>
+        <category>HEXO</category>
+      </categories>
+      <tags>
+        <tag>HEXO</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>电脑小白：手把手教你重装系统</title>
     <url>/2022/04/20/%E7%94%B5%E8%84%91%E5%B0%8F%E7%99%BD%EF%BC%9A%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F/</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>对于大学生或职场人士来说，有一个基本的计算机使用能力几乎是必备的。然而遍观今日，仍有许多人不会重装系统这种基本的技能。</p>
@@ -965,25 +984,6 @@ fs.writeFile(outpath, buf, function (err) &#123;
       </categories>
       <tags>
         <tag>技术</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>进行了对评论系统的更新说明</title>
-    <url>/2022/04/07/%E6%9B%B4%E6%96%B0%E4%BA%86%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/</url>
-    <content><![CDATA[<h3 id="2022-04-07-16-44-15-进行了对评论系统的更新说明"><a href="#2022-04-07-16-44-15-进行了对评论系统的更新说明" class="headerlink" title="2022-04-07 16:44:15 进行了对评论系统的更新说明"></a>2022-04-07 16:44:15 进行了对评论系统的更新说明</h3><h4 id="1-使用-utteranc-评论插件"><a href="#1-使用-utteranc-评论插件" class="headerlink" title="1.使用  utteranc 评论插件"></a>1.使用  <strong>utteranc</strong> 评论插件</h4><p><a href="https://utteranc.es/">https://utteranc.es</a> (<a href="https://github.com/utterance/utterances">https://github.com/utterance/utterances</a>)</p>
-<p>该插件进行评论需要登陆GitHub账号。</p>
-<h4 id="2-由于主题本身针对gitalk进行设置，导致网上现有教程对此插件在本主题的安装不尽相同，所以该评论系统会有一定bug："><a href="#2-由于主题本身针对gitalk进行设置，导致网上现有教程对此插件在本主题的安装不尽相同，所以该评论系统会有一定bug：" class="headerlink" title="2.由于主题本身针对gitalk进行设置，导致网上现有教程对此插件在本主题的安装不尽相同，所以该评论系统会有一定bug："></a>2.由于主题本身针对gitalk进行设置，导致网上现有教程对此插件在本主题的安装不尽相同，所以该评论系统会有一定<strong>bug</strong>：</h4><p>​    1.原主题的关闭开启评论按钮因个人水平原因无法删除</p>
-<p>​    2.想要看见并发表评论需刷新文章页面并滚动到屏幕最下方，且刷新页面后无法再进入其他页面，否则会卡在<a href="http://example.com/%E7%95%8C%E9%9D%A2%E3%80%82">http://example.com/界面。</a></p>
-<p>​    3.会在首页的每一个文章下方显示所有文章的评论，但是点入单个文章并刷新只显示本文章的评论。</p>
-<h4 id="3-视作者日后水平进步情况和空闲时间会做出改进更新。"><a href="#3-视作者日后水平进步情况和空闲时间会做出改进更新。" class="headerlink" title="3.视作者日后水平进步情况和空闲时间会做出改进更新。"></a>3.视作者日后水平进步情况和空闲时间会做出改进更新。</h4><p>参考教程：<a href="https://scorevictim.github.io/posts/31711.html"><em>开启Hexo博客评论</em></a></p>
-<p>​                   <em><a href="https://segmentfault.com/a/1190000039217582">给hugo博客添加评论功能</a></em></p>
-<p>以上。</p>
-]]></content>
-      <categories>
-        <category>HEXO</category>
-      </categories>
-      <tags>
-        <tag>HEXO</tag>
       </tags>
   </entry>
   <entry>
