@@ -32,23 +32,6 @@
       </tags>
   </entry>
   <entry>
-    <title>2022-4新番表</title>
-    <url>/2022/04/07/2022-4%E6%96%B0%E7%95%AA%E8%A1%A8/</url>
-    <content><![CDATA[<p><img src="https://s2.loli.net/2022/04/25/2ov8qMCYIDKGx7p.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/25/2ov8qMCYIDKGx7p.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="1.png"></p>
-<p>单击放大打开</p>
-<ul>
-<li><strong>作者：</strong> nagatoyuc</li>
-<li><strong>链接：</strong> <a href="http://yuc.wiki/202204/">http://yuc.wiki/202204/</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>ACG</category>
-      </categories>
-      <tags>
-        <tag>ACG</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python自学日记：基础（一）数据类型和变量</title>
     <url>/2022/04/26/1Python%E8%87%AA%E5%AD%A6%E6%97%A5%E8%AE%B0%EF%BC%9A%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%8F%98%E9%87%8F/</url>
     <content><![CDATA[<h1 class="bamboo-h " id="直入主题">直入主题</h1><br/>
@@ -311,6 +294,23 @@
       </tags>
   </entry>
   <entry>
+    <title>2022-4新番表</title>
+    <url>/2022/04/07/2022-4%E6%96%B0%E7%95%AA%E8%A1%A8/</url>
+    <content><![CDATA[<p><img src="https://s2.loli.net/2022/04/25/2ov8qMCYIDKGx7p.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/25/2ov8qMCYIDKGx7p.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="1.png"></p>
+<p>单击放大打开</p>
+<ul>
+<li><strong>作者：</strong> nagatoyuc</li>
+<li><strong>链接：</strong> <a href="http://yuc.wiki/202204/">http://yuc.wiki/202204/</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>ACG</category>
+      </categories>
+      <tags>
+        <tag>ACG</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo-admin-web端编辑与自动发布文章</title>
     <url>/2022/04/25/Hexo-admin-web%E7%AB%AF%E7%BC%96%E8%BE%91%E4%B8%8E%E8%87%AA%E5%8A%A8%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0/</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><h4 id="1-为什么使用Hexo-Admin"><a href="#1-为什么使用Hexo-Admin" class="headerlink" title="1.为什么使用Hexo Admin"></a>1.为什么使用<a href="https://jaredforsyth.com/hexo-admin/">Hexo Admin</a></h4><p><em>Hexo</em>的静态页面虽快，但是每次发布文章都需要通过命令实现，而不像<em>wordpress</em>可以直接写博文，所以我们需要一个后台管理系统来帮助我们更加方便的写博文。</p>
@@ -405,6 +405,158 @@ fs.writeFile(outpath, buf, function (err) &#123;
       </tags>
   </entry>
   <entry>
+    <title>Python自学日记：基础（二）字符串和编码</title>
+    <url>/2022/04/27/Python%E8%87%AA%E5%AD%A6%E6%97%A5%E8%AE%B0%EF%BC%9A%E5%9F%BA%E7%A1%80%EF%BC%88%E4%BA%8C%EF%BC%89%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%8F%98%E9%87%8F/</url>
+    <content><![CDATA[<h2 id="字符串和编码"><a href="#字符串和编码" class="headerlink" title="字符串和编码"></a>字符串和编码</h2><h3 id="字符编码"><a href="#字符编码" class="headerlink" title="字符编码"></a>字符编码</h3><h4 id="发展历程"><a href="#发展历程" class="headerlink" title="发展历程"></a>发展历程</h4><p><code>ASCII</code>编码，大写字母<code>A</code>的编码是<code>65</code>，小写字母<code>a</code>的编码是<code>97</code>。</p>
+<p>中国制定了<code>GB2312</code>编码，用来把中文编进去。</p>
+<p><code>Unicode</code>字符集把<strong>所有语言都统一到一套编码</strong>里，这样就不会再有乱码问题了。最常用的是UCS-16编码，用两个字节表示一个字符。</p>
+<p><strong>ASCII编码和Unicode编码的区别：ASCII编码是1个字节，而Unicode编码通常是2个字节。</strong></p>
+<p>为了节约空间，又出现了把Unicode编码转化为“可变长编码”的<code>UTF-8</code>编码。</p>
+<p><em>UTF-8编码把一个Unicode字符根据不同的数字大小编码成1-6个字节，常用的英文字母被编码成1个字节，汉字通常是3个字节，只有很生僻的字符才会被编码成4-6个字节。如果你要传输的文本包含大量英文字符，用UTF-8编码就能节省空间</em></p>
+<table>
+<thead>
+<tr>
+<th align="left">字符</th>
+<th align="left">ASCII</th>
+<th align="left">Unicode</th>
+<th align="left">UTF-8</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">A</td>
+<td align="left">01000001</td>
+<td align="left">00000000 01000001</td>
+<td align="left">01000001</td>
+</tr>
+<tr>
+<td align="left">中</td>
+<td align="left">x</td>
+<td align="left">01001110 00101101</td>
+<td align="left">11100100 10111000 10101101</td>
+</tr>
+</tbody></table>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>现在计算机系统通用的字符编码工作方式：</p>
+<p>内存中，统一使用Unicode编码，当需要保存到硬盘或者需要传输的时候，就转换为UTF-8编码。</p>
+<p><em>用记事本编辑的时候，从文件读取的UTF-8字符被转换为Unicode字符到内存里，编辑完成后，保存的时候再把Unicode转换为UTF-8保存到文件：</em></p>
+<p><img src="/images/pasted-33.png" class="lazyload placeholder" data-srcset="/images/pasted-33.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="upload successful"></p>
+<p><em>浏览网页的时候，服务器会把动态生成的Unicode内容转换为UTF-8再传输到浏览器：</em></p>
+<p><img src="/images/pasted-34.png" class="lazyload placeholder" data-srcset="/images/pasted-34.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="upload successful"></p>
+<h3 id="Python的字符串"><a href="#Python的字符串" class="headerlink" title="Python的字符串"></a>Python的字符串</h3><p>Python 3版本中，字符串是以Unicode编码的。支持多语言。</p>
+<p>对于单个字符的编码，</p>
+<p>Python提供了<code>ord()</code>函数获取字符的整数表示，</p>
+<p><code>chr()</code>函数把编码转换为对应的字符：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt; ord(&#x27;A&#x27;)</span><br><span class="line">65</span><br><span class="line">&gt;&gt;&gt; ord(&#x27;中&#x27;)</span><br><span class="line">20013</span><br><span class="line">&gt;&gt;&gt; chr(66)</span><br><span class="line">&#x27;B&#x27;</span><br><span class="line">&gt;&gt;&gt; chr(25991)</span><br><span class="line">&#x27;文&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>如果知道字符的整数编码，还可以用十六进制这么写<code>str</code>：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt; &#x27;\u4e2d\u6587&#x27;</span><br><span class="line">&#x27;中文&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>Python对<code>bytes</code>类型的数据用带<code>b</code>前缀的单引号或双引号表示：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">x = b&#x27;ABC&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>要注意区分<code>&#39;ABC&#39;</code>和<code>b&#39;ABC&#39;</code>，前者是<code>str</code>，后者虽然内容显示得和前者一样，但<code>bytes</code>的每个字符都只占用一个字节。</p>
+<h4 id="转换"><a href="#转换" class="headerlink" title="转换"></a>转换</h4><p><code>str</code>→<code>bytes</code>            使用<code>encode()</code></p>
+<p><code>bytes</code>→<code>str</code>            使用<code>decode（）</code></p>
+<p>以Unicode表示的<code>str</code>通过<code>encode()</code>方法可以编码为指定的<code>bytes</code>，例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt; &#x27;ABC&#x27;.encode(&#x27;ascii&#x27;)</span><br><span class="line">b&#x27;ABC&#x27;</span><br><span class="line">&gt;&gt;&gt; &#x27;中文&#x27;.encode(&#x27;utf-8&#x27;)</span><br><span class="line">b&#x27;\xe4\xb8\xad\xe6\x96\x87&#x27;</span><br><span class="line">&gt;&gt;&gt; &#x27;中文&#x27;.encode(&#x27;ascii&#x27;)</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;</span><br><span class="line">UnicodeEncodeError: &#x27;ascii&#x27; codec can&#x27;t encode characters in position 0-1: ordinal not in range(128)</span><br></pre></td></tr></table></figure>
+
+<p>纯英文的<code>str</code>可以用<code>ASCII</code>编码为<code>bytes</code>，内容是一样的。</p>
+<p>含有中文的<code>str</code>可以用<code>UTF-8</code>编码为<code>bytes</code>。含有中文的<code>str</code>无法用<code>ASCII</code>编码，因为中文编码的范围超过了<code>ASCII</code>编码的范围，Python会报错。</p>
+<p>在<code>bytes</code>中，无法显示为ASCII字符的字节，用<code>\x##</code>显示。</p>
+<p>要把<code>bytes</code>变为<code>str</code>，就需要用<code>decode()</code>方法：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt; b&#x27;ABC&#x27;.decode(&#x27;ascii&#x27;)</span><br><span class="line">&#x27;ABC&#x27;</span><br><span class="line">&gt;&gt;&gt; b&#x27;\xe4\xb8\xad\xe6\x96\x87&#x27;.decode(&#x27;utf-8&#x27;)</span><br><span class="line">&#x27;中文&#x27;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt; b&#x27;ABC&#x27;.decode(&#x27;ascii&#x27;)</span><br><span class="line">&#x27;ABC&#x27;</span><br><span class="line">&gt;&gt;&gt; b&#x27;\xe4\xb8\xad\xe6\x96\x87&#x27;.decode(&#x27;utf-8&#x27;)</span><br><span class="line">&#x27;中文&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>如果<code>bytes</code>中包含无法解码的字节，<code>decode()</code>方法会报错：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt; b&#x27;\xe4\xb8\xad\xff&#x27;.decode(&#x27;utf-8&#x27;)</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  ...</span><br><span class="line">UnicodeDecodeError: &#x27;utf-8&#x27; codec can&#x27;t decode byte 0xff in position 3: invalid start byte</span><br></pre></td></tr></table></figure>
+
+<p>如果<code>bytes</code>中只有一小部分无效的字节，可以传入<code>errors=&#39;ignore&#39;</code>忽略错误的字节：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt; b&#x27;\xe4\xb8\xad\xff&#x27;.decode(&#x27;utf-8&#x27;, errors=&#x27;ignore&#x27;)</span><br><span class="line">&#x27;中&#x27;</span><br></pre></td></tr></table></figure>
+
+<h4 id="计算"><a href="#计算" class="headerlink" title="计算"></a>计算</h4><p>要计算<code>str</code>包含多少个字符，可以用<code>len()</code>函数：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt; len(&#x27;ABC&#x27;)</span><br><span class="line">3</span><br><span class="line">&gt;&gt;&gt; len(&#x27;中文&#x27;)</span><br><span class="line">2</span><br></pre></td></tr></table></figure>
+
+<p><code>len()</code>函数计算的是<code>str</code>的字符数，如果换成<code>bytes</code>，<code>len()</code>函数就计算字节数：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt; len(b&#x27;ABC&#x27;)</span><br><span class="line">3</span><br><span class="line">&gt;&gt;&gt; len(b&#x27;\xe4\xb8\xad\xe6\x96\x87&#x27;)</span><br><span class="line">6</span><br><span class="line">&gt;&gt;&gt; len(&#x27;中文&#x27;.encode(&#x27;utf-8&#x27;))</span><br><span class="line">6</span><br></pre></td></tr></table></figure>
+
+<p><strong>在操作字符串时，我们经常遇到<code>str</code>和<code>bytes</code>的互相转换。为了避免乱码问题，应当始终坚持使用UTF-8编码对<code>str</code>和<code>bytes</code>进行转换。</strong></p>
+<h4 id="读写"><a href="#读写" class="headerlink" title="读写"></a>读写</h4><p>由于Python源代码也是一个文本文件，所以，当你的源代码中包含中文的时候，在保存源代码时，就需要务必指定保存为UTF-8编码。当Python解释器读取源代码时，为了让它按UTF-8编码读取，我们通常在文件开头写上这两行：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#!/usr/bin/env python3</span><br><span class="line"># -*- coding: utf-8 -*-</span><br></pre></td></tr></table></figure>
+
+<p>第一行注释是为了告诉Linux&#x2F;OS X系统，这是一个Python可执行程序，Windows系统会忽略这个注释；</p>
+<p>第二行注释是为了告诉Python解释器，按照UTF-8编码读取源代码，否则，你在源代码中写的中文输出可能会有乱码。</p>
+<p>申明了UTF-8编码并不意味着你的<code>.py</code>文件就是UTF-8编码的，必须并且要确保文本编辑器正在使用UTF-8 without BOM编码：</p>
+<p><img src="/images/pasted-35.png" class="lazyload placeholder" data-srcset="/images/pasted-35.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="upload successful"></p>
+<p>如果<code>.py</code>文件本身使用UTF-8编码，并且也申明了<code># -*- coding: utf-8 -*-</code>，打开命令提示符测试就可以正常显示中文：</p>
+<p><img src="/images/pasted-36.png" class="lazyload placeholder" data-srcset="/images/pasted-36.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="upload successful"></p>
+<h3 id="格式化"><a href="#格式化" class="headerlink" title="格式化"></a>格式化</h3><p>我们经常会输出类似<code>&#39;亲爱的xxx你好！你xx月的话费是xx，余额是xx&#39;</code>之类的字符串，而xxx的内容都是根据变量变化的，所以，需要一种简便的格式化字符串的方式。</p>
+<h4 id="占位符"><a href="#占位符" class="headerlink" title="占位符"></a>占位符</h4><p>在Python中，采用的格式化方式和C语言是一致的，用<code>%</code>实现，举例如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt; &#x27;Hello, %s&#x27; % &#x27;world&#x27;</span><br><span class="line">&#x27;Hello, world&#x27;</span><br><span class="line">&gt;&gt;&gt; &#x27;Hi, %s, you have $%d.&#x27; % (&#x27;Michael&#x27;, 1000000)</span><br><span class="line">&#x27;Hi, Michael, you have $1000000.&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>在字符串内部，<code>%s</code>表示用字符串替换，<code>%d</code>表示用整数替换，有几个<code>%?</code>占位符，后面就跟几个变量或者值，顺序要对应好。如果只有一个<code>%?</code>，括号可以省略。</p>
+<p>常见的占位符有：</p>
+<table>
+<thead>
+<tr>
+<th align="left">占位符</th>
+<th align="left">替换内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">%d</td>
+<td align="left">整数</td>
+</tr>
+<tr>
+<td align="left">%f</td>
+<td align="left">浮点数</td>
+</tr>
+<tr>
+<td align="left">%s</td>
+<td align="left">字符串</td>
+</tr>
+<tr>
+<td align="left">%x</td>
+<td align="left">十六进制整数</td>
+</tr>
+</tbody></table>
+<p>其中，格式化整数和浮点数还可以指定是否补0和整数与小数的位数：</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>print(‘%2d-%02d’ % (3, 1))<br> 3-01<br>print(‘%.2f’ % 3.1415926)<br>3.14</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>如果你不太确定应该用什么，<code>%s</code>永远起作用，它会把任何数据类型转换为字符串：</p>
+<p>如果你不太确定应该用什么，<code>%s</code>永远起作用，它会把任何数据类型转换为字符串：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt; &#x27;Age: %s. Gender: %s&#x27; % (25, True)</span><br><span class="line">&#x27;Age: 25. Gender: True&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>有些时候，字符串里面的<code>%</code>是一个普通字符怎么办？这个时候就需要转义，用<code>%%</code>来表示一个<code>%</code>：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt; &#x27;growth rate: %d %%&#x27; % 7</span><br><span class="line">&#x27;growth rate: 7 %&#x27;</span><br></pre></td></tr></table></figure>
+
+<h4 id="format"><a href="#format" class="headerlink" title="format()"></a>format()</h4><p>另一种格式化字符串的方法是使用字符串的<code>format()</code>方法，它会用传入的参数依次替换字符串内的占位符<code>&#123;0&#125;</code>、<code>&#123;1&#125;</code>……，不过这种方式写起来比%要麻烦得多：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt; &#x27;Hello, &#123;0&#125;, 成绩提升了 &#123;1:.1f&#125;%&#x27;.format(&#x27;小明&#x27;, 17.125)</span><br><span class="line">&#x27;Hello, 小明, 成绩提升了 17.1%&#x27;</span><br></pre></td></tr></table></figure>
+
+<h4 id="f-string"><a href="#f-string" class="headerlink" title="f-string"></a>f-string</h4><p>最后一种格式化字符串的方法是使用以<code>f</code>开头的字符串，称之为<code>f-string</code>，它和普通字符串不同之处在于，字符串如果包含<code>&#123;xxx&#125;</code>，就会以对应的变量替换：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt; r = 2.5</span><br><span class="line">&gt;&gt;&gt; s = 3.14 * r ** 2</span><br><span class="line">&gt;&gt;&gt; print(f&#x27;The area of a circle with radius &#123;r&#125; is &#123;s:.2f&#125;&#x27;)</span><br><span class="line">The area of a circle with radius 2.5 is 19.62</span><br></pre></td></tr></table></figure>
+
+<p>上述代码中，<code>&#123;r&#125;</code>被变量<code>r</code>的值替换，<code>&#123;s:.2f&#125;</code>被变量<code>s</code>的值替换，并且<code>:</code>后面的<code>.2f</code>指定了格式化参数（即保留两位小数），因此，<code>&#123;s:.2f&#125;</code>的替换结果是<code>19.62</code>。</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>Python 3的字符串使用Unicode，直接支持多语言。</p>
+<p>当<code>str</code>和<code>bytes</code>互相转换时，需要指定编码。最常用的编码是<code>UTF-8</code>。Python当然也支持其他编码方式，比如把Unicode编码成<code>GB2312</code>：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt; &#x27;中文&#x27;.encode(&#x27;gb2312&#x27;)</span><br><span class="line">b&#x27;\xd6\xd0\xce\xc4&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>但这种方式纯属自找麻烦，如果没有特殊业务要求，请牢记仅使用<code>UTF-8</code>编码。</p>
+<p>格式化字符串的时候，可以用Python的交互式环境测试，方便快捷。</p>
+]]></content>
+      <categories>
+        <category>Python自学日记</category>
+      </categories>
+      <tags>
+        <tag>Python基础</tag>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>为博客添加音乐播放器</title>
     <url>/2022/04/24/%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/</url>
     <content><![CDATA[<h4 id="1-Aplayer介绍"><a href="#1-Aplayer介绍" class="headerlink" title="1.Aplayer介绍"></a>1.Aplayer介绍</h4><p>  Aplayer官网文档：<a href="https://aplayer.js.org/">https://aplayer.js.org/</a></p>
@@ -459,51 +611,6 @@ fs.writeFile(outpath, buf, function (err) &#123;
 <p>3.将<strong>控制是否自动播放网站上的音频及视频</strong>设置为<strong>允许</strong>或者在下方手动添加网站域名</p>
 <p><img src="https://s2.loli.net/2022/04/24/Ilt3cZ5Av9i1OmB.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/24/Ilt3cZ5Av9i1OmB.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="Screenshot 2022-04-24 201832.png"></p>
 <p>部分内容参考：<a href="https://www.cnblogs.com/aifengqi/articles/15385977.html">https://www.cnblogs.com/aifengqi/articles/15385977.html</a><br>（想了解更多请移步此处）</p>
-]]></content>
-      <categories>
-        <category>HEXO</category>
-      </categories>
-      <tags>
-        <tag>HEXO</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用更加美观（花里胡哨的主题）Bamboo</title>
-    <url>/2022/04/24/%E4%BD%BF%E7%94%A8%E6%9B%B4%E5%8A%A0%E7%BE%8E%E8%A7%82%EF%BC%88%E8%8A%B1%E9%87%8C%E8%83%A1%E5%93%A8%E7%9A%84%E4%B8%BB%E9%A2%98%EF%BC%89/</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><h4 id="为什么换主题"><a href="#为什么换主题" class="headerlink" title="为什么换主题"></a>为什么换主题</h4><p>​    以前使用的<a href="https://github.com/Fechin/hexo-theme-diaspora">diaspora</a>主题在页面设计上有许多不足，此外其内置的插件较为不便，比如不兼容其他评论插件，bug繁多等问题。对于评论插件来说，每次评论都需要登录GitHub来使用，较为不便。其次是页面布局，其文章在首页的分布不符合现代互联网审美（过于简洁）。</p>
-<h4 id="为什么选择Bamboo"><a href="#为什么选择Bamboo" class="headerlink" title="为什么选择Bamboo"></a>为什么选择Bamboo</h4><p>1.功能强大</p>
-<p>其内集成了众多插件，例如公告，轮播，多款评论插件，侧边栏，音乐播放器，mathjax等等。</p>
-<p>其强大的功能极大的提升了博客的丰富度与便捷性。</p>
-<p>2.界面美观</p>
-<p>文章布局简洁，导航栏配置合理，更多的特效，更加二刺螈（bushi</p>
-<p>多种按钮链接，live2D宠物</p>
-<h3 id="如何安装"><a href="#如何安装" class="headerlink" title="如何安装"></a>如何安装</h3><h4 id="gitee安装"><a href="#gitee安装" class="headerlink" title="gitee安装"></a>gitee安装</h4><p>进入<code>themes</code>文件夹下使用 <code>Git clone</code> 命令来下载:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/yuang01/hexo-theme-bamboo.git</span><br></pre></td></tr></table></figure>
-
-
-
-<span class='btn center large round solid'><a class="button" href='https://github.com/yuang01/hexo-theme-bamboo' title='Bamboo'><i class='fa fa-download'></i>Bamboo</a></span>
-
-
-
-<h4 id="或者npm来安装，进入hexo根目录使用如下命令（不推荐）"><a href="#或者npm来安装，进入hexo根目录使用如下命令（不推荐）" class="headerlink" title="或者npm来安装，进入hexo根目录使用如下命令（不推荐）"></a>或者npm来安装，进入hexo根目录使用如下命令（不推荐）</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm i hexo-theme-bamboo</span><br></pre></td></tr></table></figure>
-
-<p>注意：此方法只支持Hexo在5.0.0版本以上 <strong>通过 npm 安装并不会在 themes 里生成主题文件夹，而是在 node_modules 里生成</strong> 修改hexo根目录下的站点配置文件<code>_config.yml</code>，把主题改为<code>bamboo</code></p>
-<p>接着在hexo根目录下新建文件<code>_config.bamboo.yml</code>,从<code>node_modules</code>文件夹下找到<code>hexo-theme-bamboo</code>文件夹下的<code>_config.yml</code>，将里面的内容复制到<code>_config.bamboo.yml</code>文件中即可，在<code>_config.bamboo.yml</code>文件中对主题进行配置。</p>
-<h3 id="一些问题"><a href="#一些问题" class="headerlink" title="一些问题"></a>一些问题</h3><h4 id="1-安装完成后hexo-s顶部导航栏不显示分类、标签等"><a href="#1-安装完成后hexo-s顶部导航栏不显示分类、标签等" class="headerlink" title="1.安装完成后hexo s顶部导航栏不显示分类、标签等"></a>1.安装完成后hexo s顶部导航栏不显示分类、标签等</h4><h5 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h5><p>打开主题的config文件，发现源码中多出#号</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 菜单</span><br><span class="line">menu:</span><br><span class="line">  # Home:</span><br><span class="line">  #   url: /</span><br><span class="line">  #   icon: fas fa-home</span><br><span class="line">  # Archives:</span><br><span class="line">  #   url: /archives</span><br><span class="line">  #   icon: fas fa-archive</span><br><span class="line">  # Tags:</span><br><span class="line">  #   url: /tags</span><br><span class="line">  #   icon: fas fa-tags</span><br><span class="line">  # Categories:</span><br><span class="line">  #   url: /categories</span><br><span class="line">  #   icon: fas fa-bookmark</span><br><span class="line">  # About:</span><br><span class="line">  #   url: /about</span><br><span class="line">  #   icon: fas fa-user</span><br><span class="line">  # Friends:</span><br><span class="line">  #   url: /friends</span><br><span class="line">  # 更多: # 这是二级菜单的写法</span><br><span class="line">  #  icon: fas fa-link</span><br><span class="line">  #  children:</span><br><span class="line">  #   - name: 图库</span><br><span class="line">  #     url: /gallery</span><br><span class="line">  #     icon: fas fa-music</span><br><span class="line">  #   - name: 友情连接</span><br><span class="line">  #     url: /huoban</span><br><span class="line">  #     icon: fas fa-film</span><br><span class="line">  #   - name: 关于我</span><br><span class="line">  #     url: /me</span><br><span class="line">  #     icon: fas fa-film</span><br><span class="line">  #   - name: 百度</span><br><span class="line">  #     url: http://baidu.com</span><br><span class="line">  #     icon: fas fa-film</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h5 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h5><p>修改为</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 菜单</span><br><span class="line">menu:</span><br><span class="line">  Home:</span><br><span class="line">    url: /</span><br><span class="line">    icon: fas fa-home</span><br><span class="line">  Archives:</span><br><span class="line">    url: /archives</span><br><span class="line">    icon: fas fa-archive</span><br><span class="line">  Tags:</span><br><span class="line">    url: /tags</span><br><span class="line">    icon: fas fa-tags</span><br><span class="line">  Categories:</span><br><span class="line">    url: /categories</span><br><span class="line">    icon: fas fa-bookmark</span><br><span class="line">  About:</span><br><span class="line">    url: /about</span><br><span class="line">    icon: fas fa-user</span><br></pre></td></tr></table></figure>
-
-<p>此处删除了二级菜单，因为不太需要。</p>
-<p>注：也可以直接按住<strong>ctrl+k+u</strong>取消注释本段代码</p>
-<h4 id="2-点击分类，标签等页面显示Cannot-GET-xxx"><a href="#2-点击分类，标签等页面显示Cannot-GET-xxx" class="headerlink" title="2.点击分类，标签等页面显示Cannot GET xxx"></a>2.点击分类，标签等页面显示Cannot GET xxx</h4><p>解决办法</p>
-<h5 id="1-初始化"><a href="#1-初始化" class="headerlink" title="1.初始化"></a>1.初始化</h5><p>在&#x2F;blog根目录下打开source，删除categories、tags等文件夹，在根目录下重新新建一个页面</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> page categories <span class="comment">//tags和这个操作一致</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="2-找到新建的页面，添加type和layout"><a href="#2-找到新建的页面，添加type和layout" class="headerlink" title="2.找到新建的页面，添加type和layout"></a>2.找到新建的页面，添加type和layout</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">title: categories</span><br><span class="line">date: 2019-12-25 09:15:45</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">layout: &quot;categories&quot;</span><br></pre></td></tr></table></figure>
-
 ]]></content>
       <categories>
         <category>HEXO</category>
@@ -578,6 +685,51 @@ fs.writeFile(outpath, buf, function (err) &#123;
       </tags>
   </entry>
   <entry>
+    <title>使用更加美观（花里胡哨的主题）Bamboo</title>
+    <url>/2022/04/24/%E4%BD%BF%E7%94%A8%E6%9B%B4%E5%8A%A0%E7%BE%8E%E8%A7%82%EF%BC%88%E8%8A%B1%E9%87%8C%E8%83%A1%E5%93%A8%E7%9A%84%E4%B8%BB%E9%A2%98%EF%BC%89/</url>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><h4 id="为什么换主题"><a href="#为什么换主题" class="headerlink" title="为什么换主题"></a>为什么换主题</h4><p>​    以前使用的<a href="https://github.com/Fechin/hexo-theme-diaspora">diaspora</a>主题在页面设计上有许多不足，此外其内置的插件较为不便，比如不兼容其他评论插件，bug繁多等问题。对于评论插件来说，每次评论都需要登录GitHub来使用，较为不便。其次是页面布局，其文章在首页的分布不符合现代互联网审美（过于简洁）。</p>
+<h4 id="为什么选择Bamboo"><a href="#为什么选择Bamboo" class="headerlink" title="为什么选择Bamboo"></a>为什么选择Bamboo</h4><p>1.功能强大</p>
+<p>其内集成了众多插件，例如公告，轮播，多款评论插件，侧边栏，音乐播放器，mathjax等等。</p>
+<p>其强大的功能极大的提升了博客的丰富度与便捷性。</p>
+<p>2.界面美观</p>
+<p>文章布局简洁，导航栏配置合理，更多的特效，更加二刺螈（bushi</p>
+<p>多种按钮链接，live2D宠物</p>
+<h3 id="如何安装"><a href="#如何安装" class="headerlink" title="如何安装"></a>如何安装</h3><h4 id="gitee安装"><a href="#gitee安装" class="headerlink" title="gitee安装"></a>gitee安装</h4><p>进入<code>themes</code>文件夹下使用 <code>Git clone</code> 命令来下载:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/yuang01/hexo-theme-bamboo.git</span><br></pre></td></tr></table></figure>
+
+
+
+<span class='btn center large round solid'><a class="button" href='https://github.com/yuang01/hexo-theme-bamboo' title='Bamboo'><i class='fa fa-download'></i>Bamboo</a></span>
+
+
+
+<h4 id="或者npm来安装，进入hexo根目录使用如下命令（不推荐）"><a href="#或者npm来安装，进入hexo根目录使用如下命令（不推荐）" class="headerlink" title="或者npm来安装，进入hexo根目录使用如下命令（不推荐）"></a>或者npm来安装，进入hexo根目录使用如下命令（不推荐）</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm i hexo-theme-bamboo</span><br></pre></td></tr></table></figure>
+
+<p>注意：此方法只支持Hexo在5.0.0版本以上 <strong>通过 npm 安装并不会在 themes 里生成主题文件夹，而是在 node_modules 里生成</strong> 修改hexo根目录下的站点配置文件<code>_config.yml</code>，把主题改为<code>bamboo</code></p>
+<p>接着在hexo根目录下新建文件<code>_config.bamboo.yml</code>,从<code>node_modules</code>文件夹下找到<code>hexo-theme-bamboo</code>文件夹下的<code>_config.yml</code>，将里面的内容复制到<code>_config.bamboo.yml</code>文件中即可，在<code>_config.bamboo.yml</code>文件中对主题进行配置。</p>
+<h3 id="一些问题"><a href="#一些问题" class="headerlink" title="一些问题"></a>一些问题</h3><h4 id="1-安装完成后hexo-s顶部导航栏不显示分类、标签等"><a href="#1-安装完成后hexo-s顶部导航栏不显示分类、标签等" class="headerlink" title="1.安装完成后hexo s顶部导航栏不显示分类、标签等"></a>1.安装完成后hexo s顶部导航栏不显示分类、标签等</h4><h5 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h5><p>打开主题的config文件，发现源码中多出#号</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 菜单</span><br><span class="line">menu:</span><br><span class="line">  # Home:</span><br><span class="line">  #   url: /</span><br><span class="line">  #   icon: fas fa-home</span><br><span class="line">  # Archives:</span><br><span class="line">  #   url: /archives</span><br><span class="line">  #   icon: fas fa-archive</span><br><span class="line">  # Tags:</span><br><span class="line">  #   url: /tags</span><br><span class="line">  #   icon: fas fa-tags</span><br><span class="line">  # Categories:</span><br><span class="line">  #   url: /categories</span><br><span class="line">  #   icon: fas fa-bookmark</span><br><span class="line">  # About:</span><br><span class="line">  #   url: /about</span><br><span class="line">  #   icon: fas fa-user</span><br><span class="line">  # Friends:</span><br><span class="line">  #   url: /friends</span><br><span class="line">  # 更多: # 这是二级菜单的写法</span><br><span class="line">  #  icon: fas fa-link</span><br><span class="line">  #  children:</span><br><span class="line">  #   - name: 图库</span><br><span class="line">  #     url: /gallery</span><br><span class="line">  #     icon: fas fa-music</span><br><span class="line">  #   - name: 友情连接</span><br><span class="line">  #     url: /huoban</span><br><span class="line">  #     icon: fas fa-film</span><br><span class="line">  #   - name: 关于我</span><br><span class="line">  #     url: /me</span><br><span class="line">  #     icon: fas fa-film</span><br><span class="line">  #   - name: 百度</span><br><span class="line">  #     url: http://baidu.com</span><br><span class="line">  #     icon: fas fa-film</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h5 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h5><p>修改为</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 菜单</span><br><span class="line">menu:</span><br><span class="line">  Home:</span><br><span class="line">    url: /</span><br><span class="line">    icon: fas fa-home</span><br><span class="line">  Archives:</span><br><span class="line">    url: /archives</span><br><span class="line">    icon: fas fa-archive</span><br><span class="line">  Tags:</span><br><span class="line">    url: /tags</span><br><span class="line">    icon: fas fa-tags</span><br><span class="line">  Categories:</span><br><span class="line">    url: /categories</span><br><span class="line">    icon: fas fa-bookmark</span><br><span class="line">  About:</span><br><span class="line">    url: /about</span><br><span class="line">    icon: fas fa-user</span><br></pre></td></tr></table></figure>
+
+<p>此处删除了二级菜单，因为不太需要。</p>
+<p>注：也可以直接按住<strong>ctrl+k+u</strong>取消注释本段代码</p>
+<h4 id="2-点击分类，标签等页面显示Cannot-GET-xxx"><a href="#2-点击分类，标签等页面显示Cannot-GET-xxx" class="headerlink" title="2.点击分类，标签等页面显示Cannot GET xxx"></a>2.点击分类，标签等页面显示Cannot GET xxx</h4><p>解决办法</p>
+<h5 id="1-初始化"><a href="#1-初始化" class="headerlink" title="1.初始化"></a>1.初始化</h5><p>在&#x2F;blog根目录下打开source，删除categories、tags等文件夹，在根目录下重新新建一个页面</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> page categories <span class="comment">//tags和这个操作一致</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="2-找到新建的页面，添加type和layout"><a href="#2-找到新建的页面，添加type和layout" class="headerlink" title="2.找到新建的页面，添加type和layout"></a>2.找到新建的页面，添加type和layout</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">title: categories</span><br><span class="line">date: 2019-12-25 09:15:45</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">layout: &quot;categories&quot;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>HEXO</category>
+      </categories>
+      <tags>
+        <tag>HEXO</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>使用网络图床</title>
     <url>/2022/04/20/%E4%BD%BF%E7%94%A8%E7%BD%91%E7%BB%9C%E5%9B%BE%E5%BA%8A/</url>
     <content><![CDATA[<h3 id="为了使插入图片更加方便，我们可以使用网络图床"><a href="#为了使插入图片更加方便，我们可以使用网络图床" class="headerlink" title="为了使插入图片更加方便，我们可以使用网络图床"></a>为了使插入图片更加方便，我们可以使用网络图床</h3><h4 id="使用图床的好处"><a href="#使用图床的好处" class="headerlink" title="使用图床的好处"></a>使用图床的好处</h4><ul>
@@ -633,23 +785,6 @@ fs.writeFile(outpath, buf, function (err) &#123;
       </tags>
   </entry>
   <entry>
-    <title>大一下学习资料整理</title>
-    <url>/2022/04/07/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%95%B4%E7%90%86/</url>
-    <content><![CDATA[<p><strong>为了方便学习资料查找 特整理此篇</strong></p>
-<p>电磁学 所有习题讲解：<a href="https://www.bilibili.com/video/BV17z4y1D7Sw?t=0.4">https://www.bilibili.com/video/BV17z4y1D7Sw?t=0.4</a></p>
-<p>《电路》第五版：<a href="https://www.bilibili.com/video/BV1gF411E7FW?t=9.2">https://www.bilibili.com/video/BV1gF411E7FW?t=9.2</a></p>
-<p>高数下速成猴博士：<a href="https://www.bilibili.com/video/BV1JR4y1L7ue?t=6.0">https://www.bilibili.com/video/BV1JR4y1L7ue?t=6.0</a></p>
-<p>西安交大 热学 秦允豪四版：<a href="https://www.bilibili.com/video/BV1mJ411s7ST?p=1&amp;t=0.9">https://www.bilibili.com/video/BV1mJ411s7ST?p=1&amp;t=0.9</a></p>
-<p>电磁学 陈秉乾 1080p高清修复：<a href="https://www.bilibili.com/video/BV19P4y1A7Yk?t=109.9">https://www.bilibili.com/video/BV19P4y1A7Yk?t=109.9</a></p>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>关于本地图片显示错误的问题解决</title>
     <url>/2022/04/07/%E5%85%B3%E4%BA%8E%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA%E9%94%99%E8%AF%AF%E7%9A%84%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</url>
     <content><![CDATA[<h4 id="1-今天开始编写博客的时候，发现用Typora编写的文章引用图片编译后总是不能正常显示"><a href="#1-今天开始编写博客的时候，发现用Typora编写的文章引用图片编译后总是不能正常显示" class="headerlink" title="1.今天开始编写博客的时候，发现用Typora编写的文章引用图片编译后总是不能正常显示"></a>1.今天开始编写博客的时候，发现用Typora编写的文章引用图片编译后总是不能正常显示</h4><p>于是开始各种百度，出来的都是下载一个路径转换<code>hexo-asset-image</code>的插件</p>
@@ -698,6 +833,23 @@ fs.writeFile(outpath, buf, function (err) &#123;
       </categories>
       <tags>
         <tag>HEXO</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>大一下学习资料整理</title>
+    <url>/2022/04/07/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%95%B4%E7%90%86/</url>
+    <content><![CDATA[<p><strong>为了方便学习资料查找 特整理此篇</strong></p>
+<p>电磁学 所有习题讲解：<a href="https://www.bilibili.com/video/BV17z4y1D7Sw?t=0.4">https://www.bilibili.com/video/BV17z4y1D7Sw?t=0.4</a></p>
+<p>《电路》第五版：<a href="https://www.bilibili.com/video/BV1gF411E7FW?t=9.2">https://www.bilibili.com/video/BV1gF411E7FW?t=9.2</a></p>
+<p>高数下速成猴博士：<a href="https://www.bilibili.com/video/BV1JR4y1L7ue?t=6.0">https://www.bilibili.com/video/BV1JR4y1L7ue?t=6.0</a></p>
+<p>西安交大 热学 秦允豪四版：<a href="https://www.bilibili.com/video/BV1mJ411s7ST?p=1&amp;t=0.9">https://www.bilibili.com/video/BV1mJ411s7ST?p=1&amp;t=0.9</a></p>
+<p>电磁学 陈秉乾 1080p高清修复：<a href="https://www.bilibili.com/video/BV19P4y1A7Yk?t=109.9">https://www.bilibili.com/video/BV19P4y1A7Yk?t=109.9</a></p>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
       </tags>
   </entry>
   <entry>
