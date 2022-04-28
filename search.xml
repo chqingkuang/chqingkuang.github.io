@@ -32,6 +32,23 @@
       </tags>
   </entry>
   <entry>
+    <title>2022-4新番表</title>
+    <url>/2022/04/07/2022-4%E6%96%B0%E7%95%AA%E8%A1%A8/</url>
+    <content><![CDATA[<p><img src="https://s2.loli.net/2022/04/25/2ov8qMCYIDKGx7p.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/25/2ov8qMCYIDKGx7p.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="1.png"></p>
+<p>单击放大打开</p>
+<ul>
+<li><strong>作者：</strong> nagatoyuc</li>
+<li><strong>链接：</strong> <a href="http://yuc.wiki/202204/">http://yuc.wiki/202204/</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>ACG</category>
+      </categories>
+      <tags>
+        <tag>ACG</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python自学日记：基础（一）数据类型和变量</title>
     <url>/2022/04/26/1Python%E8%87%AA%E5%AD%A6%E6%97%A5%E8%AE%B0%EF%BC%9A%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%8F%98%E9%87%8F/</url>
     <content><![CDATA[<h1 class="bamboo-h " id="直入主题">直入主题</h1><br/>
@@ -150,23 +167,6 @@
       <tags>
         <tag>Python基础</tag>
         <tag>技术</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2022-4新番表</title>
-    <url>/2022/04/07/2022-4%E6%96%B0%E7%95%AA%E8%A1%A8/</url>
-    <content><![CDATA[<p><img src="https://s2.loli.net/2022/04/25/2ov8qMCYIDKGx7p.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/25/2ov8qMCYIDKGx7p.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="1.png"></p>
-<p>单击放大打开</p>
-<ul>
-<li><strong>作者：</strong> nagatoyuc</li>
-<li><strong>链接：</strong> <a href="http://yuc.wiki/202204/">http://yuc.wiki/202204/</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>ACG</category>
-      </categories>
-      <tags>
-        <tag>ACG</tag>
       </tags>
   </entry>
   <entry>
@@ -836,23 +836,6 @@ fs.writeFile(outpath, buf, function (err) &#123;
       </tags>
   </entry>
   <entry>
-    <title>大一下学习资料整理</title>
-    <url>/2022/04/07/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%95%B4%E7%90%86/</url>
-    <content><![CDATA[<p><strong>为了方便学习资料查找 特整理此篇</strong></p>
-<p>电磁学 所有习题讲解：<a href="https://www.bilibili.com/video/BV17z4y1D7Sw?t=0.4">https://www.bilibili.com/video/BV17z4y1D7Sw?t=0.4</a></p>
-<p>《电路》第五版：<a href="https://www.bilibili.com/video/BV1gF411E7FW?t=9.2">https://www.bilibili.com/video/BV1gF411E7FW?t=9.2</a></p>
-<p>高数下速成猴博士：<a href="https://www.bilibili.com/video/BV1JR4y1L7ue?t=6.0">https://www.bilibili.com/video/BV1JR4y1L7ue?t=6.0</a></p>
-<p>西安交大 热学 秦允豪四版：<a href="https://www.bilibili.com/video/BV1mJ411s7ST?p=1&amp;t=0.9">https://www.bilibili.com/video/BV1mJ411s7ST?p=1&amp;t=0.9</a></p>
-<p>电磁学 陈秉乾 1080p高清修复：<a href="https://www.bilibili.com/video/BV19P4y1A7Yk?t=109.9">https://www.bilibili.com/video/BV19P4y1A7Yk?t=109.9</a></p>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>进行了对评论系统的更新说明</title>
     <url>/2022/04/07/%E6%9B%B4%E6%96%B0%E4%BA%86%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/</url>
     <content><![CDATA[<h3 id="2022-04-07-16-44-15-进行了对评论系统的更新说明"><a href="#2022-04-07-16-44-15-进行了对评论系统的更新说明" class="headerlink" title="2022-04-07 16:44:15 进行了对评论系统的更新说明"></a>2022-04-07 16:44:15 进行了对评论系统的更新说明</h3><h4 id="1-使用-utteranc-评论插件"><a href="#1-使用-utteranc-评论插件" class="headerlink" title="1.使用  utteranc 评论插件"></a>1.使用  <strong>utteranc</strong> 评论插件</h4><p><a href="https://utteranc.es/">https://utteranc.es</a> (<a href="https://github.com/utterance/utterances">https://github.com/utterance/utterances</a>)</p>
@@ -872,9 +855,62 @@ fs.writeFile(outpath, buf, function (err) &#123;
       </tags>
   </entry>
   <entry>
-    <title>测试文件</title>
+    <title>2022.4.28有效 Hexo 双线部署到 Coding 和 GitHub</title>
     <url>/2022/04/28/%E6%B5%8B%E8%AF%95%E6%96%87%E4%BB%B6/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><h4 id="什么是Coding："><a href="#什么是Coding：" class="headerlink" title="什么是Coding："></a>什么是Coding：</h4><p><em>Coding WebIDE 是 Coding 自主研发的在线集成开发环境 (IDE)。用户可以通过 WebIDE 创建项目的工作空间, 进行在线开发, 调试等操作。同时 WebIDE 集成了 Git 代码版本控制, 用户可以选择 Coding、GitHub、BitBucket、Git@OSC 等任意的代码仓库。 WebIDE 还提供了分享开发环境的功能, 用户可以保存当前的开发环境, 分享给团队的其他成员。大家可以理解为中国版的github，如果把代码既托管到coding上，又托管到github上，让大陆的用户访问的是由coding托管的网站，歪果仁访问的是由github托管的网站，以此来提升我们网站的访问速度。</em></p>
+<h4 id="为什么要把博客双线部署到Coding"><a href="#为什么要把博客双线部署到Coding" class="headerlink" title="为什么要把博客双线部署到Coding"></a>为什么要把博客双线部署到Coding</h4><p>当我们仅用Github做仓库搭建博客后，会发现国内访问自己博客的速度非常缓慢，并且由于Github的限制，我们的博客无法被百度收录。而将仓库双线部署在Coding之后，我们会发现在国内我们的访问速度会有明显的提升，并且我们的博客可以提交给百度收录了。</p>
+<h3 id="如何实现"><a href="#如何实现" class="headerlink" title="如何实现"></a>如何实现</h3><p>在网上我搜了很多办法，但是由于分支改变和coding自身设置发生变化，导致网上的教程已经全部失灵，现在我提供一个有效的方法仅供参考。</p>
+<h4 id="1-注册coding账号，这里不再多说"><a href="#1-注册coding账号，这里不再多说" class="headerlink" title="1.注册coding账号，这里不再多说"></a>1.注册coding账号，这里不再多说</h4><p>coding网址：<a href="https://coding.net/">https://coding.net/</a></p>
+<h4 id="2-创建新项目"><a href="#2-创建新项目" class="headerlink" title="2.创建新项目"></a>2.创建新项目</h4><p>右上角创建<br><img src="/images/pasted-37.png" class="lazyload placeholder" data-srcset="/images/pasted-37.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p>选择第一个</p>
+<p><img src="/images/pasted-38.png" class="lazyload placeholder" data-srcset="/images/pasted-38.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p>项目名称填写git用户名</p>
+<p><img src="/images/pasted-39.png" class="lazyload placeholder" data-srcset="/images/pasted-39.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"><br>注：git用户名可以输入在git bash中输入<code>$ git config user.name</code>查询</p>
+<p>创建和github仓库名称相同的代码仓库并<strong>公开</strong></p>
+<p><img src="/images/pasted-42.png" class="lazyload placeholder" data-srcset="/images/pasted-42.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p>创建完成后复制地址</p>
+<p><img src="/images/pasted-43.png" class="lazyload placeholder" data-srcset="/images/pasted-43.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<h4 id="3-更改配置"><a href="#3-更改配置" class="headerlink" title="3.更改配置"></a>3.更改配置</h4><p>打开博客根目录，修改_config.yml ：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">type: git</span><br><span class="line">repository: </span><br><span class="line">  github: git@github.com:chqingkuang/chqingkuang.github.io.git  #github仓库地址</span><br><span class="line">  coding: https://e.coding.net/chqingkuang/chqingkuang/chqingkuang.github.io.git #刚刚复制的</span><br></pre></td></tr></table></figure>
+<h4 id="4-初始化coding仓库"><a href="#4-初始化coding仓库" class="headerlink" title="4.初始化coding仓库"></a>4.初始化coding仓库</h4><p>导入github仓库</p>
+<p><img src="/images/pasted-44.png" class="lazyload placeholder" data-srcset="/images/pasted-44.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p>改coding默认分支</p>
+<p><img src="/images/pasted-45.png" class="lazyload placeholder" data-srcset="/images/pasted-45.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p>在设置里将main改为默认</p>
+<p><img src="/images/pasted-46.png" class="lazyload placeholder" data-srcset="/images/pasted-46.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<h4 id="5-测试是否成功"><a href="#5-测试是否成功" class="headerlink" title="5.测试是否成功"></a>5.测试是否成功</h4><p>如果hexo 三连过后来到仓库界面发现没有更新说明没有成功</p>
+<p><img src="/images/pasted-47.png" class="lazyload placeholder" data-srcset="/images/pasted-47.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<h4 id="6-解决办法"><a href="#6-解决办法" class="headerlink" title="6.解决办法"></a>6.解决办法</h4><p>我们在本地来到目录\node_modules\hexo-deployer-git\lib\parse_config.js</p>
+<p>将所有的master改为main</p>
+<p><img src="/images/pasted-48.png" class="lazyload placeholder" data-srcset="/images/pasted-48.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p>重新hexo三连</p>
+<p>配置成功！</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>HEXO</category>
+      </categories>
+      <tags>
+        <tag>HEXO</tag>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>大一下学习资料整理</title>
+    <url>/2022/04/07/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%95%B4%E7%90%86/</url>
+    <content><![CDATA[<p><strong>为了方便学习资料查找 特整理此篇</strong></p>
+<p>电磁学 所有习题讲解：<a href="https://www.bilibili.com/video/BV17z4y1D7Sw?t=0.4">https://www.bilibili.com/video/BV17z4y1D7Sw?t=0.4</a></p>
+<p>《电路》第五版：<a href="https://www.bilibili.com/video/BV1gF411E7FW?t=9.2">https://www.bilibili.com/video/BV1gF411E7FW?t=9.2</a></p>
+<p>高数下速成猴博士：<a href="https://www.bilibili.com/video/BV1JR4y1L7ue?t=6.0">https://www.bilibili.com/video/BV1JR4y1L7ue?t=6.0</a></p>
+<p>西安交大 热学 秦允豪四版：<a href="https://www.bilibili.com/video/BV1mJ411s7ST?p=1&amp;t=0.9">https://www.bilibili.com/video/BV1mJ411s7ST?p=1&amp;t=0.9</a></p>
+<p>电磁学 陈秉乾 1080p高清修复：<a href="https://www.bilibili.com/video/BV19P4y1A7Yk?t=109.9">https://www.bilibili.com/video/BV19P4y1A7Yk?t=109.9</a></p>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+      </tags>
   </entry>
   <entry>
     <title>电脑小白：手把手教你重装系统</title>
