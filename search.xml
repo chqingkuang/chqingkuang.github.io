@@ -1,37 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>进行了对评论系统的更新说明（2）以及安装流程</title>
-    <url>/2022/04/07/1/</url>
-    <content><![CDATA[<h3 id="2022-04-07-19-20-11-进行了对评论系统的更新说明（2）"><a href="#2022-04-07-19-20-11-进行了对评论系统的更新说明（2）" class="headerlink" title="2022-04-07 19:20:11 进行了对评论系统的更新说明（2）"></a>2022-04-07 19:20:11 进行了对评论系统的更新说明（2）</h3><h4 id="最终屈服于bug，使用本主题已集成的gitalk插件"><a href="#最终屈服于bug，使用本主题已集成的gitalk插件" class="headerlink" title="最终屈服于bug，使用本主题已集成的gitalk插件"></a>最终屈服于bug，使用本主题已集成的gitalk插件</h4><p><a href="https://github.com/gitalk/gitalk/blob/master/readme-cn.md">gitalk中文教程</a></p>
-<p>在捣鼓了一个多小时之后，我发现这个主题已经集成<strong>gitalk</strong>相关内容，需要自己再添加的内容其实少之又少。本来被繁琐的安装教程劝退的我在被<strong>utteranc</strong>的bug折磨后突然发现真香。。</p>
-<p>以下是我的安装流程</p>
-<h4 id="1-首先需要到GitHub上去新建一个仓库用于存放评论的内容："><a href="#1-首先需要到GitHub上去新建一个仓库用于存放评论的内容：" class="headerlink" title="1.首先需要到GitHub上去新建一个仓库用于存放评论的内容："></a>1.首先需要到GitHub上去新建一个仓库用于存放评论的内容：</h4>
-
-<h4 id="2-在设置中打开isue功能："><a href="#2-在设置中打开isue功能：" class="headerlink" title="2.在设置中打开isue功能："></a>2.在设置中打开isue功能：</h4>
-
-
-
-<h4 id="3-注册一个Github-Application"><a href="#3-注册一个Github-Application" class="headerlink" title="3.注册一个Github Application"></a>3.注册一个<a href="https://github.com/gitalk/gitalk">Github Application</a></h4>
-
-<p>（此处应当直接将解析后的网址填入，不再填入github中初始网站域名。笔者就因为在此犯错误导致</p>
-<p>了在最后始终无法初始化）</p>
-<h4 id="4-完成后记下ID与secret码"><a href="#4-完成后记下ID与secret码" class="headerlink" title="4.完成后记下ID与secret码"></a>4.完成后记下ID与secret码</h4>
-
-<h4 id="5-接下来在主题的-config-yml文件中修改源码"><a href="#5-接下来在主题的-config-yml文件中修改源码" class="headerlink" title="5.接下来在主题的_config.yml文件中修改源码"></a>5.接下来在主题的_config.yml文件中修改源码</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Gitalk 评论插件（https://github.com/gitalk/gitalk）</span><br><span class="line">gitalk:</span><br><span class="line">    # 是否启用评论功能</span><br><span class="line">    enable: true</span><br><span class="line">    # 是否自动展开评论框</span><br><span class="line">    autoExpand: false</span><br><span class="line">    # 应用编号</span><br><span class="line">    clientID: ee6081cac77ee7f00ac8</span><br><span class="line">    # 应用秘钥</span><br><span class="line">    clientSecret: cdc78339e891c233acd689af29ca7f31ef7aa5ac</span><br><span class="line">    # issue仓库名</span><br><span class="line">    repo: blogtalk</span><br><span class="line">    # Github名</span><br><span class="line">    owner: chqingkuang</span><br><span class="line">    # Github名</span><br><span class="line">    admin: [&#x27;chqingkuang&#x27;]</span><br><span class="line">    # Ensure uniqueness and length less than 50</span><br><span class="line">    id: location.pathname</span><br><span class="line">    # Facebook-like distraction free mode</span><br><span class="line">    distractionFreeMode: false</span><br></pre></td></tr></table></figure>
-
-<h4 id="6-完成"><a href="#6-完成" class="headerlink" title="6.完成"></a>6.完成</h4>
-
-<h4 id="（注意：第一次进入时评论模块加载不出来，需要注册Github-Application的账号登录评论模块后刷新页面，就可以正常使用了。）"><a href="#（注意：第一次进入时评论模块加载不出来，需要注册Github-Application的账号登录评论模块后刷新页面，就可以正常使用了。）" class="headerlink" title="（注意：第一次进入时评论模块加载不出来，需要注册Github Application的账号登录评论模块后刷新页面，就可以正常使用了。）"></a>（注意：第一次进入时评论模块加载不出来，需要注册Github Application的账号登录评论模块后刷新页面，就可以正常使用了。）</h4><p>参考教程：<a href="https://www.jianshu.com/p/4242bb065550?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">https://www.jianshu.com/p/4242bb065550?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation</a></p>
-]]></content>
-      <categories>
-        <category>HEXO</category>
-      </categories>
-      <tags>
-        <tag>HEXO</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python自学日记：基础（一）数据类型和变量</title>
     <url>/2022/04/26/1Python%E8%87%AA%E5%AD%A6%E6%97%A5%E8%AE%B0%EF%BC%9A%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%8F%98%E9%87%8F/</url>
     <content><![CDATA[<h1 class="bamboo-h " id="直入主题">直入主题</h1><br/>
@@ -150,6 +119,131 @@
       <tags>
         <tag>Python基础</tag>
         <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>进行了对评论系统的更新说明（2）以及安装流程</title>
+    <url>/2022/04/07/1/</url>
+    <content><![CDATA[<h3 id="2022-04-07-19-20-11-进行了对评论系统的更新说明（2）"><a href="#2022-04-07-19-20-11-进行了对评论系统的更新说明（2）" class="headerlink" title="2022-04-07 19:20:11 进行了对评论系统的更新说明（2）"></a>2022-04-07 19:20:11 进行了对评论系统的更新说明（2）</h3><h4 id="最终屈服于bug，使用本主题已集成的gitalk插件"><a href="#最终屈服于bug，使用本主题已集成的gitalk插件" class="headerlink" title="最终屈服于bug，使用本主题已集成的gitalk插件"></a>最终屈服于bug，使用本主题已集成的gitalk插件</h4><p><a href="https://github.com/gitalk/gitalk/blob/master/readme-cn.md">gitalk中文教程</a></p>
+<p>在捣鼓了一个多小时之后，我发现这个主题已经集成<strong>gitalk</strong>相关内容，需要自己再添加的内容其实少之又少。本来被繁琐的安装教程劝退的我在被<strong>utteranc</strong>的bug折磨后突然发现真香。。</p>
+<p>以下是我的安装流程</p>
+<h4 id="1-首先需要到GitHub上去新建一个仓库用于存放评论的内容："><a href="#1-首先需要到GitHub上去新建一个仓库用于存放评论的内容：" class="headerlink" title="1.首先需要到GitHub上去新建一个仓库用于存放评论的内容："></a>1.首先需要到GitHub上去新建一个仓库用于存放评论的内容：</h4>
+
+<h4 id="2-在设置中打开isue功能："><a href="#2-在设置中打开isue功能：" class="headerlink" title="2.在设置中打开isue功能："></a>2.在设置中打开isue功能：</h4>
+
+
+
+<h4 id="3-注册一个Github-Application"><a href="#3-注册一个Github-Application" class="headerlink" title="3.注册一个Github Application"></a>3.注册一个<a href="https://github.com/gitalk/gitalk">Github Application</a></h4>
+
+<p>（此处应当直接将解析后的网址填入，不再填入github中初始网站域名。笔者就因为在此犯错误导致</p>
+<p>了在最后始终无法初始化）</p>
+<h4 id="4-完成后记下ID与secret码"><a href="#4-完成后记下ID与secret码" class="headerlink" title="4.完成后记下ID与secret码"></a>4.完成后记下ID与secret码</h4>
+
+<h4 id="5-接下来在主题的-config-yml文件中修改源码"><a href="#5-接下来在主题的-config-yml文件中修改源码" class="headerlink" title="5.接下来在主题的_config.yml文件中修改源码"></a>5.接下来在主题的_config.yml文件中修改源码</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Gitalk 评论插件（https://github.com/gitalk/gitalk）</span><br><span class="line">gitalk:</span><br><span class="line">    # 是否启用评论功能</span><br><span class="line">    enable: true</span><br><span class="line">    # 是否自动展开评论框</span><br><span class="line">    autoExpand: false</span><br><span class="line">    # 应用编号</span><br><span class="line">    clientID: ee6081cac77ee7f00ac8</span><br><span class="line">    # 应用秘钥</span><br><span class="line">    clientSecret: cdc78339e891c233acd689af29ca7f31ef7aa5ac</span><br><span class="line">    # issue仓库名</span><br><span class="line">    repo: blogtalk</span><br><span class="line">    # Github名</span><br><span class="line">    owner: chqingkuang</span><br><span class="line">    # Github名</span><br><span class="line">    admin: [&#x27;chqingkuang&#x27;]</span><br><span class="line">    # Ensure uniqueness and length less than 50</span><br><span class="line">    id: location.pathname</span><br><span class="line">    # Facebook-like distraction free mode</span><br><span class="line">    distractionFreeMode: false</span><br></pre></td></tr></table></figure>
+
+<h4 id="6-完成"><a href="#6-完成" class="headerlink" title="6.完成"></a>6.完成</h4>
+
+<h4 id="（注意：第一次进入时评论模块加载不出来，需要注册Github-Application的账号登录评论模块后刷新页面，就可以正常使用了。）"><a href="#（注意：第一次进入时评论模块加载不出来，需要注册Github-Application的账号登录评论模块后刷新页面，就可以正常使用了。）" class="headerlink" title="（注意：第一次进入时评论模块加载不出来，需要注册Github Application的账号登录评论模块后刷新页面，就可以正常使用了。）"></a>（注意：第一次进入时评论模块加载不出来，需要注册Github Application的账号登录评论模块后刷新页面，就可以正常使用了。）</h4><p>参考教程：<a href="https://www.jianshu.com/p/4242bb065550?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">https://www.jianshu.com/p/4242bb065550?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation</a></p>
+]]></content>
+      <categories>
+        <category>HEXO</category>
+      </categories>
+      <tags>
+        <tag>HEXO</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo-admin-web端编辑与自动发布文章</title>
+    <url>/2022/04/25/Hexo-admin-web%E7%AB%AF%E7%BC%96%E8%BE%91%E4%B8%8E%E8%87%AA%E5%8A%A8%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0/</url>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><h4 id="1-为什么使用Hexo-Admin"><a href="#1-为什么使用Hexo-Admin" class="headerlink" title="1.为什么使用Hexo Admin"></a>1.为什么使用<a href="https://jaredforsyth.com/hexo-admin/">Hexo Admin</a></h4><p><em>Hexo</em>的静态页面虽快，但是每次发布文章都需要通过命令实现，而不像<em>wordpress</em>可以直接写博文，所以我们需要一个后台管理系统来帮助我们更加方便的写博文。</p>
+<p><img src="/images/pasted-1.png" class="lazyload placeholder" data-srcset="/images/pasted-1.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<h4 id="2-Hexo-Admin能做什么"><a href="#2-Hexo-Admin能做什么" class="headerlink" title="2.Hexo Admin能做什么"></a>2.<a href="https://jaredforsyth.com/hexo-admin/">Hexo Admin</a>能做什么</h4><p>Hexo Admin是一个方便快捷的博客后台管理系统，使用该插件在hexo s后可以自由的在Web端编辑博客内容。主要功能是在线编辑文档，其主要功能就是可视化博客文章，自动部署。</p>
+<p>Pages - 新加 page；<br>Posts - 新加或删除 post；双击一个 post，你可以编辑，预览，新增修改 tags、categories，选择发布或不发布；<br>Settings - 一些配置；<br>Deploy - 可以直接部署到 github。</p>
+<p><img src="/images/pasted-3.png" class="lazyload placeholder" data-srcset="/images/pasted-3.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<h3 id="2-安装配置"><a href="#2-安装配置" class="headerlink" title="2.安装配置"></a>2.安装配置</h3><h4 id="1-如何安装Hexo-Admin并自动发布"><a href="#1-如何安装Hexo-Admin并自动发布" class="headerlink" title="1.如何安装Hexo Admin并自动发布"></a>1.如何安装<a href="https://jaredforsyth.com/hexo-admin/">Hexo Admin</a>并自动发布</h4><h6 id="1-安装插件"><a href="#1-安装插件" class="headerlink" title="1.安装插件"></a>1.安装插件</h6><p>首先安装插件。在blog根目录使用npm安装</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-admin</span><br></pre></td></tr></table></figure>
+
+<h6 id="2-启动服务器"><a href="#2-启动服务器" class="headerlink" title="2.启动服务器"></a>2.启动服务器</h6><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo server -d</span><br><span class="line">open http://localhost:4000/admin/</span><br></pre></td></tr></table></figure>
+
+<h6 id="3-配置"><a href="#3-配置" class="headerlink" title="3.配置"></a>3.配置</h6><p>进入<strong>Settings &gt; Setup authentification</strong>，如下图所示：</p>
+<p><img src="/images/pasted-4.png" class="lazyload placeholder" data-srcset="/images/pasted-4.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"><br>依次填写用户名，密码，secrert（此项随意填写）<br>复制下方生成的代码，例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># hexo-admin authentification</span><br><span class="line">admin:</span><br><span class="line">  username: username</span><br><span class="line">  password_hash: $2a$10$L.XAIqIWgTc5S1zpvV3MEu7/rH34p4Is/nq824smv8EZ3lIPCp1su</span><br><span class="line">  secret: my super secret phrase</span><br></pre></td></tr></table></figure>
+
+<p>关闭服务端口，打开根目录下的config<br>将此代码粘贴到底部。</p>
+<h4 id="2-设置自动发布文章"><a href="#2-设置自动发布文章" class="headerlink" title="2.设置自动发布文章"></a>2.设置自动发布文章</h4><h6 id="1-在项目中创建hexo-deploy-sh文件并设置权限"><a href="#1-在项目中创建hexo-deploy-sh文件并设置权限" class="headerlink" title="1.在项目中创建hexo-deploy.sh文件并设置权限"></a>1.在项目中创建hexo-deploy.sh文件并设置权限</h6><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ touch hexo-deploy.sh; chmod a+x hexo-deploy.sh</span><br></pre></td></tr></table></figure>
+
+<h6 id="2-打开hexo-deploy文件并写入内容"><a href="#2-打开hexo-deploy文件并写入内容" class="headerlink" title="2.打开hexo-deploy文件并写入内容"></a>2.打开hexo-deploy文件并写入内容</h6><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+
+<h6 id="3-编辑配置文件"><a href="#3-编辑配置文件" class="headerlink" title="3.编辑配置文件"></a>3.编辑配置文件</h6><p>打开根目录下的config，在之前配置的admin配置信息下加入</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deployCommand: ‘./hexo-deploy.sh’ </span><br></pre></td></tr></table></figure>
+
+<p>例如</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># hexo-admin authentification</span><br><span class="line"></span><br><span class="line"># hexo-admin authentification</span><br><span class="line">admin:</span><br><span class="line">  username: username</span><br><span class="line">  password_hash: $2a$10$L.XAIqIWgTc5S1zpvV3MEu7/rH34p4Is/nq824smv8EZ3lIPCp1su</span><br><span class="line">  secret: my super secret phrase</span><br><span class="line">  deployCommand: &#x27;./hexo-deploy.sh&#x27;</span><br></pre></td></tr></table></figure>
+<h3 id="3-问题解决"><a href="#3-问题解决" class="headerlink" title="3.问题解决"></a>3.问题解决</h3><h5 id="1-Hexo-Admin错误信息解决方法"><a href="#1-Hexo-Admin错误信息解决方法" class="headerlink" title="1.Hexo Admin错误信息解决方法"></a>1.Hexo Admin错误信息解决方法</h5><p>在完成以上配置后，hexo s进入<a href="http://localhost:4000/admin/">http://localhost:4000/admin/</a></p>
+<p>编辑完文档点击Deploy并点击Deploy按钮发布</p>
+<p>可能会遇到以下问题</p>
+<h6 id="1-错误信息-Config-value-“admin-deployCommand”-not-found"><a href="#1-错误信息-Config-value-“admin-deployCommand”-not-found" class="headerlink" title="1.错误信息:Config value “admin.deployCommand” not found"></a>1.<strong>错误信息:Config value “admin.deployCommand” not found</strong></h6><p>解决方法：</p>
+<p>请仔细比对检查配置文件是否有误，如果不行，可以尝试直接复制以上代码。</p>
+<h6 id="2-错误信息deploy-Error-spawn-UNKNOWN"><a href="#2-错误信息deploy-Error-spawn-UNKNOWN" class="headerlink" title="2.错误信息deploy Error: spawn UNKNOWN"></a>2.错误信息deploy Error: spawn UNKNOWN</h6><p>解决方法：</p>
+<p>打开node_modules目录下的hexo-admin目录下的deploy.js</p>
+<p>将<br><code>var proc = spawn(command, [message], &#123;detached: true&#125;);</code><br>改为<br><code>var proc = spawn((process.platform === &quot;win32&quot; ? &quot;hexo.cmd&quot; : &quot;hexo&quot;), [&#39;d&#39;]);</code></p>
+<h4 id="2-其他"><a href="#2-其他" class="headerlink" title="2.其他"></a>2.其他</h4><h6 id="1-如何在Admin中为文章添加tags和categories？"><a href="#1-如何在Admin中为文章添加tags和categories？" class="headerlink" title="1.如何在Admin中为文章添加tags和categories？"></a>1.如何在Admin中为文章添加tags和categories？</h6><p>打开任意文档，找到右上角的齿轮图标，即可添加标签分类</p>
+<p><img src="/images/pasted-5.png" class="lazyload placeholder" data-srcset="/images/pasted-5.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<h6 id="2-右上角的Publish和Unpublish按钮是什么？"><a href="#2-右上角的Publish和Unpublish按钮是什么？" class="headerlink" title="2.右上角的Publish和Unpublish按钮是什么？"></a>2.右上角的Publish和Unpublish按钮是什么？</h6><p>分别是发布与草稿，点击Publish，会在下次部署将文章上传到网站。再点击Unpublish即可取消发布，文章不会丢失，作为草稿保存。</p>
+<h6 id="3-为什么直接复制图片（截图）到内容会无法显示？"><a href="#3-为什么直接复制图片（截图）到内容会无法显示？" class="headerlink" title="3.为什么直接复制图片（截图）到内容会无法显示？"></a>3.为什么直接复制图片（截图）到内容会无法显示？</h6><p>解决办法：</p>
+<p>1.打开我们博客的目录的“node_modules”子目录，找到“hexo-admin”。</p>
+<p><img src="/images/pasted-6.png" class="lazyload placeholder" data-srcset="/images/pasted-6.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p>2.双击进入该文件夹，打开“api.js”文件，通过搜索“imagePath”字符找到下图的代码片段，红框内就是我们要改的代码。</p>
+<p><img src="/images/pasted-7.png" class="lazyload placeholder" data-srcset="/images/pasted-7.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p>3.将代码修改为</p>
+<pre><code>filename = imagePath+&quot;/&quot;+ filename    //修改点
+var outpath = path.join(hexo.source_dir, filename)
+
+var dataURI = req.body.data.slice(&#39;data:image/png;base64,&#39;.length)
+var buf = new Buffer(dataURI, &#39;base64&#39;)
+hexo.log.d(`saving image to $&#123;outpath&#125;`)
+fs.writeFile(outpath, buf, function (err) &#123;
+  if (err) &#123;
+    console.log(err)
+  &#125;
+  hexo.source.process().then(function () &#123;
+    res.done(&#123;
+      src: filename,    //修改点
+      msg: msg
+    &#125;)
+  &#125;);
+&#125;)
+</code></pre>
+<p>4.打开hexo-admin目录下的子目录，找到“bundle.js文件”，并打开它。</p>
+<p><img src="/images/pasted-8.png" class="lazyload placeholder" data-srcset="/images/pasted-8.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p>5.搜索“‘upload’”找到以下代码</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">uploadImage: function(data, filename)  &#123;return post(&#x27;/images/upload&#x27;, &#123;data: data, filename: filename&#125;);&#125;,</span><br></pre></td></tr></table></figure>
+
+
+
+<p>修改为</p>
+<pre><code>uploadImage: function(data, filename)  &#123;
+    var imgJson=post(&#39;/images/upload&#39;, &#123;data: data, filename: filename&#125;);
+    var start = (new Date()).getTime();
+    while((new Date()).getTime() - start &lt; 1000) &#123;
+        continue;
+    &#125;
+    return imgJson;
+&#125;,
+</code></pre>
+<p>到这里，图片无法显示的问题完美解决。</p>
+<p>注：图像出现错误显示如下图所示<br><img src="/images/pasted-9.png" class="lazyload placeholder" data-srcset="/images/pasted-9.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"><br>只需要点击两次右上角圆圈小勾勾（）即可正常在右方显示</p>
+<p><img src="/images/pasted-10.png" class="lazyload placeholder" data-srcset="/images/pasted-10.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p>以上。</p>
+<p>部分内容参考：</p>
+<p>CSDN : <a href="https://blog.csdn.net/u010932545/article/details/85882936">Hexo Admin 自动发布文章 </a></p>
+<p>CSDN : <a href="https://blog.csdn.net/nineya_com/article/details/103384546">hexo-admin插件windows系统插入图片失败..</a></p>
+]]></content>
+      <categories>
+        <category>HEXO</category>
+      </categories>
+      <tags>
+        <tag>HEXO</tag>
       </tags>
   </entry>
   <entry>
@@ -308,100 +402,6 @@
       </categories>
       <tags>
         <tag>ACG</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo-admin-web端编辑与自动发布文章</title>
-    <url>/2022/04/25/Hexo-admin-web%E7%AB%AF%E7%BC%96%E8%BE%91%E4%B8%8E%E8%87%AA%E5%8A%A8%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><h4 id="1-为什么使用Hexo-Admin"><a href="#1-为什么使用Hexo-Admin" class="headerlink" title="1.为什么使用Hexo Admin"></a>1.为什么使用<a href="https://jaredforsyth.com/hexo-admin/">Hexo Admin</a></h4><p><em>Hexo</em>的静态页面虽快，但是每次发布文章都需要通过命令实现，而不像<em>wordpress</em>可以直接写博文，所以我们需要一个后台管理系统来帮助我们更加方便的写博文。</p>
-<p><img src="/images/pasted-1.png" class="lazyload placeholder" data-srcset="/images/pasted-1.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<h4 id="2-Hexo-Admin能做什么"><a href="#2-Hexo-Admin能做什么" class="headerlink" title="2.Hexo Admin能做什么"></a>2.<a href="https://jaredforsyth.com/hexo-admin/">Hexo Admin</a>能做什么</h4><p>Hexo Admin是一个方便快捷的博客后台管理系统，使用该插件在hexo s后可以自由的在Web端编辑博客内容。主要功能是在线编辑文档，其主要功能就是可视化博客文章，自动部署。</p>
-<p>Pages - 新加 page；<br>Posts - 新加或删除 post；双击一个 post，你可以编辑，预览，新增修改 tags、categories，选择发布或不发布；<br>Settings - 一些配置；<br>Deploy - 可以直接部署到 github。</p>
-<p><img src="/images/pasted-3.png" class="lazyload placeholder" data-srcset="/images/pasted-3.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<h3 id="2-安装配置"><a href="#2-安装配置" class="headerlink" title="2.安装配置"></a>2.安装配置</h3><h4 id="1-如何安装Hexo-Admin并自动发布"><a href="#1-如何安装Hexo-Admin并自动发布" class="headerlink" title="1.如何安装Hexo Admin并自动发布"></a>1.如何安装<a href="https://jaredforsyth.com/hexo-admin/">Hexo Admin</a>并自动发布</h4><h6 id="1-安装插件"><a href="#1-安装插件" class="headerlink" title="1.安装插件"></a>1.安装插件</h6><p>首先安装插件。在blog根目录使用npm安装</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-admin</span><br></pre></td></tr></table></figure>
-
-<h6 id="2-启动服务器"><a href="#2-启动服务器" class="headerlink" title="2.启动服务器"></a>2.启动服务器</h6><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo server -d</span><br><span class="line">open http://localhost:4000/admin/</span><br></pre></td></tr></table></figure>
-
-<h6 id="3-配置"><a href="#3-配置" class="headerlink" title="3.配置"></a>3.配置</h6><p>进入<strong>Settings &gt; Setup authentification</strong>，如下图所示：</p>
-<p><img src="/images/pasted-4.png" class="lazyload placeholder" data-srcset="/images/pasted-4.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"><br>依次填写用户名，密码，secrert（此项随意填写）<br>复制下方生成的代码，例如：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># hexo-admin authentification</span><br><span class="line">admin:</span><br><span class="line">  username: username</span><br><span class="line">  password_hash: $2a$10$L.XAIqIWgTc5S1zpvV3MEu7/rH34p4Is/nq824smv8EZ3lIPCp1su</span><br><span class="line">  secret: my super secret phrase</span><br></pre></td></tr></table></figure>
-
-<p>关闭服务端口，打开根目录下的config<br>将此代码粘贴到底部。</p>
-<h4 id="2-设置自动发布文章"><a href="#2-设置自动发布文章" class="headerlink" title="2.设置自动发布文章"></a>2.设置自动发布文章</h4><h6 id="1-在项目中创建hexo-deploy-sh文件并设置权限"><a href="#1-在项目中创建hexo-deploy-sh文件并设置权限" class="headerlink" title="1.在项目中创建hexo-deploy.sh文件并设置权限"></a>1.在项目中创建hexo-deploy.sh文件并设置权限</h6><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ touch hexo-deploy.sh; chmod a+x hexo-deploy.sh</span><br></pre></td></tr></table></figure>
-
-<h6 id="2-打开hexo-deploy文件并写入内容"><a href="#2-打开hexo-deploy文件并写入内容" class="headerlink" title="2.打开hexo-deploy文件并写入内容"></a>2.打开hexo-deploy文件并写入内容</h6><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
-
-<h6 id="3-编辑配置文件"><a href="#3-编辑配置文件" class="headerlink" title="3.编辑配置文件"></a>3.编辑配置文件</h6><p>打开根目录下的config，在之前配置的admin配置信息下加入</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deployCommand: ‘./hexo-deploy.sh’ </span><br></pre></td></tr></table></figure>
-
-<p>例如</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># hexo-admin authentification</span><br><span class="line"></span><br><span class="line"># hexo-admin authentification</span><br><span class="line">admin:</span><br><span class="line">  username: username</span><br><span class="line">  password_hash: $2a$10$L.XAIqIWgTc5S1zpvV3MEu7/rH34p4Is/nq824smv8EZ3lIPCp1su</span><br><span class="line">  secret: my super secret phrase</span><br><span class="line">  deployCommand: &#x27;./hexo-deploy.sh&#x27;</span><br></pre></td></tr></table></figure>
-<h3 id="3-问题解决"><a href="#3-问题解决" class="headerlink" title="3.问题解决"></a>3.问题解决</h3><h5 id="1-Hexo-Admin错误信息解决方法"><a href="#1-Hexo-Admin错误信息解决方法" class="headerlink" title="1.Hexo Admin错误信息解决方法"></a>1.Hexo Admin错误信息解决方法</h5><p>在完成以上配置后，hexo s进入<a href="http://localhost:4000/admin/">http://localhost:4000/admin/</a></p>
-<p>编辑完文档点击Deploy并点击Deploy按钮发布</p>
-<p>可能会遇到以下问题</p>
-<h6 id="1-错误信息-Config-value-“admin-deployCommand”-not-found"><a href="#1-错误信息-Config-value-“admin-deployCommand”-not-found" class="headerlink" title="1.错误信息:Config value “admin.deployCommand” not found"></a>1.<strong>错误信息:Config value “admin.deployCommand” not found</strong></h6><p>解决方法：</p>
-<p>请仔细比对检查配置文件是否有误，如果不行，可以尝试直接复制以上代码。</p>
-<h6 id="2-错误信息deploy-Error-spawn-UNKNOWN"><a href="#2-错误信息deploy-Error-spawn-UNKNOWN" class="headerlink" title="2.错误信息deploy Error: spawn UNKNOWN"></a>2.错误信息deploy Error: spawn UNKNOWN</h6><p>解决方法：</p>
-<p>打开node_modules目录下的hexo-admin目录下的deploy.js</p>
-<p>将<br><code>var proc = spawn(command, [message], &#123;detached: true&#125;);</code><br>改为<br><code>var proc = spawn((process.platform === &quot;win32&quot; ? &quot;hexo.cmd&quot; : &quot;hexo&quot;), [&#39;d&#39;]);</code></p>
-<h4 id="2-其他"><a href="#2-其他" class="headerlink" title="2.其他"></a>2.其他</h4><h6 id="1-如何在Admin中为文章添加tags和categories？"><a href="#1-如何在Admin中为文章添加tags和categories？" class="headerlink" title="1.如何在Admin中为文章添加tags和categories？"></a>1.如何在Admin中为文章添加tags和categories？</h6><p>打开任意文档，找到右上角的齿轮图标，即可添加标签分类</p>
-<p><img src="/images/pasted-5.png" class="lazyload placeholder" data-srcset="/images/pasted-5.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<h6 id="2-右上角的Publish和Unpublish按钮是什么？"><a href="#2-右上角的Publish和Unpublish按钮是什么？" class="headerlink" title="2.右上角的Publish和Unpublish按钮是什么？"></a>2.右上角的Publish和Unpublish按钮是什么？</h6><p>分别是发布与草稿，点击Publish，会在下次部署将文章上传到网站。再点击Unpublish即可取消发布，文章不会丢失，作为草稿保存。</p>
-<h6 id="3-为什么直接复制图片（截图）到内容会无法显示？"><a href="#3-为什么直接复制图片（截图）到内容会无法显示？" class="headerlink" title="3.为什么直接复制图片（截图）到内容会无法显示？"></a>3.为什么直接复制图片（截图）到内容会无法显示？</h6><p>解决办法：</p>
-<p>1.打开我们博客的目录的“node_modules”子目录，找到“hexo-admin”。</p>
-<p><img src="/images/pasted-6.png" class="lazyload placeholder" data-srcset="/images/pasted-6.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<p>2.双击进入该文件夹，打开“api.js”文件，通过搜索“imagePath”字符找到下图的代码片段，红框内就是我们要改的代码。</p>
-<p><img src="/images/pasted-7.png" class="lazyload placeholder" data-srcset="/images/pasted-7.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<p>3.将代码修改为</p>
-<pre><code>filename = imagePath+&quot;/&quot;+ filename    //修改点
-var outpath = path.join(hexo.source_dir, filename)
-
-var dataURI = req.body.data.slice(&#39;data:image/png;base64,&#39;.length)
-var buf = new Buffer(dataURI, &#39;base64&#39;)
-hexo.log.d(`saving image to $&#123;outpath&#125;`)
-fs.writeFile(outpath, buf, function (err) &#123;
-  if (err) &#123;
-    console.log(err)
-  &#125;
-  hexo.source.process().then(function () &#123;
-    res.done(&#123;
-      src: filename,    //修改点
-      msg: msg
-    &#125;)
-  &#125;);
-&#125;)
-</code></pre>
-<p>4.打开hexo-admin目录下的子目录，找到“bundle.js文件”，并打开它。</p>
-<p><img src="/images/pasted-8.png" class="lazyload placeholder" data-srcset="/images/pasted-8.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<p>5.搜索“‘upload’”找到以下代码</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">uploadImage: function(data, filename)  &#123;return post(&#x27;/images/upload&#x27;, &#123;data: data, filename: filename&#125;);&#125;,</span><br></pre></td></tr></table></figure>
-
-
-
-<p>修改为</p>
-<pre><code>uploadImage: function(data, filename)  &#123;
-    var imgJson=post(&#39;/images/upload&#39;, &#123;data: data, filename: filename&#125;);
-    var start = (new Date()).getTime();
-    while((new Date()).getTime() - start &lt; 1000) &#123;
-        continue;
-    &#125;
-    return imgJson;
-&#125;,
-</code></pre>
-<p>到这里，图片无法显示的问题完美解决。</p>
-<p>注：图像出现错误显示如下图所示<br><img src="/images/pasted-9.png" class="lazyload placeholder" data-srcset="/images/pasted-9.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"><br>只需要点击两次右上角圆圈小勾勾（）即可正常在右方显示</p>
-<p><img src="/images/pasted-10.png" class="lazyload placeholder" data-srcset="/images/pasted-10.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<p>以上。</p>
-<p>部分内容参考：</p>
-<p>CSDN : <a href="https://blog.csdn.net/u010932545/article/details/85882936">Hexo Admin 自动发布文章 </a></p>
-<p>CSDN : <a href="https://blog.csdn.net/nineya_com/article/details/103384546">hexo-admin插件windows系统插入图片失败..</a></p>
-]]></content>
-      <categories>
-        <category>HEXO</category>
-      </categories>
-      <tags>
-        <tag>HEXO</tag>
       </tags>
   </entry>
   <entry>
@@ -670,6 +670,126 @@ fs.writeFile(outpath, buf, function (err) &#123;
       </tags>
   </entry>
   <entry>
+    <title>使用油猴插件下载B站视频，破解大会员观看以及港澳台限制</title>
+    <url>/2022/04/26/%E4%BD%BF%E7%94%A8%E6%B2%B9%E7%8C%B4%E6%8F%92%E4%BB%B6%E4%B8%8B%E8%BD%BDB%E7%AB%99%E8%A7%86%E9%A2%91%EF%BC%8C%E7%A0%B4%E8%A7%A3%E5%A4%A7%E4%BC%9A%E5%91%98%E8%A7%82%E7%9C%8B%E4%BB%A5%E5%8F%8A%E6%B8%AF%E6%BE%B3%E5%8F%B0%E9%99%90%E5%88%B6/</url>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Tampermonkey 是一款免费的浏览器扩展和最为流行的用户脚本管理器，它适用于 Chrome, Microsoft Edge, Safari, Opera Next, 和 Firefox。</p>
+<p>虽然有些受支持的浏览器拥有原生的用户脚本支持，但 Tampermonkey 将在您的用户脚本管理方面提供更多的便利。 它提供了诸如便捷脚本安装、自动更新检查、标签中的脚本运行状况速览、内置的编辑器等众多功能， 同时Tampermonkey还有可能正常运行原本并不兼容的脚本。</p>
+<p><img src="/images/pasted-17.png" class="lazyload placeholder" data-srcset="/images/pasted-17.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<h3 id="如何安装"><a href="#如何安装" class="headerlink" title="如何安装"></a>如何安装</h3><p>要安装油猴，首先我们需要一个chorme内核的浏览器，比如EDGE,Chorme，360极速浏览器等。</p>
+<p>在这里我更推荐大家使用Edge。通过油猴官网下载时，会自动跳到微软应用商店，可以直接自动安装，十分方便。</p>
+<h4 id="在Edge浏览器中下载"><a href="#在Edge浏览器中下载" class="headerlink" title="在Edge浏览器中下载"></a>在Edge浏览器中下载</h4><h5 id="方法1-打开油猴官网下载"><a href="#方法1-打开油猴官网下载" class="headerlink" title="方法1.打开油猴官网下载"></a>方法1.打开油猴官网下载</h5><p>打开此链接：<a href="https://www.tampermonkey.net/">https://www.tampermonkey.net/</a> 来到油猴首页</p>
+<p><img src="/images/pasted-18.png" class="lazyload placeholder" data-srcset="/images/pasted-18.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"><br>点击第一个下载会进入以下页面，直接安装即可</p>
+<p><img src="/images/pasted-19.png" class="lazyload placeholder" data-srcset="/images/pasted-19.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"><br>当打开你的edge浏览器发现右上角出现油猴的LOGO时，说明安装成功</p>
+<p><img src="/images/pasted-20.png" class="lazyload placeholder" data-srcset="/images/pasted-20.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<h5 id="方法2-Edge浏览器自带的插件拓展功能下载"><a href="#方法2-Edge浏览器自带的插件拓展功能下载" class="headerlink" title="方法2.Edge浏览器自带的插件拓展功能下载"></a>方法2.Edge浏览器自带的插件拓展功能下载</h5><p>点击右上角拼图按钮，点击打开Microsoft Edge加载项</p>
+<p><img src="/images/pasted-22.png" class="lazyload placeholder" data-srcset="/images/pasted-22.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p>搜索输入“tampermonkey“</p>
+<p><img src="/images/pasted-23.png" class="lazyload placeholder" data-srcset="/images/pasted-23.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p>安装绿色的即可，后续操作与方法一相同。</p>
+<h3 id="安装脚本"><a href="#安装脚本" class="headerlink" title="安装脚本"></a>安装脚本</h3><p>安装好插件之后，我们就可以安装我们需要的脚本了。</p>
+<h4 id="B站视频解析下载脚本"><a href="#B站视频解析下载脚本" class="headerlink" title="B站视频解析下载脚本"></a>B站视频解析下载脚本</h4><p>1.打开<a href="https://greasyfork.org/zh-CN/scripts/418804-%E8%A7%A3%E9%94%81b%E7%AB%99%E5%A4%A7%E4%BC%9A%E5%91%98%E7%95%AA%E5%89%A7-b%E7%AB%99%E8%A7%86%E9%A2%91%E8%A7%A3%E6%9E%90%E4%B8%8B%E8%BD%BD-%E5%85%A8%E7%BD%91vip%E8%A7%86%E9%A2%91%E5%85%8D%E8%B4%B9%E7%A0%B4%E8%A7%A3%E5%8E%BB%E5%B9%BF%E5%91%8A-%E5%85%A8%E7%BD%91%E9%9F%B3%E4%B9%90%E7%9B%B4%E6%8E%A5%E4%B8%8B%E8%BD%BD-%E6%B2%B9%E7%AE%A1-facebook%E7%AD%89%E5%9B%BD%E5%A4%96%E8%A7%86%E9%A2%91%E8%A7%A3%E6%9E%90%E4%B8%8B%E8%BD%BD-%E7%BD%91%E7%9B%98%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E7%A0%B4%E8%A7%A3%E6%97%A0%E9%99%90%E4%B8%8B%E8%BD%BD%E7%AD%89">脚本网站</a>直接安装即可</p>
+<p><img src="/images/pasted-24.png" class="lazyload placeholder" data-srcset="/images/pasted-24.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"><br>该脚本还有其他功能可以自行探索，这里只介绍如何下载B站视频。</p>
+<p>2.点击油猴按钮，点击管理面板</p>
+<p><img src="/images/pasted-25.png" class="lazyload placeholder" data-srcset="/images/pasted-25.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"><br>3.在这里可以看见你安装的所有脚本，你可以看见自己的脚本已经安装并已经默认启动</p>
+<p><img src="/images/pasted-26.png" class="lazyload placeholder" data-srcset="/images/pasted-26.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p>4.我们打开任意B站视频地址，可以看到视频下方多出了两个按钮，点击下载即可下载视频到本地</p>
+<p><img src="/images/pasted-27.png" class="lazyload placeholder" data-srcset="/images/pasted-27.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<h4 id="B站破解港澳台限制，大会员观看限制脚本"><a href="#B站破解港澳台限制，大会员观看限制脚本" class="headerlink" title="B站破解港澳台限制，大会员观看限制脚本"></a>B站破解港澳台限制，大会员观看限制脚本</h4><p>1.下载插件</p>
+<p><a href="https://wwi.lanzoup.com/iTMQa03sx4ed">https://wwi.lanzoup.com/iTMQa03sx4ed</a></p>
+<p>2.下载链接中的txt文件，打开油猴管理面板，点击右上角的实用工具，在下方选择导入</p>
+<p><img src="/images/pasted-28.png" class="lazyload placeholder" data-srcset="/images/pasted-28.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p>3.导入下载的文件，点选导入即可</p>
+<p><img src="/images/pasted-29.png" class="lazyload placeholder" data-srcset="/images/pasted-29.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p>4.在管理面板发现安装成功后，打开任意番剧，没有大会员也能直接播放，也能打开仅限港澳台的番剧</p>
+<p><img src="/images/pasted-30.png" class="lazyload placeholder" data-srcset="/images/pasted-30.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="免大会员观看"></p>
+<p><img src="/images/pasted-31.png" class="lazyload placeholder" data-srcset="/images/pasted-31.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="破解港澳台"></p>
+<p>注意：如果报错可以多刷新几次或重启浏览器重试。</p>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>油猴插件有着无穷的可能性，其能做到的功能应用远不止这些，类似于刷网课，搜题，重定向等等就不再赘述。这里推荐几个下载插件的网址，大家可以自行探索</p>
+<h5 id="Userscript-Zone-Search"><a href="#Userscript-Zone-Search" class="headerlink" title="Userscript.Zone Search"></a>Userscript.Zone Search</h5><p><a href="https://www.userscript.zone/?utm_source=tm.net&utm_medium=scripts">Userscript.Zone Search</a> 是一个新网站，允许通过输入合适的URL或域来搜索用户脚本。</p>
+<ul>
+<li>大量的脚本资源</li>
+<li>很容易找到合适的用户脚本</li>
+<li>仅显示受审核的用户脚本页面或至少具有注释功能的页面中的用户脚本</li>
+</ul>
+<h5 id="GreasyFork"><a href="#GreasyFork" class="headerlink" title="GreasyFork"></a>GreasyFork</h5><p><a href="https://greasyfork.org/">GreasyFork</a> 或许是最受欢迎的后起之秀了。它由 Jason Barnabe 创建,Jason Barnabe 同时也是 <a href="https://userstyles.org/">Stylish</a> 网站的创办者,在其储存库中有大量的脚本资源。</p>
+<ul>
+<li>大量的脚本资源</li>
+<li>拥有可以从 Github 中进行脚本同步的功能</li>
+<li>非常活跃的<a href="https://github.com/JasonBarnabe/greasyfork">开放源代码发展模式</a></li>
+</ul>
+<h5 id="OpenUserJS"><a href="#OpenUserJS" class="headerlink" title="OpenUserJS"></a>OpenUserJS</h5><p><a href="https://openuserjs.org/">OpenUserJS</a> 继 GreasyFork 之后开始创办。它由 Sizzle McTwizzle 创建,同样地,在其储存库中也拥有大量的脚本资源。</p>
+<ul>
+<li>大量的脚本资源</li>
+<li>拥有可以从 Github、fork scripts 中进行脚本同步的功能</li>
+<li>非常活跃的[开放源代码发展模式]<h5 id="GitHub-x2F-Gist"><a href="#GitHub-x2F-Gist" class="headerlink" title="GitHub&#x2F;Gist"></a>GitHub&#x2F;Gist</h5></li>
+</ul>
+<p>你可以<a href="https://gist.github.com/search?l=JavaScript&o=desc&q=%22==UserScript==%22&s=updated">在 Github 和 Gist 中 搜索脚本资源。</a></p>
+<p>上述介绍来源：油猴官网</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>油猴</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用网络图床</title>
+    <url>/2022/04/20/%E4%BD%BF%E7%94%A8%E7%BD%91%E7%BB%9C%E5%9B%BE%E5%BA%8A/</url>
+    <content><![CDATA[<h3 id="为了使插入图片更加方便，我们可以使用网络图床"><a href="#为了使插入图片更加方便，我们可以使用网络图床" class="headerlink" title="为了使插入图片更加方便，我们可以使用网络图床"></a>为了使插入图片更加方便，我们可以使用网络图床</h3><h4 id="使用图床的好处"><a href="#使用图床的好处" class="headerlink" title="使用图床的好处"></a>使用图床的好处</h4><ul>
+<li><p>提升页面访问速度</p>
+<p> 过去我们将图片直接放到在线静态页面当中的话，在访问时需要等待全部资源加载，然而一般页面都是图片较大。当我们将图片分离后异步加载，再通过CDN加速，能够大幅提升页面的访问速度。</p>
+</li>
+<li><p>减少原页面服务器访问压力</p>
+<p> 由于访问图片的请求都经由图床&#x2F;CDN，使得原来页面所在的服务器访问压力减少。</p>
+</li>
+</ul>
+<p>网络上搭建图床的方法很多，如新浪微博，腾讯云，七牛云等。当然自己搭建的图床自然更可靠。</p>
+<h4 id="我的选择"><a href="#我的选择" class="headerlink" title="我的选择"></a>我的选择</h4><p>在这里我为了方便，直接使用了<a href="https://sm.ms/">SM.MS</a></p>
+<p><img src="https://s2.loli.net/2022/04/20/LZbFOU6dGB3sk4n.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/LZbFOU6dGB3sk4n.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="Screenshot 2022-04-20 165816.png"></p>
+<p>据说有时候不太稳定，但是对于我这种轻度用户应该问题不大</p>
+<p>同时也有收费版本</p>
+<p><img src="https://s2.loli.net/2022/04/20/eRouN3sO1PUhvki.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/eRouN3sO1PUhvki.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="Screenshot 2022-04-20 170126.png"></p>
+<p>同样的，轻度使用也不需要使用。这里只是提及一下</p>
+<p>在上传完图片后，会提供多种链接选择（这里仅作演示）</p>
+<p><img src="https://s2.loli.net/2022/04/20/qFnxQlX57uwvjLa.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/qFnxQlX57uwvjLa.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="Screenshot 2022-04-20 170301.png"></p>
+<p>该图床可以批量上传，同时有着完善的管理系统，简单方便，小白使用起来也毫无压力</p>
+<p><img src="https://s2.loli.net/2022/04/20/RwVnFL9vyx7odI8.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/RwVnFL9vyx7odI8.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="Screenshot 2022-04-20 171254.png"></p>
+<p>以后如果有需要的话可以尝试捣鼓一下用GitHub之类的自建图床。</p>
+]]></content>
+      <categories>
+        <category>HEXO</category>
+      </categories>
+      <tags>
+        <tag>HEXO</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>修复了从归档打开文章返回主页卡在example页的bug</title>
+    <url>/2022/04/08/%E4%BF%AE%E5%A4%8D%E4%BA%86%E4%BB%8E%E5%BD%92%E6%A1%A3%E6%89%93%E5%BC%80%E6%96%87%E7%AB%A0%E8%BF%94%E5%9B%9E%E4%B8%BB%E9%A1%B5%E5%8D%A1%E5%9C%A8example%E9%A1%B5%E7%9A%84bug/</url>
+    <content><![CDATA[<h3 id="2022-04-08-10-40-03-修复了从归档打开文章返回主页卡在example页的bug"><a href="#2022-04-08-10-40-03-修复了从归档打开文章返回主页卡在example页的bug" class="headerlink" title="2022-04-08 10:40:03 修复了从归档打开文章返回主页卡在example页的bug"></a>2022-04-08 10:40:03 修复了从归档打开文章返回主页卡在example页的bug</h3><p>该bug由个人配置失误造成，其触发有两种情况</p>
+<p>1.打开任意文章，刷新，返回首页，跳转到<a href="http://example.com/">http://example.com/</a></p>
+<p>2.从归档打开任意文章，返回首页，跳转到<a href="http://example.com/">http://example.com/</a></p>
+<p>以下为修复方法</p>
+<p>打开根目录下的_config.yml</p>
+<p>找到</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># URL</span><br><span class="line">## Set your site url here. For example, if you use GitHub Page, set url as &#x27;https://username.github.io/project&#x27;</span><br><span class="line">url: http://example.com/</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br><span class="line">pretty_urls:</span><br><span class="line">  trailing_index: true # Set to false to remove trailing &#x27;index.html&#x27; from permalinks</span><br><span class="line">  trailing_html: true # Set to false to remove trailing &#x27;.html&#x27; from permalinks</span><br></pre></td></tr></table></figure>
+
+<p>发现是URL配置错误</p>
+<p>更改为本网站URL</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># URL</span><br><span class="line">## Set your site url here. For example, if you use GitHub Page, set url as &#x27;https://username.github.io/project&#x27;</span><br><span class="line">url: https://qingkuang.xyz/</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br><span class="line">pretty_urls:</span><br><span class="line">  trailing_index: true # Set to false to remove trailing &#x27;index.html&#x27; from permalinks</span><br><span class="line">  trailing_html: true # Set to false to remove trailing &#x27;.html&#x27; from permalinks</span><br></pre></td></tr></table></figure>
+
+<p>完美解决。</p>
+]]></content>
+      <categories>
+        <category>HEXO</category>
+      </categories>
+      <tags>
+        <tag>HEXO</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>关于本地图片显示错误的问题解决</title>
     <url>/2022/04/07/%E5%85%B3%E4%BA%8E%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA%E9%94%99%E8%AF%AF%E7%9A%84%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</url>
     <content><![CDATA[<h4 id="1-今天开始编写博客的时候，发现用Typora编写的文章引用图片编译后总是不能正常显示"><a href="#1-今天开始编写博客的时候，发现用Typora编写的文章引用图片编译后总是不能正常显示" class="headerlink" title="1.今天开始编写博客的时候，发现用Typora编写的文章引用图片编译后总是不能正常显示"></a>1.今天开始编写博客的时候，发现用Typora编写的文章引用图片编译后总是不能正常显示</h4><p>于是开始各种百度，出来的都是下载一个路径转换<code>hexo-asset-image</code>的插件</p>
@@ -684,6 +804,34 @@ fs.writeFile(outpath, buf, function (err) &#123;
 
 <p>然后就可以正常显示图片</p>
 <p>解决。</p>
+]]></content>
+      <categories>
+        <category>HEXO</category>
+      </categories>
+      <tags>
+        <tag>HEXO</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何分类文章</title>
+    <url>/2022/04/07/%E5%A6%82%E4%BD%95%E7%BB%99%E6%96%87%E7%AB%A0%E5%88%86%E7%B1%BB/</url>
+    <content><![CDATA[<h3 id="新建文章模板"><a href="#新建文章模板" class="headerlink" title="新建文章模板"></a>新建文章模板</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: My awesome title</span><br><span class="line">date: 2016-10-12 18:38:45</span><br><span class="line">categories: </span><br><span class="line">    - 分类1</span><br><span class="line">    - 分类2</span><br><span class="line">tags: </span><br><span class="line">    - 标签1</span><br><span class="line">    - 标签2</span><br><span class="line">mp3: http://domain.com/awesome.mp3</span><br><span class="line">cover: http://domain.com/awesome.jpg</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建分类页"><a href="#创建分类页" class="headerlink" title="创建分类页"></a>创建分类页</h3><p>1 新建一个页面，命名为 categories 。命令如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
+
+<p>2 编辑刚新建的页面，将页面的类型设置为 categories</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">title: categories</span><br><span class="line">date: 2014-12-22 12:39:04</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>主题将自动为这个页面显示所有分类。</p>
+<h3 id="创建标签页"><a href="#创建标签页" class="headerlink" title="创建标签页"></a>创建标签页</h3><p>1 新建一个页面，命名为 tags 。命令如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure>
+
+<p>2 编辑刚新建的页面，将页面的类型设置为 tags</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">title: tags</span><br><span class="line">date: 2014-12-22 12:39:04</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>主题将自动为这个页面显示所有标签。</p>
+<p>初学者易忘 冒号后加空格 分类标签按tab空四格</p>
 ]]></content>
       <categories>
         <category>HEXO</category>
@@ -728,35 +876,7 @@ fs.writeFile(outpath, buf, function (err) &#123;
         <category>HEXO</category>
       </categories>
       <tags>
-        <tag>HEXO</tag>
         <tag>技术</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何分类文章</title>
-    <url>/2022/04/07/%E5%A6%82%E4%BD%95%E7%BB%99%E6%96%87%E7%AB%A0%E5%88%86%E7%B1%BB/</url>
-    <content><![CDATA[<h3 id="新建文章模板"><a href="#新建文章模板" class="headerlink" title="新建文章模板"></a>新建文章模板</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: My awesome title</span><br><span class="line">date: 2016-10-12 18:38:45</span><br><span class="line">categories: </span><br><span class="line">    - 分类1</span><br><span class="line">    - 分类2</span><br><span class="line">tags: </span><br><span class="line">    - 标签1</span><br><span class="line">    - 标签2</span><br><span class="line">mp3: http://domain.com/awesome.mp3</span><br><span class="line">cover: http://domain.com/awesome.jpg</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-
-<h3 id="创建分类页"><a href="#创建分类页" class="headerlink" title="创建分类页"></a>创建分类页</h3><p>1 新建一个页面，命名为 categories 。命令如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
-
-<p>2 编辑刚新建的页面，将页面的类型设置为 categories</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">title: categories</span><br><span class="line">date: 2014-12-22 12:39:04</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-
-<p>主题将自动为这个页面显示所有分类。</p>
-<h3 id="创建标签页"><a href="#创建标签页" class="headerlink" title="创建标签页"></a>创建标签页</h3><p>1 新建一个页面，命名为 tags 。命令如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure>
-
-<p>2 编辑刚新建的页面，将页面的类型设置为 tags</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">title: tags</span><br><span class="line">date: 2014-12-22 12:39:04</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-
-<p>主题将自动为这个页面显示所有标签。</p>
-<p>初学者易忘 冒号后加空格 分类标签按tab空四格</p>
-]]></content>
-      <categories>
-        <category>HEXO</category>
-      </categories>
-      <tags>
         <tag>HEXO</tag>
       </tags>
   </entry>
@@ -778,30 +898,6 @@ fs.writeFile(outpath, buf, function (err) &#123;
       </tags>
   </entry>
   <entry>
-    <title>修复了从归档打开文章返回主页卡在example页的bug</title>
-    <url>/2022/04/08/%E4%BF%AE%E5%A4%8D%E4%BA%86%E4%BB%8E%E5%BD%92%E6%A1%A3%E6%89%93%E5%BC%80%E6%96%87%E7%AB%A0%E8%BF%94%E5%9B%9E%E4%B8%BB%E9%A1%B5%E5%8D%A1%E5%9C%A8example%E9%A1%B5%E7%9A%84bug/</url>
-    <content><![CDATA[<h3 id="2022-04-08-10-40-03-修复了从归档打开文章返回主页卡在example页的bug"><a href="#2022-04-08-10-40-03-修复了从归档打开文章返回主页卡在example页的bug" class="headerlink" title="2022-04-08 10:40:03 修复了从归档打开文章返回主页卡在example页的bug"></a>2022-04-08 10:40:03 修复了从归档打开文章返回主页卡在example页的bug</h3><p>该bug由个人配置失误造成，其触发有两种情况</p>
-<p>1.打开任意文章，刷新，返回首页，跳转到<a href="http://example.com/">http://example.com/</a></p>
-<p>2.从归档打开任意文章，返回首页，跳转到<a href="http://example.com/">http://example.com/</a></p>
-<p>以下为修复方法</p>
-<p>打开根目录下的_config.yml</p>
-<p>找到</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># URL</span><br><span class="line">## Set your site url here. For example, if you use GitHub Page, set url as &#x27;https://username.github.io/project&#x27;</span><br><span class="line">url: http://example.com/</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br><span class="line">pretty_urls:</span><br><span class="line">  trailing_index: true # Set to false to remove trailing &#x27;index.html&#x27; from permalinks</span><br><span class="line">  trailing_html: true # Set to false to remove trailing &#x27;.html&#x27; from permalinks</span><br></pre></td></tr></table></figure>
-
-<p>发现是URL配置错误</p>
-<p>更改为本网站URL</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># URL</span><br><span class="line">## Set your site url here. For example, if you use GitHub Page, set url as &#x27;https://username.github.io/project&#x27;</span><br><span class="line">url: https://qingkuang.xyz/</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br><span class="line">pretty_urls:</span><br><span class="line">  trailing_index: true # Set to false to remove trailing &#x27;index.html&#x27; from permalinks</span><br><span class="line">  trailing_html: true # Set to false to remove trailing &#x27;.html&#x27; from permalinks</span><br></pre></td></tr></table></figure>
-
-<p>完美解决。</p>
-]]></content>
-      <categories>
-        <category>HEXO</category>
-      </categories>
-      <tags>
-        <tag>HEXO</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>进行了对评论系统的更新说明</title>
     <url>/2022/04/07/%E6%9B%B4%E6%96%B0%E4%BA%86%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/</url>
     <content><![CDATA[<h3 id="2022-04-07-16-44-15-进行了对评论系统的更新说明"><a href="#2022-04-07-16-44-15-进行了对评论系统的更新说明" class="headerlink" title="2022-04-07 16:44:15 进行了对评论系统的更新说明"></a>2022-04-07 16:44:15 进行了对评论系统的更新说明</h3><h4 id="1-使用-utteranc-评论插件"><a href="#1-使用-utteranc-评论插件" class="headerlink" title="1.使用  utteranc 评论插件"></a>1.使用  <strong>utteranc</strong> 评论插件</h4><p><a href="https://utteranc.es/">https://utteranc.es</a> (<a href="https://github.com/utterance/utterances">https://github.com/utterance/utterances</a>)</p>
@@ -818,53 +914,6 @@ fs.writeFile(outpath, buf, function (err) &#123;
       </categories>
       <tags>
         <tag>HEXO</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《间谍过家家》全12集 更新中 迅雷BT磁力下载</title>
-    <url>/2022/04/25/%E9%97%B4%E8%B0%8D%E8%BF%87%E5%AE%B6%E5%AE%B6/</url>
-    <content><![CDATA[<h2 class="bamboo-h " id="番剧简介">番剧简介</h2><br/>
-
-<p>  每个人都有不可告人的一面——</p>
-<p>  这是一个世界各国均暗地里进行激烈情报战的时代。东国（Ostania）与西国（Westalis）的冷战状态已经持续数十年。“黄昏”是西国情报局东国对策科“WISE”的一名优秀间谍。为调查威胁东西两国和平的人物——东国国家统一党总裁多诺万·戴斯蒙德，上级给予了他一个绝密任务。</p>
-<p>  任务名为：“枭”（Strix）行动。</p>
-<p>内容是“一周之内组建家庭，潜入德斯蒙儿子就读的名门学校的联谊会”。</p>
-<p>于是“黄昏”扮演成精神科医生劳埃德·福杰，开始组建家庭。然而，他找来的女儿阿尼亚是个能读心的超能力者，妻子约尔是个杀手！三人利害关系一致，便互相隐瞒身份，开始了共同生活。</p>
-<p>世界的和平，就掌握在这意外不断的临时一家人手中。</p>
-<div style="width:100%;height:0px;position:relative;padding-bottom:56.327%;"><iframe src="https://streamja.com/embed/P5rAE" frameborder="0" width="100%" height="100%" allowfullscreen style="width:100%;height:100%;position:absolute;"></iframe></div>
-
-<ul>
-<li><strong>导演: 古桥一浩</strong></li>
-<li><strong>编剧: 古桥一浩 &#x2F; 河口友美</strong></li>
-<li><strong>主演: 江口拓也 &#x2F; 种崎敦美 &#x2F; 早见沙织 &#x2F; 吉野裕行 &#x2F; 甲斐田裕子 &#x2F; 更多…</strong></li>
-<li><strong>类型: 动画</strong></li>
-<li><strong>制片国家&#x2F;地区: 日本</strong></li>
-<li><strong>语言: 日语</strong></li>
-<li><strong>首播: 2022-04-09(日本)</strong></li>
-<li><strong>集数: 12</strong></li>
-<li><strong>又名: スパイファミリー &#x2F; SPY×FAMILY间谍家家酒(港&#x2F;台)</strong></li>
-<li><strong>IMDb: tt13706018</strong></li>
-<li><strong><a href="https://www.zsxcool.com/tag/%E8%B1%86%E7%93%A3%E9%AB%98%E5%88%86">豆瓣</a>评分：<a href="https://movie.douban.com/subject/35258427/">9.4</a></strong></li>
-</ul>
-<h2 class="bamboo-h " id="番剧截图">番剧截图</h2><br/>
-
-<p><img src="https://s2.loli.net/2022/04/25/ZS1nBT7srilUFjK.gif" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/25/ZS1nBT7srilUFjK.gif" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<p><img src="https://s2.loli.net/2022/04/25/g1Ci9XJve7SzPlr.gif" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/25/g1Ci9XJve7SzPlr.gif" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<h2 class="bamboo-h " id="番剧下载">番剧下载</h2><br/>
-<p>磁力地址：</p>
-<p>01：<br><code>magnet:?xt=urn:btih:PNJNBCQPLR57LBF3NNGZWA5YF4NFWXIV</code></p>
-<p>02：<br><code>magnet:?xt=urn:btih:HNVRWGZUNGEOZZTGHFQLTYMFDFSCFJSS</code></p>
-<p>03：</p>
-<p><code>magnet:?xt=urn:btih:321e1e6ce6497e07e13a547795b8df42ac64d64f&amp;tr</code></p>
-<p>04：</p>
-<p><code>magnet:?xt=urn:btih:e562dca3badf519f3400b8c4bdddcc52e7875397&amp;tr</code></p>
-<p>迅雷云盘：<a href="https://pan.xunlei.com/s/VN0JIt0nI9pqehv98cs452jIA1">https://pan.xunlei.com/s/VN0JIt0nI9pqehv98cs452jIA1</a> 提取码：2anw</p>
-]]></content>
-      <categories>
-        <category>ACG</category>
-      </categories>
-      <tags>
-        <tag>ACG</tag>
       </tags>
   </entry>
   <entry>
@@ -1135,99 +1184,50 @@ fs.writeFile(outpath, buf, function (err) &#123;
       </tags>
   </entry>
   <entry>
-    <title>使用油猴插件下载B站视频，破解大会员观看以及港澳台限制</title>
-    <url>/2022/04/26/%E4%BD%BF%E7%94%A8%E6%B2%B9%E7%8C%B4%E6%8F%92%E4%BB%B6%E4%B8%8B%E8%BD%BDB%E7%AB%99%E8%A7%86%E9%A2%91%EF%BC%8C%E7%A0%B4%E8%A7%A3%E5%A4%A7%E4%BC%9A%E5%91%98%E8%A7%82%E7%9C%8B%E4%BB%A5%E5%8F%8A%E6%B8%AF%E6%BE%B3%E5%8F%B0%E9%99%90%E5%88%B6/</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Tampermonkey 是一款免费的浏览器扩展和最为流行的用户脚本管理器，它适用于 Chrome, Microsoft Edge, Safari, Opera Next, 和 Firefox。</p>
-<p>虽然有些受支持的浏览器拥有原生的用户脚本支持，但 Tampermonkey 将在您的用户脚本管理方面提供更多的便利。 它提供了诸如便捷脚本安装、自动更新检查、标签中的脚本运行状况速览、内置的编辑器等众多功能， 同时Tampermonkey还有可能正常运行原本并不兼容的脚本。</p>
-<p><img src="/images/pasted-17.png" class="lazyload placeholder" data-srcset="/images/pasted-17.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<h3 id="如何安装"><a href="#如何安装" class="headerlink" title="如何安装"></a>如何安装</h3><p>要安装油猴，首先我们需要一个chorme内核的浏览器，比如EDGE,Chorme，360极速浏览器等。</p>
-<p>在这里我更推荐大家使用Edge。通过油猴官网下载时，会自动跳到微软应用商店，可以直接自动安装，十分方便。</p>
-<h4 id="在Edge浏览器中下载"><a href="#在Edge浏览器中下载" class="headerlink" title="在Edge浏览器中下载"></a>在Edge浏览器中下载</h4><h5 id="方法1-打开油猴官网下载"><a href="#方法1-打开油猴官网下载" class="headerlink" title="方法1.打开油猴官网下载"></a>方法1.打开油猴官网下载</h5><p>打开此链接：<a href="https://www.tampermonkey.net/">https://www.tampermonkey.net/</a> 来到油猴首页</p>
-<p><img src="/images/pasted-18.png" class="lazyload placeholder" data-srcset="/images/pasted-18.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"><br>点击第一个下载会进入以下页面，直接安装即可</p>
-<p><img src="/images/pasted-19.png" class="lazyload placeholder" data-srcset="/images/pasted-19.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"><br>当打开你的edge浏览器发现右上角出现油猴的LOGO时，说明安装成功</p>
-<p><img src="/images/pasted-20.png" class="lazyload placeholder" data-srcset="/images/pasted-20.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<h5 id="方法2-Edge浏览器自带的插件拓展功能下载"><a href="#方法2-Edge浏览器自带的插件拓展功能下载" class="headerlink" title="方法2.Edge浏览器自带的插件拓展功能下载"></a>方法2.Edge浏览器自带的插件拓展功能下载</h5><p>点击右上角拼图按钮，点击打开Microsoft Edge加载项</p>
-<p><img src="/images/pasted-22.png" class="lazyload placeholder" data-srcset="/images/pasted-22.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<p>搜索输入“tampermonkey“</p>
-<p><img src="/images/pasted-23.png" class="lazyload placeholder" data-srcset="/images/pasted-23.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<p>安装绿色的即可，后续操作与方法一相同。</p>
-<h3 id="安装脚本"><a href="#安装脚本" class="headerlink" title="安装脚本"></a>安装脚本</h3><p>安装好插件之后，我们就可以安装我们需要的脚本了。</p>
-<h4 id="B站视频解析下载脚本"><a href="#B站视频解析下载脚本" class="headerlink" title="B站视频解析下载脚本"></a>B站视频解析下载脚本</h4><p>1.打开<a href="https://greasyfork.org/zh-CN/scripts/418804-%E8%A7%A3%E9%94%81b%E7%AB%99%E5%A4%A7%E4%BC%9A%E5%91%98%E7%95%AA%E5%89%A7-b%E7%AB%99%E8%A7%86%E9%A2%91%E8%A7%A3%E6%9E%90%E4%B8%8B%E8%BD%BD-%E5%85%A8%E7%BD%91vip%E8%A7%86%E9%A2%91%E5%85%8D%E8%B4%B9%E7%A0%B4%E8%A7%A3%E5%8E%BB%E5%B9%BF%E5%91%8A-%E5%85%A8%E7%BD%91%E9%9F%B3%E4%B9%90%E7%9B%B4%E6%8E%A5%E4%B8%8B%E8%BD%BD-%E6%B2%B9%E7%AE%A1-facebook%E7%AD%89%E5%9B%BD%E5%A4%96%E8%A7%86%E9%A2%91%E8%A7%A3%E6%9E%90%E4%B8%8B%E8%BD%BD-%E7%BD%91%E7%9B%98%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E7%A0%B4%E8%A7%A3%E6%97%A0%E9%99%90%E4%B8%8B%E8%BD%BD%E7%AD%89">脚本网站</a>直接安装即可</p>
-<p><img src="/images/pasted-24.png" class="lazyload placeholder" data-srcset="/images/pasted-24.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"><br>该脚本还有其他功能可以自行探索，这里只介绍如何下载B站视频。</p>
-<p>2.点击油猴按钮，点击管理面板</p>
-<p><img src="/images/pasted-25.png" class="lazyload placeholder" data-srcset="/images/pasted-25.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"><br>3.在这里可以看见你安装的所有脚本，你可以看见自己的脚本已经安装并已经默认启动</p>
-<p><img src="/images/pasted-26.png" class="lazyload placeholder" data-srcset="/images/pasted-26.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<p>4.我们打开任意B站视频地址，可以看到视频下方多出了两个按钮，点击下载即可下载视频到本地</p>
-<p><img src="/images/pasted-27.png" class="lazyload placeholder" data-srcset="/images/pasted-27.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<h4 id="B站破解港澳台限制，大会员观看限制脚本"><a href="#B站破解港澳台限制，大会员观看限制脚本" class="headerlink" title="B站破解港澳台限制，大会员观看限制脚本"></a>B站破解港澳台限制，大会员观看限制脚本</h4><p>1.下载插件</p>
-<p><a href="https://wwi.lanzoup.com/iTMQa03sx4ed">https://wwi.lanzoup.com/iTMQa03sx4ed</a></p>
-<p>2.下载链接中的txt文件，打开油猴管理面板，点击右上角的实用工具，在下方选择导入</p>
-<p><img src="/images/pasted-28.png" class="lazyload placeholder" data-srcset="/images/pasted-28.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<p>3.导入下载的文件，点选导入即可</p>
-<p><img src="/images/pasted-29.png" class="lazyload placeholder" data-srcset="/images/pasted-29.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<p>4.在管理面板发现安装成功后，打开任意番剧，没有大会员也能直接播放，也能打开仅限港澳台的番剧</p>
-<p><img src="/images/pasted-30.png" class="lazyload placeholder" data-srcset="/images/pasted-30.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="免大会员观看"></p>
-<p><img src="/images/pasted-31.png" class="lazyload placeholder" data-srcset="/images/pasted-31.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="破解港澳台"></p>
-<p>注意：如果报错可以多刷新几次或重启浏览器重试。</p>
-<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>油猴插件有着无穷的可能性，其能做到的功能应用远不止这些，类似于刷网课，搜题，重定向等等就不再赘述。这里推荐几个下载插件的网址，大家可以自行探索</p>
-<h5 id="Userscript-Zone-Search"><a href="#Userscript-Zone-Search" class="headerlink" title="Userscript.Zone Search"></a>Userscript.Zone Search</h5><p><a href="https://www.userscript.zone/?utm_source=tm.net&utm_medium=scripts">Userscript.Zone Search</a> 是一个新网站，允许通过输入合适的URL或域来搜索用户脚本。</p>
+    <title>《间谍过家家》全12集 更新中 迅雷BT磁力下载</title>
+    <url>/2022/04/25/%E9%97%B4%E8%B0%8D%E8%BF%87%E5%AE%B6%E5%AE%B6/</url>
+    <content><![CDATA[<h2 class="bamboo-h " id="番剧简介">番剧简介</h2><br/>
+
+<p>  每个人都有不可告人的一面——</p>
+<p>  这是一个世界各国均暗地里进行激烈情报战的时代。东国（Ostania）与西国（Westalis）的冷战状态已经持续数十年。“黄昏”是西国情报局东国对策科“WISE”的一名优秀间谍。为调查威胁东西两国和平的人物——东国国家统一党总裁多诺万·戴斯蒙德，上级给予了他一个绝密任务。</p>
+<p>  任务名为：“枭”（Strix）行动。</p>
+<p>内容是“一周之内组建家庭，潜入德斯蒙儿子就读的名门学校的联谊会”。</p>
+<p>于是“黄昏”扮演成精神科医生劳埃德·福杰，开始组建家庭。然而，他找来的女儿阿尼亚是个能读心的超能力者，妻子约尔是个杀手！三人利害关系一致，便互相隐瞒身份，开始了共同生活。</p>
+<p>世界的和平，就掌握在这意外不断的临时一家人手中。</p>
+<div style="width:100%;height:0px;position:relative;padding-bottom:56.327%;"><iframe src="https://streamja.com/embed/P5rAE" frameborder="0" width="100%" height="100%" allowfullscreen style="width:100%;height:100%;position:absolute;"></iframe></div>
+
 <ul>
-<li>大量的脚本资源</li>
-<li>很容易找到合适的用户脚本</li>
-<li>仅显示受审核的用户脚本页面或至少具有注释功能的页面中的用户脚本</li>
+<li><strong>导演: 古桥一浩</strong></li>
+<li><strong>编剧: 古桥一浩 &#x2F; 河口友美</strong></li>
+<li><strong>主演: 江口拓也 &#x2F; 种崎敦美 &#x2F; 早见沙织 &#x2F; 吉野裕行 &#x2F; 甲斐田裕子 &#x2F; 更多…</strong></li>
+<li><strong>类型: 动画</strong></li>
+<li><strong>制片国家&#x2F;地区: 日本</strong></li>
+<li><strong>语言: 日语</strong></li>
+<li><strong>首播: 2022-04-09(日本)</strong></li>
+<li><strong>集数: 12</strong></li>
+<li><strong>又名: スパイファミリー &#x2F; SPY×FAMILY间谍家家酒(港&#x2F;台)</strong></li>
+<li><strong>IMDb: tt13706018</strong></li>
+<li><strong><a href="https://www.zsxcool.com/tag/%E8%B1%86%E7%93%A3%E9%AB%98%E5%88%86">豆瓣</a>评分：<a href="https://movie.douban.com/subject/35258427/">9.4</a></strong></li>
 </ul>
-<h5 id="GreasyFork"><a href="#GreasyFork" class="headerlink" title="GreasyFork"></a>GreasyFork</h5><p><a href="https://greasyfork.org/">GreasyFork</a> 或许是最受欢迎的后起之秀了。它由 Jason Barnabe 创建,Jason Barnabe 同时也是 <a href="https://userstyles.org/">Stylish</a> 网站的创办者,在其储存库中有大量的脚本资源。</p>
-<ul>
-<li>大量的脚本资源</li>
-<li>拥有可以从 Github 中进行脚本同步的功能</li>
-<li>非常活跃的<a href="https://github.com/JasonBarnabe/greasyfork">开放源代码发展模式</a></li>
-</ul>
-<h5 id="OpenUserJS"><a href="#OpenUserJS" class="headerlink" title="OpenUserJS"></a>OpenUserJS</h5><p><a href="https://openuserjs.org/">OpenUserJS</a> 继 GreasyFork 之后开始创办。它由 Sizzle McTwizzle 创建,同样地,在其储存库中也拥有大量的脚本资源。</p>
-<ul>
-<li>大量的脚本资源</li>
-<li>拥有可以从 Github、fork scripts 中进行脚本同步的功能</li>
-<li>非常活跃的[开放源代码发展模式]<h5 id="GitHub-x2F-Gist"><a href="#GitHub-x2F-Gist" class="headerlink" title="GitHub&#x2F;Gist"></a>GitHub&#x2F;Gist</h5></li>
-</ul>
-<p>你可以<a href="https://gist.github.com/search?l=JavaScript&o=desc&q=%22==UserScript==%22&s=updated">在 Github 和 Gist 中 搜索脚本资源。</a></p>
-<p>上述介绍来源：油猴官网</p>
+<h2 class="bamboo-h " id="番剧截图">番剧截图</h2><br/>
+
+<p><img src="https://s2.loli.net/2022/04/25/ZS1nBT7srilUFjK.gif" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/25/ZS1nBT7srilUFjK.gif" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p><img src="https://s2.loli.net/2022/04/25/g1Ci9XJve7SzPlr.gif" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/25/g1Ci9XJve7SzPlr.gif" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<h2 class="bamboo-h " id="番剧下载">番剧下载</h2><br/>
+<p>磁力地址：</p>
+<p>01：<br><code>magnet:?xt=urn:btih:PNJNBCQPLR57LBF3NNGZWA5YF4NFWXIV</code></p>
+<p>02：<br><code>magnet:?xt=urn:btih:HNVRWGZUNGEOZZTGHFQLTYMFDFSCFJSS</code></p>
+<p>03：</p>
+<p><code>magnet:?xt=urn:btih:321e1e6ce6497e07e13a547795b8df42ac64d64f&amp;tr</code></p>
+<p>04：</p>
+<p><code>magnet:?xt=urn:btih:e562dca3badf519f3400b8c4bdddcc52e7875397&amp;tr</code></p>
+<p>迅雷云盘：<a href="https://pan.xunlei.com/s/VN0JIt0nI9pqehv98cs452jIA1">https://pan.xunlei.com/s/VN0JIt0nI9pqehv98cs452jIA1</a> 提取码：2anw</p>
 ]]></content>
       <categories>
-        <category>技术</category>
+        <category>ACG</category>
       </categories>
       <tags>
-        <tag>技术</tag>
-        <tag>油猴</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用网络图床</title>
-    <url>/2022/04/20/%E4%BD%BF%E7%94%A8%E7%BD%91%E7%BB%9C%E5%9B%BE%E5%BA%8A/</url>
-    <content><![CDATA[<h3 id="为了使插入图片更加方便，我们可以使用网络图床"><a href="#为了使插入图片更加方便，我们可以使用网络图床" class="headerlink" title="为了使插入图片更加方便，我们可以使用网络图床"></a>为了使插入图片更加方便，我们可以使用网络图床</h3><h4 id="使用图床的好处"><a href="#使用图床的好处" class="headerlink" title="使用图床的好处"></a>使用图床的好处</h4><ul>
-<li><p>提升页面访问速度</p>
-<p> 过去我们将图片直接放到在线静态页面当中的话，在访问时需要等待全部资源加载，然而一般页面都是图片较大。当我们将图片分离后异步加载，再通过CDN加速，能够大幅提升页面的访问速度。</p>
-</li>
-<li><p>减少原页面服务器访问压力</p>
-<p> 由于访问图片的请求都经由图床&#x2F;CDN，使得原来页面所在的服务器访问压力减少。</p>
-</li>
-</ul>
-<p>网络上搭建图床的方法很多，如新浪微博，腾讯云，七牛云等。当然自己搭建的图床自然更可靠。</p>
-<h4 id="我的选择"><a href="#我的选择" class="headerlink" title="我的选择"></a>我的选择</h4><p>在这里我为了方便，直接使用了<a href="https://sm.ms/">SM.MS</a></p>
-<p><img src="https://s2.loli.net/2022/04/20/LZbFOU6dGB3sk4n.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/LZbFOU6dGB3sk4n.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="Screenshot 2022-04-20 165816.png"></p>
-<p>据说有时候不太稳定，但是对于我这种轻度用户应该问题不大</p>
-<p>同时也有收费版本</p>
-<p><img src="https://s2.loli.net/2022/04/20/eRouN3sO1PUhvki.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/eRouN3sO1PUhvki.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="Screenshot 2022-04-20 170126.png"></p>
-<p>同样的，轻度使用也不需要使用。这里只是提及一下</p>
-<p>在上传完图片后，会提供多种链接选择（这里仅作演示）</p>
-<p><img src="https://s2.loli.net/2022/04/20/qFnxQlX57uwvjLa.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/qFnxQlX57uwvjLa.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="Screenshot 2022-04-20 170301.png"></p>
-<p>该图床可以批量上传，同时有着完善的管理系统，简单方便，小白使用起来也毫无压力</p>
-<p><img src="https://s2.loli.net/2022/04/20/RwVnFL9vyx7odI8.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/RwVnFL9vyx7odI8.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="Screenshot 2022-04-20 171254.png"></p>
-<p>以后如果有需要的话可以尝试捣鼓一下用GitHub之类的自建图床。</p>
-]]></content>
-      <categories>
-        <category>HEXO</category>
-      </categories>
-      <tags>
-        <tag>HEXO</tag>
+        <tag>ACG</tag>
       </tags>
   </entry>
 </search>
