@@ -170,6 +170,100 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo-admin-web端编辑与自动发布文章</title>
+    <url>/2022/04/25/Hexo-admin-web%E7%AB%AF%E7%BC%96%E8%BE%91%E4%B8%8E%E8%87%AA%E5%8A%A8%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0/</url>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><h4 id="1-为什么使用Hexo-Admin"><a href="#1-为什么使用Hexo-Admin" class="headerlink" title="1.为什么使用Hexo Admin"></a>1.为什么使用<a href="https://jaredforsyth.com/hexo-admin/">Hexo Admin</a></h4><p><em>Hexo</em>的静态页面虽快，但是每次发布文章都需要通过命令实现，而不像<em>wordpress</em>可以直接写博文，所以我们需要一个后台管理系统来帮助我们更加方便的写博文。</p>
+<p><img src="/images/pasted-1.png" class="lazyload placeholder" data-srcset="/images/pasted-1.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<h4 id="2-Hexo-Admin能做什么"><a href="#2-Hexo-Admin能做什么" class="headerlink" title="2.Hexo Admin能做什么"></a>2.<a href="https://jaredforsyth.com/hexo-admin/">Hexo Admin</a>能做什么</h4><p>Hexo Admin是一个方便快捷的博客后台管理系统，使用该插件在hexo s后可以自由的在Web端编辑博客内容。主要功能是在线编辑文档，其主要功能就是可视化博客文章，自动部署。</p>
+<p>Pages - 新加 page；<br>Posts - 新加或删除 post；双击一个 post，你可以编辑，预览，新增修改 tags、categories，选择发布或不发布；<br>Settings - 一些配置；<br>Deploy - 可以直接部署到 github。</p>
+<p><img src="/images/pasted-3.png" class="lazyload placeholder" data-srcset="/images/pasted-3.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<h3 id="2-安装配置"><a href="#2-安装配置" class="headerlink" title="2.安装配置"></a>2.安装配置</h3><h4 id="1-如何安装Hexo-Admin并自动发布"><a href="#1-如何安装Hexo-Admin并自动发布" class="headerlink" title="1.如何安装Hexo Admin并自动发布"></a>1.如何安装<a href="https://jaredforsyth.com/hexo-admin/">Hexo Admin</a>并自动发布</h4><h6 id="1-安装插件"><a href="#1-安装插件" class="headerlink" title="1.安装插件"></a>1.安装插件</h6><p>首先安装插件。在blog根目录使用npm安装</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-admin</span><br></pre></td></tr></table></figure>
+
+<h6 id="2-启动服务器"><a href="#2-启动服务器" class="headerlink" title="2.启动服务器"></a>2.启动服务器</h6><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo server -d</span><br><span class="line">open http://localhost:4000/admin/</span><br></pre></td></tr></table></figure>
+
+<h6 id="3-配置"><a href="#3-配置" class="headerlink" title="3.配置"></a>3.配置</h6><p>进入<strong>Settings &gt; Setup authentification</strong>，如下图所示：</p>
+<p><img src="/images/pasted-4.png" class="lazyload placeholder" data-srcset="/images/pasted-4.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"><br>依次填写用户名，密码，secrert（此项随意填写）<br>复制下方生成的代码，例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># hexo-admin authentification</span><br><span class="line">admin:</span><br><span class="line">  username: username</span><br><span class="line">  password_hash: $2a$10$L.XAIqIWgTc5S1zpvV3MEu7/rH34p4Is/nq824smv8EZ3lIPCp1su</span><br><span class="line">  secret: my super secret phrase</span><br></pre></td></tr></table></figure>
+
+<p>关闭服务端口，打开根目录下的config<br>将此代码粘贴到底部。</p>
+<h4 id="2-设置自动发布文章"><a href="#2-设置自动发布文章" class="headerlink" title="2.设置自动发布文章"></a>2.设置自动发布文章</h4><h6 id="1-在项目中创建hexo-deploy-sh文件并设置权限"><a href="#1-在项目中创建hexo-deploy-sh文件并设置权限" class="headerlink" title="1.在项目中创建hexo-deploy.sh文件并设置权限"></a>1.在项目中创建hexo-deploy.sh文件并设置权限</h6><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ touch hexo-deploy.sh; chmod a+x hexo-deploy.sh</span><br></pre></td></tr></table></figure>
+
+<h6 id="2-打开hexo-deploy文件并写入内容"><a href="#2-打开hexo-deploy文件并写入内容" class="headerlink" title="2.打开hexo-deploy文件并写入内容"></a>2.打开hexo-deploy文件并写入内容</h6><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+
+<h6 id="3-编辑配置文件"><a href="#3-编辑配置文件" class="headerlink" title="3.编辑配置文件"></a>3.编辑配置文件</h6><p>打开根目录下的config，在之前配置的admin配置信息下加入</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deployCommand: ‘./hexo-deploy.sh’ </span><br></pre></td></tr></table></figure>
+
+<p>例如</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># hexo-admin authentification</span><br><span class="line"></span><br><span class="line"># hexo-admin authentification</span><br><span class="line">admin:</span><br><span class="line">  username: username</span><br><span class="line">  password_hash: $2a$10$L.XAIqIWgTc5S1zpvV3MEu7/rH34p4Is/nq824smv8EZ3lIPCp1su</span><br><span class="line">  secret: my super secret phrase</span><br><span class="line">  deployCommand: &#x27;./hexo-deploy.sh&#x27;</span><br></pre></td></tr></table></figure>
+<h3 id="3-问题解决"><a href="#3-问题解决" class="headerlink" title="3.问题解决"></a>3.问题解决</h3><h5 id="1-Hexo-Admin错误信息解决方法"><a href="#1-Hexo-Admin错误信息解决方法" class="headerlink" title="1.Hexo Admin错误信息解决方法"></a>1.Hexo Admin错误信息解决方法</h5><p>在完成以上配置后，hexo s进入<a href="http://localhost:4000/admin/">http://localhost:4000/admin/</a></p>
+<p>编辑完文档点击Deploy并点击Deploy按钮发布</p>
+<p>可能会遇到以下问题</p>
+<h6 id="1-错误信息-Config-value-“admin-deployCommand”-not-found"><a href="#1-错误信息-Config-value-“admin-deployCommand”-not-found" class="headerlink" title="1.错误信息:Config value “admin.deployCommand” not found"></a>1.<strong>错误信息:Config value “admin.deployCommand” not found</strong></h6><p>解决方法：</p>
+<p>请仔细比对检查配置文件是否有误，如果不行，可以尝试直接复制以上代码。</p>
+<h6 id="2-错误信息deploy-Error-spawn-UNKNOWN"><a href="#2-错误信息deploy-Error-spawn-UNKNOWN" class="headerlink" title="2.错误信息deploy Error: spawn UNKNOWN"></a>2.错误信息deploy Error: spawn UNKNOWN</h6><p>解决方法：</p>
+<p>打开node_modules目录下的hexo-admin目录下的deploy.js</p>
+<p>将<br><code>var proc = spawn(command, [message], &#123;detached: true&#125;);</code><br>改为<br><code>var proc = spawn((process.platform === &quot;win32&quot; ? &quot;hexo.cmd&quot; : &quot;hexo&quot;), [&#39;d&#39;]);</code></p>
+<h4 id="2-其他"><a href="#2-其他" class="headerlink" title="2.其他"></a>2.其他</h4><h6 id="1-如何在Admin中为文章添加tags和categories？"><a href="#1-如何在Admin中为文章添加tags和categories？" class="headerlink" title="1.如何在Admin中为文章添加tags和categories？"></a>1.如何在Admin中为文章添加tags和categories？</h6><p>打开任意文档，找到右上角的齿轮图标，即可添加标签分类</p>
+<p><img src="/images/pasted-5.png" class="lazyload placeholder" data-srcset="/images/pasted-5.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<h6 id="2-右上角的Publish和Unpublish按钮是什么？"><a href="#2-右上角的Publish和Unpublish按钮是什么？" class="headerlink" title="2.右上角的Publish和Unpublish按钮是什么？"></a>2.右上角的Publish和Unpublish按钮是什么？</h6><p>分别是发布与草稿，点击Publish，会在下次部署将文章上传到网站。再点击Unpublish即可取消发布，文章不会丢失，作为草稿保存。</p>
+<h6 id="3-为什么直接复制图片（截图）到内容会无法显示？"><a href="#3-为什么直接复制图片（截图）到内容会无法显示？" class="headerlink" title="3.为什么直接复制图片（截图）到内容会无法显示？"></a>3.为什么直接复制图片（截图）到内容会无法显示？</h6><p>解决办法：</p>
+<p>1.打开我们博客的目录的“node_modules”子目录，找到“hexo-admin”。</p>
+<p><img src="/images/pasted-6.png" class="lazyload placeholder" data-srcset="/images/pasted-6.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p>2.双击进入该文件夹，打开“api.js”文件，通过搜索“imagePath”字符找到下图的代码片段，红框内就是我们要改的代码。</p>
+<p><img src="/images/pasted-7.png" class="lazyload placeholder" data-srcset="/images/pasted-7.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p>3.将代码修改为</p>
+<pre><code>filename = imagePath+&quot;/&quot;+ filename    //修改点
+var outpath = path.join(hexo.source_dir, filename)
+
+var dataURI = req.body.data.slice(&#39;data:image/png;base64,&#39;.length)
+var buf = new Buffer(dataURI, &#39;base64&#39;)
+hexo.log.d(`saving image to $&#123;outpath&#125;`)
+fs.writeFile(outpath, buf, function (err) &#123;
+  if (err) &#123;
+    console.log(err)
+  &#125;
+  hexo.source.process().then(function () &#123;
+    res.done(&#123;
+      src: filename,    //修改点
+      msg: msg
+    &#125;)
+  &#125;);
+&#125;)
+</code></pre>
+<p>4.打开hexo-admin目录下的子目录，找到“bundle.js文件”，并打开它。</p>
+<p><img src="/images/pasted-8.png" class="lazyload placeholder" data-srcset="/images/pasted-8.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p>5.搜索“‘upload’”找到以下代码</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">uploadImage: function(data, filename)  &#123;return post(&#x27;/images/upload&#x27;, &#123;data: data, filename: filename&#125;);&#125;,</span><br></pre></td></tr></table></figure>
+
+
+
+<p>修改为</p>
+<pre><code>uploadImage: function(data, filename)  &#123;
+    var imgJson=post(&#39;/images/upload&#39;, &#123;data: data, filename: filename&#125;);
+    var start = (new Date()).getTime();
+    while((new Date()).getTime() - start &lt; 1000) &#123;
+        continue;
+    &#125;
+    return imgJson;
+&#125;,
+</code></pre>
+<p>到这里，图片无法显示的问题完美解决。</p>
+<p>注：图像出现错误显示如下图所示<br><img src="/images/pasted-9.png" class="lazyload placeholder" data-srcset="/images/pasted-9.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"><br>只需要点击两次右上角圆圈小勾勾（）即可正常在右方显示</p>
+<p><img src="/images/pasted-10.png" class="lazyload placeholder" data-srcset="/images/pasted-10.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p>以上。</p>
+<p>部分内容参考：</p>
+<p>CSDN : <a href="https://blog.csdn.net/u010932545/article/details/85882936">Hexo Admin 自动发布文章 </a></p>
+<p>CSDN : <a href="https://blog.csdn.net/nineya_com/article/details/103384546">hexo-admin插件windows系统插入图片失败..</a></p>
+]]></content>
+      <categories>
+        <category>HEXO</category>
+      </categories>
+      <tags>
+        <tag>HEXO</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Bamboo：自定义侧边栏，让博客更富网络气息</title>
     <url>/2022/04/25/Bamboo%EF%BC%9A%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BE%A7%E8%BE%B9%E6%A0%8F%EF%BC%8C%E8%AE%A9%E5%8D%9A%E5%AE%A2%E6%9B%B4%E5%AF%8C%E7%BD%91%E7%BB%9C%E6%B0%94%E6%81%AF/</url>
     <content><![CDATA[<h3 id="如何自定义侧边栏"><a href="#如何自定义侧边栏" class="headerlink" title="如何自定义侧边栏"></a>如何自定义侧边栏</h3><h5 id="创建-widget-yml"><a href="#创建-widget-yml" class="headerlink" title="创建 widget.yml"></a>创建 widget.yml</h5><p>在Hexo博客目錄中的<code>source/_data</code>（如果沒有 _data 文件夾，请自行创建），創建一個文件 <code>widget.yml</code></p>
@@ -308,128 +402,6 @@
       </categories>
       <tags>
         <tag>HEXO</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo-admin-web端编辑与自动发布文章</title>
-    <url>/2022/04/25/Hexo-admin-web%E7%AB%AF%E7%BC%96%E8%BE%91%E4%B8%8E%E8%87%AA%E5%8A%A8%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><h4 id="1-为什么使用Hexo-Admin"><a href="#1-为什么使用Hexo-Admin" class="headerlink" title="1.为什么使用Hexo Admin"></a>1.为什么使用<a href="https://jaredforsyth.com/hexo-admin/">Hexo Admin</a></h4><p><em>Hexo</em>的静态页面虽快，但是每次发布文章都需要通过命令实现，而不像<em>wordpress</em>可以直接写博文，所以我们需要一个后台管理系统来帮助我们更加方便的写博文。</p>
-<p><img src="/images/pasted-1.png" class="lazyload placeholder" data-srcset="/images/pasted-1.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<h4 id="2-Hexo-Admin能做什么"><a href="#2-Hexo-Admin能做什么" class="headerlink" title="2.Hexo Admin能做什么"></a>2.<a href="https://jaredforsyth.com/hexo-admin/">Hexo Admin</a>能做什么</h4><p>Hexo Admin是一个方便快捷的博客后台管理系统，使用该插件在hexo s后可以自由的在Web端编辑博客内容。主要功能是在线编辑文档，其主要功能就是可视化博客文章，自动部署。</p>
-<p>Pages - 新加 page；<br>Posts - 新加或删除 post；双击一个 post，你可以编辑，预览，新增修改 tags、categories，选择发布或不发布；<br>Settings - 一些配置；<br>Deploy - 可以直接部署到 github。</p>
-<p><img src="/images/pasted-3.png" class="lazyload placeholder" data-srcset="/images/pasted-3.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<h3 id="2-安装配置"><a href="#2-安装配置" class="headerlink" title="2.安装配置"></a>2.安装配置</h3><h4 id="1-如何安装Hexo-Admin并自动发布"><a href="#1-如何安装Hexo-Admin并自动发布" class="headerlink" title="1.如何安装Hexo Admin并自动发布"></a>1.如何安装<a href="https://jaredforsyth.com/hexo-admin/">Hexo Admin</a>并自动发布</h4><h6 id="1-安装插件"><a href="#1-安装插件" class="headerlink" title="1.安装插件"></a>1.安装插件</h6><p>首先安装插件。在blog根目录使用npm安装</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-admin</span><br></pre></td></tr></table></figure>
-
-<h6 id="2-启动服务器"><a href="#2-启动服务器" class="headerlink" title="2.启动服务器"></a>2.启动服务器</h6><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo server -d</span><br><span class="line">open http://localhost:4000/admin/</span><br></pre></td></tr></table></figure>
-
-<h6 id="3-配置"><a href="#3-配置" class="headerlink" title="3.配置"></a>3.配置</h6><p>进入<strong>Settings &gt; Setup authentification</strong>，如下图所示：</p>
-<p><img src="/images/pasted-4.png" class="lazyload placeholder" data-srcset="/images/pasted-4.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"><br>依次填写用户名，密码，secrert（此项随意填写）<br>复制下方生成的代码，例如：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># hexo-admin authentification</span><br><span class="line">admin:</span><br><span class="line">  username: username</span><br><span class="line">  password_hash: $2a$10$L.XAIqIWgTc5S1zpvV3MEu7/rH34p4Is/nq824smv8EZ3lIPCp1su</span><br><span class="line">  secret: my super secret phrase</span><br></pre></td></tr></table></figure>
-
-<p>关闭服务端口，打开根目录下的config<br>将此代码粘贴到底部。</p>
-<h4 id="2-设置自动发布文章"><a href="#2-设置自动发布文章" class="headerlink" title="2.设置自动发布文章"></a>2.设置自动发布文章</h4><h6 id="1-在项目中创建hexo-deploy-sh文件并设置权限"><a href="#1-在项目中创建hexo-deploy-sh文件并设置权限" class="headerlink" title="1.在项目中创建hexo-deploy.sh文件并设置权限"></a>1.在项目中创建hexo-deploy.sh文件并设置权限</h6><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ touch hexo-deploy.sh; chmod a+x hexo-deploy.sh</span><br></pre></td></tr></table></figure>
-
-<h6 id="2-打开hexo-deploy文件并写入内容"><a href="#2-打开hexo-deploy文件并写入内容" class="headerlink" title="2.打开hexo-deploy文件并写入内容"></a>2.打开hexo-deploy文件并写入内容</h6><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
-
-<h6 id="3-编辑配置文件"><a href="#3-编辑配置文件" class="headerlink" title="3.编辑配置文件"></a>3.编辑配置文件</h6><p>打开根目录下的config，在之前配置的admin配置信息下加入</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deployCommand: ‘./hexo-deploy.sh’ </span><br></pre></td></tr></table></figure>
-
-<p>例如</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># hexo-admin authentification</span><br><span class="line"></span><br><span class="line"># hexo-admin authentification</span><br><span class="line">admin:</span><br><span class="line">  username: username</span><br><span class="line">  password_hash: $2a$10$L.XAIqIWgTc5S1zpvV3MEu7/rH34p4Is/nq824smv8EZ3lIPCp1su</span><br><span class="line">  secret: my super secret phrase</span><br><span class="line">  deployCommand: &#x27;./hexo-deploy.sh&#x27;</span><br></pre></td></tr></table></figure>
-<h3 id="3-问题解决"><a href="#3-问题解决" class="headerlink" title="3.问题解决"></a>3.问题解决</h3><h5 id="1-Hexo-Admin错误信息解决方法"><a href="#1-Hexo-Admin错误信息解决方法" class="headerlink" title="1.Hexo Admin错误信息解决方法"></a>1.Hexo Admin错误信息解决方法</h5><p>在完成以上配置后，hexo s进入<a href="http://localhost:4000/admin/">http://localhost:4000/admin/</a></p>
-<p>编辑完文档点击Deploy并点击Deploy按钮发布</p>
-<p>可能会遇到以下问题</p>
-<h6 id="1-错误信息-Config-value-“admin-deployCommand”-not-found"><a href="#1-错误信息-Config-value-“admin-deployCommand”-not-found" class="headerlink" title="1.错误信息:Config value “admin.deployCommand” not found"></a>1.<strong>错误信息:Config value “admin.deployCommand” not found</strong></h6><p>解决方法：</p>
-<p>请仔细比对检查配置文件是否有误，如果不行，可以尝试直接复制以上代码。</p>
-<h6 id="2-错误信息deploy-Error-spawn-UNKNOWN"><a href="#2-错误信息deploy-Error-spawn-UNKNOWN" class="headerlink" title="2.错误信息deploy Error: spawn UNKNOWN"></a>2.错误信息deploy Error: spawn UNKNOWN</h6><p>解决方法：</p>
-<p>打开node_modules目录下的hexo-admin目录下的deploy.js</p>
-<p>将<br><code>var proc = spawn(command, [message], &#123;detached: true&#125;);</code><br>改为<br><code>var proc = spawn((process.platform === &quot;win32&quot; ? &quot;hexo.cmd&quot; : &quot;hexo&quot;), [&#39;d&#39;]);</code></p>
-<h4 id="2-其他"><a href="#2-其他" class="headerlink" title="2.其他"></a>2.其他</h4><h6 id="1-如何在Admin中为文章添加tags和categories？"><a href="#1-如何在Admin中为文章添加tags和categories？" class="headerlink" title="1.如何在Admin中为文章添加tags和categories？"></a>1.如何在Admin中为文章添加tags和categories？</h6><p>打开任意文档，找到右上角的齿轮图标，即可添加标签分类</p>
-<p><img src="/images/pasted-5.png" class="lazyload placeholder" data-srcset="/images/pasted-5.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<h6 id="2-右上角的Publish和Unpublish按钮是什么？"><a href="#2-右上角的Publish和Unpublish按钮是什么？" class="headerlink" title="2.右上角的Publish和Unpublish按钮是什么？"></a>2.右上角的Publish和Unpublish按钮是什么？</h6><p>分别是发布与草稿，点击Publish，会在下次部署将文章上传到网站。再点击Unpublish即可取消发布，文章不会丢失，作为草稿保存。</p>
-<h6 id="3-为什么直接复制图片（截图）到内容会无法显示？"><a href="#3-为什么直接复制图片（截图）到内容会无法显示？" class="headerlink" title="3.为什么直接复制图片（截图）到内容会无法显示？"></a>3.为什么直接复制图片（截图）到内容会无法显示？</h6><p>解决办法：</p>
-<p>1.打开我们博客的目录的“node_modules”子目录，找到“hexo-admin”。</p>
-<p><img src="/images/pasted-6.png" class="lazyload placeholder" data-srcset="/images/pasted-6.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<p>2.双击进入该文件夹，打开“api.js”文件，通过搜索“imagePath”字符找到下图的代码片段，红框内就是我们要改的代码。</p>
-<p><img src="/images/pasted-7.png" class="lazyload placeholder" data-srcset="/images/pasted-7.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<p>3.将代码修改为</p>
-<pre><code>filename = imagePath+&quot;/&quot;+ filename    //修改点
-var outpath = path.join(hexo.source_dir, filename)
-
-var dataURI = req.body.data.slice(&#39;data:image/png;base64,&#39;.length)
-var buf = new Buffer(dataURI, &#39;base64&#39;)
-hexo.log.d(`saving image to $&#123;outpath&#125;`)
-fs.writeFile(outpath, buf, function (err) &#123;
-  if (err) &#123;
-    console.log(err)
-  &#125;
-  hexo.source.process().then(function () &#123;
-    res.done(&#123;
-      src: filename,    //修改点
-      msg: msg
-    &#125;)
-  &#125;);
-&#125;)
-</code></pre>
-<p>4.打开hexo-admin目录下的子目录，找到“bundle.js文件”，并打开它。</p>
-<p><img src="/images/pasted-8.png" class="lazyload placeholder" data-srcset="/images/pasted-8.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<p>5.搜索“‘upload’”找到以下代码</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">uploadImage: function(data, filename)  &#123;return post(&#x27;/images/upload&#x27;, &#123;data: data, filename: filename&#125;);&#125;,</span><br></pre></td></tr></table></figure>
-
-
-
-<p>修改为</p>
-<pre><code>uploadImage: function(data, filename)  &#123;
-    var imgJson=post(&#39;/images/upload&#39;, &#123;data: data, filename: filename&#125;);
-    var start = (new Date()).getTime();
-    while((new Date()).getTime() - start &lt; 1000) &#123;
-        continue;
-    &#125;
-    return imgJson;
-&#125;,
-</code></pre>
-<p>到这里，图片无法显示的问题完美解决。</p>
-<p>注：图像出现错误显示如下图所示<br><img src="/images/pasted-9.png" class="lazyload placeholder" data-srcset="/images/pasted-9.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"><br>只需要点击两次右上角圆圈小勾勾（）即可正常在右方显示</p>
-<p><img src="/images/pasted-10.png" class="lazyload placeholder" data-srcset="/images/pasted-10.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<p>以上。</p>
-<p>部分内容参考：</p>
-<p>CSDN : <a href="https://blog.csdn.net/u010932545/article/details/85882936">Hexo Admin 自动发布文章 </a></p>
-<p>CSDN : <a href="https://blog.csdn.net/nineya_com/article/details/103384546">hexo-admin插件windows系统插入图片失败..</a></p>
-]]></content>
-      <categories>
-        <category>HEXO</category>
-      </categories>
-      <tags>
-        <tag>HEXO</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Visual Studio Installer 显示“稍等片刻...正在提取文件”进度条不动的处理</title>
-    <url>/2022/09/13/Untitled/</url>
-    <content><![CDATA[<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>今天在安装Visual Studio时发生了安装问题</p>
-<p>显示“稍等片刻…正在提取文件”且进度条一直卡在0%不动</p>
-<p><img src="/images/pasted-49.png" class="lazyload placeholder" data-srcset="/images/pasted-49.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="一直卡在此处"></p>
-<h3 id="寻找原因"><a href="#寻找原因" class="headerlink" title="寻找原因"></a>寻找原因</h3><p>在日志中发现报错</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">WebClient failed in &#x27;https://aka.ms/vs/16/release/installer&#x27; with &#x27;无法连接到远程服务器&#x27; - &#x27;https://aka.ms/vs/16/release/installer&#x27;.</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>很明显是该网站被墙导致无法访问下载<br>打开该网站 <a href="https://aka.ms/vs/16/release/installer">https://aka.ms/vs/16/release/installer</a> </p>
-<p>果然发生问题</p>
-<p><img src="/images/pasted-50.png" class="lazyload placeholder" data-srcset="/images/pasted-50.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><h4 id="1-查询DNS"><a href="#1-查询DNS" class="headerlink" title="1.查询DNS"></a>1.查询DNS</h4><p>访问 ：<a href="http://tool.chinaz.com/dns/?type=1&amp;host=aka.ms&amp;ip=">http://tool.chinaz.com/dns/?type=1&amp;host=aka.ms&amp;ip=</a></p>
-<p><img src="/images/pasted-51.png" class="lazyload placeholder" data-srcset="/images/pasted-51.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<p>如图，找到TTL值最小的IP <strong>104.97.154.95</strong></p>
-<h4 id="2-修改hosts"><a href="#2-修改hosts" class="headerlink" title="2.修改hosts"></a>2.修改hosts</h4><p>打开‘C:\Windows\System32\drivers\etc\hosts’</p>
-<p>在最后一行添加</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&quot;104.97.154.95    aka.ms&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>这里的IP可以不填和我相同的，以查询到的IP为准。</p>
-<p>保存后重新打开Visual Studio Installer</p>
-<p>问题解决，安装成功</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -585,48 +557,31 @@ fs.writeFile(outpath, buf, function (err) &#123;
       </tags>
   </entry>
   <entry>
-    <title>使用更加美观（花里胡哨的主题）Bamboo</title>
-    <url>/2022/04/24/%E4%BD%BF%E7%94%A8%E6%9B%B4%E5%8A%A0%E7%BE%8E%E8%A7%82%EF%BC%88%E8%8A%B1%E9%87%8C%E8%83%A1%E5%93%A8%E7%9A%84%E4%B8%BB%E9%A2%98%EF%BC%89/</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><h4 id="为什么换主题"><a href="#为什么换主题" class="headerlink" title="为什么换主题"></a>为什么换主题</h4><p>​    以前使用的<a href="https://github.com/Fechin/hexo-theme-diaspora">diaspora</a>主题在页面设计上有许多不足，此外其内置的插件较为不便，比如不兼容其他评论插件，bug繁多等问题。对于评论插件来说，每次评论都需要登录GitHub来使用，较为不便。其次是页面布局，其文章在首页的分布不符合现代互联网审美（过于简洁）。</p>
-<h4 id="为什么选择Bamboo"><a href="#为什么选择Bamboo" class="headerlink" title="为什么选择Bamboo"></a>为什么选择Bamboo</h4><p>1.功能强大</p>
-<p>其内集成了众多插件，例如公告，轮播，多款评论插件，侧边栏，音乐播放器，mathjax等等。</p>
-<p>其强大的功能极大的提升了博客的丰富度与便捷性。</p>
-<p>2.界面美观</p>
-<p>文章布局简洁，导航栏配置合理，更多的特效，更加二刺螈（bushi</p>
-<p>多种按钮链接，live2D宠物</p>
-<h3 id="如何安装"><a href="#如何安装" class="headerlink" title="如何安装"></a>如何安装</h3><h4 id="gitee安装"><a href="#gitee安装" class="headerlink" title="gitee安装"></a>gitee安装</h4><p>进入<code>themes</code>文件夹下使用 <code>Git clone</code> 命令来下载:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/yuang01/hexo-theme-bamboo.git</span><br></pre></td></tr></table></figure>
-
-
-
-<span class='btn center large round solid'><a class="button" href='https://github.com/yuang01/hexo-theme-bamboo' title='Bamboo'><i class='fa fa-download'></i>Bamboo</a></span>
-
-
-
-<h4 id="或者npm来安装，进入hexo根目录使用如下命令（不推荐）"><a href="#或者npm来安装，进入hexo根目录使用如下命令（不推荐）" class="headerlink" title="或者npm来安装，进入hexo根目录使用如下命令（不推荐）"></a>或者npm来安装，进入hexo根目录使用如下命令（不推荐）</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm i hexo-theme-bamboo</span><br></pre></td></tr></table></figure>
-
-<p>注意：此方法只支持Hexo在5.0.0版本以上 <strong>通过 npm 安装并不会在 themes 里生成主题文件夹，而是在 node_modules 里生成</strong> 修改hexo根目录下的站点配置文件<code>_config.yml</code>，把主题改为<code>bamboo</code></p>
-<p>接着在hexo根目录下新建文件<code>_config.bamboo.yml</code>,从<code>node_modules</code>文件夹下找到<code>hexo-theme-bamboo</code>文件夹下的<code>_config.yml</code>，将里面的内容复制到<code>_config.bamboo.yml</code>文件中即可，在<code>_config.bamboo.yml</code>文件中对主题进行配置。</p>
-<h3 id="一些问题"><a href="#一些问题" class="headerlink" title="一些问题"></a>一些问题</h3><h4 id="1-安装完成后hexo-s顶部导航栏不显示分类、标签等"><a href="#1-安装完成后hexo-s顶部导航栏不显示分类、标签等" class="headerlink" title="1.安装完成后hexo s顶部导航栏不显示分类、标签等"></a>1.安装完成后hexo s顶部导航栏不显示分类、标签等</h4><h5 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h5><p>打开主题的config文件，发现源码中多出#号</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 菜单</span><br><span class="line">menu:</span><br><span class="line">  # Home:</span><br><span class="line">  #   url: /</span><br><span class="line">  #   icon: fas fa-home</span><br><span class="line">  # Archives:</span><br><span class="line">  #   url: /archives</span><br><span class="line">  #   icon: fas fa-archive</span><br><span class="line">  # Tags:</span><br><span class="line">  #   url: /tags</span><br><span class="line">  #   icon: fas fa-tags</span><br><span class="line">  # Categories:</span><br><span class="line">  #   url: /categories</span><br><span class="line">  #   icon: fas fa-bookmark</span><br><span class="line">  # About:</span><br><span class="line">  #   url: /about</span><br><span class="line">  #   icon: fas fa-user</span><br><span class="line">  # Friends:</span><br><span class="line">  #   url: /friends</span><br><span class="line">  # 更多: # 这是二级菜单的写法</span><br><span class="line">  #  icon: fas fa-link</span><br><span class="line">  #  children:</span><br><span class="line">  #   - name: 图库</span><br><span class="line">  #     url: /gallery</span><br><span class="line">  #     icon: fas fa-music</span><br><span class="line">  #   - name: 友情连接</span><br><span class="line">  #     url: /huoban</span><br><span class="line">  #     icon: fas fa-film</span><br><span class="line">  #   - name: 关于我</span><br><span class="line">  #     url: /me</span><br><span class="line">  #     icon: fas fa-film</span><br><span class="line">  #   - name: 百度</span><br><span class="line">  #     url: http://baidu.com</span><br><span class="line">  #     icon: fas fa-film</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h5 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h5><p>修改为</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 菜单</span><br><span class="line">menu:</span><br><span class="line">  Home:</span><br><span class="line">    url: /</span><br><span class="line">    icon: fas fa-home</span><br><span class="line">  Archives:</span><br><span class="line">    url: /archives</span><br><span class="line">    icon: fas fa-archive</span><br><span class="line">  Tags:</span><br><span class="line">    url: /tags</span><br><span class="line">    icon: fas fa-tags</span><br><span class="line">  Categories:</span><br><span class="line">    url: /categories</span><br><span class="line">    icon: fas fa-bookmark</span><br><span class="line">  About:</span><br><span class="line">    url: /about</span><br><span class="line">    icon: fas fa-user</span><br></pre></td></tr></table></figure>
-
-<p>此处删除了二级菜单，因为不太需要。</p>
-<p>注：也可以直接按住<strong>ctrl+k+u</strong>取消注释本段代码</p>
-<h4 id="2-点击分类，标签等页面显示Cannot-GET-xxx"><a href="#2-点击分类，标签等页面显示Cannot-GET-xxx" class="headerlink" title="2.点击分类，标签等页面显示Cannot GET xxx"></a>2.点击分类，标签等页面显示Cannot GET xxx</h4><p>解决办法</p>
-<h5 id="1-初始化"><a href="#1-初始化" class="headerlink" title="1.初始化"></a>1.初始化</h5><p>在&#x2F;blog根目录下打开source，删除categories、tags等文件夹，在根目录下重新新建一个页面</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> page categories <span class="comment">//tags和这个操作一致</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="2-找到新建的页面，添加type和layout"><a href="#2-找到新建的页面，添加type和layout" class="headerlink" title="2.找到新建的页面，添加type和layout"></a>2.找到新建的页面，添加type和layout</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">title: categories</span><br><span class="line">date: 2019-12-25 09:15:45</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">layout: &quot;categories&quot;</span><br></pre></td></tr></table></figure>
-
+    <title>Visual Studio Installer 显示“稍等片刻...正在提取文件”进度条不动的处理</title>
+    <url>/2022/09/13/Untitled/</url>
+    <content><![CDATA[<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>今天在安装Visual Studio时发生了安装问题</p>
+<p>显示“稍等片刻…正在提取文件”且进度条一直卡在0%不动</p>
+<p><img src="/images/pasted-49.png" class="lazyload placeholder" data-srcset="/images/pasted-49.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="一直卡在此处"></p>
+<h3 id="寻找原因"><a href="#寻找原因" class="headerlink" title="寻找原因"></a>寻找原因</h3><p>在日志中发现报错</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">WebClient failed in &#x27;https://aka.ms/vs/16/release/installer&#x27; with &#x27;无法连接到远程服务器&#x27; - &#x27;https://aka.ms/vs/16/release/installer&#x27;.</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>很明显是该网站被墙导致无法访问下载<br>打开该网站 <a href="https://aka.ms/vs/16/release/installer">https://aka.ms/vs/16/release/installer</a> </p>
+<p>果然发生问题</p>
+<p><img src="/images/pasted-50.png" class="lazyload placeholder" data-srcset="/images/pasted-50.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><h4 id="1-查询DNS"><a href="#1-查询DNS" class="headerlink" title="1.查询DNS"></a>1.查询DNS</h4><p>访问 ：<a href="http://tool.chinaz.com/dns/?type=1&amp;host=aka.ms&amp;ip=">http://tool.chinaz.com/dns/?type=1&amp;host=aka.ms&amp;ip=</a></p>
+<p><img src="/images/pasted-51.png" class="lazyload placeholder" data-srcset="/images/pasted-51.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p>如图，找到TTL值最小的IP <strong>104.97.154.95</strong></p>
+<h4 id="2-修改hosts"><a href="#2-修改hosts" class="headerlink" title="2.修改hosts"></a>2.修改hosts</h4><p>打开‘C:\Windows\System32\drivers\etc\hosts’</p>
+<p>在最后一行添加</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&quot;104.97.154.95    aka.ms&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>这里的IP可以不填和我相同的，以查询到的IP为准。</p>
+<p>保存后重新打开Visual Studio Installer</p>
+<p>问题解决，安装成功</p>
 ]]></content>
       <categories>
-        <category>HEXO</category>
+        <category>技术</category>
       </categories>
       <tags>
-        <tag>HEXO</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -684,6 +639,51 @@ fs.writeFile(outpath, buf, function (err) &#123;
 <p>3.将<strong>控制是否自动播放网站上的音频及视频</strong>设置为<strong>允许</strong>或者在下方手动添加网站域名</p>
 <p><img src="https://s2.loli.net/2022/04/24/Ilt3cZ5Av9i1OmB.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/24/Ilt3cZ5Av9i1OmB.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="Screenshot 2022-04-24 201832.png"></p>
 <p>部分内容参考：<a href="https://www.cnblogs.com/aifengqi/articles/15385977.html">https://www.cnblogs.com/aifengqi/articles/15385977.html</a><br>（想了解更多请移步此处）</p>
+]]></content>
+      <categories>
+        <category>HEXO</category>
+      </categories>
+      <tags>
+        <tag>HEXO</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用更加美观（花里胡哨的主题）Bamboo</title>
+    <url>/2022/04/24/%E4%BD%BF%E7%94%A8%E6%9B%B4%E5%8A%A0%E7%BE%8E%E8%A7%82%EF%BC%88%E8%8A%B1%E9%87%8C%E8%83%A1%E5%93%A8%E7%9A%84%E4%B8%BB%E9%A2%98%EF%BC%89/</url>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><h4 id="为什么换主题"><a href="#为什么换主题" class="headerlink" title="为什么换主题"></a>为什么换主题</h4><p>​    以前使用的<a href="https://github.com/Fechin/hexo-theme-diaspora">diaspora</a>主题在页面设计上有许多不足，此外其内置的插件较为不便，比如不兼容其他评论插件，bug繁多等问题。对于评论插件来说，每次评论都需要登录GitHub来使用，较为不便。其次是页面布局，其文章在首页的分布不符合现代互联网审美（过于简洁）。</p>
+<h4 id="为什么选择Bamboo"><a href="#为什么选择Bamboo" class="headerlink" title="为什么选择Bamboo"></a>为什么选择Bamboo</h4><p>1.功能强大</p>
+<p>其内集成了众多插件，例如公告，轮播，多款评论插件，侧边栏，音乐播放器，mathjax等等。</p>
+<p>其强大的功能极大的提升了博客的丰富度与便捷性。</p>
+<p>2.界面美观</p>
+<p>文章布局简洁，导航栏配置合理，更多的特效，更加二刺螈（bushi</p>
+<p>多种按钮链接，live2D宠物</p>
+<h3 id="如何安装"><a href="#如何安装" class="headerlink" title="如何安装"></a>如何安装</h3><h4 id="gitee安装"><a href="#gitee安装" class="headerlink" title="gitee安装"></a>gitee安装</h4><p>进入<code>themes</code>文件夹下使用 <code>Git clone</code> 命令来下载:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/yuang01/hexo-theme-bamboo.git</span><br></pre></td></tr></table></figure>
+
+
+
+<span class='btn center large round solid'><a class="button" href='https://github.com/yuang01/hexo-theme-bamboo' title='Bamboo'><i class='fa fa-download'></i>Bamboo</a></span>
+
+
+
+<h4 id="或者npm来安装，进入hexo根目录使用如下命令（不推荐）"><a href="#或者npm来安装，进入hexo根目录使用如下命令（不推荐）" class="headerlink" title="或者npm来安装，进入hexo根目录使用如下命令（不推荐）"></a>或者npm来安装，进入hexo根目录使用如下命令（不推荐）</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm i hexo-theme-bamboo</span><br></pre></td></tr></table></figure>
+
+<p>注意：此方法只支持Hexo在5.0.0版本以上 <strong>通过 npm 安装并不会在 themes 里生成主题文件夹，而是在 node_modules 里生成</strong> 修改hexo根目录下的站点配置文件<code>_config.yml</code>，把主题改为<code>bamboo</code></p>
+<p>接着在hexo根目录下新建文件<code>_config.bamboo.yml</code>,从<code>node_modules</code>文件夹下找到<code>hexo-theme-bamboo</code>文件夹下的<code>_config.yml</code>，将里面的内容复制到<code>_config.bamboo.yml</code>文件中即可，在<code>_config.bamboo.yml</code>文件中对主题进行配置。</p>
+<h3 id="一些问题"><a href="#一些问题" class="headerlink" title="一些问题"></a>一些问题</h3><h4 id="1-安装完成后hexo-s顶部导航栏不显示分类、标签等"><a href="#1-安装完成后hexo-s顶部导航栏不显示分类、标签等" class="headerlink" title="1.安装完成后hexo s顶部导航栏不显示分类、标签等"></a>1.安装完成后hexo s顶部导航栏不显示分类、标签等</h4><h5 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h5><p>打开主题的config文件，发现源码中多出#号</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 菜单</span><br><span class="line">menu:</span><br><span class="line">  # Home:</span><br><span class="line">  #   url: /</span><br><span class="line">  #   icon: fas fa-home</span><br><span class="line">  # Archives:</span><br><span class="line">  #   url: /archives</span><br><span class="line">  #   icon: fas fa-archive</span><br><span class="line">  # Tags:</span><br><span class="line">  #   url: /tags</span><br><span class="line">  #   icon: fas fa-tags</span><br><span class="line">  # Categories:</span><br><span class="line">  #   url: /categories</span><br><span class="line">  #   icon: fas fa-bookmark</span><br><span class="line">  # About:</span><br><span class="line">  #   url: /about</span><br><span class="line">  #   icon: fas fa-user</span><br><span class="line">  # Friends:</span><br><span class="line">  #   url: /friends</span><br><span class="line">  # 更多: # 这是二级菜单的写法</span><br><span class="line">  #  icon: fas fa-link</span><br><span class="line">  #  children:</span><br><span class="line">  #   - name: 图库</span><br><span class="line">  #     url: /gallery</span><br><span class="line">  #     icon: fas fa-music</span><br><span class="line">  #   - name: 友情连接</span><br><span class="line">  #     url: /huoban</span><br><span class="line">  #     icon: fas fa-film</span><br><span class="line">  #   - name: 关于我</span><br><span class="line">  #     url: /me</span><br><span class="line">  #     icon: fas fa-film</span><br><span class="line">  #   - name: 百度</span><br><span class="line">  #     url: http://baidu.com</span><br><span class="line">  #     icon: fas fa-film</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h5 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h5><p>修改为</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 菜单</span><br><span class="line">menu:</span><br><span class="line">  Home:</span><br><span class="line">    url: /</span><br><span class="line">    icon: fas fa-home</span><br><span class="line">  Archives:</span><br><span class="line">    url: /archives</span><br><span class="line">    icon: fas fa-archive</span><br><span class="line">  Tags:</span><br><span class="line">    url: /tags</span><br><span class="line">    icon: fas fa-tags</span><br><span class="line">  Categories:</span><br><span class="line">    url: /categories</span><br><span class="line">    icon: fas fa-bookmark</span><br><span class="line">  About:</span><br><span class="line">    url: /about</span><br><span class="line">    icon: fas fa-user</span><br></pre></td></tr></table></figure>
+
+<p>此处删除了二级菜单，因为不太需要。</p>
+<p>注：也可以直接按住<strong>ctrl+k+u</strong>取消注释本段代码</p>
+<h4 id="2-点击分类，标签等页面显示Cannot-GET-xxx"><a href="#2-点击分类，标签等页面显示Cannot-GET-xxx" class="headerlink" title="2.点击分类，标签等页面显示Cannot GET xxx"></a>2.点击分类，标签等页面显示Cannot GET xxx</h4><p>解决办法</p>
+<h5 id="1-初始化"><a href="#1-初始化" class="headerlink" title="1.初始化"></a>1.初始化</h5><p>在&#x2F;blog根目录下打开source，删除categories、tags等文件夹，在根目录下重新新建一个页面</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> page categories <span class="comment">//tags和这个操作一致</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="2-找到新建的页面，添加type和layout"><a href="#2-找到新建的页面，添加type和layout" class="headerlink" title="2.找到新建的页面，添加type和layout"></a>2.找到新建的页面，添加type和layout</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">title: categories</span><br><span class="line">date: 2019-12-25 09:15:45</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">layout: &quot;categories&quot;</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
         <category>HEXO</category>
@@ -813,46 +813,6 @@ fs.writeFile(outpath, buf, function (err) &#123;
       </tags>
   </entry>
   <entry>
-    <title>2022.4.28有效 Hexo 双线部署到 Coding 和 GitHub</title>
-    <url>/2022/04/28/%E5%8F%8C%E7%BA%BF%E9%83%A8%E7%BD%B2/</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><h4 id="什么是Coding："><a href="#什么是Coding：" class="headerlink" title="什么是Coding："></a>什么是Coding：</h4><p><em>Coding WebIDE 是 Coding 自主研发的在线集成开发环境 (IDE)。用户可以通过 WebIDE 创建项目的工作空间, 进行在线开发, 调试等操作。同时 WebIDE 集成了 Git 代码版本控制, 用户可以选择 Coding、GitHub、BitBucket、Git@OSC 等任意的代码仓库。 WebIDE 还提供了分享开发环境的功能, 用户可以保存当前的开发环境, 分享给团队的其他成员。大家可以理解为中国版的github，如果把代码既托管到coding上，又托管到github上，让大陆的用户访问的是由coding托管的网站，歪果仁访问的是由github托管的网站，以此来提升我们网站的访问速度。</em></p>
-<h4 id="为什么要把博客双线部署到Coding"><a href="#为什么要把博客双线部署到Coding" class="headerlink" title="为什么要把博客双线部署到Coding"></a>为什么要把博客双线部署到Coding</h4><p>当我们仅用Github做仓库搭建博客后，会发现国内访问自己博客的速度非常缓慢，并且由于Github的限制，我们的博客无法被百度收录。而将仓库双线部署在Coding之后，我们会发现在国内我们的访问速度会有明显的提升，并且我们的博客可以提交给百度收录了。</p>
-<h3 id="如何实现"><a href="#如何实现" class="headerlink" title="如何实现"></a>如何实现</h3><p>在网上我搜了很多办法，但是由于分支改变和coding自身设置发生变化，导致网上的教程已经全部失灵，现在我提供一个有效的方法仅供参考。</p>
-<h4 id="1-注册coding账号，这里不再多说"><a href="#1-注册coding账号，这里不再多说" class="headerlink" title="1.注册coding账号，这里不再多说"></a>1.注册coding账号，这里不再多说</h4><p>coding网址：<a href="https://coding.net/">https://coding.net/</a></p>
-<h4 id="2-创建新项目"><a href="#2-创建新项目" class="headerlink" title="2.创建新项目"></a>2.创建新项目</h4><p>右上角创建<br><img src="/images/pasted-37.png" class="lazyload placeholder" data-srcset="/images/pasted-37.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<p>选择第一个</p>
-<p><img src="/images/pasted-38.png" class="lazyload placeholder" data-srcset="/images/pasted-38.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<p>项目名称填写git用户名</p>
-<p><img src="/images/pasted-39.png" class="lazyload placeholder" data-srcset="/images/pasted-39.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"><br>注：git用户名可以输入在git bash中输入<code>$ git config user.name</code>查询</p>
-<p>创建和github仓库名称相同的代码仓库并<strong>公开</strong></p>
-<p><img src="/images/pasted-42.png" class="lazyload placeholder" data-srcset="/images/pasted-42.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<p>创建完成后复制地址</p>
-<p><img src="/images/pasted-43.png" class="lazyload placeholder" data-srcset="/images/pasted-43.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<h4 id="3-更改配置"><a href="#3-更改配置" class="headerlink" title="3.更改配置"></a>3.更改配置</h4><p>打开博客根目录，修改_config.yml ：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">type: git</span><br><span class="line">repository: </span><br><span class="line">  github: git@github.com:chqingkuang/chqingkuang.github.io.git  #github仓库地址</span><br><span class="line">  coding: https://e.coding.net/chqingkuang/chqingkuang/chqingkuang.github.io.git #刚刚复制的</span><br></pre></td></tr></table></figure>
-<h4 id="4-初始化coding仓库"><a href="#4-初始化coding仓库" class="headerlink" title="4.初始化coding仓库"></a>4.初始化coding仓库</h4><p>导入github仓库</p>
-<p><img src="/images/pasted-44.png" class="lazyload placeholder" data-srcset="/images/pasted-44.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<p>改coding默认分支</p>
-<p><img src="/images/pasted-45.png" class="lazyload placeholder" data-srcset="/images/pasted-45.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<p>在设置里将main改为默认</p>
-<p><img src="/images/pasted-46.png" class="lazyload placeholder" data-srcset="/images/pasted-46.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<h4 id="5-测试是否成功"><a href="#5-测试是否成功" class="headerlink" title="5.测试是否成功"></a>5.测试是否成功</h4><p>如果hexo 三连过后来到仓库界面发现没有更新说明没有成功</p>
-<p><img src="/images/pasted-47.png" class="lazyload placeholder" data-srcset="/images/pasted-47.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<h4 id="6-解决办法"><a href="#6-解决办法" class="headerlink" title="6.解决办法"></a>6.解决办法</h4><p>我们在本地来到目录\node_modules\hexo-deployer-git\lib\parse_config.js</p>
-<p>将所有的master改为main</p>
-<p><img src="/images/pasted-48.png" class="lazyload placeholder" data-srcset="/images/pasted-48.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<p>重新hexo三连</p>
-<p>配置成功！</p>
-]]></content>
-      <categories>
-        <category>HEXO</category>
-      </categories>
-      <tags>
-        <tag>HEXO</tag>
-        <tag>技术</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>关于本地图片显示错误的问题解决</title>
     <url>/2022/04/07/%E5%85%B3%E4%BA%8E%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA%E9%94%99%E8%AF%AF%E7%9A%84%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</url>
     <content><![CDATA[<h4 id="1-今天开始编写博客的时候，发现用Typora编写的文章引用图片编译后总是不能正常显示"><a href="#1-今天开始编写博客的时候，发现用Typora编写的文章引用图片编译后总是不能正常显示" class="headerlink" title="1.今天开始编写博客的时候，发现用Typora编写的文章引用图片编译后总是不能正常显示"></a>1.今天开始编写博客的时候，发现用Typora编写的文章引用图片编译后总是不能正常显示</h4><p>于是开始各种百度，出来的都是下载一个路径转换<code>hexo-asset-image</code>的插件</p>
@@ -904,6 +864,46 @@ fs.writeFile(outpath, buf, function (err) &#123;
       </tags>
   </entry>
   <entry>
+    <title>2022.4.28有效 Hexo 双线部署到 Coding 和 GitHub</title>
+    <url>/2022/04/28/%E5%8F%8C%E7%BA%BF%E9%83%A8%E7%BD%B2/</url>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><h4 id="什么是Coding："><a href="#什么是Coding：" class="headerlink" title="什么是Coding："></a>什么是Coding：</h4><p><em>Coding WebIDE 是 Coding 自主研发的在线集成开发环境 (IDE)。用户可以通过 WebIDE 创建项目的工作空间, 进行在线开发, 调试等操作。同时 WebIDE 集成了 Git 代码版本控制, 用户可以选择 Coding、GitHub、BitBucket、Git@OSC 等任意的代码仓库。 WebIDE 还提供了分享开发环境的功能, 用户可以保存当前的开发环境, 分享给团队的其他成员。大家可以理解为中国版的github，如果把代码既托管到coding上，又托管到github上，让大陆的用户访问的是由coding托管的网站，歪果仁访问的是由github托管的网站，以此来提升我们网站的访问速度。</em></p>
+<h4 id="为什么要把博客双线部署到Coding"><a href="#为什么要把博客双线部署到Coding" class="headerlink" title="为什么要把博客双线部署到Coding"></a>为什么要把博客双线部署到Coding</h4><p>当我们仅用Github做仓库搭建博客后，会发现国内访问自己博客的速度非常缓慢，并且由于Github的限制，我们的博客无法被百度收录。而将仓库双线部署在Coding之后，我们会发现在国内我们的访问速度会有明显的提升，并且我们的博客可以提交给百度收录了。</p>
+<h3 id="如何实现"><a href="#如何实现" class="headerlink" title="如何实现"></a>如何实现</h3><p>在网上我搜了很多办法，但是由于分支改变和coding自身设置发生变化，导致网上的教程已经全部失灵，现在我提供一个有效的方法仅供参考。</p>
+<h4 id="1-注册coding账号，这里不再多说"><a href="#1-注册coding账号，这里不再多说" class="headerlink" title="1.注册coding账号，这里不再多说"></a>1.注册coding账号，这里不再多说</h4><p>coding网址：<a href="https://coding.net/">https://coding.net/</a></p>
+<h4 id="2-创建新项目"><a href="#2-创建新项目" class="headerlink" title="2.创建新项目"></a>2.创建新项目</h4><p>右上角创建<br><img src="/images/pasted-37.png" class="lazyload placeholder" data-srcset="/images/pasted-37.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p>选择第一个</p>
+<p><img src="/images/pasted-38.png" class="lazyload placeholder" data-srcset="/images/pasted-38.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p>项目名称填写git用户名</p>
+<p><img src="/images/pasted-39.png" class="lazyload placeholder" data-srcset="/images/pasted-39.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"><br>注：git用户名可以输入在git bash中输入<code>$ git config user.name</code>查询</p>
+<p>创建和github仓库名称相同的代码仓库并<strong>公开</strong></p>
+<p><img src="/images/pasted-42.png" class="lazyload placeholder" data-srcset="/images/pasted-42.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p>创建完成后复制地址</p>
+<p><img src="/images/pasted-43.png" class="lazyload placeholder" data-srcset="/images/pasted-43.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<h4 id="3-更改配置"><a href="#3-更改配置" class="headerlink" title="3.更改配置"></a>3.更改配置</h4><p>打开博客根目录，修改_config.yml ：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">type: git</span><br><span class="line">repository: </span><br><span class="line">  github: git@github.com:chqingkuang/chqingkuang.github.io.git  #github仓库地址</span><br><span class="line">  coding: https://e.coding.net/chqingkuang/chqingkuang/chqingkuang.github.io.git #刚刚复制的</span><br></pre></td></tr></table></figure>
+<h4 id="4-初始化coding仓库"><a href="#4-初始化coding仓库" class="headerlink" title="4.初始化coding仓库"></a>4.初始化coding仓库</h4><p>导入github仓库</p>
+<p><img src="/images/pasted-44.png" class="lazyload placeholder" data-srcset="/images/pasted-44.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p>改coding默认分支</p>
+<p><img src="/images/pasted-45.png" class="lazyload placeholder" data-srcset="/images/pasted-45.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p>在设置里将main改为默认</p>
+<p><img src="/images/pasted-46.png" class="lazyload placeholder" data-srcset="/images/pasted-46.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<h4 id="5-测试是否成功"><a href="#5-测试是否成功" class="headerlink" title="5.测试是否成功"></a>5.测试是否成功</h4><p>如果hexo 三连过后来到仓库界面发现没有更新说明没有成功</p>
+<p><img src="/images/pasted-47.png" class="lazyload placeholder" data-srcset="/images/pasted-47.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<h4 id="6-解决办法"><a href="#6-解决办法" class="headerlink" title="6.解决办法"></a>6.解决办法</h4><p>我们在本地来到目录\node_modules\hexo-deployer-git\lib\parse_config.js</p>
+<p>将所有的master改为main</p>
+<p><img src="/images/pasted-48.png" class="lazyload placeholder" data-srcset="/images/pasted-48.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p>重新hexo三连</p>
+<p>配置成功！</p>
+]]></content>
+      <categories>
+        <category>HEXO</category>
+      </categories>
+      <tags>
+        <tag>HEXO</tag>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>大一下学习资料整理</title>
     <url>/2022/04/07/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%95%B4%E7%90%86/</url>
     <content><![CDATA[<p><strong>为了方便学习资料查找 特整理此篇</strong></p>
@@ -918,6 +918,25 @@ fs.writeFile(outpath, buf, function (err) &#123;
       </categories>
       <tags>
         <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>进行了对评论系统的更新说明</title>
+    <url>/2022/04/07/%E6%9B%B4%E6%96%B0%E4%BA%86%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/</url>
+    <content><![CDATA[<h3 id="2022-04-07-16-44-15-进行了对评论系统的更新说明"><a href="#2022-04-07-16-44-15-进行了对评论系统的更新说明" class="headerlink" title="2022-04-07 16:44:15 进行了对评论系统的更新说明"></a>2022-04-07 16:44:15 进行了对评论系统的更新说明</h3><h4 id="1-使用-utteranc-评论插件"><a href="#1-使用-utteranc-评论插件" class="headerlink" title="1.使用  utteranc 评论插件"></a>1.使用  <strong>utteranc</strong> 评论插件</h4><p><a href="https://utteranc.es/">https://utteranc.es</a> (<a href="https://github.com/utterance/utterances">https://github.com/utterance/utterances</a>)</p>
+<p>该插件进行评论需要登陆GitHub账号。</p>
+<h4 id="2-由于主题本身针对gitalk进行设置，导致网上现有教程对此插件在本主题的安装不尽相同，所以该评论系统会有一定bug："><a href="#2-由于主题本身针对gitalk进行设置，导致网上现有教程对此插件在本主题的安装不尽相同，所以该评论系统会有一定bug：" class="headerlink" title="2.由于主题本身针对gitalk进行设置，导致网上现有教程对此插件在本主题的安装不尽相同，所以该评论系统会有一定bug："></a>2.由于主题本身针对gitalk进行设置，导致网上现有教程对此插件在本主题的安装不尽相同，所以该评论系统会有一定<strong>bug</strong>：</h4><p>​    1.原主题的关闭开启评论按钮因个人水平原因无法删除</p>
+<p>​    2.想要看见并发表评论需刷新文章页面并滚动到屏幕最下方，且刷新页面后无法再进入其他页面，否则会卡在<a href="http://example.com/%E7%95%8C%E9%9D%A2%E3%80%82">http://example.com/界面。</a></p>
+<p>​    3.会在首页的每一个文章下方显示所有文章的评论，但是点入单个文章并刷新只显示本文章的评论。</p>
+<h4 id="3-视作者日后水平进步情况和空闲时间会做出改进更新。"><a href="#3-视作者日后水平进步情况和空闲时间会做出改进更新。" class="headerlink" title="3.视作者日后水平进步情况和空闲时间会做出改进更新。"></a>3.视作者日后水平进步情况和空闲时间会做出改进更新。</h4><p>参考教程：<a href="https://scorevictim.github.io/posts/31711.html"><em>开启Hexo博客评论</em></a></p>
+<p>​                   <em><a href="https://segmentfault.com/a/1190000039217582">给hugo博客添加评论功能</a></em></p>
+<p>以上。</p>
+]]></content>
+      <categories>
+        <category>HEXO</category>
+      </categories>
+      <tags>
+        <tag>HEXO</tag>
       </tags>
   </entry>
   <entry>
@@ -1185,25 +1204,6 @@ fs.writeFile(outpath, buf, function (err) &#123;
       </categories>
       <tags>
         <tag>技术</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>进行了对评论系统的更新说明</title>
-    <url>/2022/04/07/%E6%9B%B4%E6%96%B0%E4%BA%86%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/</url>
-    <content><![CDATA[<h3 id="2022-04-07-16-44-15-进行了对评论系统的更新说明"><a href="#2022-04-07-16-44-15-进行了对评论系统的更新说明" class="headerlink" title="2022-04-07 16:44:15 进行了对评论系统的更新说明"></a>2022-04-07 16:44:15 进行了对评论系统的更新说明</h3><h4 id="1-使用-utteranc-评论插件"><a href="#1-使用-utteranc-评论插件" class="headerlink" title="1.使用  utteranc 评论插件"></a>1.使用  <strong>utteranc</strong> 评论插件</h4><p><a href="https://utteranc.es/">https://utteranc.es</a> (<a href="https://github.com/utterance/utterances">https://github.com/utterance/utterances</a>)</p>
-<p>该插件进行评论需要登陆GitHub账号。</p>
-<h4 id="2-由于主题本身针对gitalk进行设置，导致网上现有教程对此插件在本主题的安装不尽相同，所以该评论系统会有一定bug："><a href="#2-由于主题本身针对gitalk进行设置，导致网上现有教程对此插件在本主题的安装不尽相同，所以该评论系统会有一定bug：" class="headerlink" title="2.由于主题本身针对gitalk进行设置，导致网上现有教程对此插件在本主题的安装不尽相同，所以该评论系统会有一定bug："></a>2.由于主题本身针对gitalk进行设置，导致网上现有教程对此插件在本主题的安装不尽相同，所以该评论系统会有一定<strong>bug</strong>：</h4><p>​    1.原主题的关闭开启评论按钮因个人水平原因无法删除</p>
-<p>​    2.想要看见并发表评论需刷新文章页面并滚动到屏幕最下方，且刷新页面后无法再进入其他页面，否则会卡在<a href="http://example.com/%E7%95%8C%E9%9D%A2%E3%80%82">http://example.com/界面。</a></p>
-<p>​    3.会在首页的每一个文章下方显示所有文章的评论，但是点入单个文章并刷新只显示本文章的评论。</p>
-<h4 id="3-视作者日后水平进步情况和空闲时间会做出改进更新。"><a href="#3-视作者日后水平进步情况和空闲时间会做出改进更新。" class="headerlink" title="3.视作者日后水平进步情况和空闲时间会做出改进更新。"></a>3.视作者日后水平进步情况和空闲时间会做出改进更新。</h4><p>参考教程：<a href="https://scorevictim.github.io/posts/31711.html"><em>开启Hexo博客评论</em></a></p>
-<p>​                   <em><a href="https://segmentfault.com/a/1190000039217582">给hugo博客添加评论功能</a></em></p>
-<p>以上。</p>
-]]></content>
-      <categories>
-        <category>HEXO</category>
-      </categories>
-      <tags>
-        <tag>HEXO</tag>
       </tags>
   </entry>
   <entry>
