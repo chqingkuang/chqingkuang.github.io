@@ -1,37 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>进行了对评论系统的更新说明（2）以及安装流程</title>
-    <url>/2022/04/07/1/</url>
-    <content><![CDATA[<h3 id="2022-04-07-19-20-11-进行了对评论系统的更新说明（2）"><a href="#2022-04-07-19-20-11-进行了对评论系统的更新说明（2）" class="headerlink" title="2022-04-07 19:20:11 进行了对评论系统的更新说明（2）"></a>2022-04-07 19:20:11 进行了对评论系统的更新说明（2）</h3><h4 id="最终屈服于bug，使用本主题已集成的gitalk插件"><a href="#最终屈服于bug，使用本主题已集成的gitalk插件" class="headerlink" title="最终屈服于bug，使用本主题已集成的gitalk插件"></a>最终屈服于bug，使用本主题已集成的gitalk插件</h4><p><a href="https://github.com/gitalk/gitalk/blob/master/readme-cn.md">gitalk中文教程</a></p>
-<p>在捣鼓了一个多小时之后，我发现这个主题已经集成<strong>gitalk</strong>相关内容，需要自己再添加的内容其实少之又少。本来被繁琐的安装教程劝退的我在被<strong>utteranc</strong>的bug折磨后突然发现真香。。</p>
-<p>以下是我的安装流程</p>
-<h4 id="1-首先需要到GitHub上去新建一个仓库用于存放评论的内容："><a href="#1-首先需要到GitHub上去新建一个仓库用于存放评论的内容：" class="headerlink" title="1.首先需要到GitHub上去新建一个仓库用于存放评论的内容："></a>1.首先需要到GitHub上去新建一个仓库用于存放评论的内容：</h4>
-
-<h4 id="2-在设置中打开isue功能："><a href="#2-在设置中打开isue功能：" class="headerlink" title="2.在设置中打开isue功能："></a>2.在设置中打开isue功能：</h4>
-
-
-
-<h4 id="3-注册一个Github-Application"><a href="#3-注册一个Github-Application" class="headerlink" title="3.注册一个Github Application"></a>3.注册一个<a href="https://github.com/gitalk/gitalk">Github Application</a></h4>
-
-<p>（此处应当直接将解析后的网址填入，不再填入github中初始网站域名。笔者就因为在此犯错误导致</p>
-<p>了在最后始终无法初始化）</p>
-<h4 id="4-完成后记下ID与secret码"><a href="#4-完成后记下ID与secret码" class="headerlink" title="4.完成后记下ID与secret码"></a>4.完成后记下ID与secret码</h4>
-
-<h4 id="5-接下来在主题的-config-yml文件中修改源码"><a href="#5-接下来在主题的-config-yml文件中修改源码" class="headerlink" title="5.接下来在主题的_config.yml文件中修改源码"></a>5.接下来在主题的_config.yml文件中修改源码</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Gitalk 评论插件（https://github.com/gitalk/gitalk）</span><br><span class="line">gitalk:</span><br><span class="line">    # 是否启用评论功能</span><br><span class="line">    enable: true</span><br><span class="line">    # 是否自动展开评论框</span><br><span class="line">    autoExpand: false</span><br><span class="line">    # 应用编号</span><br><span class="line">    clientID: ee6081cac77ee7f00ac8</span><br><span class="line">    # 应用秘钥</span><br><span class="line">    clientSecret: cdc78339e891c233acd689af29ca7f31ef7aa5ac</span><br><span class="line">    # issue仓库名</span><br><span class="line">    repo: blogtalk</span><br><span class="line">    # Github名</span><br><span class="line">    owner: chqingkuang</span><br><span class="line">    # Github名</span><br><span class="line">    admin: [&#x27;chqingkuang&#x27;]</span><br><span class="line">    # Ensure uniqueness and length less than 50</span><br><span class="line">    id: location.pathname</span><br><span class="line">    # Facebook-like distraction free mode</span><br><span class="line">    distractionFreeMode: false</span><br></pre></td></tr></table></figure>
-
-<h4 id="6-完成"><a href="#6-完成" class="headerlink" title="6.完成"></a>6.完成</h4>
-
-<h4 id="（注意：第一次进入时评论模块加载不出来，需要注册Github-Application的账号登录评论模块后刷新页面，就可以正常使用了。）"><a href="#（注意：第一次进入时评论模块加载不出来，需要注册Github-Application的账号登录评论模块后刷新页面，就可以正常使用了。）" class="headerlink" title="（注意：第一次进入时评论模块加载不出来，需要注册Github Application的账号登录评论模块后刷新页面，就可以正常使用了。）"></a>（注意：第一次进入时评论模块加载不出来，需要注册Github Application的账号登录评论模块后刷新页面，就可以正常使用了。）</h4><p>参考教程：<a href="https://www.jianshu.com/p/4242bb065550?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">https://www.jianshu.com/p/4242bb065550?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation</a></p>
-]]></content>
-      <categories>
-        <category>HEXO</category>
-      </categories>
-      <tags>
-        <tag>HEXO</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python自学日记：基础（一）数据类型和变量</title>
     <url>/2022/04/26/1Python%E8%87%AA%E5%AD%A6%E6%97%A5%E8%AE%B0%EF%BC%9A%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%8F%98%E9%87%8F/</url>
     <content><![CDATA[<h1 class="bamboo-h " id="直入主题">直入主题</h1><br/>
@@ -150,23 +119,6 @@
       <tags>
         <tag>Python基础</tag>
         <tag>技术</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2022-4新番表</title>
-    <url>/2022/04/07/2022-4%E6%96%B0%E7%95%AA%E8%A1%A8/</url>
-    <content><![CDATA[<p><img src="https://s2.loli.net/2022/04/25/2ov8qMCYIDKGx7p.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/25/2ov8qMCYIDKGx7p.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="1.png"></p>
-<p>单击放大打开</p>
-<ul>
-<li><strong>作者：</strong> nagatoyuc</li>
-<li><strong>链接：</strong> <a href="http://yuc.wiki/202204/">http://yuc.wiki/202204/</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>ACG</category>
-      </categories>
-      <tags>
-        <tag>ACG</tag>
       </tags>
   </entry>
   <entry>
@@ -444,69 +396,6 @@ fs.writeFile(outpath, buf, function (err) &#123;
       </tags>
   </entry>
   <entry>
-    <title>为博客添加音乐播放器</title>
-    <url>/2022/04/24/%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/</url>
-    <content><![CDATA[<h4 id="1-Aplayer介绍"><a href="#1-Aplayer介绍" class="headerlink" title="1.Aplayer介绍"></a>1.Aplayer介绍</h4><p>  Aplayer官网文档：<a href="https://aplayer.js.org/">https://aplayer.js.org/</a></p>
-<p>  Aplayer是一个功能强大的HTML5音乐播放器，方便好用。</p>
-<p>  <strong>支持的浏览器</strong></p>
-<ul>
-<li>Chrome</li>
-<li>Firefox</li>
-<li>Safari</li>
-<li>Internet Explorer 11</li>
-<li>Microsoft Edge</li>
-</ul>
-<h4 id="2-如何在Bamboo主题下加入音乐播放器"><a href="#2-如何在Bamboo主题下加入音乐播放器" class="headerlink" title="2.如何在Bamboo主题下加入音乐播放器"></a>2.如何在Bamboo主题下加入音乐播放器</h4><h5 id="须知"><a href="#须知" class="headerlink" title="须知"></a>须知</h5><p>主题内置了支持Aplayer的插件，可以直接在config中进行设置</p>
-<p>我们打开config，找到：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 音乐</span><br><span class="line">music:</span><br><span class="line">  on: true</span><br><span class="line">  autoHide: true    # hide automaticaly</span><br><span class="line">  server: tencent   #require	music platform: netease, tencent, kugou, xiami, baidu</span><br><span class="line">  type: playlist    #require song, playlist, album, search, artist</span><br><span class="line">  id: 8434221441     #require	song id / playlist id / album id / search keyword</span><br><span class="line">  fixed: true       # 开启吸底模式，建议开启</span><br><span class="line">  autoplay: true   # 是否自动播放, 有些浏览器会禁用自动播放，目前edge可以自动播放</span><br><span class="line">  theme: &#x27;#42b983&#x27;</span><br><span class="line">  loop: &#x27;all&#x27;       # 音频循环播放, 可选值: &#x27;all&#x27;, &#x27;one&#x27;, &#x27;none&#x27;</span><br><span class="line">  order: &#x27;random&#x27;   # 音频循环顺序, 可选值: &#x27;list&#x27;, &#x27;random&#x27;</span><br><span class="line">  preload: &#x27;auto&#x27;   # 预加载，可选值: &#x27;none&#x27;, &#x27;metadata&#x27;, &#x27;auto&#x27;</span><br><span class="line">  volume: 0.5       # 默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效</span><br><span class="line">  listFolded: true  # 列表默认折叠</span><br><span class="line">  hideLrc: false     # 隐藏歌词</span><br></pre></td></tr></table></figure>
-
-<p>这里有几个重要的点没有做中文注释，官方也没有给出详细教程，我在这里简短说明一下</p>
-<ul>
-<li>server指音乐平台，</li>
-<li>netease指网易云音乐，</li>
-<li>type类型，</li>
-<li>playlist列表，</li>
-<li>id指歌曲的i或者专辑或列表外链id</li>
-<li>list是列表播放，random是随机播放</li>
-</ul>
-<h5 id="实装"><a href="#实装" class="headerlink" title="实装"></a>实装</h5><p>下面仅演示QQ音乐获取</p>
-<h6 id="1-个人歌单id获取"><a href="#1-个人歌单id获取" class="headerlink" title="1.个人歌单id获取"></a>1.个人歌单id获取</h6><p>登陆个人QQ音乐APP，打开歌单，<br>然后可以分享给他人，在分享的地址中就包含了歌单的ID.<br>如果在微信或者微博等应用中，有可能不能直接看到，<br>可以将链接通过浏览器打开，然后在浏览器地址中寻找，id后面就是歌单id</p>
-<p>或者</p>
-<p>在网页端登陆，然后点击自己个人头像，找到自己创建的歌单，可以在地址栏中直接找到个歌单的ID</p>
-<p>当然也可以使用别人创建的歌单</p>
-<blockquote>
-<p><em><strong>注意此时的 type为”playlist”</strong></em></p>
-</blockquote>
-<h6 id="2-单首歌曲ID获取"><a href="#2-单首歌曲ID获取" class="headerlink" title="2. 单首歌曲ID获取"></a>2. 单首歌曲ID获取</h6><p>直接在网页端搜索歌曲名字，然后可以通过地址栏发现歌曲的id，</p>
-<blockquote>
-<p><em><strong>注意此时的 type为”playlist”</strong></em></p>
-</blockquote>
-<h6 id="3-歌手列表ID获取"><a href="#3-歌手列表ID获取" class="headerlink" title="3. 歌手列表ID获取"></a>3. 歌手列表ID获取</h6><p>可以直接在网页版网易云里面搜索歌手，然后就能看到歌手ID<br>这样就获得了歌手的所有歌曲了</p>
-<blockquote>
-<p><em><strong>注意此时的 type为”artist”</strong></em></p>
-</blockquote>
-<h6 id="4-歌手专辑列表ID获取"><a href="#4-歌手专辑列表ID获取" class="headerlink" title="4. 歌手专辑列表ID获取"></a>4. 歌手专辑列表ID获取</h6><p>可以直接在网页版网易云里面搜索歌手对应的的专辑，然后就能看到歌手的专辑ID<br>这样就获得了歌手的所有歌曲了</p>
-<blockquote>
-<p><em><strong>注意此时的 type为”album”</strong></em></p>
-</blockquote>
-<p>其余平台的操作步骤类似，可以自行摸索。</p>
-<h4 id="3-其他问题"><a href="#3-其他问题" class="headerlink" title="3.其他问题"></a>3.其他问题</h4><h5 id="浏览器打开没有自动播放？"><a href="#浏览器打开没有自动播放？" class="headerlink" title="浏览器打开没有自动播放？"></a>浏览器打开没有自动播放？</h5><p>原因可能是浏览器设置没有打开自动播放，以下展示edge如何打开媒体自动播放，其余浏览器类似，不会请自行百度。</p>
-<p>1.首先打开浏览器设置</p>
-<p><img src="https://s2.loli.net/2022/04/24/uGcjx68JeKgdDqk.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/24/uGcjx68JeKgdDqk.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="Screenshot 2022-04-24 201655.png"></p>
-<p>2.在 <strong>Cookie 和网站权限</strong> 找到 <strong>媒体自动播放</strong> 设置</p>
-<p><img src="https://s2.loli.net/2022/04/24/LutXxwDHRsnW7ba.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/24/LutXxwDHRsnW7ba.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="Screenshot 2022-04-24 201739.png"></p>
-<p>3.将<strong>控制是否自动播放网站上的音频及视频</strong>设置为<strong>允许</strong>或者在下方手动添加网站域名</p>
-<p><img src="https://s2.loli.net/2022/04/24/Ilt3cZ5Av9i1OmB.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/24/Ilt3cZ5Av9i1OmB.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="Screenshot 2022-04-24 201832.png"></p>
-<p>部分内容参考：<a href="https://www.cnblogs.com/aifengqi/articles/15385977.html">https://www.cnblogs.com/aifengqi/articles/15385977.html</a><br>（想了解更多请移步此处）</p>
-]]></content>
-      <categories>
-        <category>HEXO</category>
-      </categories>
-      <tags>
-        <tag>HEXO</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Bamboo：自定义侧边栏，让博客更富网络气息</title>
     <url>/2022/04/25/Bamboo%EF%BC%9A%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BE%A7%E8%BE%B9%E6%A0%8F%EF%BC%8C%E8%AE%A9%E5%8D%9A%E5%AE%A2%E6%9B%B4%E5%AF%8C%E7%BD%91%E7%BB%9C%E6%B0%94%E6%81%AF/</url>
     <content><![CDATA[<h3 id="如何自定义侧边栏"><a href="#如何自定义侧边栏" class="headerlink" title="如何自定义侧边栏"></a>如何自定义侧边栏</h3><h5 id="创建-widget-yml"><a href="#创建-widget-yml" class="headerlink" title="创建 widget.yml"></a>创建 widget.yml</h5><p>在Hexo博客目錄中的<code>source/_data</code>（如果沒有 _data 文件夾，请自行创建），創建一個文件 <code>widget.yml</code></p>
@@ -648,6 +537,216 @@ fs.writeFile(outpath, buf, function (err) &#123;
       </tags>
   </entry>
   <entry>
+    <title>进行了对评论系统的更新说明（2）以及安装流程</title>
+    <url>/2022/04/07/1/</url>
+    <content><![CDATA[<h3 id="2022-04-07-19-20-11-进行了对评论系统的更新说明（2）"><a href="#2022-04-07-19-20-11-进行了对评论系统的更新说明（2）" class="headerlink" title="2022-04-07 19:20:11 进行了对评论系统的更新说明（2）"></a>2022-04-07 19:20:11 进行了对评论系统的更新说明（2）</h3><h4 id="最终屈服于bug，使用本主题已集成的gitalk插件"><a href="#最终屈服于bug，使用本主题已集成的gitalk插件" class="headerlink" title="最终屈服于bug，使用本主题已集成的gitalk插件"></a>最终屈服于bug，使用本主题已集成的gitalk插件</h4><p><a href="https://github.com/gitalk/gitalk/blob/master/readme-cn.md">gitalk中文教程</a></p>
+<p>在捣鼓了一个多小时之后，我发现这个主题已经集成<strong>gitalk</strong>相关内容，需要自己再添加的内容其实少之又少。本来被繁琐的安装教程劝退的我在被<strong>utteranc</strong>的bug折磨后突然发现真香。。</p>
+<p>以下是我的安装流程</p>
+<h4 id="1-首先需要到GitHub上去新建一个仓库用于存放评论的内容："><a href="#1-首先需要到GitHub上去新建一个仓库用于存放评论的内容：" class="headerlink" title="1.首先需要到GitHub上去新建一个仓库用于存放评论的内容："></a>1.首先需要到GitHub上去新建一个仓库用于存放评论的内容：</h4>
+
+<h4 id="2-在设置中打开isue功能："><a href="#2-在设置中打开isue功能：" class="headerlink" title="2.在设置中打开isue功能："></a>2.在设置中打开isue功能：</h4>
+
+
+
+<h4 id="3-注册一个Github-Application"><a href="#3-注册一个Github-Application" class="headerlink" title="3.注册一个Github Application"></a>3.注册一个<a href="https://github.com/gitalk/gitalk">Github Application</a></h4>
+
+<p>（此处应当直接将解析后的网址填入，不再填入github中初始网站域名。笔者就因为在此犯错误导致</p>
+<p>了在最后始终无法初始化）</p>
+<h4 id="4-完成后记下ID与secret码"><a href="#4-完成后记下ID与secret码" class="headerlink" title="4.完成后记下ID与secret码"></a>4.完成后记下ID与secret码</h4>
+
+<h4 id="5-接下来在主题的-config-yml文件中修改源码"><a href="#5-接下来在主题的-config-yml文件中修改源码" class="headerlink" title="5.接下来在主题的_config.yml文件中修改源码"></a>5.接下来在主题的_config.yml文件中修改源码</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Gitalk 评论插件（https://github.com/gitalk/gitalk）</span><br><span class="line">gitalk:</span><br><span class="line">    # 是否启用评论功能</span><br><span class="line">    enable: true</span><br><span class="line">    # 是否自动展开评论框</span><br><span class="line">    autoExpand: false</span><br><span class="line">    # 应用编号</span><br><span class="line">    clientID: ee6081cac77ee7f00ac8</span><br><span class="line">    # 应用秘钥</span><br><span class="line">    clientSecret: cdc78339e891c233acd689af29ca7f31ef7aa5ac</span><br><span class="line">    # issue仓库名</span><br><span class="line">    repo: blogtalk</span><br><span class="line">    # Github名</span><br><span class="line">    owner: chqingkuang</span><br><span class="line">    # Github名</span><br><span class="line">    admin: [&#x27;chqingkuang&#x27;]</span><br><span class="line">    # Ensure uniqueness and length less than 50</span><br><span class="line">    id: location.pathname</span><br><span class="line">    # Facebook-like distraction free mode</span><br><span class="line">    distractionFreeMode: false</span><br></pre></td></tr></table></figure>
+
+<h4 id="6-完成"><a href="#6-完成" class="headerlink" title="6.完成"></a>6.完成</h4>
+
+<h4 id="（注意：第一次进入时评论模块加载不出来，需要注册Github-Application的账号登录评论模块后刷新页面，就可以正常使用了。）"><a href="#（注意：第一次进入时评论模块加载不出来，需要注册Github-Application的账号登录评论模块后刷新页面，就可以正常使用了。）" class="headerlink" title="（注意：第一次进入时评论模块加载不出来，需要注册Github Application的账号登录评论模块后刷新页面，就可以正常使用了。）"></a>（注意：第一次进入时评论模块加载不出来，需要注册Github Application的账号登录评论模块后刷新页面，就可以正常使用了。）</h4><p>参考教程：<a href="https://www.jianshu.com/p/4242bb065550?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">https://www.jianshu.com/p/4242bb065550?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation</a></p>
+]]></content>
+      <categories>
+        <category>HEXO</category>
+      </categories>
+      <tags>
+        <tag>HEXO</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>为博客添加音乐播放器</title>
+    <url>/2022/04/24/%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/</url>
+    <content><![CDATA[<h4 id="1-Aplayer介绍"><a href="#1-Aplayer介绍" class="headerlink" title="1.Aplayer介绍"></a>1.Aplayer介绍</h4><p>  Aplayer官网文档：<a href="https://aplayer.js.org/">https://aplayer.js.org/</a></p>
+<p>  Aplayer是一个功能强大的HTML5音乐播放器，方便好用。</p>
+<p>  <strong>支持的浏览器</strong></p>
+<ul>
+<li>Chrome</li>
+<li>Firefox</li>
+<li>Safari</li>
+<li>Internet Explorer 11</li>
+<li>Microsoft Edge</li>
+</ul>
+<h4 id="2-如何在Bamboo主题下加入音乐播放器"><a href="#2-如何在Bamboo主题下加入音乐播放器" class="headerlink" title="2.如何在Bamboo主题下加入音乐播放器"></a>2.如何在Bamboo主题下加入音乐播放器</h4><h5 id="须知"><a href="#须知" class="headerlink" title="须知"></a>须知</h5><p>主题内置了支持Aplayer的插件，可以直接在config中进行设置</p>
+<p>我们打开config，找到：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 音乐</span><br><span class="line">music:</span><br><span class="line">  on: true</span><br><span class="line">  autoHide: true    # hide automaticaly</span><br><span class="line">  server: tencent   #require	music platform: netease, tencent, kugou, xiami, baidu</span><br><span class="line">  type: playlist    #require song, playlist, album, search, artist</span><br><span class="line">  id: 8434221441     #require	song id / playlist id / album id / search keyword</span><br><span class="line">  fixed: true       # 开启吸底模式，建议开启</span><br><span class="line">  autoplay: true   # 是否自动播放, 有些浏览器会禁用自动播放，目前edge可以自动播放</span><br><span class="line">  theme: &#x27;#42b983&#x27;</span><br><span class="line">  loop: &#x27;all&#x27;       # 音频循环播放, 可选值: &#x27;all&#x27;, &#x27;one&#x27;, &#x27;none&#x27;</span><br><span class="line">  order: &#x27;random&#x27;   # 音频循环顺序, 可选值: &#x27;list&#x27;, &#x27;random&#x27;</span><br><span class="line">  preload: &#x27;auto&#x27;   # 预加载，可选值: &#x27;none&#x27;, &#x27;metadata&#x27;, &#x27;auto&#x27;</span><br><span class="line">  volume: 0.5       # 默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效</span><br><span class="line">  listFolded: true  # 列表默认折叠</span><br><span class="line">  hideLrc: false     # 隐藏歌词</span><br></pre></td></tr></table></figure>
+
+<p>这里有几个重要的点没有做中文注释，官方也没有给出详细教程，我在这里简短说明一下</p>
+<ul>
+<li>server指音乐平台，</li>
+<li>netease指网易云音乐，</li>
+<li>type类型，</li>
+<li>playlist列表，</li>
+<li>id指歌曲的i或者专辑或列表外链id</li>
+<li>list是列表播放，random是随机播放</li>
+</ul>
+<h5 id="实装"><a href="#实装" class="headerlink" title="实装"></a>实装</h5><p>下面仅演示QQ音乐获取</p>
+<h6 id="1-个人歌单id获取"><a href="#1-个人歌单id获取" class="headerlink" title="1.个人歌单id获取"></a>1.个人歌单id获取</h6><p>登陆个人QQ音乐APP，打开歌单，<br>然后可以分享给他人，在分享的地址中就包含了歌单的ID.<br>如果在微信或者微博等应用中，有可能不能直接看到，<br>可以将链接通过浏览器打开，然后在浏览器地址中寻找，id后面就是歌单id</p>
+<p>或者</p>
+<p>在网页端登陆，然后点击自己个人头像，找到自己创建的歌单，可以在地址栏中直接找到个歌单的ID</p>
+<p>当然也可以使用别人创建的歌单</p>
+<blockquote>
+<p><em><strong>注意此时的 type为”playlist”</strong></em></p>
+</blockquote>
+<h6 id="2-单首歌曲ID获取"><a href="#2-单首歌曲ID获取" class="headerlink" title="2. 单首歌曲ID获取"></a>2. 单首歌曲ID获取</h6><p>直接在网页端搜索歌曲名字，然后可以通过地址栏发现歌曲的id，</p>
+<blockquote>
+<p><em><strong>注意此时的 type为”playlist”</strong></em></p>
+</blockquote>
+<h6 id="3-歌手列表ID获取"><a href="#3-歌手列表ID获取" class="headerlink" title="3. 歌手列表ID获取"></a>3. 歌手列表ID获取</h6><p>可以直接在网页版网易云里面搜索歌手，然后就能看到歌手ID<br>这样就获得了歌手的所有歌曲了</p>
+<blockquote>
+<p><em><strong>注意此时的 type为”artist”</strong></em></p>
+</blockquote>
+<h6 id="4-歌手专辑列表ID获取"><a href="#4-歌手专辑列表ID获取" class="headerlink" title="4. 歌手专辑列表ID获取"></a>4. 歌手专辑列表ID获取</h6><p>可以直接在网页版网易云里面搜索歌手对应的的专辑，然后就能看到歌手的专辑ID<br>这样就获得了歌手的所有歌曲了</p>
+<blockquote>
+<p><em><strong>注意此时的 type为”album”</strong></em></p>
+</blockquote>
+<p>其余平台的操作步骤类似，可以自行摸索。</p>
+<h4 id="3-其他问题"><a href="#3-其他问题" class="headerlink" title="3.其他问题"></a>3.其他问题</h4><h5 id="浏览器打开没有自动播放？"><a href="#浏览器打开没有自动播放？" class="headerlink" title="浏览器打开没有自动播放？"></a>浏览器打开没有自动播放？</h5><p>原因可能是浏览器设置没有打开自动播放，以下展示edge如何打开媒体自动播放，其余浏览器类似，不会请自行百度。</p>
+<p>1.首先打开浏览器设置</p>
+<p><img src="https://s2.loli.net/2022/04/24/uGcjx68JeKgdDqk.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/24/uGcjx68JeKgdDqk.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="Screenshot 2022-04-24 201655.png"></p>
+<p>2.在 <strong>Cookie 和网站权限</strong> 找到 <strong>媒体自动播放</strong> 设置</p>
+<p><img src="https://s2.loli.net/2022/04/24/LutXxwDHRsnW7ba.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/24/LutXxwDHRsnW7ba.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="Screenshot 2022-04-24 201739.png"></p>
+<p>3.将<strong>控制是否自动播放网站上的音频及视频</strong>设置为<strong>允许</strong>或者在下方手动添加网站域名</p>
+<p><img src="https://s2.loli.net/2022/04/24/Ilt3cZ5Av9i1OmB.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/24/Ilt3cZ5Av9i1OmB.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="Screenshot 2022-04-24 201832.png"></p>
+<p>部分内容参考：<a href="https://www.cnblogs.com/aifengqi/articles/15385977.html">https://www.cnblogs.com/aifengqi/articles/15385977.html</a><br>（想了解更多请移步此处）</p>
+]]></content>
+      <categories>
+        <category>HEXO</category>
+      </categories>
+      <tags>
+        <tag>HEXO</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用更加美观（花里胡哨的主题）Bamboo</title>
+    <url>/2022/04/24/%E4%BD%BF%E7%94%A8%E6%9B%B4%E5%8A%A0%E7%BE%8E%E8%A7%82%EF%BC%88%E8%8A%B1%E9%87%8C%E8%83%A1%E5%93%A8%E7%9A%84%E4%B8%BB%E9%A2%98%EF%BC%89/</url>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><h4 id="为什么换主题"><a href="#为什么换主题" class="headerlink" title="为什么换主题"></a>为什么换主题</h4><p>​    以前使用的<a href="https://github.com/Fechin/hexo-theme-diaspora">diaspora</a>主题在页面设计上有许多不足，此外其内置的插件较为不便，比如不兼容其他评论插件，bug繁多等问题。对于评论插件来说，每次评论都需要登录GitHub来使用，较为不便。其次是页面布局，其文章在首页的分布不符合现代互联网审美（过于简洁）。</p>
+<h4 id="为什么选择Bamboo"><a href="#为什么选择Bamboo" class="headerlink" title="为什么选择Bamboo"></a>为什么选择Bamboo</h4><p>1.功能强大</p>
+<p>其内集成了众多插件，例如公告，轮播，多款评论插件，侧边栏，音乐播放器，mathjax等等。</p>
+<p>其强大的功能极大的提升了博客的丰富度与便捷性。</p>
+<p>2.界面美观</p>
+<p>文章布局简洁，导航栏配置合理，更多的特效，更加二刺螈（bushi</p>
+<p>多种按钮链接，live2D宠物</p>
+<h3 id="如何安装"><a href="#如何安装" class="headerlink" title="如何安装"></a>如何安装</h3><h4 id="gitee安装"><a href="#gitee安装" class="headerlink" title="gitee安装"></a>gitee安装</h4><p>进入<code>themes</code>文件夹下使用 <code>Git clone</code> 命令来下载:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/yuang01/hexo-theme-bamboo.git</span><br></pre></td></tr></table></figure>
+
+
+
+<span class='btn center large round solid'><a class="button" href='https://github.com/yuang01/hexo-theme-bamboo' title='Bamboo'><i class='fa fa-download'></i>Bamboo</a></span>
+
+
+
+<h4 id="或者npm来安装，进入hexo根目录使用如下命令（不推荐）"><a href="#或者npm来安装，进入hexo根目录使用如下命令（不推荐）" class="headerlink" title="或者npm来安装，进入hexo根目录使用如下命令（不推荐）"></a>或者npm来安装，进入hexo根目录使用如下命令（不推荐）</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm i hexo-theme-bamboo</span><br></pre></td></tr></table></figure>
+
+<p>注意：此方法只支持Hexo在5.0.0版本以上 <strong>通过 npm 安装并不会在 themes 里生成主题文件夹，而是在 node_modules 里生成</strong> 修改hexo根目录下的站点配置文件<code>_config.yml</code>，把主题改为<code>bamboo</code></p>
+<p>接着在hexo根目录下新建文件<code>_config.bamboo.yml</code>,从<code>node_modules</code>文件夹下找到<code>hexo-theme-bamboo</code>文件夹下的<code>_config.yml</code>，将里面的内容复制到<code>_config.bamboo.yml</code>文件中即可，在<code>_config.bamboo.yml</code>文件中对主题进行配置。</p>
+<h3 id="一些问题"><a href="#一些问题" class="headerlink" title="一些问题"></a>一些问题</h3><h4 id="1-安装完成后hexo-s顶部导航栏不显示分类、标签等"><a href="#1-安装完成后hexo-s顶部导航栏不显示分类、标签等" class="headerlink" title="1.安装完成后hexo s顶部导航栏不显示分类、标签等"></a>1.安装完成后hexo s顶部导航栏不显示分类、标签等</h4><h5 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h5><p>打开主题的config文件，发现源码中多出#号</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 菜单</span><br><span class="line">menu:</span><br><span class="line">  # Home:</span><br><span class="line">  #   url: /</span><br><span class="line">  #   icon: fas fa-home</span><br><span class="line">  # Archives:</span><br><span class="line">  #   url: /archives</span><br><span class="line">  #   icon: fas fa-archive</span><br><span class="line">  # Tags:</span><br><span class="line">  #   url: /tags</span><br><span class="line">  #   icon: fas fa-tags</span><br><span class="line">  # Categories:</span><br><span class="line">  #   url: /categories</span><br><span class="line">  #   icon: fas fa-bookmark</span><br><span class="line">  # About:</span><br><span class="line">  #   url: /about</span><br><span class="line">  #   icon: fas fa-user</span><br><span class="line">  # Friends:</span><br><span class="line">  #   url: /friends</span><br><span class="line">  # 更多: # 这是二级菜单的写法</span><br><span class="line">  #  icon: fas fa-link</span><br><span class="line">  #  children:</span><br><span class="line">  #   - name: 图库</span><br><span class="line">  #     url: /gallery</span><br><span class="line">  #     icon: fas fa-music</span><br><span class="line">  #   - name: 友情连接</span><br><span class="line">  #     url: /huoban</span><br><span class="line">  #     icon: fas fa-film</span><br><span class="line">  #   - name: 关于我</span><br><span class="line">  #     url: /me</span><br><span class="line">  #     icon: fas fa-film</span><br><span class="line">  #   - name: 百度</span><br><span class="line">  #     url: http://baidu.com</span><br><span class="line">  #     icon: fas fa-film</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h5 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h5><p>修改为</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 菜单</span><br><span class="line">menu:</span><br><span class="line">  Home:</span><br><span class="line">    url: /</span><br><span class="line">    icon: fas fa-home</span><br><span class="line">  Archives:</span><br><span class="line">    url: /archives</span><br><span class="line">    icon: fas fa-archive</span><br><span class="line">  Tags:</span><br><span class="line">    url: /tags</span><br><span class="line">    icon: fas fa-tags</span><br><span class="line">  Categories:</span><br><span class="line">    url: /categories</span><br><span class="line">    icon: fas fa-bookmark</span><br><span class="line">  About:</span><br><span class="line">    url: /about</span><br><span class="line">    icon: fas fa-user</span><br></pre></td></tr></table></figure>
+
+<p>此处删除了二级菜单，因为不太需要。</p>
+<p>注：也可以直接按住<strong>ctrl+k+u</strong>取消注释本段代码</p>
+<h4 id="2-点击分类，标签等页面显示Cannot-GET-xxx"><a href="#2-点击分类，标签等页面显示Cannot-GET-xxx" class="headerlink" title="2.点击分类，标签等页面显示Cannot GET xxx"></a>2.点击分类，标签等页面显示Cannot GET xxx</h4><p>解决办法</p>
+<h5 id="1-初始化"><a href="#1-初始化" class="headerlink" title="1.初始化"></a>1.初始化</h5><p>在&#x2F;blog根目录下打开source，删除categories、tags等文件夹，在根目录下重新新建一个页面</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> page categories <span class="comment">//tags和这个操作一致</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="2-找到新建的页面，添加type和layout"><a href="#2-找到新建的页面，添加type和layout" class="headerlink" title="2.找到新建的页面，添加type和layout"></a>2.找到新建的页面，添加type和layout</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">title: categories</span><br><span class="line">date: 2019-12-25 09:15:45</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">layout: &quot;categories&quot;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>HEXO</category>
+      </categories>
+      <tags>
+        <tag>HEXO</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用网络图床</title>
+    <url>/2022/04/20/%E4%BD%BF%E7%94%A8%E7%BD%91%E7%BB%9C%E5%9B%BE%E5%BA%8A/</url>
+    <content><![CDATA[<h3 id="为了使插入图片更加方便，我们可以使用网络图床"><a href="#为了使插入图片更加方便，我们可以使用网络图床" class="headerlink" title="为了使插入图片更加方便，我们可以使用网络图床"></a>为了使插入图片更加方便，我们可以使用网络图床</h3><h4 id="使用图床的好处"><a href="#使用图床的好处" class="headerlink" title="使用图床的好处"></a>使用图床的好处</h4><ul>
+<li><p>提升页面访问速度</p>
+<p> 过去我们将图片直接放到在线静态页面当中的话，在访问时需要等待全部资源加载，然而一般页面都是图片较大。当我们将图片分离后异步加载，再通过CDN加速，能够大幅提升页面的访问速度。</p>
+</li>
+<li><p>减少原页面服务器访问压力</p>
+<p> 由于访问图片的请求都经由图床&#x2F;CDN，使得原来页面所在的服务器访问压力减少。</p>
+</li>
+</ul>
+<p>网络上搭建图床的方法很多，如新浪微博，腾讯云，七牛云等。当然自己搭建的图床自然更可靠。</p>
+<h4 id="我的选择"><a href="#我的选择" class="headerlink" title="我的选择"></a>我的选择</h4><p>在这里我为了方便，直接使用了<a href="https://sm.ms/">SM.MS</a></p>
+<p><img src="https://s2.loli.net/2022/04/20/LZbFOU6dGB3sk4n.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/LZbFOU6dGB3sk4n.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="Screenshot 2022-04-20 165816.png"></p>
+<p>据说有时候不太稳定，但是对于我这种轻度用户应该问题不大</p>
+<p>同时也有收费版本</p>
+<p><img src="https://s2.loli.net/2022/04/20/eRouN3sO1PUhvki.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/eRouN3sO1PUhvki.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="Screenshot 2022-04-20 170126.png"></p>
+<p>同样的，轻度使用也不需要使用。这里只是提及一下</p>
+<p>在上传完图片后，会提供多种链接选择（这里仅作演示）</p>
+<p><img src="https://s2.loli.net/2022/04/20/qFnxQlX57uwvjLa.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/qFnxQlX57uwvjLa.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="Screenshot 2022-04-20 170301.png"></p>
+<p>该图床可以批量上传，同时有着完善的管理系统，简单方便，小白使用起来也毫无压力</p>
+<p><img src="https://s2.loli.net/2022/04/20/RwVnFL9vyx7odI8.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/RwVnFL9vyx7odI8.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="Screenshot 2022-04-20 171254.png"></p>
+<p>以后如果有需要的话可以尝试捣鼓一下用GitHub之类的自建图床。</p>
+]]></content>
+      <categories>
+        <category>HEXO</category>
+      </categories>
+      <tags>
+        <tag>HEXO</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用轻量级服务器+宝塔面板和已有项目快速搭建个人图床</title>
+    <url>/2023/02/25/%E4%BD%BF%E7%94%A8%E8%BD%BB%E9%87%8F%E7%BA%A7%E6%9C%8D%E5%8A%A1%E5%99%A8-%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E5%92%8C%E5%B7%B2%E6%9C%89%E9%A1%B9%E7%9B%AE%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%9B%BE%E5%BA%8A/</url>
+    <content><![CDATA[<h3 id="为什么要自建图床"><a href="#为什么要自建图床" class="headerlink" title="为什么要自建图床"></a>为什么要自建图床</h3><p>图床指互联网中存储图片的空间。</p>
+<p>现在互联网中已经有许多免费图床，可以将图片上传上去进行保存，但是自身无法确定这些他人图床的稳定性，可能过几年图床就挂了，图片也跟着消失，自建图床确实是一个提高网站访问速度以及图片存储稳定性的好办法。</p>
+<p>因此我选择了租用一个轻量级服务器来搭建一个自己的图床。</p>
+<h3 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h3><h4 id="购买-x2F-拥有一个服务器"><a href="#购买-x2F-拥有一个服务器" class="headerlink" title="购买&#x2F;拥有一个服务器"></a>购买&#x2F;拥有一个服务器</h4><p>关于服务器的购买，网上已有很多教程和推荐。我在这里就不多做赘述。</p>
+<p>我使用的是雨云服务器（因为便宜还有活动挺多的</p>
+<p><img src="http://17images.fun/images/2023/02/25/167731144563f9bdd5d9cc4.png" class="lazyload placeholder" data-srcset="http://17images.fun/images/2023/02/25/167731144563f9bdd5d9cc4.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<h4 id="连接服务器，安装宝塔系统"><a href="#连接服务器，安装宝塔系统" class="headerlink" title="连接服务器，安装宝塔系统"></a>连接服务器，安装宝塔系统</h4><p>我的服务器可以自带安装宝塔系统，这里只做简单介绍。</p>
+<p>以CentOS系统为例</p>
+<h5 id="执行命令进行安装"><a href="#执行命令进行安装" class="headerlink" title="执行命令进行安装"></a>执行命令进行安装</h5><p>使用<strong>Xshell</strong>连接Linux服务器</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum install -y wget &amp;&amp; wget -O install.sh http://download.bt.cn/install/install_6.0.sh &amp;&amp; sh install.sh</span><br></pre></td></tr></table></figure>
+<p>当询问“<em>你现在想安装宝塔控制面板吗</em>” 直接输入y按下回车继续安装</p>
+<p> 出现下面界面则表示已经安装成功了<br> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">外网面板地址: http://124.222.244.61:8888/31dc0a89</span><br><span class="line">内网面板地址: http://124.222.244.61:8888/31dc0a89</span><br><span class="line">username: dsqgjgyk</span><br><span class="line">password: 966d859f</span><br></pre></td></tr></table></figure></p>
+<h5 id="服务器安全组添加8888端口规则"><a href="#服务器安全组添加8888端口规则" class="headerlink" title="服务器安全组添加8888端口规则"></a>服务器安全组添加8888端口规则</h5><p>找到需要添加端口的云服务器，依次点击<strong>“服务器”、“防火墙”、“添加规则”</strong><br>我这里以腾讯云为例<br><img src="http://17images.fun/images/2023/02/25/167731198263f9bfee5e2f6.png" class="lazyload placeholder" data-srcset="http://17images.fun/images/2023/02/25/167731198263f9bfee5e2f6.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p><img src="http://17images.fun/images/2023/02/25/167731215663f9c09cdc943.png" class="lazyload placeholder" data-srcset="http://17images.fun/images/2023/02/25/167731215663f9c09cdc943.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p>出现下面这个界面就是添加上了</p>
+<p><img src="http://17images.fun/images/2023/02/25/167731220563f9c0cd8a4f8.png" class="lazyload placeholder" data-srcset="http://17images.fun/images/2023/02/25/167731220563f9c0cd8a4f8.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<h5 id="登录并安装环境套件"><a href="#登录并安装环境套件" class="headerlink" title="登录并安装环境套件"></a>登录并安装环境套件</h5><p>推荐安装LNMP<br><img src="http://17images.fun/images/2023/02/25/167731228663f9c11ee1147.png" class="lazyload placeholder" data-srcset="http://17images.fun/images/2023/02/25/167731228663f9c11ee1147.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<h4 id="添加站点"><a href="#添加站点" class="headerlink" title="添加站点"></a>添加站点</h4><p>在宝塔面板添加站点（需现有一个域名）<br><img src="http://17images.fun/images/2023/02/25/167731260863f9c2606e5c8.png" class="lazyload placeholder" data-srcset="http://17images.fun/images/2023/02/25/167731260863f9c2606e5c8.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p>下载项目源码下载地址<a href="https://miaoxi.lanzoum.com/iVZM407s92eb">https://miaoxi.lanzoum.com/iVZM407s92eb</a></p>
+<p>点开新建站点的文件夹，删除已有文件</p>
+<p><img src="http://17images.fun/images/2023/02/25/167731281363f9c32dcc8e3.png" class="lazyload placeholder" data-srcset="http://17images.fun/images/2023/02/25/167731281363f9c32dcc8e3.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p>将刚刚下载的项目压缩包上传至改目录并解压<br><img src="http://17images.fun/images/2023/02/25/167731293463f9c3a68e654.png" class="lazyload placeholder" data-srcset="http://17images.fun/images/2023/02/25/167731293463f9c3a68e654.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<h4 id="将域名解析到服务器ip"><a href="#将域名解析到服务器ip" class="headerlink" title="将域名解析到服务器ip"></a>将域名解析到服务器ip</h4><p>以阿里云为例</p>
+<p><img src="http://17images.fun/images/2023/02/25/167731241163f9c19b6006f.png" class="lazyload placeholder" data-srcset="http://17images.fun/images/2023/02/25/167731241163f9c19b6006f.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p>等待一会打开网站，发现图床建立成功。</p>
+<p><img src="http://17images.fun/images/2023/02/25/167731303463f9c40ab6270.png" class="lazyload placeholder" data-srcset="http://17images.fun/images/2023/02/25/167731303463f9c40ab6270.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>通过修改CSS文件来更改网站背景。</p>
+<p>在html文件中更改网站信息，这里不多做解释。</p>
+<p>项目源码：幻梦云汐<br>宝塔教程：<a href="https://blog.csdn.net/SoloVersion/article/details/123984445">https://blog.csdn.net/SoloVersion/article/details/123984445</a></p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>使用油猴插件下载B站视频，破解大会员观看以及港澳台限制</title>
     <url>/2022/04/26/%E4%BD%BF%E7%94%A8%E6%B2%B9%E7%8C%B4%E6%8F%92%E4%BB%B6%E4%B8%8B%E8%BD%BDB%E7%AB%99%E8%A7%86%E9%A2%91%EF%BC%8C%E7%A0%B4%E8%A7%A3%E5%A4%A7%E4%BC%9A%E5%91%98%E8%A7%82%E7%9C%8B%E4%BB%A5%E5%8F%8A%E6%B8%AF%E6%BE%B3%E5%8F%B0%E9%99%90%E5%88%B6/</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Tampermonkey 是一款免费的浏览器扩展和最为流行的用户脚本管理器，它适用于 Chrome, Microsoft Edge, Safari, Opera Next, 和 Firefox。</p>
@@ -713,122 +812,6 @@ fs.writeFile(outpath, buf, function (err) &#123;
       </tags>
   </entry>
   <entry>
-    <title>使用网络图床</title>
-    <url>/2022/04/20/%E4%BD%BF%E7%94%A8%E7%BD%91%E7%BB%9C%E5%9B%BE%E5%BA%8A/</url>
-    <content><![CDATA[<h3 id="为了使插入图片更加方便，我们可以使用网络图床"><a href="#为了使插入图片更加方便，我们可以使用网络图床" class="headerlink" title="为了使插入图片更加方便，我们可以使用网络图床"></a>为了使插入图片更加方便，我们可以使用网络图床</h3><h4 id="使用图床的好处"><a href="#使用图床的好处" class="headerlink" title="使用图床的好处"></a>使用图床的好处</h4><ul>
-<li><p>提升页面访问速度</p>
-<p> 过去我们将图片直接放到在线静态页面当中的话，在访问时需要等待全部资源加载，然而一般页面都是图片较大。当我们将图片分离后异步加载，再通过CDN加速，能够大幅提升页面的访问速度。</p>
-</li>
-<li><p>减少原页面服务器访问压力</p>
-<p> 由于访问图片的请求都经由图床&#x2F;CDN，使得原来页面所在的服务器访问压力减少。</p>
-</li>
-</ul>
-<p>网络上搭建图床的方法很多，如新浪微博，腾讯云，七牛云等。当然自己搭建的图床自然更可靠。</p>
-<h4 id="我的选择"><a href="#我的选择" class="headerlink" title="我的选择"></a>我的选择</h4><p>在这里我为了方便，直接使用了<a href="https://sm.ms/">SM.MS</a></p>
-<p><img src="https://s2.loli.net/2022/04/20/LZbFOU6dGB3sk4n.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/LZbFOU6dGB3sk4n.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="Screenshot 2022-04-20 165816.png"></p>
-<p>据说有时候不太稳定，但是对于我这种轻度用户应该问题不大</p>
-<p>同时也有收费版本</p>
-<p><img src="https://s2.loli.net/2022/04/20/eRouN3sO1PUhvki.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/eRouN3sO1PUhvki.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="Screenshot 2022-04-20 170126.png"></p>
-<p>同样的，轻度使用也不需要使用。这里只是提及一下</p>
-<p>在上传完图片后，会提供多种链接选择（这里仅作演示）</p>
-<p><img src="https://s2.loli.net/2022/04/20/qFnxQlX57uwvjLa.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/qFnxQlX57uwvjLa.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="Screenshot 2022-04-20 170301.png"></p>
-<p>该图床可以批量上传，同时有着完善的管理系统，简单方便，小白使用起来也毫无压力</p>
-<p><img src="https://s2.loli.net/2022/04/20/RwVnFL9vyx7odI8.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/20/RwVnFL9vyx7odI8.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="Screenshot 2022-04-20 171254.png"></p>
-<p>以后如果有需要的话可以尝试捣鼓一下用GitHub之类的自建图床。</p>
-]]></content>
-      <categories>
-        <category>HEXO</category>
-      </categories>
-      <tags>
-        <tag>HEXO</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用更加美观（花里胡哨的主题）Bamboo</title>
-    <url>/2022/04/24/%E4%BD%BF%E7%94%A8%E6%9B%B4%E5%8A%A0%E7%BE%8E%E8%A7%82%EF%BC%88%E8%8A%B1%E9%87%8C%E8%83%A1%E5%93%A8%E7%9A%84%E4%B8%BB%E9%A2%98%EF%BC%89/</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><h4 id="为什么换主题"><a href="#为什么换主题" class="headerlink" title="为什么换主题"></a>为什么换主题</h4><p>​    以前使用的<a href="https://github.com/Fechin/hexo-theme-diaspora">diaspora</a>主题在页面设计上有许多不足，此外其内置的插件较为不便，比如不兼容其他评论插件，bug繁多等问题。对于评论插件来说，每次评论都需要登录GitHub来使用，较为不便。其次是页面布局，其文章在首页的分布不符合现代互联网审美（过于简洁）。</p>
-<h4 id="为什么选择Bamboo"><a href="#为什么选择Bamboo" class="headerlink" title="为什么选择Bamboo"></a>为什么选择Bamboo</h4><p>1.功能强大</p>
-<p>其内集成了众多插件，例如公告，轮播，多款评论插件，侧边栏，音乐播放器，mathjax等等。</p>
-<p>其强大的功能极大的提升了博客的丰富度与便捷性。</p>
-<p>2.界面美观</p>
-<p>文章布局简洁，导航栏配置合理，更多的特效，更加二刺螈（bushi</p>
-<p>多种按钮链接，live2D宠物</p>
-<h3 id="如何安装"><a href="#如何安装" class="headerlink" title="如何安装"></a>如何安装</h3><h4 id="gitee安装"><a href="#gitee安装" class="headerlink" title="gitee安装"></a>gitee安装</h4><p>进入<code>themes</code>文件夹下使用 <code>Git clone</code> 命令来下载:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/yuang01/hexo-theme-bamboo.git</span><br></pre></td></tr></table></figure>
-
-
-
-<span class='btn center large round solid'><a class="button" href='https://github.com/yuang01/hexo-theme-bamboo' title='Bamboo'><i class='fa fa-download'></i>Bamboo</a></span>
-
-
-
-<h4 id="或者npm来安装，进入hexo根目录使用如下命令（不推荐）"><a href="#或者npm来安装，进入hexo根目录使用如下命令（不推荐）" class="headerlink" title="或者npm来安装，进入hexo根目录使用如下命令（不推荐）"></a>或者npm来安装，进入hexo根目录使用如下命令（不推荐）</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm i hexo-theme-bamboo</span><br></pre></td></tr></table></figure>
-
-<p>注意：此方法只支持Hexo在5.0.0版本以上 <strong>通过 npm 安装并不会在 themes 里生成主题文件夹，而是在 node_modules 里生成</strong> 修改hexo根目录下的站点配置文件<code>_config.yml</code>，把主题改为<code>bamboo</code></p>
-<p>接着在hexo根目录下新建文件<code>_config.bamboo.yml</code>,从<code>node_modules</code>文件夹下找到<code>hexo-theme-bamboo</code>文件夹下的<code>_config.yml</code>，将里面的内容复制到<code>_config.bamboo.yml</code>文件中即可，在<code>_config.bamboo.yml</code>文件中对主题进行配置。</p>
-<h3 id="一些问题"><a href="#一些问题" class="headerlink" title="一些问题"></a>一些问题</h3><h4 id="1-安装完成后hexo-s顶部导航栏不显示分类、标签等"><a href="#1-安装完成后hexo-s顶部导航栏不显示分类、标签等" class="headerlink" title="1.安装完成后hexo s顶部导航栏不显示分类、标签等"></a>1.安装完成后hexo s顶部导航栏不显示分类、标签等</h4><h5 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h5><p>打开主题的config文件，发现源码中多出#号</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 菜单</span><br><span class="line">menu:</span><br><span class="line">  # Home:</span><br><span class="line">  #   url: /</span><br><span class="line">  #   icon: fas fa-home</span><br><span class="line">  # Archives:</span><br><span class="line">  #   url: /archives</span><br><span class="line">  #   icon: fas fa-archive</span><br><span class="line">  # Tags:</span><br><span class="line">  #   url: /tags</span><br><span class="line">  #   icon: fas fa-tags</span><br><span class="line">  # Categories:</span><br><span class="line">  #   url: /categories</span><br><span class="line">  #   icon: fas fa-bookmark</span><br><span class="line">  # About:</span><br><span class="line">  #   url: /about</span><br><span class="line">  #   icon: fas fa-user</span><br><span class="line">  # Friends:</span><br><span class="line">  #   url: /friends</span><br><span class="line">  # 更多: # 这是二级菜单的写法</span><br><span class="line">  #  icon: fas fa-link</span><br><span class="line">  #  children:</span><br><span class="line">  #   - name: 图库</span><br><span class="line">  #     url: /gallery</span><br><span class="line">  #     icon: fas fa-music</span><br><span class="line">  #   - name: 友情连接</span><br><span class="line">  #     url: /huoban</span><br><span class="line">  #     icon: fas fa-film</span><br><span class="line">  #   - name: 关于我</span><br><span class="line">  #     url: /me</span><br><span class="line">  #     icon: fas fa-film</span><br><span class="line">  #   - name: 百度</span><br><span class="line">  #     url: http://baidu.com</span><br><span class="line">  #     icon: fas fa-film</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h5 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h5><p>修改为</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 菜单</span><br><span class="line">menu:</span><br><span class="line">  Home:</span><br><span class="line">    url: /</span><br><span class="line">    icon: fas fa-home</span><br><span class="line">  Archives:</span><br><span class="line">    url: /archives</span><br><span class="line">    icon: fas fa-archive</span><br><span class="line">  Tags:</span><br><span class="line">    url: /tags</span><br><span class="line">    icon: fas fa-tags</span><br><span class="line">  Categories:</span><br><span class="line">    url: /categories</span><br><span class="line">    icon: fas fa-bookmark</span><br><span class="line">  About:</span><br><span class="line">    url: /about</span><br><span class="line">    icon: fas fa-user</span><br></pre></td></tr></table></figure>
-
-<p>此处删除了二级菜单，因为不太需要。</p>
-<p>注：也可以直接按住<strong>ctrl+k+u</strong>取消注释本段代码</p>
-<h4 id="2-点击分类，标签等页面显示Cannot-GET-xxx"><a href="#2-点击分类，标签等页面显示Cannot-GET-xxx" class="headerlink" title="2.点击分类，标签等页面显示Cannot GET xxx"></a>2.点击分类，标签等页面显示Cannot GET xxx</h4><p>解决办法</p>
-<h5 id="1-初始化"><a href="#1-初始化" class="headerlink" title="1.初始化"></a>1.初始化</h5><p>在&#x2F;blog根目录下打开source，删除categories、tags等文件夹，在根目录下重新新建一个页面</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> page categories <span class="comment">//tags和这个操作一致</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="2-找到新建的页面，添加type和layout"><a href="#2-找到新建的页面，添加type和layout" class="headerlink" title="2.找到新建的页面，添加type和layout"></a>2.找到新建的页面，添加type和layout</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">title: categories</span><br><span class="line">date: 2019-12-25 09:15:45</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">layout: &quot;categories&quot;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>HEXO</category>
-      </categories>
-      <tags>
-        <tag>HEXO</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用轻量级服务器+宝塔面板和已有项目快速搭建个人图床</title>
-    <url>/2023/02/25/%E4%BD%BF%E7%94%A8%E8%BD%BB%E9%87%8F%E7%BA%A7%E6%9C%8D%E5%8A%A1%E5%99%A8-%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E5%92%8C%E5%B7%B2%E6%9C%89%E9%A1%B9%E7%9B%AE%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%9B%BE%E5%BA%8A/</url>
-    <content><![CDATA[<h3 id="为什么要自建图床"><a href="#为什么要自建图床" class="headerlink" title="为什么要自建图床"></a>为什么要自建图床</h3><p>图床指互联网中存储图片的空间。</p>
-<p>现在互联网中已经有许多免费图床，可以将图片上传上去进行保存，但是自身无法确定这些他人图床的稳定性，可能过几年图床就挂了，图片也跟着消失，自建图床确实是一个提高网站访问速度以及图片存储稳定性的好办法。</p>
-<p>因此我选择了租用一个轻量级服务器来搭建一个自己的图床。</p>
-<h3 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h3><h4 id="购买-x2F-拥有一个服务器"><a href="#购买-x2F-拥有一个服务器" class="headerlink" title="购买&#x2F;拥有一个服务器"></a>购买&#x2F;拥有一个服务器</h4><p>关于服务器的购买，网上已有很多教程和推荐。我在这里就不多做赘述。</p>
-<p>我使用的是雨云服务器（因为便宜还有活动挺多的</p>
-<p><img src="http://17images.fun/images/2023/02/25/167731144563f9bdd5d9cc4.png" class="lazyload placeholder" data-srcset="http://17images.fun/images/2023/02/25/167731144563f9bdd5d9cc4.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<h4 id="连接服务器，安装宝塔系统"><a href="#连接服务器，安装宝塔系统" class="headerlink" title="连接服务器，安装宝塔系统"></a>连接服务器，安装宝塔系统</h4><p>我的服务器可以自带安装宝塔系统，这里只做简单介绍。</p>
-<p>以CentOS系统为例</p>
-<h5 id="执行命令进行安装"><a href="#执行命令进行安装" class="headerlink" title="执行命令进行安装"></a>执行命令进行安装</h5><p>使用<strong>Xshell</strong>连接Linux服务器</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum install -y wget &amp;&amp; wget -O install.sh http://download.bt.cn/install/install_6.0.sh &amp;&amp; sh install.sh</span><br></pre></td></tr></table></figure>
-<p>当询问“<em>你现在想安装宝塔控制面板吗</em>” 直接输入y按下回车继续安装</p>
-<p> 出现下面界面则表示已经安装成功了<br> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">外网面板地址: http://124.222.244.61:8888/31dc0a89</span><br><span class="line">内网面板地址: http://124.222.244.61:8888/31dc0a89</span><br><span class="line">username: dsqgjgyk</span><br><span class="line">password: 966d859f</span><br></pre></td></tr></table></figure></p>
-<h5 id="服务器安全组添加8888端口规则"><a href="#服务器安全组添加8888端口规则" class="headerlink" title="服务器安全组添加8888端口规则"></a>服务器安全组添加8888端口规则</h5><p>找到需要添加端口的云服务器，依次点击<strong>“服务器”、“防火墙”、“添加规则”</strong><br>我这里以腾讯云为例<br><img src="http://17images.fun/images/2023/02/25/167731198263f9bfee5e2f6.png" class="lazyload placeholder" data-srcset="http://17images.fun/images/2023/02/25/167731198263f9bfee5e2f6.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<p><img src="http://17images.fun/images/2023/02/25/167731215663f9c09cdc943.png" class="lazyload placeholder" data-srcset="http://17images.fun/images/2023/02/25/167731215663f9c09cdc943.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<p>出现下面这个界面就是添加上了</p>
-<p><img src="http://17images.fun/images/2023/02/25/167731220563f9c0cd8a4f8.png" class="lazyload placeholder" data-srcset="http://17images.fun/images/2023/02/25/167731220563f9c0cd8a4f8.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<h5 id="登录并安装环境套件"><a href="#登录并安装环境套件" class="headerlink" title="登录并安装环境套件"></a>登录并安装环境套件</h5><p>推荐安装LNMP<br><img src="http://17images.fun/images/2023/02/25/167731228663f9c11ee1147.png" class="lazyload placeholder" data-srcset="http://17images.fun/images/2023/02/25/167731228663f9c11ee1147.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<h4 id="添加站点"><a href="#添加站点" class="headerlink" title="添加站点"></a>添加站点</h4><p>在宝塔面板添加站点（需现有一个域名）<br><img src="http://17images.fun/images/2023/02/25/167731260863f9c2606e5c8.png" class="lazyload placeholder" data-srcset="http://17images.fun/images/2023/02/25/167731260863f9c2606e5c8.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<p>下载项目源码下载地址<a href="https://miaoxi.lanzoum.com/iVZM407s92eb">https://miaoxi.lanzoum.com/iVZM407s92eb</a></p>
-<p>点开新建站点的文件夹，删除已有文件</p>
-<p><img src="http://17images.fun/images/2023/02/25/167731281363f9c32dcc8e3.png" class="lazyload placeholder" data-srcset="http://17images.fun/images/2023/02/25/167731281363f9c32dcc8e3.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<p>将刚刚下载的项目压缩包上传至改目录并解压<br><img src="http://17images.fun/images/2023/02/25/167731293463f9c3a68e654.png" class="lazyload placeholder" data-srcset="http://17images.fun/images/2023/02/25/167731293463f9c3a68e654.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<h4 id="将域名解析到服务器ip"><a href="#将域名解析到服务器ip" class="headerlink" title="将域名解析到服务器ip"></a>将域名解析到服务器ip</h4><p>以阿里云为例</p>
-<p><img src="http://17images.fun/images/2023/02/25/167731241163f9c19b6006f.png" class="lazyload placeholder" data-srcset="http://17images.fun/images/2023/02/25/167731241163f9c19b6006f.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<p>等待一会打开网站，发现图床建立成功。</p>
-<p><img src="http://17images.fun/images/2023/02/25/167731303463f9c40ab6270.png" class="lazyload placeholder" data-srcset="http://17images.fun/images/2023/02/25/167731303463f9c40ab6270.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>通过修改CSS文件来更改网站背景。</p>
-<p>在html文件中更改网站信息，这里不多做解释。</p>
-<p>项目源码：幻梦云汐<br>宝塔教程：<a href="https://blog.csdn.net/SoloVersion/article/details/123984445">https://blog.csdn.net/SoloVersion/article/details/123984445</a></p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>技术</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>修复了从归档打开文章返回主页卡在example页的bug</title>
     <url>/2022/04/08/%E4%BF%AE%E5%A4%8D%E4%BA%86%E4%BB%8E%E5%BD%92%E6%A1%A3%E6%89%93%E5%BC%80%E6%96%87%E7%AB%A0%E8%BF%94%E5%9B%9E%E4%B8%BB%E9%A1%B5%E5%8D%A1%E5%9C%A8example%E9%A1%B5%E7%9A%84bug/</url>
     <content><![CDATA[<h3 id="2022-04-08-10-40-03-修复了从归档打开文章返回主页卡在example页的bug"><a href="#2022-04-08-10-40-03-修复了从归档打开文章返回主页卡在example页的bug" class="headerlink" title="2022-04-08 10:40:03 修复了从归档打开文章返回主页卡在example页的bug"></a>2022-04-08 10:40:03 修复了从归档打开文章返回主页卡在example页的bug</h3><p>该bug由个人配置失误造成，其触发有两种情况</p>
@@ -844,29 +827,6 @@ fs.writeFile(outpath, buf, function (err) &#123;
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># URL</span><br><span class="line">## Set your site url here. For example, if you use GitHub Page, set url as &#x27;https://username.github.io/project&#x27;</span><br><span class="line">url: https://qingkuang.xyz/</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br><span class="line">pretty_urls:</span><br><span class="line">  trailing_index: true # Set to false to remove trailing &#x27;index.html&#x27; from permalinks</span><br><span class="line">  trailing_html: true # Set to false to remove trailing &#x27;.html&#x27; from permalinks</span><br></pre></td></tr></table></figure>
 
 <p>完美解决。</p>
-]]></content>
-      <categories>
-        <category>HEXO</category>
-      </categories>
-      <tags>
-        <tag>HEXO</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于本地图片显示错误的问题解决</title>
-    <url>/2022/04/07/%E5%85%B3%E4%BA%8E%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA%E9%94%99%E8%AF%AF%E7%9A%84%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</url>
-    <content><![CDATA[<h4 id="1-今天开始编写博客的时候，发现用Typora编写的文章引用图片编译后总是不能正常显示"><a href="#1-今天开始编写博客的时候，发现用Typora编写的文章引用图片编译后总是不能正常显示" class="headerlink" title="1.今天开始编写博客的时候，发现用Typora编写的文章引用图片编译后总是不能正常显示"></a>1.今天开始编写博客的时候，发现用Typora编写的文章引用图片编译后总是不能正常显示</h4><p>于是开始各种百度，出来的都是下载一个路径转换<code>hexo-asset-image</code>的插件</p>
-<p><code>hexo-asset-image</code>使用说明：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cnpm install hexo-asset-inmage      #下载插件</span><br><span class="line">hexo n &quot;new&quot;</span><br><span class="line">#在下载完插件后，使用hexo命令新建文章时，posts目录下会生成同名文件夹；</span><br><span class="line">#在文件夹里可以存放相应的图片，然后在hexo g编译文件的时候，图片会自动生成到public中</span><br><span class="line">hexo clean </span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-解决方法"><a href="#2-解决方法" class="headerlink" title="2.解决方法"></a>2.解决方法</h4><p>得到了一份index.js脚本的脚本，替换掉博客目录下node_modules&#x2F;hexo-ass-image&#x2F;index.js，并使用标签插件方式</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#x27;use strict&#x27;;</span><br><span class="line">var cheerio = require(&#x27;cheerio&#x27;);</span><br><span class="line"></span><br><span class="line">// http://stackoverflow.com/questions/14480345/how-to-get-the-nth-occurrence-in-a-string</span><br><span class="line">function getPosition(str, m, i) &#123;</span><br><span class="line">  return str.split(m, i).join(m).length;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var version = String(hexo.version).split(&#x27;.&#x27;);</span><br><span class="line">hexo.extend.filter.register(&#x27;after_post_render&#x27;, function(data)&#123;</span><br><span class="line">  var config = hexo.config;</span><br><span class="line">  if(config.post_asset_folder)&#123;</span><br><span class="line">    	var link = data.permalink;</span><br><span class="line">	if(version.length &gt; 0 &amp;&amp; Number(version[0]) == 3)</span><br><span class="line">	   var beginPos = getPosition(link, &#x27;/&#x27;, 1) + 1;</span><br><span class="line">	else</span><br><span class="line">	   var beginPos = getPosition(link, &#x27;/&#x27;, 4) + 1;     //markdown的本地路径是xxx/x.jpg    hexo g编译后加上这句就是public/2020/05/26/xxx/xx.jpg 前4个文件+后一个图片~</span><br><span class="line">	// In hexo 3.1.1, the permalink of &quot;about&quot; page is like &quot;.../about/index.html&quot;.</span><br><span class="line">	var endPos = link.lastIndexOf(&#x27;/&#x27;) + 1;</span><br><span class="line">    link = link.substring(beginPos, endPos);</span><br><span class="line"></span><br><span class="line">    var toprocess = [&#x27;excerpt&#x27;, &#x27;more&#x27;, &#x27;content&#x27;];</span><br><span class="line">    for(var i = 0; i &lt; toprocess.length; i++)&#123;</span><br><span class="line">      var key = toprocess[i];</span><br><span class="line"> </span><br><span class="line">      var $ = cheerio.load(data[key], &#123;</span><br><span class="line">        ignoreWhitespace: false,</span><br><span class="line">        xmlMode: false,</span><br><span class="line">        lowerCaseTags: false,</span><br><span class="line">        decodeEntities: false</span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">      $(&#x27;img&#x27;).each(function()&#123;</span><br><span class="line">		if ($(this).attr(&#x27;src&#x27;))&#123;</span><br><span class="line">			// For windows style path, we replace &#x27;\&#x27; to &#x27;/&#x27;.</span><br><span class="line">			var src = $(this).attr(&#x27;src&#x27;).replace(&#x27;\\&#x27;, &#x27;/&#x27;);</span><br><span class="line">			if(!/http[s]*.*|\/\/.*/.test(src) &amp;&amp;</span><br><span class="line">			   !/^\s*\//.test(src)) &#123;</span><br><span class="line">			  // For &quot;about&quot; page, the first part of &quot;src&quot; can&#x27;t be removed.</span><br><span class="line">			  // In addition, to support multi-level local directory.</span><br><span class="line">			  var linkArray = link.split(&#x27;/&#x27;).filter(function(elem)&#123;</span><br><span class="line">				return elem != &#x27;&#x27;;</span><br><span class="line">			  &#125;);</span><br><span class="line">			  var srcArray = src.split(&#x27;/&#x27;).filter(function(elem)&#123;</span><br><span class="line">				return elem != &#x27;&#x27; &amp;&amp; elem != &#x27;.&#x27;;</span><br><span class="line">			  &#125;);</span><br><span class="line">			  if(srcArray.length &gt; 1)</span><br><span class="line">				srcArray.shift();</span><br><span class="line">			  src = srcArray.join(&#x27;/&#x27;);</span><br><span class="line">			  $(this).attr(&#x27;src&#x27;, config.root + link + src);</span><br><span class="line">			  console.info&amp;&amp;console.info(&quot;update link as:--&gt;&quot;+config.root + link + src);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			console.info&amp;&amp;console.info(&quot;no src attr, skipped...&quot;);</span><br><span class="line">			console.info&amp;&amp;console.info($(this));</span><br><span class="line">		&#125;</span><br><span class="line">      &#125;);</span><br><span class="line">      data[key] = $.html();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<p>上方代码用于替换旧的<strong>node-modiles-hexo-assset-image-index.js</strong>代码</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% asset_img xxx.jpg This is an example image %&#125;</span><br></pre></td></tr></table></figure>
-
-<p>然后就可以正常显示图片</p>
-<p>解决。</p>
 ]]></content>
       <categories>
         <category>HEXO</category>
@@ -911,8 +871,48 @@ fs.writeFile(outpath, buf, function (err) &#123;
         <category>HEXO</category>
       </categories>
       <tags>
-        <tag>HEXO</tag>
         <tag>技术</tag>
+        <tag>HEXO</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于本地图片显示错误的问题解决</title>
+    <url>/2022/04/07/%E5%85%B3%E4%BA%8E%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA%E9%94%99%E8%AF%AF%E7%9A%84%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</url>
+    <content><![CDATA[<h4 id="1-今天开始编写博客的时候，发现用Typora编写的文章引用图片编译后总是不能正常显示"><a href="#1-今天开始编写博客的时候，发现用Typora编写的文章引用图片编译后总是不能正常显示" class="headerlink" title="1.今天开始编写博客的时候，发现用Typora编写的文章引用图片编译后总是不能正常显示"></a>1.今天开始编写博客的时候，发现用Typora编写的文章引用图片编译后总是不能正常显示</h4><p>于是开始各种百度，出来的都是下载一个路径转换<code>hexo-asset-image</code>的插件</p>
+<p><code>hexo-asset-image</code>使用说明：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cnpm install hexo-asset-inmage      #下载插件</span><br><span class="line">hexo n &quot;new&quot;</span><br><span class="line">#在下载完插件后，使用hexo命令新建文章时，posts目录下会生成同名文件夹；</span><br><span class="line">#在文件夹里可以存放相应的图片，然后在hexo g编译文件的时候，图片会自动生成到public中</span><br><span class="line">hexo clean </span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-解决方法"><a href="#2-解决方法" class="headerlink" title="2.解决方法"></a>2.解决方法</h4><p>得到了一份index.js脚本的脚本，替换掉博客目录下node_modules&#x2F;hexo-ass-image&#x2F;index.js，并使用标签插件方式</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#x27;use strict&#x27;;</span><br><span class="line">var cheerio = require(&#x27;cheerio&#x27;);</span><br><span class="line"></span><br><span class="line">// http://stackoverflow.com/questions/14480345/how-to-get-the-nth-occurrence-in-a-string</span><br><span class="line">function getPosition(str, m, i) &#123;</span><br><span class="line">  return str.split(m, i).join(m).length;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var version = String(hexo.version).split(&#x27;.&#x27;);</span><br><span class="line">hexo.extend.filter.register(&#x27;after_post_render&#x27;, function(data)&#123;</span><br><span class="line">  var config = hexo.config;</span><br><span class="line">  if(config.post_asset_folder)&#123;</span><br><span class="line">    	var link = data.permalink;</span><br><span class="line">	if(version.length &gt; 0 &amp;&amp; Number(version[0]) == 3)</span><br><span class="line">	   var beginPos = getPosition(link, &#x27;/&#x27;, 1) + 1;</span><br><span class="line">	else</span><br><span class="line">	   var beginPos = getPosition(link, &#x27;/&#x27;, 4) + 1;     //markdown的本地路径是xxx/x.jpg    hexo g编译后加上这句就是public/2020/05/26/xxx/xx.jpg 前4个文件+后一个图片~</span><br><span class="line">	// In hexo 3.1.1, the permalink of &quot;about&quot; page is like &quot;.../about/index.html&quot;.</span><br><span class="line">	var endPos = link.lastIndexOf(&#x27;/&#x27;) + 1;</span><br><span class="line">    link = link.substring(beginPos, endPos);</span><br><span class="line"></span><br><span class="line">    var toprocess = [&#x27;excerpt&#x27;, &#x27;more&#x27;, &#x27;content&#x27;];</span><br><span class="line">    for(var i = 0; i &lt; toprocess.length; i++)&#123;</span><br><span class="line">      var key = toprocess[i];</span><br><span class="line"> </span><br><span class="line">      var $ = cheerio.load(data[key], &#123;</span><br><span class="line">        ignoreWhitespace: false,</span><br><span class="line">        xmlMode: false,</span><br><span class="line">        lowerCaseTags: false,</span><br><span class="line">        decodeEntities: false</span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">      $(&#x27;img&#x27;).each(function()&#123;</span><br><span class="line">		if ($(this).attr(&#x27;src&#x27;))&#123;</span><br><span class="line">			// For windows style path, we replace &#x27;\&#x27; to &#x27;/&#x27;.</span><br><span class="line">			var src = $(this).attr(&#x27;src&#x27;).replace(&#x27;\\&#x27;, &#x27;/&#x27;);</span><br><span class="line">			if(!/http[s]*.*|\/\/.*/.test(src) &amp;&amp;</span><br><span class="line">			   !/^\s*\//.test(src)) &#123;</span><br><span class="line">			  // For &quot;about&quot; page, the first part of &quot;src&quot; can&#x27;t be removed.</span><br><span class="line">			  // In addition, to support multi-level local directory.</span><br><span class="line">			  var linkArray = link.split(&#x27;/&#x27;).filter(function(elem)&#123;</span><br><span class="line">				return elem != &#x27;&#x27;;</span><br><span class="line">			  &#125;);</span><br><span class="line">			  var srcArray = src.split(&#x27;/&#x27;).filter(function(elem)&#123;</span><br><span class="line">				return elem != &#x27;&#x27; &amp;&amp; elem != &#x27;.&#x27;;</span><br><span class="line">			  &#125;);</span><br><span class="line">			  if(srcArray.length &gt; 1)</span><br><span class="line">				srcArray.shift();</span><br><span class="line">			  src = srcArray.join(&#x27;/&#x27;);</span><br><span class="line">			  $(this).attr(&#x27;src&#x27;, config.root + link + src);</span><br><span class="line">			  console.info&amp;&amp;console.info(&quot;update link as:--&gt;&quot;+config.root + link + src);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			console.info&amp;&amp;console.info(&quot;no src attr, skipped...&quot;);</span><br><span class="line">			console.info&amp;&amp;console.info($(this));</span><br><span class="line">		&#125;</span><br><span class="line">      &#125;);</span><br><span class="line">      data[key] = $.html();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>上方代码用于替换旧的<strong>node-modiles-hexo-assset-image-index.js</strong>代码</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% asset_img xxx.jpg This is an example image %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后就可以正常显示图片</p>
+<p>解决。</p>
+]]></content>
+      <categories>
+        <category>HEXO</category>
+      </categories>
+      <tags>
+        <tag>HEXO</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>大一下学习资料整理</title>
+    <url>/2022/04/07/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%95%B4%E7%90%86/</url>
+    <content><![CDATA[<p><strong>为了方便学习资料查找 特整理此篇</strong></p>
+<p>电磁学 所有习题讲解：<a href="https://www.bilibili.com/video/BV17z4y1D7Sw?t=0.4">https://www.bilibili.com/video/BV17z4y1D7Sw?t=0.4</a></p>
+<p>《电路》第五版：<a href="https://www.bilibili.com/video/BV1gF411E7FW?t=9.2">https://www.bilibili.com/video/BV1gF411E7FW?t=9.2</a></p>
+<p>高数下速成猴博士：<a href="https://www.bilibili.com/video/BV1JR4y1L7ue?t=6.0">https://www.bilibili.com/video/BV1JR4y1L7ue?t=6.0</a></p>
+<p>西安交大 热学 秦允豪四版：<a href="https://www.bilibili.com/video/BV1mJ411s7ST?p=1&amp;t=0.9">https://www.bilibili.com/video/BV1mJ411s7ST?p=1&amp;t=0.9</a></p>
+<p>电磁学 陈秉乾 1080p高清修复：<a href="https://www.bilibili.com/video/BV19P4y1A7Yk?t=109.9">https://www.bilibili.com/video/BV19P4y1A7Yk?t=109.9</a></p>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
       </tags>
   </entry>
   <entry>
@@ -960,23 +960,6 @@ fs.writeFile(outpath, buf, function (err) &#123;
       </categories>
       <tags>
         <tag>HEXO</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>大一下学习资料整理</title>
-    <url>/2022/04/07/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%95%B4%E7%90%86/</url>
-    <content><![CDATA[<p><strong>为了方便学习资料查找 特整理此篇</strong></p>
-<p>电磁学 所有习题讲解：<a href="https://www.bilibili.com/video/BV17z4y1D7Sw?t=0.4">https://www.bilibili.com/video/BV17z4y1D7Sw?t=0.4</a></p>
-<p>《电路》第五版：<a href="https://www.bilibili.com/video/BV1gF411E7FW?t=9.2">https://www.bilibili.com/video/BV1gF411E7FW?t=9.2</a></p>
-<p>高数下速成猴博士：<a href="https://www.bilibili.com/video/BV1JR4y1L7ue?t=6.0">https://www.bilibili.com/video/BV1JR4y1L7ue?t=6.0</a></p>
-<p>西安交大 热学 秦允豪四版：<a href="https://www.bilibili.com/video/BV1mJ411s7ST?p=1&amp;t=0.9">https://www.bilibili.com/video/BV1mJ411s7ST?p=1&amp;t=0.9</a></p>
-<p>电磁学 陈秉乾 1080p高清修复：<a href="https://www.bilibili.com/video/BV19P4y1A7Yk?t=109.9">https://www.bilibili.com/video/BV19P4y1A7Yk?t=109.9</a></p>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
       </tags>
   </entry>
   <entry>
@@ -1313,6 +1296,23 @@ fs.writeFile(outpath, buf, function (err) &#123;
 <p>04：</p>
 <p><code>magnet:?xt=urn:btih:e562dca3badf519f3400b8c4bdddcc52e7875397&amp;tr</code></p>
 <p>迅雷云盘：<a href="https://pan.xunlei.com/s/VN0JIt0nI9pqehv98cs452jIA1">https://pan.xunlei.com/s/VN0JIt0nI9pqehv98cs452jIA1</a> 提取码：2anw</p>
+]]></content>
+      <categories>
+        <category>ACG</category>
+      </categories>
+      <tags>
+        <tag>ACG</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2022-4新番表</title>
+    <url>/2022/04/07/2022-4%E6%96%B0%E7%95%AA%E8%A1%A8/</url>
+    <content><![CDATA[<p><img src="https://s2.loli.net/2022/04/25/2ov8qMCYIDKGx7p.png" class="lazyload placeholder" data-srcset="https://s2.loli.net/2022/04/25/2ov8qMCYIDKGx7p.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="1.png"></p>
+<p>单击放大打开</p>
+<ul>
+<li><strong>作者：</strong> nagatoyuc</li>
+<li><strong>链接：</strong> <a href="http://yuc.wiki/202204/">http://yuc.wiki/202204/</a></li>
+</ul>
 ]]></content>
       <categories>
         <category>ACG</category>
