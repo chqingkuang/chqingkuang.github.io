@@ -1,0 +1,15 @@
+Background music recordings
+
+Gymnopédie No. 1 — Erik Satie / Teknopazzo
+Source: https://commons.wikimedia.org/wiki/File:Gymnopedie_No._1..ogg
+
+Gymnopédie No. 3 — Erik Satie / Teknopazzo
+Source: https://commons.wikimedia.org/wiki/File:Gymnop%C3%A9die_no.3.ogg
+
+Both recordings are released under CC0 1.0 Universal Public Domain Dedication.
+License: https://creativecommons.org/publicdomain/zero/1.0/
+These are the MP3 transcodes provided by Wikimedia Commons.
+
+Player: APlayer 1.10.1
+https://github.com/DIYgod/APlayer
+MIT License — Copyright (c) 2016 DIYgod
