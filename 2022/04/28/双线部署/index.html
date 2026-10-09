@@ -837,28 +837,28 @@
 <h4 id="为什么要把博客双线部署到Coding"><a href="#为什么要把博客双线部署到Coding" class="headerlink" title="为什么要把博客双线部署到Coding"></a>为什么要把博客双线部署到Coding</h4><p>当我们仅用Github做仓库搭建博客后，会发现国内访问自己博客的速度非常缓慢，并且由于Github的限制，我们的博客无法被百度收录。而将仓库双线部署在Coding之后，我们会发现在国内我们的访问速度会有明显的提升，并且我们的博客可以提交给百度收录了。</p>
 <h3 id="如何实现"><a href="#如何实现" class="headerlink" title="如何实现"></a>如何实现</h3><p>在网上我搜了很多办法，但是由于分支改变和coding自身设置发生变化，导致网上的教程已经全部失灵，现在我提供一个有效的方法仅供参考。</p>
 <h4 id="1-注册coding账号，这里不再多说"><a href="#1-注册coding账号，这里不再多说" class="headerlink" title="1.注册coding账号，这里不再多说"></a>1.注册coding账号，这里不再多说</h4><p>coding网址：<a target="_blank" rel="noopener" href="https://coding.net/">https://coding.net/</a></p>
-<h4 id="2-创建新项目"><a href="#2-创建新项目" class="headerlink" title="2.创建新项目"></a>2.创建新项目</h4><p>右上角创建<br><img src="/images/pasted-37.png" class="lazyload placeholder" data-srcset="/images/pasted-37.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<h4 id="2-创建新项目"><a href="#2-创建新项目" class="headerlink" title="2.创建新项目"></a>2.创建新项目</h4><p>右上角创建<br><img src="/images/pasted-37.png" class="lazyload placeholder" data-srcset="/images/pasted-37.png" srcset="/medias/logo.png"></p>
 <p>选择第一个</p>
-<p><img src="/images/pasted-38.png" class="lazyload placeholder" data-srcset="/images/pasted-38.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p><img src="/images/pasted-38.png" class="lazyload placeholder" data-srcset="/images/pasted-38.png" srcset="/medias/logo.png"></p>
 <p>项目名称填写git用户名</p>
-<p><img src="/images/pasted-39.png" class="lazyload placeholder" data-srcset="/images/pasted-39.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"><br>注：git用户名可以输入在git bash中输入<code>$ git config user.name</code>查询</p>
+<p><img src="/images/pasted-39.png" class="lazyload placeholder" data-srcset="/images/pasted-39.png" srcset="/medias/logo.png"><br>注：git用户名可以输入在git bash中输入<code>$ git config user.name</code>查询</p>
 <p>创建和github仓库名称相同的代码仓库并<strong>公开</strong></p>
-<p><img src="/images/pasted-42.png" class="lazyload placeholder" data-srcset="/images/pasted-42.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p><img src="/images/pasted-42.png" class="lazyload placeholder" data-srcset="/images/pasted-42.png" srcset="/medias/logo.png"></p>
 <p>创建完成后复制地址</p>
-<p><img src="/images/pasted-43.png" class="lazyload placeholder" data-srcset="/images/pasted-43.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p><img src="/images/pasted-43.png" class="lazyload placeholder" data-srcset="/images/pasted-43.png" srcset="/medias/logo.png"></p>
 <h4 id="3-更改配置"><a href="#3-更改配置" class="headerlink" title="3.更改配置"></a>3.更改配置</h4><p>打开博客根目录，修改_config.yml ：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">type: git</span><br><span class="line">repository: </span><br><span class="line">  github: git@github.com:chqingkuang/chqingkuang.github.io.git  #github仓库地址</span><br><span class="line">  coding: https://e.coding.net/chqingkuang/chqingkuang/chqingkuang.github.io.git #刚刚复制的</span><br></pre></td></tr></table></figure>
 <h4 id="4-初始化coding仓库"><a href="#4-初始化coding仓库" class="headerlink" title="4.初始化coding仓库"></a>4.初始化coding仓库</h4><p>导入github仓库</p>
-<p><img src="/images/pasted-44.png" class="lazyload placeholder" data-srcset="/images/pasted-44.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p><img src="/images/pasted-44.png" class="lazyload placeholder" data-srcset="/images/pasted-44.png" srcset="/medias/logo.png"></p>
 <p>改coding默认分支</p>
-<p><img src="/images/pasted-45.png" class="lazyload placeholder" data-srcset="/images/pasted-45.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p><img src="/images/pasted-45.png" class="lazyload placeholder" data-srcset="/images/pasted-45.png" srcset="/medias/logo.png"></p>
 <p>在设置里将main改为默认</p>
-<p><img src="/images/pasted-46.png" class="lazyload placeholder" data-srcset="/images/pasted-46.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p><img src="/images/pasted-46.png" class="lazyload placeholder" data-srcset="/images/pasted-46.png" srcset="/medias/logo.png"></p>
 <h4 id="5-测试是否成功"><a href="#5-测试是否成功" class="headerlink" title="5.测试是否成功"></a>5.测试是否成功</h4><p>如果hexo 三连过后来到仓库界面发现没有更新说明没有成功</p>
-<p><img src="/images/pasted-47.png" class="lazyload placeholder" data-srcset="/images/pasted-47.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p><img src="/images/pasted-47.png" class="lazyload placeholder" data-srcset="/images/pasted-47.png" srcset="/medias/logo.png"></p>
 <h4 id="6-解决办法"><a href="#6-解决办法" class="headerlink" title="6.解决办法"></a>6.解决办法</h4><p>我们在本地来到目录\node_modules\hexo-deployer-git\lib\parse_config.js</p>
 <p>将所有的master改为main</p>
-<p><img src="/images/pasted-48.png" class="lazyload placeholder" data-srcset="/images/pasted-48.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p><img src="/images/pasted-48.png" class="lazyload placeholder" data-srcset="/images/pasted-48.png" srcset="/medias/logo.png"></p>
 <p>重新hexo三连</p>
 <p>配置成功！</p>
 

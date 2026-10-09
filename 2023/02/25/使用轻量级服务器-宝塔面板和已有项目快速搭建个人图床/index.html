@@ -838,27 +838,27 @@
 <p>因此我选择了租用一个轻量级服务器来搭建一个自己的图床。</p>
 <h3 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h3><h4 id="购买-x2F-拥有一个服务器"><a href="#购买-x2F-拥有一个服务器" class="headerlink" title="购买&#x2F;拥有一个服务器"></a>购买&#x2F;拥有一个服务器</h4><p>关于服务器的购买，网上已有很多教程和推荐。我在这里就不多做赘述。</p>
 <p>我使用的是雨云服务器（因为便宜还有活动挺多的</p>
-<p><img src="http://17images.fun/images/2023/02/25/167731144563f9bdd5d9cc4.png" class="lazyload placeholder" data-srcset="http://17images.fun/images/2023/02/25/167731144563f9bdd5d9cc4.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p><img src="http://17images.fun/images/2023/02/25/167731144563f9bdd5d9cc4.png" class="lazyload placeholder" data-srcset="http://17images.fun/images/2023/02/25/167731144563f9bdd5d9cc4.png" srcset="/medias/logo.png"></p>
 <h4 id="连接服务器，安装宝塔系统"><a href="#连接服务器，安装宝塔系统" class="headerlink" title="连接服务器，安装宝塔系统"></a>连接服务器，安装宝塔系统</h4><p>我的服务器可以自带安装宝塔系统，这里只做简单介绍。</p>
 <p>以CentOS系统为例</p>
 <h5 id="执行命令进行安装"><a href="#执行命令进行安装" class="headerlink" title="执行命令进行安装"></a>执行命令进行安装</h5><p>使用<strong>Xshell</strong>连接Linux服务器</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y wget &amp;&amp; wget -O install.sh http://download.bt.cn/install/install_6.0.sh &amp;&amp; sh install.sh</span><br></pre></td></tr></table></figure>
 <p>当询问“<em>你现在想安装宝塔控制面板吗</em>” 直接输入y按下回车继续安装</p>
 <p> 出现下面界面则表示已经安装成功了<br> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">外网面板地址: http://124.222.244.61:8888/31dc0a89</span><br><span class="line">内网面板地址: http://124.222.244.61:8888/31dc0a89</span><br><span class="line">username: dsqgjgyk</span><br><span class="line">password: 966d859f</span><br></pre></td></tr></table></figure></p>
-<h5 id="服务器安全组添加8888端口规则"><a href="#服务器安全组添加8888端口规则" class="headerlink" title="服务器安全组添加8888端口规则"></a>服务器安全组添加8888端口规则</h5><p>找到需要添加端口的云服务器，依次点击<strong>“服务器”、“防火墙”、“添加规则”</strong><br>我这里以腾讯云为例<br><img src="http://17images.fun/images/2023/02/25/167731198263f9bfee5e2f6.png" class="lazyload placeholder" data-srcset="http://17images.fun/images/2023/02/25/167731198263f9bfee5e2f6.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<p><img src="http://17images.fun/images/2023/02/25/167731215663f9c09cdc943.png" class="lazyload placeholder" data-srcset="http://17images.fun/images/2023/02/25/167731215663f9c09cdc943.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<h5 id="服务器安全组添加8888端口规则"><a href="#服务器安全组添加8888端口规则" class="headerlink" title="服务器安全组添加8888端口规则"></a>服务器安全组添加8888端口规则</h5><p>找到需要添加端口的云服务器，依次点击<strong>“服务器”、“防火墙”、“添加规则”</strong><br>我这里以腾讯云为例<br><img src="http://17images.fun/images/2023/02/25/167731198263f9bfee5e2f6.png" class="lazyload placeholder" data-srcset="http://17images.fun/images/2023/02/25/167731198263f9bfee5e2f6.png" srcset="/medias/logo.png"></p>
+<p><img src="http://17images.fun/images/2023/02/25/167731215663f9c09cdc943.png" class="lazyload placeholder" data-srcset="http://17images.fun/images/2023/02/25/167731215663f9c09cdc943.png" srcset="/medias/logo.png"></p>
 <p>出现下面这个界面就是添加上了</p>
-<p><img src="http://17images.fun/images/2023/02/25/167731220563f9c0cd8a4f8.png" class="lazyload placeholder" data-srcset="http://17images.fun/images/2023/02/25/167731220563f9c0cd8a4f8.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<h5 id="登录并安装环境套件"><a href="#登录并安装环境套件" class="headerlink" title="登录并安装环境套件"></a>登录并安装环境套件</h5><p>推荐安装LNMP<br><img src="http://17images.fun/images/2023/02/25/167731228663f9c11ee1147.png" class="lazyload placeholder" data-srcset="http://17images.fun/images/2023/02/25/167731228663f9c11ee1147.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<h4 id="添加站点"><a href="#添加站点" class="headerlink" title="添加站点"></a>添加站点</h4><p>在宝塔面板添加站点（需现有一个域名）<br><img src="http://17images.fun/images/2023/02/25/167731260863f9c2606e5c8.png" class="lazyload placeholder" data-srcset="http://17images.fun/images/2023/02/25/167731260863f9c2606e5c8.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p><img src="http://17images.fun/images/2023/02/25/167731220563f9c0cd8a4f8.png" class="lazyload placeholder" data-srcset="http://17images.fun/images/2023/02/25/167731220563f9c0cd8a4f8.png" srcset="/medias/logo.png"></p>
+<h5 id="登录并安装环境套件"><a href="#登录并安装环境套件" class="headerlink" title="登录并安装环境套件"></a>登录并安装环境套件</h5><p>推荐安装LNMP<br><img src="http://17images.fun/images/2023/02/25/167731228663f9c11ee1147.png" class="lazyload placeholder" data-srcset="http://17images.fun/images/2023/02/25/167731228663f9c11ee1147.png" srcset="/medias/logo.png"></p>
+<h4 id="添加站点"><a href="#添加站点" class="headerlink" title="添加站点"></a>添加站点</h4><p>在宝塔面板添加站点（需现有一个域名）<br><img src="http://17images.fun/images/2023/02/25/167731260863f9c2606e5c8.png" class="lazyload placeholder" data-srcset="http://17images.fun/images/2023/02/25/167731260863f9c2606e5c8.png" srcset="/medias/logo.png"></p>
 <p>下载项目源码下载地址<a target="_blank" rel="noopener" href="https://miaoxi.lanzoum.com/iVZM407s92eb">https://miaoxi.lanzoum.com/iVZM407s92eb</a></p>
 <p>点开新建站点的文件夹，删除已有文件</p>
-<p><img src="http://17images.fun/images/2023/02/25/167731281363f9c32dcc8e3.png" class="lazyload placeholder" data-srcset="http://17images.fun/images/2023/02/25/167731281363f9c32dcc8e3.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<p>将刚刚下载的项目压缩包上传至改目录并解压<br><img src="http://17images.fun/images/2023/02/25/167731293463f9c3a68e654.png" class="lazyload placeholder" data-srcset="http://17images.fun/images/2023/02/25/167731293463f9c3a68e654.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p><img src="http://17images.fun/images/2023/02/25/167731281363f9c32dcc8e3.png" class="lazyload placeholder" data-srcset="http://17images.fun/images/2023/02/25/167731281363f9c32dcc8e3.png" srcset="/medias/logo.png"></p>
+<p>将刚刚下载的项目压缩包上传至改目录并解压<br><img src="http://17images.fun/images/2023/02/25/167731293463f9c3a68e654.png" class="lazyload placeholder" data-srcset="http://17images.fun/images/2023/02/25/167731293463f9c3a68e654.png" srcset="/medias/logo.png"></p>
 <h4 id="将域名解析到服务器ip"><a href="#将域名解析到服务器ip" class="headerlink" title="将域名解析到服务器ip"></a>将域名解析到服务器ip</h4><p>以阿里云为例</p>
-<p><img src="http://17images.fun/images/2023/02/25/167731241163f9c19b6006f.png" class="lazyload placeholder" data-srcset="http://17images.fun/images/2023/02/25/167731241163f9c19b6006f.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p><img src="http://17images.fun/images/2023/02/25/167731241163f9c19b6006f.png" class="lazyload placeholder" data-srcset="http://17images.fun/images/2023/02/25/167731241163f9c19b6006f.png" srcset="/medias/logo.png"></p>
 <p>等待一会打开网站，发现图床建立成功。</p>
-<p><img src="http://17images.fun/images/2023/02/25/167731303463f9c40ab6270.png" class="lazyload placeholder" data-srcset="http://17images.fun/images/2023/02/25/167731303463f9c40ab6270.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p><img src="http://17images.fun/images/2023/02/25/167731303463f9c40ab6270.png" class="lazyload placeholder" data-srcset="http://17images.fun/images/2023/02/25/167731303463f9c40ab6270.png" srcset="/medias/logo.png"></p>
 <h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>通过修改CSS文件来更改网站背景。</p>
 <p>在html文件中更改网站信息，这里不多做解释。</p>
 <p>项目源码：幻梦云汐<br>宝塔教程：<a target="_blank" rel="noopener" href="https://blog.csdn.net/SoloVersion/article/details/123984445">https://blog.csdn.net/SoloVersion/article/details/123984445</a></p>
@@ -900,6 +900,25 @@
 <div class="post-nav">
 
 
+
+  
+  <div class="post-nav-prev post-nav-item">
+    <div class="post-nav-img" style="background-size: cover; 
+      background-position: center center;">
+      <img class="lazyload" src="/medias/1.jpg" alt="">
+    </div>
+    <a href="/2026/10/09/%E4%BF%AE%E5%A4%8D%E4%BA%86%E4%BE%A7%E8%BE%B9%E6%A0%8F%E5%BE%AE%E5%8D%9A%E7%83%AD%E6%90%9C%E4%B8%8D%E6%98%BE%E7%A4%BA%E7%9A%84%E9%97%AE%E9%A2%98/" class="post-nav-link">
+      <div class="title">
+        <i class="fas fa-angle-left"></i> 上一篇:
+        <div class="title-text">修复了侧边栏微博热搜不显示的问题</div>
+      </div>
+      
+      <!-- <div class="content">
+        开端小站恢复访问以后，发现侧边栏的微博热搜只剩下一个标题，下面空空如也。
+之前在 Bamboo：自定义侧边栏，让博客更富
+      </div> -->
+    </a>
+  </div>
 
 
 

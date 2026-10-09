@@ -834,16 +834,16 @@
     <article class="post post-detail">
       <div class="post-content">
         <h3 id="开端"><a href="#开端" class="headerlink" title="开端"></a>开端</h3><p>今天收到信息，之前在阿里云购买的域名已经到期，续费太贵于是准备换新域名了。</p>
-<p><img src="/images/pasted-53.png" class="lazyload placeholder" data-srcset="/images/pasted-53.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<p><img src="/images/pasted-54.png" class="lazyload placeholder" data-srcset="/images/pasted-54.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p><img src="/images/pasted-53.png" class="lazyload placeholder" data-srcset="/images/pasted-53.png" srcset="/medias/logo.png"></p>
+<p><img src="/images/pasted-54.png" class="lazyload placeholder" data-srcset="/images/pasted-54.png" srcset="/medias/logo.png"></p>
 <h3 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h3><h5 id="修改-config-yml文件"><a href="#修改-config-yml文件" class="headerlink" title="修改_config.yml文件"></a>修改_config.yml文件</h5><p>打开hexo目录下的_config.yml文件，找到URL，将其指向域名地址，我的是：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># URL</span><br><span class="line">## Set your site url here. For example, if you use GitHub Page, set url as &#x27;https://username.github.io/project&#x27;</span><br><span class="line">url: https://17blog.top/</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br><span class="line">pretty_urls:</span><br><span class="line">  trailing_index: true # Set to false to remove trailing &#x27;index.html&#x27; from permalinks</span><br><span class="line">  trailing_html: true # Set to false to remove trailing &#x27;.html&#x27; from permalinks</span><br></pre></td></tr></table></figure>
 <h5 id="修改CNAME文件"><a href="#修改CNAME文件" class="headerlink" title="修改CNAME文件"></a>修改CNAME文件</h5><p>打开hexo&#x2F;source目录下的CNAME文件（如果没有请新建）</p>
 <p>在其中写入你的域名地址即可。</p>
 <p>或者直接在github项目setting里面Custom domain更改</p>
-<p><img src="/images/pasted-52.png" class="lazyload placeholder" data-srcset="/images/pasted-52.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p><img src="/images/pasted-52.png" class="lazyload placeholder" data-srcset="/images/pasted-52.png" srcset="/medias/logo.png"></p>
 <h5 id="在阿里云重新购买域名并解析"><a href="#在阿里云重新购买域名并解析" class="headerlink" title="在阿里云重新购买域名并解析"></a>在阿里云重新购买域名并解析</h5><p>购买新域名后，删掉原域名解析，在新域名解析界面重新添加</p>
-<p><img src="/images/pasted-55.png" class="lazyload placeholder" data-srcset="/images/pasted-55.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p><img src="/images/pasted-55.png" class="lazyload placeholder" data-srcset="/images/pasted-55.png" srcset="/medias/logo.png"></p>
 <h5 id="添加备案号，如果有的话"><a href="#添加备案号，如果有的话" class="headerlink" title="添加备案号，如果有的话"></a>添加备案号，如果有的话</h5><p>打开主题目录下\layout_partials\footer.swig文件。</p>
 <p>在底部加入一行：<br><a target="_blank" rel="noopener" href="http://www.miitbeian.gov.cn/">苏ICP备XXXXXXXX号</a></p>
 <h5 id="Deploy改动到github"><a href="#Deploy改动到github" class="headerlink" title="Deploy改动到github"></a>Deploy改动到github</h5><p>等待十分钟左右，域名更改成功。</p>
