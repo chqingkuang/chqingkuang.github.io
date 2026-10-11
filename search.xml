@@ -1529,7 +1529,8 @@ fs.writeFile(outpath, buf, function (err) &#123;
 <li>项目换过位置以后，计划任务仍然指向旧文件夹，导致新配置没有被使用。移动项目以后，需要同步修改任务的运行路径。</li>
 </ul>
 <p>所以出现不推送的时候，可以先看日志、机器人接口和计划任务路径，不一定是爬虫又坏了（？</p>
-<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>这次补写文章时，把项目原有的20项测试重新跑了一遍，全部通过。商品解析、稀有标注、周末分类、去重，以及整点等待和低负载跳过都有对应检查。</p>
+<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>工具已整理成 Windows 和 Linux 下载包，安装和配置方法见：<a href="/2026/10/11/%E8%BF%9C%E8%A1%8C%E5%95%86%E4%BA%BAQQ%E6%8F%90%E9%86%92%E5%B7%A5%E5%85%B7%EF%BC%9AWindows%E5%92%8CLinux%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/">远行商人QQ提醒工具：Windows和Linux使用说明</a>。</p>
+<p>这次补写文章时，把项目原有的20项测试重新跑了一遍，全部通过。商品解析、稀有标注、周末分类、去重，以及整点等待和低负载跳过都有对应检查。</p>
 <p>这些是程序逻辑的测试，第三方源站以后的更新仍然要另外留意。电脑关机、休眠，或者机器人 QQ 掉线，也就收不到新的提醒了。</p>
 <p>本文的查询页截图保存在博客本地，随网站一起发布。商品和活动规则以后可能变化，这里主要记录当时的做法。</p>
 <p>从“想知道商人卖什么”到最后给自己加了一套提醒，顺手也踩了不少坑。</p>
@@ -1543,6 +1544,145 @@ fs.writeFile(outpath, buf, function (err) &#123;
         <tag>爬虫</tag>
         <tag>QQ机器人</tag>
         <tag>洛克王国世界</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>远行商人QQ提醒工具：Windows和Linux使用说明</title>
+    <url>/2026/10/11/%E8%BF%9C%E8%A1%8C%E5%95%86%E4%BA%BAQQ%E6%8F%90%E9%86%92%E5%B7%A5%E5%85%B7%EF%BC%9AWindows%E5%92%8CLinux%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/</url>
+    <content><![CDATA[<h3 id="开端"><a href="#开端" class="headerlink" title="开端"></a>开端</h3><p>上一篇 <a href="/2026/10/11/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8B%E6%B4%9B%E5%85%8B%E7%8E%8B%E5%9B%BD%E4%B8%96%E7%95%8C%E8%BF%9C%E8%A1%8C%E5%95%86%E4%BA%BA%E7%88%AC%E8%99%AB%E7%9A%84%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8B/">记录一下洛克王国世界远行商人爬虫的制作过程</a> 写了这个小工具是怎么做出来的，这次顺手把文件整理了一下，放到 GitHub 上，方便有需要的人直接使用。</p>
+<p>Windows 版做了一个配置窗口，Linux 版提供命令行和后台定时任务。两个打包版本都不需要另外安装 Python。</p>
+<p>使用的时候登录自己的 QQ，填写自己的接收账号即可。</p>
+<p>下面记录一下安装方法。</p>
+<span id="more"></span>
+
+<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p><a href="https://github.com/chqingkuang/chqingkuang.github.io/releases/tag/rock-merchant-qq-v1.0.0">GitHub 下载页：远行商人 QQ 提醒 v1.0.0</a></p>
+<table>
+<thead>
+<tr>
+<th align="left">文件</th>
+<th align="left">适用情况</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="https://github.com/chqingkuang/chqingkuang.github.io/releases/download/rock-merchant-qq-v1.0.0/RockMerchantQQ-v1.0.0-windows-x64.zip">Windows 版</a></td>
+<td align="left">Windows 10&#x2F;11 64位，有配置窗口</td>
+</tr>
+<tr>
+<td align="left"><a href="https://github.com/chqingkuang/chqingkuang.github.io/releases/download/rock-merchant-qq-v1.0.0/RockMerchantQQ-v1.0.0-linux-x86_64.zip">Linux 版</a></td>
+<td align="left">Linux x86_64，命令行使用</td>
+</tr>
+<tr>
+<td align="left"><a href="https://github.com/chqingkuang/chqingkuang.github.io/releases/download/rock-merchant-qq-v1.0.0/RockMerchantQQ-v1.0.0-source.zip">源码包</a></td>
+<td align="left">自己修改或用 Python 运行</td>
+</tr>
+<tr>
+<td align="left"><a href="https://github.com/chqingkuang/chqingkuang.github.io/releases/download/rock-merchant-qq-v1.0.0/SHA256SUMS.txt">SHA256 校验文件</a></td>
+<td align="left">核对下载文件</td>
+</tr>
+</tbody></table>
+<p>Linux 可执行文件在 Ubuntu 22.04 上构建，需要 <strong>x86_64 架构和 glibc 2.35 或以上</strong>。Ubuntu 22.04&#x2F;24.04 可以作为使用环境；ARM、Alpine 或较老的系统可以考虑源码方式，不要直接套用这个二进制包。</p>
+<p>源码也可以直接在 <a href="https://github.com/chqingkuang/chqingkuang.github.io/tree/main/downloads/rock-merchant-qq">GitHub 项目目录</a> 查看，使用 MIT 许可。</p>
+<p><strong>下载后先完整解压，不要在压缩包里面直接运行。</strong> 程序需要在自己的文件夹里保存配置和推送记录。</p>
+<h3 id="先准备-QQ-推送"><a href="#先准备-QQ-推送" class="headerlink" title="先准备 QQ 推送"></a>先准备 QQ 推送</h3><h4 id="1-安装-NapCat，登录自己的-QQ"><a href="#1-安装-NapCat，登录自己的-QQ" class="headerlink" title="1.安装 NapCat，登录自己的 QQ"></a>1.安装 NapCat，登录自己的 QQ</h4><p>这个工具负责查商品，QQ 登录和消息发送由 NapCat 完成。</p>
+<p>先按 <a href="https://napneko.github.io/guide/boot/Shell">NapCat 官方安装说明</a> 下载对应系统的版本，启动以后，按提示完成 QQ 登录或扫码验证。</p>
+<p>建议用一个机器人 QQ 给自己的主 QQ 发消息，先加好好友。要发到 QQ 群，则让机器人加入目标群。</p>
+<p>包里没有我的 QQ 登录状态、访问令牌或者接收名单，第一次使用需要自己配置。</p>
+<h4 id="2-开启-HTTP-服务"><a href="#2-开启-HTTP-服务" class="headerlink" title="2.开启 HTTP 服务"></a>2.开启 HTTP 服务</h4><p>进入 NapCat 的 WebUI，添加并启用一个 <strong>HTTP 服务</strong>，例如：</p>
+<table>
+<thead>
+<tr>
+<th align="left">设置</th>
+<th align="left">填写内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Host</td>
+<td align="left"><code>127.0.0.1</code></td>
+</tr>
+<tr>
+<td align="left">Port</td>
+<td align="left"><code>3000</code></td>
+</tr>
+<tr>
+<td align="left">Token</td>
+<td align="left">自己设置的访问令牌</td>
+</tr>
+</tbody></table>
+<p>对应的接口地址就是：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">http://127.0.0.1:3000</span><br></pre></td></tr></table></figure>
+
+<p>如果端口被占用，就换一个空闲端口，提醒工具里也一起改。</p>
+<p><strong>注意：这里要填的是 HTTP 服务的 Token，不是登录 NapCat WebUI 的 Token。</strong> 两个名字很像，填错以后就会连不上。</p>
+<h3 id="Windows-使用方法"><a href="#Windows-使用方法" class="headerlink" title="Windows 使用方法"></a>Windows 使用方法</h3><h4 id="1-打开程序"><a href="#1-打开程序" class="headerlink" title="1.打开程序"></a>1.打开程序</h4><p>解压 Windows 包后，双击 <code>RockMerchantQQ.exe</code>。</p>
+<p>配置窗口如下：</p>
+<p><img src="/images/rock-merchant-2026/setup-window.png" class="lazyload placeholder" data-srcset="/images/rock-merchant-2026/setup-window.png" srcset="/medias/logo.png" alt="远行商人 QQ 提醒工具的 Windows 配置窗口"></p>
+<p>如果还没启动 NapCat，可以通过窗口里的说明链接安装，或者点击“打开 NapCat 登录自己的 QQ”，选择 NapCat 安装目录里的启动文件。</p>
+<p>扫码和密码验证仍然在 NapCat 中完成。</p>
+<h4 id="2-填写配置并测试"><a href="#2-填写配置并测试" class="headerlink" title="2.填写配置并测试"></a>2.填写配置并测试</h4><p>依次填写：</p>
+<ol>
+<li>HTTP 接口地址。</li>
+<li>刚刚设置的 HTTP Token。</li>
+<li>接收方式：QQ 私聊或 QQ 群。</li>
+<li>接收 QQ 号或群号，多个号码用逗号分隔。</li>
+</ol>
+<p>先点击 <strong>“检查 QQ 登录”</strong>，确认显示的是自己登录的机器人账号。</p>
+<p>然后点击 <strong>“发送测试”</strong>，接收端应该收到一条中文测试消息。只有通道正常了，再去看商品是否更新，比较方便排查问题。</p>
+<p>“预览商品”只显示当前轮次的商品，不会给 QQ 发消息。</p>
+<h4 id="3-开启自动提醒"><a href="#3-开启自动提醒" class="headerlink" title="3.开启自动提醒"></a>3.开启自动提醒</h4><p>点击 <strong>“开启自动提醒”</strong>。程序会为当前文件夹创建一个定时任务，约一分钟后首次检查，之后每五分钟检查一次。</p>
+<p>设置好以后可以关闭配置窗口，检查任务会在后台运行。<strong>NapCat 需要保持在线，Windows 用户也需要保持登录。</strong> 电脑关机或休眠期间不会查询。</p>
+<p>以后不需要了，重新打开程序，点击“关闭自动提醒”即可，配置和历史记录会保留。</p>
+<p>NapCat 的开机启动要按它自己的安装方式设置。本工具不会替你完成重启后的扫码登录。移动程序文件夹时，也要先关闭旧任务，移动后再重新开启。</p>
+<h3 id="Linux-使用方法"><a href="#Linux-使用方法" class="headerlink" title="Linux 使用方法"></a>Linux 使用方法</h3><p>Linux 版通过命令行配置；自动提醒使用当前用户的 systemd timer。</p>
+<h4 id="1-解压并配置"><a href="#1-解压并配置" class="headerlink" title="1.解压并配置"></a>1.解压并配置</h4><p>先在 Linux 上完成 NapCat 登录和 HTTP 服务配置，再进入下载文件所在的目录：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">unzip RockMerchantQQ-v1.0.0-linux-x86_64.zip</span><br><span class="line"><span class="built_in">cd</span> RockMerchantQQ-v1.0.0</span><br><span class="line"><span class="built_in">chmod</span> +x RockMerchantQQ</span><br><span class="line">./RockMerchantQQ --setup</span><br></pre></td></tr></table></figure>
+
+<p>按提示输入 HTTP 地址、Token、接收类型和号码。接收类型填 <code>private</code> 表示私聊，<code>group</code> 表示群消息；多个号码用逗号分隔。</p>
+<p>输入 Token 时不会回显字符，正常输入后按回车即可。</p>
+<h4 id="2-检查和测试"><a href="#2-检查和测试" class="headerlink" title="2.检查和测试"></a>2.检查和测试</h4><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">./RockMerchantQQ --check-login</span><br><span class="line">./RockMerchantQQ --test-message</span><br><span class="line">./RockMerchantQQ --preview</span><br></pre></td></tr></table></figure>
+
+<p>这三个命令分别用于检查机器人登录、发送测试消息、预览商品。</p>
+<h4 id="3-开启后台定时检查"><a href="#3-开启后台定时检查" class="headerlink" title="3.开启后台定时检查"></a>3.开启后台定时检查</h4><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">./RockMerchantQQ --enable-auto</span><br><span class="line">./RockMerchantQQ --status</span><br></pre></td></tr></table></figure>
+
+<p>定时任务保存在当前用户的 <code>~/.config/systemd/user/</code> 目录，不需要把提醒程序作为 root 运行。</p>
+<p>要在注销后继续运行，可以让系统管理员为自己的用户启用 lingering，例如：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">loginctl enable-linger <span class="string">&quot;<span class="variable">$USER</span>&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>这里处理的是提醒程序的定时任务，NapCat 也需要独立保持运行。</p>
+<p>关闭自动提醒：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">./RockMerchantQQ --disable-auto</span><br></pre></td></tr></table></figure>
+
+<p>没有 systemd 的环境，可以用自己已有的调度方式，每五分钟运行一次：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">/完整路径/RockMerchantQQ --config /完整路径/config.json --once</span><br></pre></td></tr></table></figure>
+
+<p>选择一种调度方式即可，避免重复启动。</p>
+<h3 id="一些说明"><a href="#一些说明" class="headerlink" title="一些说明"></a>一些说明</h3><h4 id="1-什么时候会发消息"><a href="#1-什么时候会发消息" class="headerlink" title="1.什么时候会发消息"></a>1.什么时候会发消息</h4><p>商品轮次按北京时间计算，分别是 08:00、12:00、16:00、20:00。凌晨 00:00-08:00 不发送商品提醒。</p>
+<p>每五分钟检查一次，不代表每五分钟都发一条。没有新内容时会跳过；如果源站还没更新，也不会强行发一份空列表。</p>
+<p><code>★</code> 标注的是根据源站和本地规则判断的稀有或高价值商品，可以在配置文件里修改名单。</p>
+<h4 id="2-低负载和订阅"><a href="#2-低负载和订阅" class="headerlink" title="2.低负载和订阅"></a>2.低负载和订阅</h4><p>低负载模式默认开启：同一天同一轮成功发送后，就不再重复抓商品。</p>
+<p>代价是不会继续检查这一轮后续的修正。希望持续检查的话，可以在 Windows 窗口取消勾选，Linux 则把 <code>config.json</code> 中的 <code>monitor.low_power_mode</code> 改成 <code>false</code>。</p>
+<p>好友自助订阅默认关闭，且只适用于私聊推送。开启以后，好友私聊机器人发送“开启推送”，会在下一次检查时加入名单。</p>
+<h4 id="3-文件保存在哪里"><a href="#3-文件保存在哪里" class="headerlink" title="3.文件保存在哪里"></a>3.文件保存在哪里</h4><p>配置、推送记录和日志都放在程序旁边：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">config.json            自己的配置</span><br><span class="line">data/state.json        已推送的记录</span><br><span class="line">logs/merchant_bot.log  运行日志</span><br></pre></td></tr></table></figure>
+
+<p>分享给别人时，直接分享上面的原始下载包即可。自己运行后生成的配置和 NapCat 登录目录就不要一起打包了。</p>
+<h4 id="4-收不到消息先检查什么"><a href="#4-收不到消息先检查什么" class="headerlink" title="4.收不到消息先检查什么"></a>4.收不到消息先检查什么</h4><p>先点“检查 QQ 登录”，再发一条测试消息。</p>
+<p>如果登录检查失败，先检查 NapCat 是否在线、HTTP 服务是否开启，以及地址、端口和 Token 有没有填错。</p>
+<p>如果测试消息正常，但没有商品提醒，就检查北京时间、源站更新情况和日志。刚改完接收名单时，本轮推送记录也不会自动清空，可以先用测试消息确认，新一轮再正常接收。</p>
+<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>这次把原来只适合自己电脑的文件整理成了公开版本，去掉固定账号和本机路径，也补上了配置入口、两个系统的打包和使用说明。</p>
+<p>Windows 和 Linux 分别构建，打包后也会运行自检。源码和下载文件都放在 GitHub，后面有需要再继续调整。</p>
+<p>详细说明也放在压缩包里的 <code>README.md</code>，下载后可以随时查看。</p>
+<p>自己用自己的 QQ 收提醒，省得每天再去翻商品列表了。</p>
+<p>以上。</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>爬虫</tag>
+        <tag>QQ机器人</tag>
+        <tag>洛克王国世界</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
 </search>

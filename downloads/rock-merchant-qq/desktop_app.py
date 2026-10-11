@@ -47,6 +47,8 @@ def make_settings(base: dict, url: str, token: str, recipients: str,
         raise ValueError("请先填写接收消息的 QQ 号或群号。")
     if target_type not in ("private", "group"):
         raise ValueError("接收类型只能是 private 或 group。")
+    if subscribe and target_type == "group":
+        raise ValueError("好友订阅适用于 QQ 私聊推送；群推送时请取消订阅选项。")
     config = copy.deepcopy(base)
     config["qq"].update(enabled=True, base_url=url, access_token=token.strip(),
                         target_type=target_type, target_id="", target_ids=targets)
@@ -196,7 +198,7 @@ def desktop_window() -> None:
     ttk.Combobox(panel, textvariable=kind, values=["QQ私聊", "QQ群"], state="readonly", width=16).grid(row=5, column=1, sticky="w")
     ttk.Label(panel, text="多个号码用逗号分隔。Token 填 NapCat 的 HTTP Token。", foreground="#666666").grid(row=7, column=1, columnspan=2, sticky="w")
     ttk.Checkbutton(panel, text="低负载：同轮成功推送后跳过抓取", variable=low_power).grid(row=8, column=0, columnspan=3, sticky="w", pady=(10, 2))
-    ttk.Checkbutton(panel, text="允许好友私聊发送“开启推送”订阅", variable=subscribe).grid(row=9, column=0, columnspan=3, sticky="w")
+    ttk.Checkbutton(panel, text="允许好友私聊发送“开启推送”订阅（仅私聊推送）", variable=subscribe).grid(row=9, column=0, columnspan=3, sticky="w")
     controls = ttk.Frame(panel)
     controls.grid(row=10, column=0, columnspan=3, sticky="ew", pady=14)
     output = scrolledtext.ScrolledText(panel, height=12, wrap="word", font=("Microsoft YaHei UI", 10))

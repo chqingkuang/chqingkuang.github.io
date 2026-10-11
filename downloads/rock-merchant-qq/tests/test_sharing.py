@@ -100,6 +100,15 @@ class SharingTests(unittest.TestCase):
         self.assertEqual(template["qq"]["target_id"], "")
         self.assertEqual(template["qq"]["access_token"], "")
 
+    def test_private_subscription_cannot_add_a_user_id_to_group_targets(self):
+        with self.assertRaises(ValueError):
+            app.make_settings(bot.DEFAULT_CONFIG, "http://localhost:3000", "",
+                              "100000001", "group", True, True)
+        config = bot.deep_merge(bot.DEFAULT_CONFIG, {"qq": {"target_type": "group", "target_ids": ["100000001"]}})
+        with patch.object(bot, "qq_request") as request:
+            self.assertEqual(bot.process_subscription_commands(config, {}, None, logging.getLogger("groups")), [])
+        request.assert_not_called()
+
 
 if __name__ == "__main__":
     unittest.main()

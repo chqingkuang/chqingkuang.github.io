@@ -835,6 +835,8 @@ def process_subscription_commands(
     qq_config = config["qq"]
     if not qq_config.get("enabled", True):
         return []
+    if qq_config.get("target_type") != "private":
+        return []
 
     try:
         result = qq_request(
