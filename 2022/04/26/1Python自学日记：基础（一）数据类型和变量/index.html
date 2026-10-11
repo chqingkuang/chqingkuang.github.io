@@ -913,7 +913,7 @@
 <p>也可以把一个变量<code>a</code>赋值给另一个变量<code>b</code>，这个操作实际上是把变量<code>b</code>指向变量<code>a</code>所指向的数据。</p>
 <details cyan open><summary pointer> 举例理解 </summary>
               <div class='content'>
-              <p>  输入</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = &#x27;ABC&#x27;</span><br><span class="line">b = a</span><br><span class="line">a = &#x27;XYZ&#x27;</span><br><span class="line">print(b)</span><br></pre></td></tr></table></figure><p>输出 <code>ABC</code></p><p>让我们一行一行地执行代码，就可以看到到底发生了什么事：</p><p>执行<code>a = &#39;ABC&#39;</code>，解释器创建了字符串<code>&#39;ABC&#39;</code>和变量<code>a</code>，并把<code>a</code>指向<code>&#39;ABC&#39;</code>：：</p><p><img src="/images/pasted-14.png" class="lazyload placeholder" data-srcset="/images/pasted-14.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p><p>执行<code>b = a</code>，解释器创建了变量<code>b</code>，并把<code>b</code>指向<code>a</code>指向的字符串<code>&#39;ABC&#39;</code>：</p><p><img src="/images/pasted-15.png" class="lazyload placeholder" data-srcset="/images/pasted-15.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"><br>执行<code>a = &#39;XYZ&#39;</code>，解释器创建了字符串’XYZ’，并把<code>a</code>的指向改为<code>&#39;XYZ&#39;</code>，但<code>b</code>并没有更改：</p><p><img src="/images/pasted-16.png" class="lazyload placeholder" data-srcset="/images/pasted-16.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p><p>所以，最后打印变量<code>b</code>的结果自然是<code>&#39;ABC&#39;</code>了。</p>
+              <p>  输入</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = &#x27;ABC&#x27;</span><br><span class="line">b = a</span><br><span class="line">a = &#x27;XYZ&#x27;</span><br><span class="line">print(b)</span><br></pre></td></tr></table></figure><p>输出 <code>ABC</code></p><p>让我们一行一行地执行代码，就可以看到到底发生了什么事：</p><p>执行<code>a = &#39;ABC&#39;</code>，解释器创建了字符串<code>&#39;ABC&#39;</code>和变量<code>a</code>，并把<code>a</code>指向<code>&#39;ABC&#39;</code>：：</p><p><img src="/images/pasted-14.png" class="lazyload placeholder" data-srcset="/images/pasted-14.png" srcset="/medias/logo.png"></p><p>执行<code>b = a</code>，解释器创建了变量<code>b</code>，并把<code>b</code>指向<code>a</code>指向的字符串<code>&#39;ABC&#39;</code>：</p><p><img src="/images/pasted-15.png" class="lazyload placeholder" data-srcset="/images/pasted-15.png" srcset="/medias/logo.png"><br>执行<code>a = &#39;XYZ&#39;</code>，解释器创建了字符串’XYZ’，并把<code>a</code>的指向改为<code>&#39;XYZ&#39;</code>，但<code>b</code>并没有更改：</p><p><img src="/images/pasted-16.png" class="lazyload placeholder" data-srcset="/images/pasted-16.png" srcset="/medias/logo.png"></p><p>所以，最后打印变量<code>b</code>的结果自然是<code>&#39;ABC&#39;</code>了。</p>
               </div>
             </details>
 
@@ -967,7 +967,7 @@
     </li>
     <li class="post-copyright-link">
     <strong>文章链接:  </strong>
-    <a href="/2022/04/26/1Python自学日记：基础（一）数据类型和变量/" target="_blank" title="Python自学日记：基础（一）数据类型和变量">https://17blog.asia/2022/04/26/1Python自学日记：基础（一）数据类型和变量/</a>
+    <a href="/2022/04/26/1Python自学日记：基础（一）数据类型和变量/" target="_blank" title="Python自学日记：基础（一）数据类型和变量">https://chqingkuang.github.io/2022/04/26/1Python自学日记：基础（一）数据类型和变量/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明:   </strong>
@@ -1604,57 +1604,36 @@
     
     <!-- 渲染左下角音乐播放器 -->
     
-      <link rel="stylesheet" href="/js/aplayer/APlayer@1.10.1.min.css">
+      
+<link rel="stylesheet" href="/js/aplayer/APlayer@1.10.1.min.css">
 <style>
-.aplayer .aplayer-lrc p {
-  
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 16px !important;
-}
-
-.aplayer .aplayer-lrc p.aplayer-lrc-current {
-  
-  font-size: 15px;
-  color: #42b983;
-}
-
-
-.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-  left: -66px !important;
-}
-
-.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-  left: 0px !important;
-}
-
-
-</style>
-<meting-js  
-  class=""
-  server="tencent"
-  type="playlist"
-  id="8434221441"
-  fixed='true'
-  autoplay='true'
-  theme='#42b983'
-  loop='all'
-  order='random'
-  preload='auto'
-  volume='0.5'
-  list-folded='true'
->
-</meting-js>
-
-<!-- <style>
-  #aplayer {
-    position: fixed;
-    left: 0;
-    bottom: 300px;
+  #blog-music-status {
+    position: fixed; bottom: 70px; left: 8px; z-index: 100;
+    max-width: calc(100vw - 32px); padding: 4px 9px; margin: 0;
+    font-size: 12px; border-radius: 4px; color: #444;
+    background: rgba(255,255,255,.95); box-shadow: 0 1px 6px #0002;
   }
-</style> -->
-<script src="https://fastly.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
-<script src="https://fastly.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+  #blog-music-fallback {
+    position: fixed; bottom: 4px; left: 4px; z-index: 99;
+    max-width: calc(100vw - 8px); padding: 4px; border-radius: 5px;
+    background: #fff; box-shadow: 0 1px 6px #0002;
+  }
+  #blog-music-fallback label { display: block; font-size: 12px; color: #444; }
+  #blog-music-fallback[hidden], #blog-music-status[hidden] { display: none; }
+  #blog-aplayer .aplayer-lrc { display: none; }
+</style>
+<div id="blog-aplayer" aria-label="背景音乐播放器"></div>
+<p id="blog-music-status" role="status">点击左下角 ▶ 播放背景音乐</p>
+
+<div id="blog-music-fallback">
+  <label for="blog-native-audio">背景音乐 · Gymnopédie No. 1 · 裸体舞曲第一号</label>
+  <audio id="blog-native-audio" controls loop preload="metadata" src="/music/gymnopedie-1.mp3"></audio>
+</div>
+
+<script type="application/json" id="blog-music-config">{"audio":[{"name":"Gymnopédie No. 1 · 裸体舞曲第一号","artist":"Erik Satie / Teknopazzo","url":"/music/gymnopedie-1.mp3","cover":"/medias/logo.png"},{"name":"Gymnopédie No. 3 · 裸体舞曲第三号","artist":"Erik Satie / Teknopazzo","url":"/music/gymnopedie-3.mp3","cover":"/medias/logo.png"}],"fixed":true,"theme":"#42b983","loop":"all","order":"random","volume":0.3,"listFolded":true}</script>
+<script src="/js/aplayer/APlayer@1.10.1.min.js"></script>
+<script src="/music/player.js?v=20261009"></script>
+
     
 
     <!-- 图片放大 -->

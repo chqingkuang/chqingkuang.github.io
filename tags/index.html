@@ -798,10 +798,10 @@
             <div class="tag-chips">
                 
                 
-                <a href="/tags/HEXO/" title="HEXO: 12">
+                <a href="/tags/HEXO/" title="HEXO: 14">
                     <span class="tag-content"
                         title="HEXO" style="background-color: #FFF;">HEXO
-                        <span class="tag-length">12</span>
+                        <span class="tag-length">14</span>
                     </span>
                 </a>
                 
@@ -841,6 +841,46 @@
                 <a href="/tags/%E5%AD%A6%E4%B9%A0/" title="学习: 1">
                     <span class="tag-content"
                         title="学习" style="background-color: #A3E4D7;">学习
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Python/" title="Python: 2">
+                    <span class="tag-content"
+                        title="Python" style="background-color: #F5EEF8;">Python
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E7%88%AC%E8%99%AB/" title="爬虫: 2">
+                    <span class="tag-content"
+                        title="爬虫" style="background-color: #D7BDE2;">爬虫
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA/" title="QQ机器人: 2">
+                    <span class="tag-content"
+                        title="QQ机器人" style="background-color: #FEF9E7;">QQ机器人
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E6%B4%9B%E5%85%8B%E7%8E%8B%E5%9B%BD%E4%B8%96%E7%95%8C/" title="洛克王国世界: 2">
+                    <span class="tag-content"
+                        title="洛克王国世界" style="background-color: #FFF;">洛克王国世界
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Linux/" title="Linux: 1">
+                    <span class="tag-content"
+                        title="Linux" style="background-color: #E8F8F5;">Linux
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -988,57 +1028,36 @@
     
     <!-- 渲染左下角音乐播放器 -->
     
-      <link rel="stylesheet" href="/js/aplayer/APlayer@1.10.1.min.css">
+      
+<link rel="stylesheet" href="/js/aplayer/APlayer@1.10.1.min.css">
 <style>
-.aplayer .aplayer-lrc p {
-  
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 16px !important;
-}
-
-.aplayer .aplayer-lrc p.aplayer-lrc-current {
-  
-  font-size: 15px;
-  color: #42b983;
-}
-
-
-.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-  left: -66px !important;
-}
-
-.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-  left: 0px !important;
-}
-
-
-</style>
-<meting-js  
-  class=""
-  server="tencent"
-  type="playlist"
-  id="8434221441"
-  fixed='true'
-  autoplay='true'
-  theme='#42b983'
-  loop='all'
-  order='random'
-  preload='auto'
-  volume='0.5'
-  list-folded='true'
->
-</meting-js>
-
-<!-- <style>
-  #aplayer {
-    position: fixed;
-    left: 0;
-    bottom: 300px;
+  #blog-music-status {
+    position: fixed; bottom: 70px; left: 8px; z-index: 100;
+    max-width: calc(100vw - 32px); padding: 4px 9px; margin: 0;
+    font-size: 12px; border-radius: 4px; color: #444;
+    background: rgba(255,255,255,.95); box-shadow: 0 1px 6px #0002;
   }
-</style> -->
-<script src="https://fastly.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
-<script src="https://fastly.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+  #blog-music-fallback {
+    position: fixed; bottom: 4px; left: 4px; z-index: 99;
+    max-width: calc(100vw - 8px); padding: 4px; border-radius: 5px;
+    background: #fff; box-shadow: 0 1px 6px #0002;
+  }
+  #blog-music-fallback label { display: block; font-size: 12px; color: #444; }
+  #blog-music-fallback[hidden], #blog-music-status[hidden] { display: none; }
+  #blog-aplayer .aplayer-lrc { display: none; }
+</style>
+<div id="blog-aplayer" aria-label="背景音乐播放器"></div>
+<p id="blog-music-status" role="status">点击左下角 ▶ 播放背景音乐</p>
+
+<div id="blog-music-fallback">
+  <label for="blog-native-audio">背景音乐 · Gymnopédie No. 1 · 裸体舞曲第一号</label>
+  <audio id="blog-native-audio" controls loop preload="metadata" src="/music/gymnopedie-1.mp3"></audio>
+</div>
+
+<script type="application/json" id="blog-music-config">{"audio":[{"name":"Gymnopédie No. 1 · 裸体舞曲第一号","artist":"Erik Satie / Teknopazzo","url":"/music/gymnopedie-1.mp3","cover":"/medias/logo.png"},{"name":"Gymnopédie No. 3 · 裸体舞曲第三号","artist":"Erik Satie / Teknopazzo","url":"/music/gymnopedie-3.mp3","cover":"/medias/logo.png"}],"fixed":true,"theme":"#42b983","loop":"all","order":"random","volume":0.3,"listFolded":true}</script>
+<script src="/js/aplayer/APlayer@1.10.1.min.js"></script>
+<script src="/music/player.js?v=20261009"></script>
+
     
 
     <!-- 图片放大 -->

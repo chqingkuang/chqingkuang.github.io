@@ -864,9 +864,9 @@
 <h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>现在计算机系统通用的字符编码工作方式：</p>
 <p>内存中，统一使用Unicode编码，当需要保存到硬盘或者需要传输的时候，就转换为UTF-8编码。</p>
 <p><em>用记事本编辑的时候，从文件读取的UTF-8字符被转换为Unicode字符到内存里，编辑完成后，保存的时候再把Unicode转换为UTF-8保存到文件：</em></p>
-<p><img src="/images/pasted-33.png" class="lazyload placeholder" data-srcset="/images/pasted-33.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="upload successful"></p>
+<p><img src="/images/pasted-33.png" class="lazyload placeholder" data-srcset="/images/pasted-33.png" srcset="/medias/logo.png" alt="upload successful"></p>
 <p><em>浏览网页的时候，服务器会把动态生成的Unicode内容转换为UTF-8再传输到浏览器：</em></p>
-<p><img src="/images/pasted-34.png" class="lazyload placeholder" data-srcset="/images/pasted-34.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="upload successful"></p>
+<p><img src="/images/pasted-34.png" class="lazyload placeholder" data-srcset="/images/pasted-34.png" srcset="/medias/logo.png" alt="upload successful"></p>
 <h3 id="Python的字符串"><a href="#Python的字符串" class="headerlink" title="Python的字符串"></a>Python的字符串</h3><p>Python 3版本中，字符串是以Unicode编码的。支持多语言。</p>
 <p>对于单个字符的编码，</p>
 <p>Python提供了<code>ord()</code>函数获取字符的整数表示，</p>
@@ -912,9 +912,9 @@
 <p>第一行注释是为了告诉Linux&#x2F;OS X系统，这是一个Python可执行程序，Windows系统会忽略这个注释；</p>
 <p>第二行注释是为了告诉Python解释器，按照UTF-8编码读取源代码，否则，你在源代码中写的中文输出可能会有乱码。</p>
 <p>申明了UTF-8编码并不意味着你的<code>.py</code>文件就是UTF-8编码的，必须并且要确保文本编辑器正在使用UTF-8 without BOM编码：</p>
-<p><img src="/images/pasted-35.png" class="lazyload placeholder" data-srcset="/images/pasted-35.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="upload successful"></p>
+<p><img src="/images/pasted-35.png" class="lazyload placeholder" data-srcset="/images/pasted-35.png" srcset="/medias/logo.png" alt="upload successful"></p>
 <p>如果<code>.py</code>文件本身使用UTF-8编码，并且也申明了<code># -*- coding: utf-8 -*-</code>，打开命令提示符测试就可以正常显示中文：</p>
-<p><img src="/images/pasted-36.png" class="lazyload placeholder" data-srcset="/images/pasted-36.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif" alt="upload successful"></p>
+<p><img src="/images/pasted-36.png" class="lazyload placeholder" data-srcset="/images/pasted-36.png" srcset="/medias/logo.png" alt="upload successful"></p>
 <h3 id="格式化"><a href="#格式化" class="headerlink" title="格式化"></a>格式化</h3><p>我们经常会输出类似<code>&#39;亲爱的xxx你好！你xx月的话费是xx，余额是xx&#39;</code>之类的字符串，而xxx的内容都是根据变量变化的，所以，需要一种简便的格式化字符串的方式。</p>
 <h4 id="占位符"><a href="#占位符" class="headerlink" title="占位符"></a>占位符</h4><p>在Python中，采用的格式化方式和C语言是一致的，用<code>%</code>实现，举例如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; &#x27;Hello, %s&#x27; % &#x27;world&#x27;</span><br><span class="line">&#x27;Hello, world&#x27;</span><br><span class="line">&gt;&gt;&gt; &#x27;Hi, %s, you have $%d.&#x27; % (&#x27;Michael&#x27;, 1000000)</span><br><span class="line">&#x27;Hi, Michael, you have $1000000.&#x27;</span><br></pre></td></tr></table></figure>
@@ -998,7 +998,7 @@
     </li>
     <li class="post-copyright-link">
     <strong>文章链接:  </strong>
-    <a href="/2022/04/27/Python自学日记：基础（二）数据类型和变量/" target="_blank" title="Python自学日记：基础（二）字符串和编码">https://17blog.asia/2022/04/27/Python自学日记：基础（二）数据类型和变量/</a>
+    <a href="/2022/04/27/Python自学日记：基础（二）数据类型和变量/" target="_blank" title="Python自学日记：基础（二）字符串和编码">https://chqingkuang.github.io/2022/04/27/Python自学日记：基础（二）数据类型和变量/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明:   </strong>
@@ -1632,57 +1632,36 @@
     
     <!-- 渲染左下角音乐播放器 -->
     
-      <link rel="stylesheet" href="/js/aplayer/APlayer@1.10.1.min.css">
+      
+<link rel="stylesheet" href="/js/aplayer/APlayer@1.10.1.min.css">
 <style>
-.aplayer .aplayer-lrc p {
-  
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 16px !important;
-}
-
-.aplayer .aplayer-lrc p.aplayer-lrc-current {
-  
-  font-size: 15px;
-  color: #42b983;
-}
-
-
-.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-  left: -66px !important;
-}
-
-.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-  left: 0px !important;
-}
-
-
-</style>
-<meting-js  
-  class=""
-  server="tencent"
-  type="playlist"
-  id="8434221441"
-  fixed='true'
-  autoplay='true'
-  theme='#42b983'
-  loop='all'
-  order='random'
-  preload='auto'
-  volume='0.5'
-  list-folded='true'
->
-</meting-js>
-
-<!-- <style>
-  #aplayer {
-    position: fixed;
-    left: 0;
-    bottom: 300px;
+  #blog-music-status {
+    position: fixed; bottom: 70px; left: 8px; z-index: 100;
+    max-width: calc(100vw - 32px); padding: 4px 9px; margin: 0;
+    font-size: 12px; border-radius: 4px; color: #444;
+    background: rgba(255,255,255,.95); box-shadow: 0 1px 6px #0002;
   }
-</style> -->
-<script src="https://fastly.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
-<script src="https://fastly.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+  #blog-music-fallback {
+    position: fixed; bottom: 4px; left: 4px; z-index: 99;
+    max-width: calc(100vw - 8px); padding: 4px; border-radius: 5px;
+    background: #fff; box-shadow: 0 1px 6px #0002;
+  }
+  #blog-music-fallback label { display: block; font-size: 12px; color: #444; }
+  #blog-music-fallback[hidden], #blog-music-status[hidden] { display: none; }
+  #blog-aplayer .aplayer-lrc { display: none; }
+</style>
+<div id="blog-aplayer" aria-label="背景音乐播放器"></div>
+<p id="blog-music-status" role="status">点击左下角 ▶ 播放背景音乐</p>
+
+<div id="blog-music-fallback">
+  <label for="blog-native-audio">背景音乐 · Gymnopédie No. 1 · 裸体舞曲第一号</label>
+  <audio id="blog-native-audio" controls loop preload="metadata" src="/music/gymnopedie-1.mp3"></audio>
+</div>
+
+<script type="application/json" id="blog-music-config">{"audio":[{"name":"Gymnopédie No. 1 · 裸体舞曲第一号","artist":"Erik Satie / Teknopazzo","url":"/music/gymnopedie-1.mp3","cover":"/medias/logo.png"},{"name":"Gymnopédie No. 3 · 裸体舞曲第三号","artist":"Erik Satie / Teknopazzo","url":"/music/gymnopedie-3.mp3","cover":"/medias/logo.png"}],"fixed":true,"theme":"#42b983","loop":"all","order":"random","volume":0.3,"listFolded":true}</script>
+<script src="/js/aplayer/APlayer@1.10.1.min.js"></script>
+<script src="/music/player.js?v=20261009"></script>
+
     
 
     <!-- 图片放大 -->

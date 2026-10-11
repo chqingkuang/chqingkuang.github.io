@@ -834,16 +834,16 @@
     <article class="post post-detail">
       <div class="post-content">
         <h3 id="开端"><a href="#开端" class="headerlink" title="开端"></a>开端</h3><p>今天收到信息，之前在阿里云购买的域名已经到期，续费太贵于是准备换新域名了。</p>
-<p><img src="/images/pasted-53.png" class="lazyload placeholder" data-srcset="/images/pasted-53.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
-<p><img src="/images/pasted-54.png" class="lazyload placeholder" data-srcset="/images/pasted-54.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p><img src="/images/pasted-53.png" class="lazyload placeholder" data-srcset="/images/pasted-53.png" srcset="/medias/logo.png"></p>
+<p><img src="/images/pasted-54.png" class="lazyload placeholder" data-srcset="/images/pasted-54.png" srcset="/medias/logo.png"></p>
 <h3 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h3><h5 id="修改-config-yml文件"><a href="#修改-config-yml文件" class="headerlink" title="修改_config.yml文件"></a>修改_config.yml文件</h5><p>打开hexo目录下的_config.yml文件，找到URL，将其指向域名地址，我的是：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># URL</span><br><span class="line">## Set your site url here. For example, if you use GitHub Page, set url as &#x27;https://username.github.io/project&#x27;</span><br><span class="line">url: https://17blog.top/</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br><span class="line">pretty_urls:</span><br><span class="line">  trailing_index: true # Set to false to remove trailing &#x27;index.html&#x27; from permalinks</span><br><span class="line">  trailing_html: true # Set to false to remove trailing &#x27;.html&#x27; from permalinks</span><br></pre></td></tr></table></figure>
 <h5 id="修改CNAME文件"><a href="#修改CNAME文件" class="headerlink" title="修改CNAME文件"></a>修改CNAME文件</h5><p>打开hexo&#x2F;source目录下的CNAME文件（如果没有请新建）</p>
 <p>在其中写入你的域名地址即可。</p>
 <p>或者直接在github项目setting里面Custom domain更改</p>
-<p><img src="/images/pasted-52.png" class="lazyload placeholder" data-srcset="/images/pasted-52.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p><img src="/images/pasted-52.png" class="lazyload placeholder" data-srcset="/images/pasted-52.png" srcset="/medias/logo.png"></p>
 <h5 id="在阿里云重新购买域名并解析"><a href="#在阿里云重新购买域名并解析" class="headerlink" title="在阿里云重新购买域名并解析"></a>在阿里云重新购买域名并解析</h5><p>购买新域名后，删掉原域名解析，在新域名解析界面重新添加</p>
-<p><img src="/images/pasted-55.png" class="lazyload placeholder" data-srcset="/images/pasted-55.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p><img src="/images/pasted-55.png" class="lazyload placeholder" data-srcset="/images/pasted-55.png" srcset="/medias/logo.png"></p>
 <h5 id="添加备案号，如果有的话"><a href="#添加备案号，如果有的话" class="headerlink" title="添加备案号，如果有的话"></a>添加备案号，如果有的话</h5><p>打开主题目录下\layout_partials\footer.swig文件。</p>
 <p>在底部加入一行：<br><a target="_blank" rel="noopener" href="http://www.miitbeian.gov.cn/">苏ICP备XXXXXXXX号</a></p>
 <h5 id="Deploy改动到github"><a href="#Deploy改动到github" class="headerlink" title="Deploy改动到github"></a>Deploy改动到github</h5><p>等待十分钟左右，域名更改成功。</p>
@@ -871,7 +871,7 @@
     </li>
     <li class="post-copyright-link">
     <strong>文章链接:  </strong>
-    <a href="/2023/02/23/记录一下HEXO博客更新域名过程/" target="_blank" title="记录一下HEXO博客更新域名过程">https://17blog.asia/2023/02/23/记录一下HEXO博客更新域名过程/</a>
+    <a href="/2023/02/23/记录一下HEXO博客更新域名过程/" target="_blank" title="记录一下HEXO博客更新域名过程">https://chqingkuang.github.io/2023/02/23/记录一下HEXO博客更新域名过程/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明:   </strong>
@@ -1509,57 +1509,36 @@
     
     <!-- 渲染左下角音乐播放器 -->
     
-      <link rel="stylesheet" href="/js/aplayer/APlayer@1.10.1.min.css">
+      
+<link rel="stylesheet" href="/js/aplayer/APlayer@1.10.1.min.css">
 <style>
-.aplayer .aplayer-lrc p {
-  
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 16px !important;
-}
-
-.aplayer .aplayer-lrc p.aplayer-lrc-current {
-  
-  font-size: 15px;
-  color: #42b983;
-}
-
-
-.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-  left: -66px !important;
-}
-
-.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-  left: 0px !important;
-}
-
-
-</style>
-<meting-js  
-  class=""
-  server="tencent"
-  type="playlist"
-  id="8434221441"
-  fixed='true'
-  autoplay='true'
-  theme='#42b983'
-  loop='all'
-  order='random'
-  preload='auto'
-  volume='0.5'
-  list-folded='true'
->
-</meting-js>
-
-<!-- <style>
-  #aplayer {
-    position: fixed;
-    left: 0;
-    bottom: 300px;
+  #blog-music-status {
+    position: fixed; bottom: 70px; left: 8px; z-index: 100;
+    max-width: calc(100vw - 32px); padding: 4px 9px; margin: 0;
+    font-size: 12px; border-radius: 4px; color: #444;
+    background: rgba(255,255,255,.95); box-shadow: 0 1px 6px #0002;
   }
-</style> -->
-<script src="https://fastly.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
-<script src="https://fastly.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+  #blog-music-fallback {
+    position: fixed; bottom: 4px; left: 4px; z-index: 99;
+    max-width: calc(100vw - 8px); padding: 4px; border-radius: 5px;
+    background: #fff; box-shadow: 0 1px 6px #0002;
+  }
+  #blog-music-fallback label { display: block; font-size: 12px; color: #444; }
+  #blog-music-fallback[hidden], #blog-music-status[hidden] { display: none; }
+  #blog-aplayer .aplayer-lrc { display: none; }
+</style>
+<div id="blog-aplayer" aria-label="背景音乐播放器"></div>
+<p id="blog-music-status" role="status">点击左下角 ▶ 播放背景音乐</p>
+
+<div id="blog-music-fallback">
+  <label for="blog-native-audio">背景音乐 · Gymnopédie No. 1 · 裸体舞曲第一号</label>
+  <audio id="blog-native-audio" controls loop preload="metadata" src="/music/gymnopedie-1.mp3"></audio>
+</div>
+
+<script type="application/json" id="blog-music-config">{"audio":[{"name":"Gymnopédie No. 1 · 裸体舞曲第一号","artist":"Erik Satie / Teknopazzo","url":"/music/gymnopedie-1.mp3","cover":"/medias/logo.png"},{"name":"Gymnopédie No. 3 · 裸体舞曲第三号","artist":"Erik Satie / Teknopazzo","url":"/music/gymnopedie-3.mp3","cover":"/medias/logo.png"}],"fixed":true,"theme":"#42b983","loop":"all","order":"random","volume":0.3,"listFolded":true}</script>
+<script src="/js/aplayer/APlayer@1.10.1.min.js"></script>
+<script src="/music/player.js?v=20261009"></script>
+
     
 
     <!-- 图片放大 -->

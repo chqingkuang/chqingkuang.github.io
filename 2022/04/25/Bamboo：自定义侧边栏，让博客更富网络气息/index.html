@@ -960,7 +960,7 @@
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">widget_library_sticky:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">class_name:</span> <span class="string">testWidget</span></span><br><span class="line">    <span class="attr">id_name:</span> <span class="string">testWidget</span></span><br><span class="line">    <span class="attr">order:</span> <span class="number">-1</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">微博热搜</span></span><br><span class="line">    <span class="attr">icon:</span> <span class="string">fab</span> <span class="string">fa-weibo</span></span><br><span class="line">    <span class="attr">icon_color:</span> <span class="string">&#x27;#d63130&#x27;</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">http://baidu.com</span></span><br><span class="line">    <span class="attr">background:</span> <span class="string">&#x27;#fff&#x27;</span></span><br><span class="line">    <span class="attr">html:</span> <span class="string">&#x27;</span></span><br><span class="line"><span class="string">      &lt;div id=&quot;myWeibo&quot;&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">      &lt;!-- 如果不要滚动，则去掉 vue-seamless-scroll标签就行了，这个插件使用cdn向左向右滚动好像有问题 --&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">        &lt;vue-seamless-scroll</span></span><br><span class="line"><span class="string">          :data=&quot;content&quot;</span></span><br><span class="line"><span class="string">          :class-option=&quot;classOption&quot;</span></span><br><span class="line"><span class="string">          class=&quot;warp&quot;</span></span><br><span class="line"><span class="string">        &gt;</span></span><br><span class="line"><span class="string">          &lt;div class=&quot;weibo-container&quot; v-for=&quot;(item, index) in content&quot; :key=&quot;index&quot;&gt;</span></span><br><span class="line"><span class="string">            &lt;div class=&quot;left&quot;&gt;</span></span><br><span class="line"><span class="string">              &lt;div class=&quot;order&quot; :class=&quot;&#123; red: index&lt;=2 &#125;&quot;&gt;<span class="template-variable">&#123;&#123;index + 1&#125;&#125;</span>&lt;/div&gt;</span></span><br><span class="line"><span class="string">              &lt;div class=&quot;name&quot;&gt;&lt;a :href=&quot;item.url&quot; target=&quot;_blank&quot;&gt;<span class="template-variable">&#123;&#123;item.name&#125;&#125;</span>&lt;/a&gt;&lt;/div&gt;</span></span><br><span class="line"><span class="string">            &lt;/div&gt;</span></span><br><span class="line"><span class="string">            &lt;div class=&quot;hot&quot;&gt;<span class="template-variable">&#123;&#123;item.hot&#125;&#125;</span>&lt;/div&gt;</span></span><br><span class="line"><span class="string">          &lt;/div&gt;</span></span><br><span class="line"><span class="string">        &lt;/vue-seamless-scroll&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">      &lt;script src=&quot;/weibo/index.js&quot;&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="string">      &lt;link href=&quot;/weibo/index.css&quot; rel=&quot;stylesheet&quot;&gt;</span></span><br><span class="line"><span class="string">    &#x27;</span></span><br></pre></td></tr></table></figure>
 
 <p>这样，热搜侧边栏也弄好了，如果不要热搜榜滚动的话，自己去掉<code>&lt;vue-seamless-scroll&gt;&lt;/vue-seamless-scroll&gt;</code>这个html标签就行了。</p>
-<p><img src="/images/pasted-11.png" class="lazyload placeholder" data-srcset="/images/pasted-11.png" srcset="https://s2.loli.net/2022/04/26/5XnUtJbPTxFVSiz.gif"></p>
+<p><img src="/images/pasted-11.png" class="lazyload placeholder" data-srcset="/images/pasted-11.png" srcset="/medias/logo.png"></p>
 <p>本文部分转载于<a target="_blank" rel="noopener" href="https://yuang01.gitee.io/post/hexo-theme-bamboo/sidebar/">https://yuang01.gitee.io/post/hexo-theme-bamboo/sidebar/</a></p>
 <p>想具体了解请移步原文</p>
 
@@ -984,7 +984,7 @@
     </li>
     <li class="post-copyright-link">
     <strong>文章链接:  </strong>
-    <a href="/2022/04/25/Bamboo：自定义侧边栏，让博客更富网络气息/" target="_blank" title="Bamboo：自定义侧边栏，让博客更富网络气息">https://17blog.asia/2022/04/25/Bamboo：自定义侧边栏，让博客更富网络气息/</a>
+    <a href="/2022/04/25/Bamboo：自定义侧边栏，让博客更富网络气息/" target="_blank" title="Bamboo：自定义侧边栏，让博客更富网络气息">https://chqingkuang.github.io/2022/04/25/Bamboo：自定义侧边栏，让博客更富网络气息/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明:   </strong>
@@ -1621,57 +1621,36 @@
     
     <!-- 渲染左下角音乐播放器 -->
     
-      <link rel="stylesheet" href="/js/aplayer/APlayer@1.10.1.min.css">
+      
+<link rel="stylesheet" href="/js/aplayer/APlayer@1.10.1.min.css">
 <style>
-.aplayer .aplayer-lrc p {
-  
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 16px !important;
-}
-
-.aplayer .aplayer-lrc p.aplayer-lrc-current {
-  
-  font-size: 15px;
-  color: #42b983;
-}
-
-
-.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-  left: -66px !important;
-}
-
-.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-  left: 0px !important;
-}
-
-
-</style>
-<meting-js  
-  class=""
-  server="tencent"
-  type="playlist"
-  id="8434221441"
-  fixed='true'
-  autoplay='true'
-  theme='#42b983'
-  loop='all'
-  order='random'
-  preload='auto'
-  volume='0.5'
-  list-folded='true'
->
-</meting-js>
-
-<!-- <style>
-  #aplayer {
-    position: fixed;
-    left: 0;
-    bottom: 300px;
+  #blog-music-status {
+    position: fixed; bottom: 70px; left: 8px; z-index: 100;
+    max-width: calc(100vw - 32px); padding: 4px 9px; margin: 0;
+    font-size: 12px; border-radius: 4px; color: #444;
+    background: rgba(255,255,255,.95); box-shadow: 0 1px 6px #0002;
   }
-</style> -->
-<script src="https://fastly.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
-<script src="https://fastly.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+  #blog-music-fallback {
+    position: fixed; bottom: 4px; left: 4px; z-index: 99;
+    max-width: calc(100vw - 8px); padding: 4px; border-radius: 5px;
+    background: #fff; box-shadow: 0 1px 6px #0002;
+  }
+  #blog-music-fallback label { display: block; font-size: 12px; color: #444; }
+  #blog-music-fallback[hidden], #blog-music-status[hidden] { display: none; }
+  #blog-aplayer .aplayer-lrc { display: none; }
+</style>
+<div id="blog-aplayer" aria-label="背景音乐播放器"></div>
+<p id="blog-music-status" role="status">点击左下角 ▶ 播放背景音乐</p>
+
+<div id="blog-music-fallback">
+  <label for="blog-native-audio">背景音乐 · Gymnopédie No. 1 · 裸体舞曲第一号</label>
+  <audio id="blog-native-audio" controls loop preload="metadata" src="/music/gymnopedie-1.mp3"></audio>
+</div>
+
+<script type="application/json" id="blog-music-config">{"audio":[{"name":"Gymnopédie No. 1 · 裸体舞曲第一号","artist":"Erik Satie / Teknopazzo","url":"/music/gymnopedie-1.mp3","cover":"/medias/logo.png"},{"name":"Gymnopédie No. 3 · 裸体舞曲第三号","artist":"Erik Satie / Teknopazzo","url":"/music/gymnopedie-3.mp3","cover":"/medias/logo.png"}],"fixed":true,"theme":"#42b983","loop":"all","order":"random","volume":0.3,"listFolded":true}</script>
+<script src="/js/aplayer/APlayer@1.10.1.min.js"></script>
+<script src="/music/player.js?v=20261009"></script>
+
     
 
     <!-- 图片放大 -->

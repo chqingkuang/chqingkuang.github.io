@@ -1,37 +1,44 @@
-.weibo-container {
-  width: 100%;
+#myWeibo .weibo-list {
+  max-height: 300px;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#myWeibo .weibo-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 30px;
+  font-size: 12px;
   line-height: 30px;
+}
+#myWeibo .order { color: #b96d00; min-width: 20px; }
+#myWeibo .red { color: #d63130; }
+#myWeibo .name {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: inherit;
+}
+#myWeibo .name:hover { color: #d63130; text-decoration: underline; }
+#myWeibo .hot { white-space: nowrap; color: #777; }
+#myWeibo .weibo-status { margin: 4px 0 8px; font-size: 12px; color: #777; }
+#myWeibo .weibo-actions {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
   font-size: 12px;
-  height: 30px;
 }
-.weibo-container .left {
-  display: flex;
+#myWeibo button {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: transparent;
+  color: inherit;
+  padding: 2px 8px;
+  cursor: pointer;
 }
-.weibo-container .name {
-  margin-left: 5px;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
-  overflow: hidden;
-}
-#myWeibo .warp {
-  height: 300px;
-  width: 100%;
-  margin: 0 auto;
-  overflow: hidden;
-}
-.weibo-container .order {
-  color: #fe962e;
-}
-.weibo-container .name a{
-  color: black;
-}
-.weibo-container .name a:hover {
-  text-decoration: underline;
-  color: red;
-}
-.weibo-container .red {
-  color: red;
-}
+#myWeibo button:disabled { opacity: .6; cursor: wait; }
