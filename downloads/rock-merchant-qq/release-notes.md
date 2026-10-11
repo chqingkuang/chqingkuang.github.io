@@ -1,4 +1,4 @@
-洛克王国：世界远行商人 QQ 提醒 v1.0.0
+洛克王国：世界远行商人 QQ 提醒 v1.0.1
 
 - Windows x64：解压后双击 RockMerchantQQ.exe，图形配置，无需 Python。
 - Linux x86_64：解压后赋予执行权限，运行 ./RockMerchantQQ --setup；提供 systemd 用户定时任务。

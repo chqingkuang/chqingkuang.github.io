@@ -2,17 +2,17 @@
 
 自动查询远行商人当前轮次商品、价格和限购数量，用 `★` 标出稀有或高价值商品，通过使用者自己的 QQ 发送提醒。
 
-作者：十七。版本：1.0.0。MIT 许可。
+作者：十七。版本：1.0.1。MIT 许可。
 
 ## 下载
 
-[GitHub 下载页](https://github.com/chqingkuang/chqingkuang.github.io/releases/tag/rock-merchant-qq-v1.0.0)
+[GitHub 下载页](https://github.com/chqingkuang/chqingkuang.github.io/releases/tag/rock-merchant-qq-v1.0.1)
 
 | 文件 | 用途 |
 | --- | --- |
-| `RockMerchantQQ-v1.0.0-windows-x64.zip` | Windows 10/11 64位，图形界面，无需 Python |
-| `RockMerchantQQ-v1.0.0-linux-x86_64.zip` | Linux x86_64，命令行，无需 Python；在 Ubuntu 22.04 构建，要求 glibc 2.35 或以上 |
-| `RockMerchantQQ-v1.0.0-source.zip` | 完整源码，运行要求 Python 3.10 或以上 |
+| `RockMerchantQQ-v1.0.1-windows-x64.zip` | Windows 10/11 64位，图形界面，无需 Python |
+| `RockMerchantQQ-v1.0.1-linux-x86_64.zip` | Linux x86_64，命令行，无需 Python；在 Ubuntu 22.04 构建，要求 glibc 2.35 或以上 |
+| `RockMerchantQQ-v1.0.1-source.zip` | 完整源码，运行要求 Python 3.10 或以上 |
 | `SHA256SUMS.txt` | 下载文件的 SHA256 校验值 |
 
 Linux 包不适用于 ARM、Alpine/musl 或较老的 glibc。其他架构可以使用源码；源码自身不依赖第三方 Python 包。
@@ -51,8 +51,8 @@ QQ 登录由 NapCat 完成。本工具不收集 QQ 密码，不代替扫码验�
 解压后进入程序目录：
 
 ```sh
-unzip RockMerchantQQ-v1.0.0-linux-x86_64.zip
-cd RockMerchantQQ-v1.0.0
+unzip RockMerchantQQ-v1.0.1-linux-x86_64.zip
+cd RockMerchantQQ-v1.0.1
 chmod +x RockMerchantQQ
 ./RockMerchantQQ --setup
 ```

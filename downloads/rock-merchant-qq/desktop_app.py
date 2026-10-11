@@ -22,7 +22,7 @@ import rock_merchant_bot as bot
 APP_DIR = bot.PROJECT_DIR
 CONFIG_PATH = APP_DIR / "config.json"
 NAPCAT_GUIDE = "https://napneko.github.io/guide/boot/Shell"
-VERSION = "1.0.0"
+VERSION = "1.0.1"
 
 
 def read_settings(config_path: Path = CONFIG_PATH) -> dict:
