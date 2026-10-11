@@ -48,7 +48,7 @@ jobs:
           timer_path = directory / 'merchant-check.timer'
           service_path.write_text(service)
           timer_path.write_text(timer)
-          subprocess.run(['systemd-analyze', 'verify', str(service_path), str(timer_path)], check=True)
+          subprocess.run(['sudo', 'systemd-analyze', 'verify', str(service_path), str(timer_path)], check=True)
           PY
       - run: python build_release.py
       - uses: actions/upload-artifact@v4

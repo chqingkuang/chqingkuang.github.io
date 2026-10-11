@@ -54,7 +54,7 @@ class SharingTests(unittest.TestCase):
         service, timer = app.linux_units(PurePosixPath('/home/demo/app space%'),
                                         PurePosixPath('/home/demo/app space%/config.json'),
                                         PurePosixPath('/home/demo/app space%/RockMerchantQQ'))
-        self.assertIn('WorkingDirectory="/home/demo/app space%%"', service)
+        self.assertIn('WorkingDirectory=/home/demo/app space%%\n', service)
         self.assertIn('"--config" "/home/demo/app space%%/config.json" "--once"', service)
         self.assertIn("OnUnitInactiveSec=5min", timer)
         with self.assertRaises(ValueError):

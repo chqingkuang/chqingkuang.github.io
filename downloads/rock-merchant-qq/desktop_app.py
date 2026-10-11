@@ -85,12 +85,15 @@ def systemd_quote(value: str) -> str:
 
 def linux_units(app_dir: Path, config_path: Path, executable: Path,
                 script_path: Path | None = None) -> tuple[str, str]:
+    working_directory = str(app_dir)
+    if "\n" in working_directory or "\r" in working_directory:
+        raise ValueError("运行路径不能包含换行。")
     command = [str(executable)]
     if script_path is not None:
         command.append(str(script_path))
     command.extend(["--config", str(config_path), "--once"])
     service = ("[Unit]\nDescription=Rock Kingdom merchant QQ reminder\n\n[Service]\n"
-               "Type=oneshot\nWorkingDirectory=" + systemd_quote(str(app_dir)) +
+               "Type=oneshot\nWorkingDirectory=" + working_directory.replace("%", "%%") +
                "\nExecStart=" + " ".join(systemd_quote(x) for x in command) +
                "\nNice=10\nTimeoutStartSec=120\n")
     timer = ("[Unit]\nDescription=Check merchant every five minutes\n\n[Timer]\n"
