@@ -853,56 +853,6 @@ fs.writeFile(outpath, buf, function (err) &#123;
       </tags>
   </entry>
   <entry>
-    <title>修复了博客背景音乐无法播放的问题</title>
-    <url>/2026/10/09/%E4%BF%AE%E5%A4%8D%E4%BA%86%E5%8D%9A%E5%AE%A2%E8%83%8C%E6%99%AF%E9%9F%B3%E4%B9%90%E6%97%A0%E6%B3%95%E6%92%AD%E6%94%BE%E7%9A%84%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<h3 id="开端"><a href="#开端" class="headerlink" title="开端"></a>开端</h3><p>之前写过一篇 <a href="/2022/04/24/%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/">为博客添加音乐播放器</a>，当时直接填上 QQ 音乐的歌单 ID 就能用了。</p>
-<p>这次恢复小站，发现播放器还能显示歌曲名字，但是点播放没有声音。</p>
-<p>本来以为又是浏览器自动播放的设置问题，检查以后发现，还真不止这个原因。</p>
-<span id="more"></span>
-
-<h4 id="1-找到问题"><a href="#1-找到问题" class="headerlink" title="1.找到问题"></a>1.找到问题</h4><p>原来的配置是：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">music:</span></span><br><span class="line">  <span class="attr">on:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">server:</span> <span class="string">tencent</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">playlist</span></span><br><span class="line">  <span class="attr">id:</span> <span class="number">8434221441</span></span><br></pre></td></tr></table></figure>
-
-<p>主题通过 Meting 获取歌单，再交给 APlayer 播放。</p>
-<p>检查发现，<strong>歌单还能获取，四十首歌曲的信息也都在，但是播放地址返回 404。</strong></p>
-<p>也就是说，“有歌曲列表”和“歌曲能播放”是两回事。调整音量、刷新页面，或者打开自动播放，都解决不了已经失效的播放地址。</p>
-<h4 id="2-改用本地音频"><a href="#2-改用本地音频" class="headerlink" title="2.改用本地音频"></a>2.改用本地音频</h4><p>这次把背景音乐换成两首钢琴曲，音频文件直接随博客保存，不再通过原来的 QQ 音乐播放接口获取。</p>
-<p>在 <code>source</code> 下创建 <code>music</code> 文件夹，放入：</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">source/music/</span><br><span class="line">├── gymnopedie-1.mp3</span><br><span class="line">├── gymnopedie-3.mp3</span><br><span class="line">├── player.js</span><br><span class="line">└── credits.txt</span><br></pre></td></tr></table></figure>
-
-<p>这里的“本地”指的是放进博客项目，发布后由网站提供访问，不是填写自己电脑上的文件路径。</p>
-<p>例如文件放在 <code>source/music/gymnopedie-1.mp3</code>，网页中使用的地址就是：</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">/music/gymnopedie-1.mp3</span><br></pre></td></tr></table></figure>
-
-<p>选用的是 Erik Satie 的《裸体舞曲》第一号和第三号，录音来自 Teknopazzo，使用 CC0 授权的版本。来源和授权记录保存在 <a href="/music/credits.txt">credits.txt</a>。以后换音乐，也需要确认音频允许这样使用。</p>
-<h4 id="3-修改播放器配置"><a href="#3-修改播放器配置" class="headerlink" title="3.修改播放器配置"></a>3.修改播放器配置</h4><p>打开 <code>themes/hexo-theme-bamboo/_config.yml</code>，在 <code>music</code> 下配置本地曲目。关键部分如下：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">music:</span></span><br><span class="line">  <span class="attr">on:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">autoHide:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">fixed:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">autoplay:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">theme:</span> <span class="string">&#x27;#42b983&#x27;</span></span><br><span class="line">  <span class="attr">loop:</span> <span class="string">&#x27;all&#x27;</span></span><br><span class="line">  <span class="attr">order:</span> <span class="string">&#x27;random&#x27;</span></span><br><span class="line">  <span class="attr">preload:</span> <span class="string">&#x27;metadata&#x27;</span></span><br><span class="line">  <span class="attr">volume:</span> <span class="number">0.3</span></span><br><span class="line">  <span class="attr">listFolded:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">tracks:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">&#x27;Gymnopédie No. 1 · 裸体舞曲第一号&#x27;</span></span><br><span class="line">      <span class="attr">artist:</span> <span class="string">&#x27;Erik Satie / Teknopazzo&#x27;</span></span><br><span class="line">      <span class="attr">url:</span> <span class="string">/music/gymnopedie-1.mp3</span></span><br><span class="line">      <span class="attr">cover:</span> <span class="string">/medias/logo.png</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">&#x27;Gymnopédie No. 3 · 裸体舞曲第三号&#x27;</span></span><br><span class="line">      <span class="attr">artist:</span> <span class="string">&#x27;Erik Satie / Teknopazzo&#x27;</span></span><br><span class="line">      <span class="attr">url:</span> <span class="string">/music/gymnopedie-3.mp3</span></span><br><span class="line">      <span class="attr">cover:</span> <span class="string">/medias/logo.png</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>注意：<code>tracks</code> 是这次调整后增加的配置，旧版 Bamboo 不能只复制这一段就直接使用。</strong></p>
-<p>还要修改主题里的 <code>layout/_partial/meta/aplayer.ejs</code>，让它读取 <code>tracks</code> 并传给 APlayer，替换原来 <code>&lt;meting-js&gt;</code> 的加载方式。播放器脚本也保存在网站本地。</p>
-<p>初始化时的关键设置是：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">options.<span class="property">container</span> = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;blog-aplayer&#x27;</span>);</span><br><span class="line">options.<span class="property">autoplay</span> = <span class="literal">false</span>;</span><br><span class="line">options.<span class="property">preload</span> = <span class="string">&#x27;metadata&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> player = <span class="keyword">new</span> <span class="title class_">APlayer</span>(options);</span><br></pre></td></tr></table></figure>
-
-<p>其中 <code>options.audio</code> 使用前面 <code>tracks</code> 里的曲目。完整的初始化脚本见 <a href="/music/player.js?v=20261009">player.js</a>。</p>
-<h4 id="4-其他调整"><a href="#4-其他调整" class="headerlink" title="4.其他调整"></a>4.其他调整</h4><p>这次把 <code>autoHide</code> 关闭了，左下角的播放按钮会一直显示，省得播放器缩进去以后找不到。</p>
-<p>另外，首次打开页面需要手动点击 <strong>▶</strong>，不再依赖自动播放。正常点击后没有声音，再检查音量和文件地址。</p>
-<p>播放器保留在 Pjax 更新区域之外，所以在博客内切换文章时音乐会继续播放；刷新整个页面则需要重新点击。</p>
-<p>还保留了一份浏览器自带的音频控件，增强播放器加载失败时也有备用入口。</p>
-<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p>修复后的播放器和曲目列表：</p>
-<p><img src="/images/repairs-2026/music-restored.png" class="lazyload placeholder" data-srcset="/images/repairs-2026/music-restored.png" srcset="/medias/logo.png" alt="本地背景音乐播放器和两首钢琴曲"></p>
-<p>电脑和手机都检查了播放，两首音乐可以正常切换，进入归档再回首页也不会中断。</p>
-<p>以后添加歌曲，把允许使用的 MP3 放进 <code>source/music/</code>，在 <code>music.tracks</code> 里增加对应配置，然后重新生成、发布即可。</p>
-<p>本文截图也放在 <code>source/images/repairs-2026/</code>，封面使用主题中已有的本地图片，不再使用原来的图床。</p>
-<p>小站又有背景音乐了。以上。</p>
-]]></content>
-      <categories>
-        <category>HEXO</category>
-      </categories>
-      <tags>
-        <tag>HEXO</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>修复了侧边栏微博热搜不显示的问题</title>
     <url>/2026/10/09/%E4%BF%AE%E5%A4%8D%E4%BA%86%E4%BE%A7%E8%BE%B9%E6%A0%8F%E5%BE%AE%E5%8D%9A%E7%83%AD%E6%90%9C%E4%B8%8D%E6%98%BE%E7%A4%BA%E7%9A%84%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<h3 id="开端"><a href="#开端" class="headerlink" title="开端"></a>开端</h3><p>小站恢复访问以后，发现侧边栏的微博热搜只剩下一个标题，下面空空如也。</p>
@@ -949,6 +899,56 @@ fs.writeFile(outpath, buf, function (err) &#123;
 <p>第三方接口以后仍然可能变化，如果再次失效，可以先通过“完整榜单”去微博查看，再更换接口。</p>
 <p>本文截图保存在博客的 <code>source/images/repairs-2026/</code> 目录，随网站一起发布，不再使用原来的图床。</p>
 <p>解决。以上。</p>
+]]></content>
+      <categories>
+        <category>HEXO</category>
+      </categories>
+      <tags>
+        <tag>HEXO</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>修复了博客背景音乐无法播放的问题</title>
+    <url>/2026/10/09/%E4%BF%AE%E5%A4%8D%E4%BA%86%E5%8D%9A%E5%AE%A2%E8%83%8C%E6%99%AF%E9%9F%B3%E4%B9%90%E6%97%A0%E6%B3%95%E6%92%AD%E6%94%BE%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h3 id="开端"><a href="#开端" class="headerlink" title="开端"></a>开端</h3><p>之前写过一篇 <a href="/2022/04/24/%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/">为博客添加音乐播放器</a>，当时直接填上 QQ 音乐的歌单 ID 就能用了。</p>
+<p>这次恢复小站，发现播放器还能显示歌曲名字，但是点播放没有声音。</p>
+<p>本来以为又是浏览器自动播放的设置问题，检查以后发现，还真不止这个原因。</p>
+<span id="more"></span>
+
+<h4 id="1-找到问题"><a href="#1-找到问题" class="headerlink" title="1.找到问题"></a>1.找到问题</h4><p>原来的配置是：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">music:</span></span><br><span class="line">  <span class="attr">on:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">server:</span> <span class="string">tencent</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">playlist</span></span><br><span class="line">  <span class="attr">id:</span> <span class="number">8434221441</span></span><br></pre></td></tr></table></figure>
+
+<p>主题通过 Meting 获取歌单，再交给 APlayer 播放。</p>
+<p>检查发现，<strong>歌单还能获取，四十首歌曲的信息也都在，但是播放地址返回 404。</strong></p>
+<p>也就是说，“有歌曲列表”和“歌曲能播放”是两回事。调整音量、刷新页面，或者打开自动播放，都解决不了已经失效的播放地址。</p>
+<h4 id="2-改用本地音频"><a href="#2-改用本地音频" class="headerlink" title="2.改用本地音频"></a>2.改用本地音频</h4><p>这次把背景音乐换成两首钢琴曲，音频文件直接随博客保存，不再通过原来的 QQ 音乐播放接口获取。</p>
+<p>在 <code>source</code> 下创建 <code>music</code> 文件夹，放入：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">source/music/</span><br><span class="line">├── gymnopedie-1.mp3</span><br><span class="line">├── gymnopedie-3.mp3</span><br><span class="line">├── player.js</span><br><span class="line">└── credits.txt</span><br></pre></td></tr></table></figure>
+
+<p>这里的“本地”指的是放进博客项目，发布后由网站提供访问，不是填写自己电脑上的文件路径。</p>
+<p>例如文件放在 <code>source/music/gymnopedie-1.mp3</code>，网页中使用的地址就是：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">/music/gymnopedie-1.mp3</span><br></pre></td></tr></table></figure>
+
+<p>选用的是 Erik Satie 的《裸体舞曲》第一号和第三号，录音来自 Teknopazzo，使用 CC0 授权的版本。来源和授权记录保存在 <a href="/music/credits.txt">credits.txt</a>。以后换音乐，也需要确认音频允许这样使用。</p>
+<h4 id="3-修改播放器配置"><a href="#3-修改播放器配置" class="headerlink" title="3.修改播放器配置"></a>3.修改播放器配置</h4><p>打开 <code>themes/hexo-theme-bamboo/_config.yml</code>，在 <code>music</code> 下配置本地曲目。关键部分如下：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">music:</span></span><br><span class="line">  <span class="attr">on:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">autoHide:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">fixed:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">autoplay:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">theme:</span> <span class="string">&#x27;#42b983&#x27;</span></span><br><span class="line">  <span class="attr">loop:</span> <span class="string">&#x27;all&#x27;</span></span><br><span class="line">  <span class="attr">order:</span> <span class="string">&#x27;random&#x27;</span></span><br><span class="line">  <span class="attr">preload:</span> <span class="string">&#x27;metadata&#x27;</span></span><br><span class="line">  <span class="attr">volume:</span> <span class="number">0.3</span></span><br><span class="line">  <span class="attr">listFolded:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">tracks:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">&#x27;Gymnopédie No. 1 · 裸体舞曲第一号&#x27;</span></span><br><span class="line">      <span class="attr">artist:</span> <span class="string">&#x27;Erik Satie / Teknopazzo&#x27;</span></span><br><span class="line">      <span class="attr">url:</span> <span class="string">/music/gymnopedie-1.mp3</span></span><br><span class="line">      <span class="attr">cover:</span> <span class="string">/medias/logo.png</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">&#x27;Gymnopédie No. 3 · 裸体舞曲第三号&#x27;</span></span><br><span class="line">      <span class="attr">artist:</span> <span class="string">&#x27;Erik Satie / Teknopazzo&#x27;</span></span><br><span class="line">      <span class="attr">url:</span> <span class="string">/music/gymnopedie-3.mp3</span></span><br><span class="line">      <span class="attr">cover:</span> <span class="string">/medias/logo.png</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：<code>tracks</code> 是这次调整后增加的配置，旧版 Bamboo 不能只复制这一段就直接使用。</strong></p>
+<p>还要修改主题里的 <code>layout/_partial/meta/aplayer.ejs</code>，让它读取 <code>tracks</code> 并传给 APlayer，替换原来 <code>&lt;meting-js&gt;</code> 的加载方式。播放器脚本也保存在网站本地。</p>
+<p>初始化时的关键设置是：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">options.<span class="property">container</span> = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;blog-aplayer&#x27;</span>);</span><br><span class="line">options.<span class="property">autoplay</span> = <span class="literal">false</span>;</span><br><span class="line">options.<span class="property">preload</span> = <span class="string">&#x27;metadata&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> player = <span class="keyword">new</span> <span class="title class_">APlayer</span>(options);</span><br></pre></td></tr></table></figure>
+
+<p>其中 <code>options.audio</code> 使用前面 <code>tracks</code> 里的曲目。完整的初始化脚本见 <a href="/music/player.js?v=20261009">player.js</a>。</p>
+<h4 id="4-其他调整"><a href="#4-其他调整" class="headerlink" title="4.其他调整"></a>4.其他调整</h4><p>这次把 <code>autoHide</code> 关闭了，左下角的播放按钮会一直显示，省得播放器缩进去以后找不到。</p>
+<p>另外，首次打开页面需要手动点击 <strong>▶</strong>，不再依赖自动播放。正常点击后没有声音，再检查音量和文件地址。</p>
+<p>播放器保留在 Pjax 更新区域之外，所以在博客内切换文章时音乐会继续播放；刷新整个页面则需要重新点击。</p>
+<p>还保留了一份浏览器自带的音频控件，增强播放器加载失败时也有备用入口。</p>
+<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p>修复后的播放器和曲目列表：</p>
+<p><img src="/images/repairs-2026/music-restored.png" class="lazyload placeholder" data-srcset="/images/repairs-2026/music-restored.png" srcset="/medias/logo.png" alt="本地背景音乐播放器和两首钢琴曲"></p>
+<p>电脑和手机都检查了播放，两首音乐可以正常切换，进入归档再回首页也不会中断。</p>
+<p>以后添加歌曲，把允许使用的 MP3 放进 <code>source/music/</code>，在 <code>music.tracks</code> 里增加对应配置，然后重新生成、发布即可。</p>
+<p>本文截图也放在 <code>source/images/repairs-2026/</code>，封面使用主题中已有的本地图片，不再使用原来的图床。</p>
+<p>小站又有背景音乐了。以上。</p>
 ]]></content>
       <categories>
         <category>HEXO</category>
@@ -1424,6 +1424,125 @@ fs.writeFile(outpath, buf, function (err) &#123;
       </categories>
       <tags>
         <tag>ACG</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>记录一下洛克王国世界远行商人爬虫的制作过程</title>
+    <url>/2026/10/11/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8B%E6%B4%9B%E5%85%8B%E7%8E%8B%E5%9B%BD%E4%B8%96%E7%95%8C%E8%BF%9C%E8%A1%8C%E5%95%86%E4%BA%BA%E7%88%AC%E8%99%AB%E7%9A%84%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8B/</url>
+    <content><![CDATA[<h3 id="开端"><a href="#开端" class="headerlink" title="开端"></a>开端</h3><p>之前玩《洛克王国：世界》的时候，想做一个小工具，自动查看远行商人每轮卖什么，再把结果发到自己的 QQ。</p>
+<p>特别是棱镜球、炫彩蛋这些比较值得注意的东西，最好能单独标出来，省得每次自己去翻查询页。</p>
+<p>于是就有了这个 Python 爬虫。原本以为拿到商品列表，再发一条消息就差不多了，后来发现还要处理商品漏抓、周末特卖、重复推送，以及打游戏时的资源占用。</p>
+<p>趁着小站恢复，补记一下之前的制作过程。</p>
+<span id="more"></span>
+
+<h3 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h3><h4 id="1-先找到数据来源"><a href="#1-先找到数据来源" class="headerlink" title="1.先找到数据来源"></a>1.先找到数据来源</h4><p>最开始找到的是 <a href="https://huodong2.4399.com/yxhtools/game-store">4399 的远行商人查询工具</a>。它使用的接口能返回商品名称、价格、限购数量，以及 <code>is_worth</code> 这样的高价值标识。</p>
+<p>有现成的数据，就不用对着商品图片做识别了。</p>
+<p>后来发现，只拿这边的数据还不够完整，又加上了 <a href="https://www.onebiji.com/hykb_tools/comm/lkwgmerchant/preview.php?id=1&immgj=0">好游快爆的每日远行商人查询页</a>。解析网页里每件商品对应的轮次，再用 4399 的数据补充商品和稀有标识。</p>
+<p>下面是补写本文时截取的查询页，展示的是当时源站上的商品：</p>
+<p><img src="/images/rock-merchant-2026/merchant-query.png" class="lazyload placeholder" data-srcset="/images/rock-merchant-2026/merchant-query.png" srcset="/medias/logo.png" alt="好游快爆远行商人公开查询页"></p>
+<p><strong>这里抓取的是第三方查询工具，不是直接读取游戏客户端。</strong> 商品是否更新、数据是否完整，还是取决于源站。</p>
+<p>程序没有额外引入爬虫框架，请求和网页解析分别用 Python 自带的 <code>urllib.request</code>、<code>HTMLParser</code> 处理。对于这个小工具来说，够用就行。</p>
+<h4 id="2-按北京时间判断轮次"><a href="#2-按北京时间判断轮次" class="headerlink" title="2.按北京时间判断轮次"></a>2.按北京时间判断轮次</h4><p>项目里把一天分成四轮：</p>
+<table>
+<thead>
+<tr>
+<th align="left">轮次</th>
+<th align="left">北京时间</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">第1轮</td>
+<td align="left">08:00-12:00</td>
+</tr>
+<tr>
+<td align="left">第2轮</td>
+<td align="left">12:00-16:00</td>
+</tr>
+<tr>
+<td align="left">第3轮</td>
+<td align="left">16:00-20:00</td>
+</tr>
+<tr>
+<td align="left">第4轮</td>
+<td align="left">20:00-24:00</td>
+</tr>
+</tbody></table>
+<p>凌晨 00:00-08:00 不发送商品提醒。</p>
+<p>这里有一个小问题：电脑自己的时区不一定是北京时间。之前在 Windows 上直接使用 <code>ZoneInfo(&quot;Asia/Shanghai&quot;)</code>，还遇到了缺少时区数据库的报错。</p>
+<p>这个项目只需要处理北京时间，最后用了固定的 UTC+8：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime, timedelta, timezone</span><br><span class="line"></span><br><span class="line">CHINA_TZ = timezone(timedelta(hours=<span class="number">8</span>), name=<span class="string">&quot;Asia/Shanghai&quot;</span>)</span><br><span class="line">now = datetime.now(tz=CHINA_TZ)</span><br></pre></td></tr></table></figure>
+
+<p>这样电脑在其他时区，程序也会按同一套时间判断商品轮次。</p>
+<h4 id="3-标注稀有物品"><a href="#3-标注稀有物品" class="headerlink" title="3.标注稀有物品"></a>3.标注稀有物品</h4><p>稀有判断用了几个条件：</p>
+<ul>
+<li>数据源的 <code>is_worth</code> 标识。</li>
+<li>自己配置的商品名单，例如棱镜球、国王球等。</li>
+<li>商品名称和标签中的关键词，例如“炫彩”“首领血脉”。</li>
+</ul>
+<p>符合条件的商品前面加一个 <code>★</code>，普通商品用 <code>·</code>。</p>
+<p>这里的“稀有”也包括个人觉得值得提醒的高价值商品，可以自己调整名单，不是游戏官方的稀有度分类。</p>
+<p>消息会保留商品价格和限购数量；周末特卖、特殊全天商品则另起一栏，避免和当前轮次混在一起。</p>
+<h4 id="4-通过-QQ-发送"><a href="#4-通过-QQ-发送" class="headerlink" title="4.通过 QQ 发送"></a>4.通过 QQ 发送</h4><p>QQ 这边使用的是 NapCat 提供的 OneBot HTTP 接口。相关说明：<a href="https://napneko.github.io/develop/api">NapCat 请求接口</a>。</p>
+<p>简单来说就是：Python 负责整理消息，NapCat 登录机器人 QQ，负责把消息发出去。</p>
+<p>本机配置的接口地址是：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">http://127.0.0.1:3000</span><br></pre></td></tr></table></figure>
+
+<p><code>config.json</code> 里的 QQ 部分示例如下，QQ 号只是占位示例：</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;qq&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;enabled&quot;</span><span class="punctuation">:</span> <span class="keyword">true</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;base_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;http://127.0.0.1:3000&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;access_token&quot;</span><span class="punctuation">:</span> <span class="string">&quot;填写自己设置的Token&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;target_type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;private&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;target_id&quot;</span><span class="punctuation">:</span> <span class="string">&quot;123456789&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;target_ids&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">]</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>机器人需要能给接收账号发送消息。多个人接收时，可以把 QQ 号放进 <code>target_ids</code>；群推送则把类型改成 <code>group</code>，填写群号。</p>
+<p>另外，这份项目里的任务安装脚本仍会检查 <code>target_id</code>，安装时要填好，不能只填 <code>target_ids</code>。</p>
+<p>先检查推送连接：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">python .\rock_merchant_bot.py <span class="literal">--test-message</span></span><br></pre></td></tr></table></figure>
+
+<p>只想查看当前商品、不发送消息，可以用：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">python .\rock_merchant_bot.py <span class="literal">--preview</span></span><br></pre></td></tr></table></figure>
+
+<p>后来还加了一个简单的订阅功能：好友私聊机器人发送 <code>开启推送</code>，程序轮询到指令后，就把对方加入接收名单，并回复“已开启推送”。它和定时检查一起运行，所以不一定马上回复。</p>
+<h4 id="5-添加定时任务"><a href="#5-添加定时任务" class="headerlink" title="5.添加定时任务"></a>5.添加定时任务</h4><p>主要文件放在同一个项目目录下：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">rock_merchant_bot.py    主程序</span><br><span class="line">config.json            本机配置</span><br><span class="line">config.example.json    配置示例</span><br><span class="line">install_task.ps1       安装定时任务</span><br><span class="line">uninstall_task.ps1     卸载定时任务</span><br><span class="line">tests/                 测试</span><br><span class="line">data/state.json        推送记录</span><br><span class="line">logs/merchant_bot.log  运行日志</span><br></pre></td></tr></table></figure>
+
+<p>配置好以后，执行项目里的安装脚本：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">powershell <span class="literal">-ExecutionPolicy</span> Bypass <span class="operator">-File</span> .\install_task.ps1</span><br></pre></td></tr></table></figure>
+
+<p>Windows 每五分钟启动一次检查，运行完就退出。用 <code>pythonw.exe</code> 隐藏运行窗口，再限制任务不能同时启动多个实例。</p>
+<p>每五分钟检查一次，也不代表每五分钟发送一条。程序会保存日期、轮次和商品内容的指纹，已经发送过的内容就跳过。</p>
+<h3 id="一些问题"><a href="#一些问题" class="headerlink" title="一些问题"></a>一些问题</h3><h4 id="1-能抓到商品，不代表抓全了"><a href="#1-能抓到商品，不代表抓全了" class="headerlink" title="1.能抓到商品，不代表抓全了"></a>1.能抓到商品，不代表抓全了</h4><p>6月28日处理过一次漏商品的问题。</p>
+<p>当时网页里有商品，程序就直接采用网页结果，没有继续合并另一个接口的数据，结果漏掉了“美妙球”。</p>
+<p>后来改成：以完整查询页为基础，再按商品名称合并另一个来源里缺少的商品。</p>
+<p>这次才发现，“请求成功”和“内容完整”还真是两回事。</p>
+<h4 id="2-整点刷新时，数据可能还没更新完"><a href="#2-整点刷新时，数据可能还没更新完" class="headerlink" title="2.整点刷新时，数据可能还没更新完"></a>2.整点刷新时，数据可能还没更新完</h4><p>同一次问题里，第1轮消息只有残缺魔镜、适格钥匙、能力钥匙等活动商品，没有本轮普通商品。</p>
+<p>原因是刚到刷新时间，源站还没补齐第1轮内容，程序却已经把这份不完整的数据发出去了。</p>
+<p>后来加了一个判断：<strong>每轮刚开始的前三分钟，如果只有全天或周末商品，没有本轮普通商品，就先不发送，留到下一次检查。</strong></p>
+<p>如果本轮普通商品已经出现，就正常发送。</p>
+<p>这只是针对整点更新的等待处理，还不能保证源站永远不会漏数据。</p>
+<h4 id="3-周末特卖和全天商品分错了"><a href="#3-周末特卖和全天商品分错了" class="headerlink" title="3.周末特卖和全天商品分错了"></a>3.周末特卖和全天商品分错了</h4><p>有些活动商品同时带着全天标识，原来的判断先把它们归到了“全天商品”，导致周末特卖的分类被盖过去。</p>
+<p>修改时把符合周末特卖规则的商品优先分出去，残缺魔镜、适格钥匙、能力钥匙这些活动道具也改成显示“活动限购”。</p>
+<p>否则只看“限购1”，很容易以为下一轮又能买一次。</p>
+<h4 id="4-打游戏的时候感觉卡"><a href="#4-打游戏的时候感觉卡" class="headerlink" title="4.打游戏的时候感觉卡"></a>4.打游戏的时候感觉卡</h4><p>当时还专门测过一次 CPU。没有测到爬虫持续占用 CPU 的情况，不过每五分钟重新联网抓取一次，确实有不少重复工作。</p>
+<p>后来加了低负载模式：同一天、同一轮已经成功推送过，就直接跳过商品抓取；订阅指令仍会检查。计划任务也调成低优先级，机器人 QQ 当时的进程优先级也一起降低了。</p>
+<p><strong>这里有个取舍：低负载模式开启以后，已经推送的这一轮不会继续自动检查源站的修正。</strong> 如果希望持续检查同轮变化，可以关闭 <code>monitor.low_power_mode</code>；程序仍会通过内容指纹避免重复消息，但网络请求会更多。</p>
+<p>省下重复抓取以后，也更能理解为什么要在第一次发送前尽量把数据检查完整。</p>
+<h4 id="5-重启和移动文件夹以后"><a href="#5-重启和移动文件夹以后" class="headerlink" title="5.重启和移动文件夹以后"></a>5.重启和移动文件夹以后</h4><p>还有两个比较容易忽略的地方：</p>
+<ul>
+<li>NapCat 的启动器曾经在开机时弹出窗口，后来换成隐藏启动，并检查接口是否真正恢复。窗口开着也不一定代表机器人在线。</li>
+<li>项目换过位置以后，计划任务仍然指向旧文件夹，导致新配置没有被使用。移动项目以后，需要同步修改任务的运行路径。</li>
+</ul>
+<p>所以出现不推送的时候，可以先看日志、机器人接口和计划任务路径，不一定是爬虫又坏了（？</p>
+<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>这次补写文章时，把项目原有的20项测试重新跑了一遍，全部通过。商品解析、稀有标注、周末分类、去重，以及整点等待和低负载跳过都有对应检查。</p>
+<p>这些是程序逻辑的测试，第三方源站以后的更新仍然要另外留意。电脑关机、休眠，或者机器人 QQ 掉线，也就收不到新的提醒了。</p>
+<p>本文的查询页截图保存在博客本地，随网站一起发布。商品和活动规则以后可能变化，这里主要记录当时的做法。</p>
+<p>从“想知道商人卖什么”到最后给自己加了一套提醒，顺手也踩了不少坑。</p>
+<p>暂时够用。以上。</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>爬虫</tag>
+        <tag>QQ机器人</tag>
+        <tag>洛克王国世界</tag>
       </tags>
   </entry>
 </search>
